@@ -1,0 +1,4 @@
+interface:
+  display_name: "AutoResearch ML Systems"
+  short_description: "Run evidence-grounded ML systems research workflows"
+  default_prompt: "Use $autoresearch-ml-systems to turn an ML systems idea into a deeply specified, evidence-grounded paper run."

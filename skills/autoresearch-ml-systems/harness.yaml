@@ -1,0 +1,53 @@
+category: research-workflow
+trigger_keywords:
+  - ml systems
+  - efficient training
+  - optimizer
+  - fixed compute
+  - compression
+  - quantization
+  - pruning
+  - throughput
+  - latency
+  - memory efficiency
+applicable_stages:
+  - idea_intake
+  - problem_decompose
+  - literature_collect
+  - literature_screen
+  - synthesis
+  - hypothesis_generation
+  - experiment_design
+  - experiment_generation
+  - experiment_loop
+  - result_analysis_decision
+  - paper_draft_revision
+  - final_verification_export
+profiles:
+  - ml-systems-efficiency
+depths:
+  - exploratory
+  - publication
+  - top_venue
+priority: 1
+stage_instructions:
+  hypothesis_generation: Define competing falsifiable hypotheses, expected effect sizes, disconfirming evidence, confounds, and the cheapest distinguishing experiment.
+  experiment_design: Freeze protocol parity, primary metrics, evaluation units, seeds, baselines, ablations, stopping rules, statistical tests, and compute accounting before execution.
+  experiment_loop: Do not mutate the evaluator. Preserve every run and decide keep, discard, or inconclusive only from prespecified evidence.
+  result_analysis_decision: Report uncertainty, practical significance, quality-efficiency tradeoffs, failed runs, and supported, refuted, or inconclusive outcomes.
+  paper_draft_revision: Draft claims only from registries and include limitations, resource disclosure, and artifact-backed reproduction instructions.
+  final_verification_export: Block submission readiness on any missing provenance, protocol parity, depth requirement, claim link, or artifact.
+references:
+  hypothesis_generation:
+    - references/methodology.md
+  experiment_design:
+    - references/methodology.md
+    - references/readiness-rubric.md
+  experiment_loop:
+    - references/methodology.md
+  result_analysis_decision:
+    - references/methodology.md
+  paper_draft_revision:
+    - references/methodology.md
+  final_verification_export:
+    - references/readiness-rubric.md

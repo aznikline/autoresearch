@@ -1,0 +1,133 @@
+profile_id: ml-systems-efficiency
+display_name: ML Systems and Efficient Training
+parent_domain: machine-learning
+target_venues:
+  - NeurIPS
+  - ICML
+  - ICLR
+  - MLSys
+
+experiment_paradigm: ablation_study
+focus_areas:
+  - training efficiency and optimizer behavior
+  - model architecture under fixed compute budgets
+  - inference efficiency and model compression
+  - reproducible agentic research workflows
+
+biases:
+  - empirical evidence over speculative theory
+  - compute-aware comparisons over unconstrained scaling
+  - mechanism and ablation evidence over leaderboard-only gains
+  - reproducibility over one-off best runs
+  - honest negative or null results over forced positive narratives
+
+anti_patterns:
+  - claim novelty from prompt wording alone
+  - compare against weak or mismatched baselines
+  - report a single seed without dispersion
+  - optimize one metric while hiding accuracy, latency, memory, or compute regressions
+  - use test data for model or hyperparameter selection
+  - claim state of the art without matching datasets, splits, and evaluation protocol
+
+standard_baselines:
+  - strongest directly comparable published baseline
+  - simple architecture or optimizer baseline
+  - compute-matched baseline
+  - parameter-matched baseline when model size changes
+
+metric_types:
+  - task quality
+  - wall-clock training time
+  - throughput
+  - peak memory
+  - parameter count
+  - compute estimate
+  - inference latency
+
+statistical_tests:
+  - bootstrap confidence interval
+  - paired permutation test
+  - effect size with confidence interval
+  - false-discovery-rate correction for multiple comparisons
+
+detector_keywords:
+  - training efficiency
+  - optimizer
+  - language model training
+  - model compression
+  - pruning
+  - quantization
+  - distillation
+  - throughput
+  - memory efficiency
+  - fixed compute
+  - scaling law
+
+skill_tags:
+  - ml-systems
+  - efficient-training
+  - empirical-ml
+  - scientific-writing
+  - statistical-reporting
+
+depth_requirements:
+  exploratory:
+    min_screened_papers: 8
+    min_baselines: 1
+    min_evaluation_units: 1
+    min_seeds: 1
+    min_ablations: 1
+    min_verified_metrics: 2
+    require_confidence_intervals: false
+    require_effect_sizes: false
+    require_compute_reporting: true
+    require_hypothesis_outcomes: true
+  publication:
+    min_screened_papers: 15
+    min_baselines: 3
+    min_evaluation_units: 2
+    min_seeds: 3
+    min_ablations: 2
+    min_verified_metrics: 5
+    require_confidence_intervals: true
+    require_effect_sizes: true
+    require_compute_reporting: true
+    require_hypothesis_outcomes: true
+  top_venue:
+    min_screened_papers: 25
+    min_baselines: 4
+    min_evaluation_units: 3
+    min_seeds: 5
+    min_ablations: 3
+    min_verified_metrics: 8
+    require_confidence_intervals: true
+    require_effect_sizes: true
+    require_compute_reporting: true
+    require_hypothesis_outcomes: true
+
+stage_guidance:
+  hypothesis_generation: >-
+    Form at least two competing falsifiable hypotheses. State H0/H1, expected
+    direction and magnitude, disconfirming evidence, confounds, and the
+    compute-feasible experiment that distinguishes them.
+  experiment_design: >-
+    Use strong published, simple, compute-matched, and parameter-matched
+    baselines as applicable. Predefine datasets, splits, seeds, primary and
+    secondary metrics, ablations, stopping rules, statistical tests, and
+    compute accounting before execution.
+  experiment_loop: >-
+    Keep a change only on prespecified evidence. Preserve all seeds and failed
+    runs, report dispersion, and reject gains caused by mismatched budgets or
+    evaluation leakage.
+  result_analysis_decision: >-
+    Resolve every hypothesis as supported, refuted, or inconclusive. Report
+    effect sizes and confidence intervals, practical significance, failure
+    modes, and accuracy-efficiency tradeoffs.
+  paper_draft_revision: >-
+    Write an IMRAD paper with explicit contributions, reproducible methods,
+    results tied to artifact evidence, honest limitations, and no SOTA claim
+    without protocol-matched support.
+  final_verification_export: >-
+    Block submission readiness unless depth requirements, citation integrity,
+    numeric claim verification, statistical reporting, compute disclosure,
+    and per-hypothesis outcomes all pass.

@@ -1,0 +1,62 @@
+<h2>Transfer mechanisms from frontier LLM training</h2>
+<p class="subtitle">The goal is structural transfer, not renaming an existing ReID loss.</p>
+
+<div class="cards">
+  <div class="card" data-choice="group-relative" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:20px">
+      <div class="mock-nav">R1-style verifiable group optimization</div>
+      <div style="display:flex;gap:7px;align-items:center;justify-content:center;margin-top:16px">
+        <div class="placeholder" style="padding:10px">1 identity</div><b>→</b>
+        <div class="placeholder" style="padding:10px">K nuisance programs</div><b>→</b>
+        <div class="placeholder" style="padding:10px">rank rewards</div><b>→</b>
+        <div class="placeholder" style="padding:10px">distill winner</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A. Group-Relative Intervention Optimization (recommended)</h3>
+      <p>Sample a group of LLM-generated interventions per identity. Use rule-based retrieval, identity-preservation, diversity, and semantic-validity rewards. Normalize rewards inside the group, update a tiny intervention policy with reference anchoring, then distill accepted trajectories into the image adapter.</p>
+      <div class="pros-cons"><div class="pros"><h4>Why it transfers</h4><ul><li>Same group-relative credit assignment as reasoning RL</li><li>ReID rank gives a verifiable reward</li><li>No critic or LLM fine-tuning</li><li>Fits free Colab</li></ul></div><div class="cons"><h4>Main risk</h4><ul><li>Reward hacking through trivial augmentations</li><li>Must beat hard-negative and consistency baselines</li></ul></div></div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="multi-intervention" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:20px">
+      <div class="mock-nav">V3-style multi-target prediction</div>
+      <div style="display:flex;gap:7px;align-items:center;justify-content:center;margin-top:16px">
+        <div class="placeholder" style="padding:10px">embedding</div><b>→</b>
+        <div class="placeholder" style="padding:10px">camera shift</div>
+        <div class="placeholder" style="padding:10px">occlusion shift</div>
+        <div class="placeholder" style="padding:10px">style shift</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B. Multi-Intervention Prediction</h3>
+      <p>Predict several counterfactual embeddings or semantic changes from each source image, densifying supervision in the spirit of multi-token prediction.</p>
+      <div class="pros-cons"><div class="pros"><h4>Pros</h4><ul><li>Simple differentiable training</li><li>Good auxiliary objective</li><li>Low compute</li></ul></div><div class="cons"><h4>Risk</h4><ul><li>May be judged as ordinary multi-task consistency</li><li>Weak as the sole contribution</li></ul></div></div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="balanced-experts" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:20px">
+      <div class="mock-nav">V3-style auxiliary-loss-free routing</div>
+      <div style="display:flex;gap:7px;align-items:center;justify-content:center;margin-top:16px">
+        <div class="placeholder" style="padding:10px">tokens</div><b>→</b>
+        <div class="placeholder" style="padding:10px">pose expert</div>
+        <div class="placeholder" style="padding:10px">camera expert</div>
+        <div class="placeholder" style="padding:10px">occlusion expert</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C. Auxiliary-Loss-Free Semantic Experts</h3>
+      <p>Route visual tokens to nuisance-specific experts and balance utilization by bias updates rather than an auxiliary loss.</p>
+      <div class="pros-cons"><div class="pros"><h4>Pros</h4><ul><li>Direct architectural transfer</li><li>Potentially interpretable specialization</li></ul></div><div class="cons"><h4>Risk</h4><ul><li>Recent ReID expert-routing overlap</li><li>Higher memory and ablation burden</li><li>Poor fit for zero budget</li></ul></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Recommended paper shape</h3>
+  <p><strong>A is the core algorithm.</strong> B is included only as a small auxiliary head if the ablation proves it adds independent value. C is excluded from v1.</p>
+</div>
+
+<p class="subtitle">Click the mechanism you want to make the primary contribution, then confirm in Codex.</p>

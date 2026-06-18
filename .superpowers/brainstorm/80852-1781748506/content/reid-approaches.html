@@ -1,0 +1,63 @@
+<h2>DG-ReID + LLM/VLM: choose the research mechanism</h2>
+<p class="subtitle">All options use an outer LLM research agent, a frozen vision-language teacher, and a lightweight image-only student at inference.</p>
+
+<div class="cards">
+  <div class="card" data-choice="causal-intervention" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:20px">
+      <div class="mock-nav">LLM nuisance graph</div>
+      <div style="display:flex;gap:8px;align-items:center;justify-content:center;margin-top:18px">
+        <div class="placeholder" style="padding:12px">person image</div><b>→</b>
+        <div class="placeholder" style="padding:12px">counterfactual semantics</div><b>→</b>
+        <div class="placeholder" style="padding:12px">small invariant adapter</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A. Causal Semantic Intervention (recommended)</h3>
+      <p>LLM constructs identity-preserving nuisance interventions for camera, background, illumination, pose, and clothing cues. A frozen VLM scores whether the representation changes for the right reasons; a small student learns intervention consistency.</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Pros</h4><ul><li>Mechanism-level claim</li><li>Fits cross-domain generalization</li><li>Image-only inference</li><li>Can test with frozen backbones</li></ul></div>
+        <div class="cons"><h4>Risks</h4><ul><li>Must prove interventions are identity-preserving</li><li>Causal language must be carefully scoped</li><li>Needs strong semantic ablations</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="prototype-bank" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:20px">
+      <div class="mock-nav">LLM semantic prototype bank</div>
+      <div style="display:flex;gap:8px;align-items:center;justify-content:center;margin-top:18px">
+        <div class="placeholder" style="padding:12px">domain-neutral prompts</div><b>→</b>
+        <div class="placeholder" style="padding:12px">frozen CLIP</div><b>→</b>
+        <div class="placeholder" style="padding:12px">prompt router</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B. Adaptive Semantic Prototype Bank</h3>
+      <p>Generate a controlled vocabulary of body parts, appearance attributes, and nuisance factors; learn a tiny router that selects prototypes for each image while distilling them into a ReID embedding.</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Pros</h4><ul><li>Cheapest and simplest</li><li>Interpretable prototype activations</li><li>Easy Colab implementation</li></ul></div>
+        <div class="cons"><h4>Risks</h4><ul><li>Very close to 2026 multi-grained alignment and ALADIN</li><li>Likely incremental without a new learning principle</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="hard-negative" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:20px">
+      <div class="mock-nav">LLM hard-negative curriculum</div>
+      <div style="display:flex;gap:8px;align-items:center;justify-content:center;margin-top:18px">
+        <div class="placeholder" style="padding:12px">confusing pair</div><b>→</b>
+        <div class="placeholder" style="padding:12px">semantic difference</div><b>→</b>
+        <div class="placeholder" style="padding:12px">relational loss</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C. Semantic Hard-Negative Curriculum</h3>
+      <p>Use VLM captions and LLM reasoning to explain why visually similar identities differ, then convert explanations into pairwise constraints and a curriculum for a lightweight student.</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Pros</h4><ul><li>Low training cost</li><li>Directly targets ReID errors</li><li>Clear retrieval diagnostics</li></ul></div>
+        <div class="cons"><h4>Risks</h4><ul><li>Hallucinated differences can leak labels</li><li>Contribution may look like data mining</li><li>Requires strict pair provenance</li></ul></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle">Click one option, then confirm your choice in the Codex terminal.</p>

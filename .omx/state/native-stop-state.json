@@ -1,0 +1,34 @@
+{
+  "sessions": {
+    "019ec9a2-df43-7cb1-9ac7-c8c4c301da2c": {
+      "ordinary_no_progress_guard": {
+        "fingerprint": "ordinary|继续推进了最终质量门。 本轮关键改动： - 新增 venue-readiness gate：[quality.py](/users/wizout/op/autoresearch/src/autoresearch/paper/quality.py) - final export 现在同时写： - `verification_report.json`: citation / numeric claim artifact integrity - `quality_report.json`: 顶会投稿 readiness rubric - `bundle_index.json`: 同时记录 `artifact_verification_ok` 和 `submission_ready` - 更新 final-stage contract，要求 `quality_report.json` - 更新 readme，明确 artifact integrity 可以通过，但 scaffold science 不能被标记为 ready - 新增测试：[test_quality_gate.py](/users/wizout/op/autoresearch/tests/test_quality_gate.py) 验证： - `uv run --extra dev pytest -q` → `52 passed` - cli smoke run结果： - `artifact_verification_ok: true` - `submission_ready: false` - citation unsupported keys: `[]` - numeric unsupported numbers: `[]` - quality blockers: - literature base too small - experiment evidence too thin - paper still self-identifies as scaffold-level 这一步很重要：之前系统会把“引用和数字没造假”误读成“paper ok”。现在不会了。它会明确告诉我们：当前 artifact chain 是干净的，但还不够顶会投稿。下一步应补真实 research depth：更大文献检索、真实任务生成、多指标实验矩阵、ablation/统计检验，然后让 quality gate 从 `submission_ready: false` 逐项变成可通过。",
+        "first_seen_at": "2026-06-16T07:43:48.555Z",
+        "last_seen_at": "2026-06-16T07:43:48.555Z",
+        "repeat_count": 1,
+        "last_turn_id": "c0664932-e63e-433c-b8af-07c3b1a5479d",
+        "last_thread_id": null
+      }
+    },
+    "019ec9e7-314d-7d03-a3b4-d38d57cd6968": {
+      "ordinary_no_progress_guard": {
+        "fingerprint": "ordinary|{\"suggestions\":[{\"title\":\"scaffold the local autoresearch cli and config skeleton from today’s plan\",\"description\":\"you created the implementation plan on june 15, 2026, and this project still only contains that plan plus `.omx` state. codex can turn unit 1 into real code now: package layout, cli commands, config loading, and tests that unblock the rest of the workflow.\",\"prompt\":\"implement unit 1 from `docs/plans/2026-06-15-001-feat-local-autoresearch-workflow-plan.md`: scaffold the local python package, cli entrypoint, config loading, and baseline tests for `init`, `run`, `status`, `resume`, `approve`, `reject`, and `export`. keep it minimal, follow the plan exactly, and verify the cli help plus tests before finishing.\",\"appid\":\"\"}]}",
+        "first_seen_at": "2026-06-15T06:13:21.604Z",
+        "last_seen_at": "2026-06-15T06:13:21.604Z",
+        "repeat_count": 1,
+        "last_turn_id": "019ec9e7-31b6-7551-b384-edc411955d99",
+        "last_thread_id": null
+      }
+    },
+    "019ecf5c-2d77-7410-9116-26f2d2dc77c8": {
+      "ordinary_no_progress_guard": {
+        "fingerprint": "ordinary|{\"suggestions\":[{\"title\":\"add approve and resume commands so gate-mode runs can actually continue\",\"description\":\"today’s local spine already pauses at gate stages when `--auto-approve` is off, but the cli still only exposes `init`, `run`, and `status`. codex can close that dead end by wiring real `approve`/`reject`/`resume` flow into checkpoints and tests.\",\"prompt\":\"implement the missing gate-run workflow in this repo: add cli commands for `resume`, `approve`, and `reject`, teach the runner/checkpoint layer how to continue from a paused gate stage, and update tests plus readme so non-`--auto-approve` runs are actually usable end to end.\",\"appid\":\"\"},{\"title\":\"wire in program.md and provider adapters for real agent-driven research stages\",\"description\":\"your compare thread today was about merging karpathy’s `program.md` loop with autoresearchclaw’s staged pipeline, but this repo still has no `program.md`, prompt manager, or provider adapters. codex can turn that design gap into a runnable agent surface now.\",\"prompt\":\"implement the next missing integration layer in this repo: add a human-edited `program.md`, scaffold prompt/provider adapter modules, connect them into the pipeline where placeholder reasoning stages need model output, and keep the implementation local-first with tests and minimal config changes.\",\"appid\":\"\"},{\"title\":\"replace the placeholder paper stages with a citation-backed draft bundle\",\"description\":\"today’s work made the literature and experiment path more concrete, while readme still says paper-generation stages are placeholders. codex can make the first real end-to-end demo possible by generating a draft package from the artifacts you already produce.\",\"prompt\":\"replace the placeholder paper/export stages in this repo with a real first-pass paper bundle: synthesize the existing knowledge cards and experiment results into a draft manuscript, bibtex, verification report, and export artifacts, with tests and readme updates for the new flow.\",\"appid\":\"\"}]}",
+        "first_seen_at": "2026-06-16T07:39:12.531Z",
+        "last_seen_at": "2026-06-16T07:39:12.531Z",
+        "repeat_count": 1,
+        "last_turn_id": "019ecf5c-2dfc-7982-8742-356e82217b8d",
+        "last_thread_id": null
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+project:
+  name: "my-research"
+
+research:
+  topic: ""
+  quality_threshold: 4.0
+  profile: "ml-systems-efficiency"
+  depth: "top_venue"
+  target_venues:
+    - "NeurIPS"
+    - "ICML"
+    - "ICLR"
+    - "MLSys"
+
+runtime:
+  artifacts_root: "artifacts"
+  max_iterations: 3
+
+llm:
+  provider: "openai-compatible"
+  base_url: "https://api.openai.com/v1"
+  api_key_env: "OPENAI_API_KEY"
+  primary_model: "gpt-4.1"
+
+experiment:
+  mode: "local"
+  time_budget_sec: 300
+  metric_key: "primary_metric"
+  metric_direction: "minimize"
+
+hitl:
+  mode: "gate-only"
+  required_stages:
+    - literature_screen
+    - experiment_design
+    - result_analysis_decision
+    - final_verification_export
+
+skills:
+  enabled: true
+  directories:
+    - "skills"
+  max_per_stage: 3
