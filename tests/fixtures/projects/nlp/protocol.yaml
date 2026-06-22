@@ -1,0 +1,24 @@
+synthetic: true
+plugin_id: natural-language-processing
+protocol:
+  confirmatory: true
+  hypotheses: [h1, h2]
+  primary_metrics: [quality]
+  exclusions: [corrupt input]
+  evaluator_hash: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  stopping_rule: fixed budget
+  resource_budget: matched
+  seeds: [1, 2, 3]
+  uncertainty: paired bootstrap
+  corpus_version: corpus-v1
+  languages: [en, zh]
+  domains: [news]
+  tokenization: tokenizer-v1
+  normalization: NFC
+  split_hash: eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+  evaluation_script_hash: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+  annotation_protocol: double blind adjudication
+  human_evaluation: task-valid paired rating
+  contamination_analysis: document hash scan
+  license_privacy_review: approved
+  subgroup_error_analysis: by language and label

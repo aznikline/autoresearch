@@ -1,0 +1,11 @@
+schema_version: 1
+venue_id: naacl
+display_name: NAACL
+year: 2026
+track: main
+status: draft
+compatible_profiles: [natural-language-processing]
+official_sources: [{url: https://www.aclweb.org/portal/, retrieved_at: null, sha256: null}]
+template: {identity: naacl-2026-main-candidate, source_url: https://www.aclweb.org/portal/, sha256: null}
+policy: {anonymity: unknown, page_limit: null, supplement_allowed: null, checklist_required: null, checklist_delivery: unknown, ethics_required: null, limitations_required: null, artifact_policy: unknown, required_sections: []}
+valid_until: null

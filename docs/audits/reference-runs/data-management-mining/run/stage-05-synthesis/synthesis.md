@@ -1,0 +1,65 @@
+# Synthesis
+
+Topic: SQLite index tradeoffs on the UCI Bike Sharing hourly workload
+
+## Grounded Starting Points
+- `khan2021mosiqsc8a373f2`: Scientific applications often require high-bandwidth shared storage to perform joint simulations and collaborative data analytics
+- `chockchowwat2023airindex34a18a07`: The end-to-end lookup latency of a hierarchical index---such as a B-tree or a learned index---is determined by its structure such as the number of layers, the kinds of branching functions appearing in each layer, the amount of data we must fetch from layers, etc
+- `zhang2018dartcaf51a21`: Affix-based search is a fundamental functionality for storage systems
+- `hossain2017mcerebrum799408b7`: The development and validation studies of new multisensory biomarkers and sensor-triggered interventions requires collecting raw sensor data with associated labels in the natural field environment
+- `andrijevi2025benchmarkingedda800b`: Efficient interaction between PHP (Hypertext Preprocessor) applications and MySQL databases is essential for the performance of modern web systems
+- `daum2021tasm968093c3`: Modern video data management systems store videos as a single encoded file, which significantly limits possible storage level optimizations
+- `paper2019indexa7e7403c`: Index of SQLite Commands
+- `fritchey2018databasefc41a48e`: Database Workload Optimization
+- `min2005adaptive522ab6b5`: An adaptive path index for XML data using the query workload
+- `pawlaszczyk2026aibased9504562c`: AI-Based Automated SQL Query Generation for SQLite Databases in Mobile Forensics
+- `mermelstein2023snowquery83be4a32`: snowquery: SQL Interface to 'Snowflake', 'Redshift', 'Postgres', 'SQLite', and 'DuckDB'
+- `min2006erratumb6de907d`: Erratum to: “An adaptive path index for XML data using the query workload”
+- `paper2009database4b698fc5`: Database Workload Optimization
+- `fritchey2014database9cd5798d`: Database Workload Optimization
+- `paper2016textdf2c3837`: Text Document Annotation and Retrieval Based on Content of the Document and Query Workload
+- `paperndintroducing2717579a`: Introducing SQLite
+- `trautmannsheimer2026drivingff61bd6f`: Driving through the Network: Performance and Workload under Latency and Video Impairments
+- `meng2013attie06ff60a`: ATTI: Workload-Aware Query Adaptive OcTree Based Trajectory Index
+- `paperndsqlite4662a699`: SQLite Internals
+- `nguyen2008query2c2d2603`: Query Workload Driven Summarization for P2P Query Routing
+- `fritchey2012databasea16044b3`: Database Workload Optimization
+- `allen2010sqliteea10af9e`: SQLite Internals and New Features
+- `zhao2016researchae69112a`: Research on SQLite Database Query Optimization Based on Improved PSO Algorithm
+- `danaouindcosteffective0bc696d1`: Un optimiseur de requêtes rentable pour des SGBDRs parallèles multi-locataires exploitant la prédiction de charges de travail Dans le domaine du "Database-as-a-Service" (DBaaS), la multi location (multi-tenancy) est devenue un concept clé, permettant à une seule instance de base de données d'être partagée entre plusieurs locataires
+- `dunnington2023adbcsqlite4ed401bf`: adbcsqlite: 'Arrow' Database Connectivity ('ADBC') 'SQLite' Driver
+- `languedoc2016analyzing1421fa41`: Analyzing SQLite Databases
+- `bhuvaneshwari2016decentralized2a4a7840`: Decentralized, Energy-Efficient, Low Latency and Less Homogeneous Settings based Workload Management in Enterprise Clouds
+- `feiler2015usingf141f28c`: Using SQLite with PHP
+- `rahayundparallel50c83349`: Parallel selection query processing involving index in parallel database systems
+- `sun2013indexd06a71f0`: Index selection
+- `havet2024copulabased072061f0`: A Copula-Based Sample Selection Binary Choice Model for Difference Analysis Among Private Bike and Bike Sharing in Lyon (France)
+- `paper2015indexf37979dd`: Index
+- `hua2022largescalea3dcd6e3`: Large-Scale Dockless Bike Sharing Repositioning Considering Future Usage and Workload Balance
+- `paper2012bike36b8579c`: Bike Sharing Systems
+- `wang2013analyzing28f8d1c0`: Analyzing Bike Repositioning Strategies Based on Simulations for Public Bike Sharing Systems: Simulating Bike Repositioning Strategies for Bike Sharing Systems
+- `luo2023dynamicaa6351a1`: Bike Sharing Systems (BSSs) offer a flexible and sustainable transport option that has gained popularity in urban areas globally
+- `brinkmann2020bike3ea4ebc3`: Bike Sharing Systems
+- `zhang2026bikeabilityb19f06f6`: Bikeability Index in Bike-Sharing Systems: A Dual-Level Assessment Integrating Station Accessibility and Cycling Environment
+- `li2023impactf8551f97`: The impact of the introduction of e-bike sharing on the usage of bike sharing
+- `kim2023investigation8b61d992`: Abstract The effect of newly introduced bike stations on bike-share systems at the system, community, and station levels is investigated in this study
+- `sadeghraimoghaddam2024sharedb393a7a0`: Shared Bike Demand Prediction by Using Metro and Bike Sharing Networks’ Features
+- `vogel2016serviceedddaae4`: Service Network Design of Bike Sharing Systems
+- `oppermann2018bikef56eb840`: Bike Sharing Atlas: Visual Analysis of Bike-Sharing Networks
+- `vogel2016bike2cdc0e3f`: Bike Sharing in the Context of Urban Mobility
+- `hua2022largescale9364fc80`: Large-scale dockless bike sharing repositioning considering future usage and workload balance
+- `aljerindimpactsa8dde5c8`: Impacts of Bike Sharing on Transit Ridership
+- `paperndfigure3ff39c7b`: Figure 4: The sliding window technique for predicting hourly bike sharing demand.
+- `wu2019stationlevel61be6a10`: Station-Level Hourly Bike Demand Prediction for Dynamic Repositioning in Bike Sharing Systems
+- `hong2022framework379bf9f4`: Framework for Hourly Demand Forecasting of Bike-Sharing Stations: Case Study of the Four Main Gate Areas in Seoul
+- `kim2022correction29b7ba87`: Correction: Graph convolutional network approach applied to predict hourly bike-sharing demands considering spatial, temporal, and global effects
+- `kim2019graph2ba8bd0a`: Graph convolutional network approach applied to predict hourly bike-sharing demands considering spatial, temporal, and global effects
+- `biswas2025spatiotemporal0c159daa`: Spatiotemporal Data-Driven Hourly Bike-Sharing Demand Prediction Using ApexBoost Regression
+- `ustiugov2021analyzingd7992127`: Analyzing Tail Latency in Serverless Clouds with STeLLAR
+- `li2022roadspecific9099c795`: Road-Specific Exploration of Bike-Sharing Usage Changes after Construction of Bike Lanes
+- `li2022systemwide85690469`: From System-Wide to Road-Specific Exploration of Bike Trips for Changes in Bike Sharing System Usage after Construction of Bike Lanes
+- `kanev2014tradeoffseb5a8f2e`: Tradeoffs between power management and tail latency in warehouse-scale applications
+- `paper2022researchccb01f09`: Research Department - Prices &amp; Statistics - Price Indexes - Wage Indexes - Minimum Hourly Rates of Wages by Industrial Groups - Correspondence, Memoranda and Blue Sheets - 1950 - 1959
+- `dellamico2014bikecdcdb26f`: The bike sharing rebalancing problem: Mathematical formulations and benchmark instances
+- `verma2020queryfe05167e`: Query similarity index based query preprocessing mechanism for multiapplication sharing wireless sensor networks
+- `paperndfigure140a619b`: Figure 6: Proposed MLP to predict future bike sharing demand.

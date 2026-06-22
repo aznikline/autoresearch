@@ -1,0 +1,22 @@
+synthetic: true
+plugin_id: foundation-models-llm
+protocol:
+  confirmatory: true
+  hypotheses: [h1, h2]
+  primary_metrics: [quality]
+  exclusions: [corrupt input]
+  evaluator_hash: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  stopping_rule: fixed budget
+  resource_budget: matched
+  seeds: [1, 2, 3]
+  uncertainty: bootstrap confidence interval
+  model_checkpoint: model@sha256:abc
+  tokenizer: tokenizer-v1
+  prompt_template_hash: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+  decoding: {temperature: 0.0}
+  context_policy: fixed 8k
+  judge_model: judge-v1
+  evaluator_forms: [judge, exact-match]
+  judge_bias_controls: [position randomization, order swap]
+  contamination_analysis: benchmark overlap scan
+  cost_metrics: [tokens, latency, usd]

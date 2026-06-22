@@ -1,0 +1,569 @@
+{
+  "artifacts": [
+    {
+      "path": "alignment.json",
+      "sha256": "4ec2818e62c9ce380be5a016bfdb8bfd18c98be7aad09771325a2aab6e20bd6e",
+      "size_bytes": 1516
+    },
+    {
+      "path": "stage-01-idea_intake/goal.md",
+      "sha256": "a89367bec0e0feb71ad4bff5bf96eb2a8f025082486267441ad15f0737640d4e",
+      "size_bytes": 113
+    },
+    {
+      "path": "stage-01-idea_intake/run_config.json",
+      "sha256": "8157669c7facbbd9519e4a8d70a42d7f249a8628bf9482f2ea51d48907787d46",
+      "size_bytes": 168
+    },
+    {
+      "path": "stage-01-idea_intake/skill_context.md",
+      "sha256": "ba58bfb5ab4b59a7ef5670d7e859b1fe702cdf07a12dc0e73363d688415eebbb",
+      "size_bytes": 637
+    },
+    {
+      "path": "stage-01-idea_intake/skills_applied.json",
+      "sha256": "4b088ab810b22c7a0416062ecb5bde69d8ac24507a77ef53f692a42228219af5",
+      "size_bytes": 1162
+    },
+    {
+      "path": "stage-02-problem_decompose/problem_tree.md",
+      "sha256": "2668ea67893c7bd153072b6bec8571066e8e5f08440e62e75adf786018b02e72",
+      "size_bytes": 119
+    },
+    {
+      "path": "stage-02-problem_decompose/skill_context.md",
+      "sha256": "55f3dcd354497fc51f0d99628d3217a242877322eac7a595b434c42bb60906fd",
+      "size_bytes": 217
+    },
+    {
+      "path": "stage-02-problem_decompose/skills_applied.json",
+      "sha256": "fd69b45ecebacaf2a7a06456ddcdaba7cbf0378b9a7cdf90754ce0c2cdbeccd2",
+      "size_bytes": 121
+    },
+    {
+      "path": "stage-03-literature_collect/candidates.jsonl",
+      "sha256": "8e85b4991234ebbb1ba9480c3d92e9178cd3fd0c95cf317d9b0f4bb783fa24c3",
+      "size_bytes": 278424
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/crossref/raw/0e44f91016702b1dcc322e3d89ccb5e3afb7fbede8c9ad0b573a253900e0adad.bin",
+      "sha256": "0e44f91016702b1dcc322e3d89ccb5e3afb7fbede8c9ad0b573a253900e0adad",
+      "size_bytes": 99813
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/crossref/raw/1064cf61da17136c3cbfb1f3d76d75faaa2a95cd682e30749e6d1a4e634ac3f8.bin",
+      "sha256": "1064cf61da17136c3cbfb1f3d76d75faaa2a95cd682e30749e6d1a4e634ac3f8",
+      "size_bytes": 173342
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/crossref/raw/69bb35cd7cd7eb1d95c4cc72610fe960676982ae84b001742d1117033977dee0.bin",
+      "sha256": "69bb35cd7cd7eb1d95c4cc72610fe960676982ae84b001742d1117033977dee0",
+      "size_bytes": 58734
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/crossref/raw/74abf37642966dc4ead2a5395b785ef9548472706569012d2ae81d69010493fa.bin",
+      "sha256": "74abf37642966dc4ead2a5395b785ef9548472706569012d2ae81d69010493fa",
+      "size_bytes": 41974
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/crossref/raw/b19ddb5828cdd54c57c80622c2f11d4cf41fa35846978ad759607518074bdf36.bin",
+      "sha256": "b19ddb5828cdd54c57c80622c2f11d4cf41fa35846978ad759607518074bdf36",
+      "size_bytes": 58726
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/crossref/raw/edd1bda00c154d779a094b577bac90a771959675bee07c40604484e04007f766.bin",
+      "sha256": "edd1bda00c154d779a094b577bac90a771959675bee07c40604484e04007f766",
+      "size_bytes": 45861
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/crossref/requests.jsonl",
+      "sha256": "8582eee0151c1fede8f2e060b991f9060159e3441ec3c97a3fbbeb6cd98bec8b",
+      "size_bytes": 3094
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/openalex/raw/01e1f65f0609eab8ab5c5bac3c9088ac84b36e39e4c1956d7f16175ff193bf33.bin",
+      "sha256": "01e1f65f0609eab8ab5c5bac3c9088ac84b36e39e4c1956d7f16175ff193bf33",
+      "size_bytes": 594
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/openalex/raw/135e4bd9015bf91183976770ac50e87a4eec9f9a5eeb7e15a0861a08b6dfc1d2.bin",
+      "sha256": "135e4bd9015bf91183976770ac50e87a4eec9f9a5eeb7e15a0861a08b6dfc1d2",
+      "size_bytes": 416462
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/openalex/raw/359300b6d87e1621c0be9e303b66784806700318228b19217405e5e37ec357e8.bin",
+      "sha256": "359300b6d87e1621c0be9e303b66784806700318228b19217405e5e37ec357e8",
+      "size_bytes": 630
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/openalex/raw/494127fab21565ed25b2c49913e62da28800689b8f756921ed1542fa193c70b4.bin",
+      "sha256": "494127fab21565ed25b2c49913e62da28800689b8f756921ed1542fa193c70b4",
+      "size_bytes": 564
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/openalex/raw/62013d55df829d82af7340fb5a4f9e3a195ed537fec9beed5e2fd417f3f4cdd8.bin",
+      "sha256": "62013d55df829d82af7340fb5a4f9e3a195ed537fec9beed5e2fd417f3f4cdd8",
+      "size_bytes": 645350
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/openalex/raw/8051a104dce4bc2e9ba934af5bfe993fb84d4689e02c7886a9fcdd119bea8f64.bin",
+      "sha256": "8051a104dce4bc2e9ba934af5bfe993fb84d4689e02c7886a9fcdd119bea8f64",
+      "size_bytes": 726501
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/openalex/raw/a5dec63a44bc0b45b6d2ce65ce6ffe6dfb8f1e6293c10e01405765ad1bb490be.bin",
+      "sha256": "a5dec63a44bc0b45b6d2ce65ce6ffe6dfb8f1e6293c10e01405765ad1bb490be",
+      "size_bytes": 605441
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/openalex/raw/a6cc01b2188da449de9b6944fb45189851c2474c56bd37ae4afe38bab5db764f.bin",
+      "sha256": "a6cc01b2188da449de9b6944fb45189851c2474c56bd37ae4afe38bab5db764f",
+      "size_bytes": 640212
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/openalex/requests.jsonl",
+      "sha256": "7ea6cc08d5cd22c069cd1441831b5a96854367f3788747dbacc3d361bb14e30d",
+      "size_bytes": 3160
+    },
+    {
+      "path": "stage-03-literature_collect/search_report.json",
+      "sha256": "145a43b6de597f9e3bf4b76acf6129cf0ff616b265c1c1b539f30aeab5ff66ce",
+      "size_bytes": 6070
+    },
+    {
+      "path": "stage-03-literature_collect/search_report.md",
+      "sha256": "3139d0f8df820aa69bf2d108e11bd247ae0c6a7277019d173b9e551881b69b2e",
+      "size_bytes": 935
+    },
+    {
+      "path": "stage-03-literature_collect/skill_context.md",
+      "sha256": "e314c56a86f08ae2c9c081fc7fa9b85cc91e8aa7da77b4154d4eae62a2178b72",
+      "size_bytes": 644
+    },
+    {
+      "path": "stage-03-literature_collect/skills_applied.json",
+      "sha256": "c6651cd1acd37fd229b6c124a497795f9620dfccb0e32036dc01c53707c06aa5",
+      "size_bytes": 1169
+    },
+    {
+      "path": "stage-04-literature_screen/screening_report.md",
+      "sha256": "9ea81d41d3d1706b47ad3a30ebf3a4c3f70c35b3cf5c0a66786649b5151e904f",
+      "size_bytes": 153
+    },
+    {
+      "path": "stage-04-literature_screen/shortlist.jsonl",
+      "sha256": "b20882d42a956965d6f30234aeb353bc7899bde7d8d34b3087d8f260495307ac",
+      "size_bytes": 238081
+    },
+    {
+      "path": "stage-04-literature_screen/skill_context.md",
+      "sha256": "e56b2511c84779ea650fd69071942b3c40092506f1352669152c089555b7ea12",
+      "size_bytes": 217
+    },
+    {
+      "path": "stage-04-literature_screen/skills_applied.json",
+      "sha256": "b54836d02595910030ddbd9aa00466cda2c2ccce2d13d92c2314efeb05b7562c",
+      "size_bytes": 121
+    },
+    {
+      "path": "stage-05-synthesis/knowledge_cards.jsonl",
+      "sha256": "df3164291a7e5cd659c9788ce12473405fd7c76373f40b70e7fdd297efffa2de",
+      "size_bytes": 89066
+    },
+    {
+      "path": "stage-05-synthesis/literature_gaps.json",
+      "sha256": "f1ad4a017be0715da49414b5cf545764e162917f50f57fad88382dfa67b613b9",
+      "size_bytes": 6796
+    },
+    {
+      "path": "stage-05-synthesis/skill_context.md",
+      "sha256": "676ccdc12fcd7ad73befdb971656d8cb27b38d48ce9cdffa6d980ac4364b560a",
+      "size_bytes": 209
+    },
+    {
+      "path": "stage-05-synthesis/skills_applied.json",
+      "sha256": "807136fe1e9c0ae3e356b1dd592219a090b0ff3d71e8af6e3edd1953e9251b4a",
+      "size_bytes": 113
+    },
+    {
+      "path": "stage-05-synthesis/synthesis.md",
+      "sha256": "05374b345400839a24baf2caaf36d5e1411b9b841fad5035c1f0236f0882ead4",
+      "size_bytes": 27532
+    },
+    {
+      "path": "stage-06-hypothesis_generation/hypotheses.json",
+      "sha256": "3be71d05817cf6788fdff515c11e44885a8ab379aa9dbb80f8bf4a1b2f555090",
+      "size_bytes": 619
+    },
+    {
+      "path": "stage-06-hypothesis_generation/hypotheses.md",
+      "sha256": "7312337ac1ffeacbd66d660462978c8585b960191b86eb0bee1fb69df117f84e",
+      "size_bytes": 239
+    },
+    {
+      "path": "stage-06-hypothesis_generation/skill_context.md",
+      "sha256": "86c335f6793b1596e7454a7a7d1a33a16b61eac303918797d283f33fad0b3db3",
+      "size_bytes": 829
+    },
+    {
+      "path": "stage-06-hypothesis_generation/skills_applied.json",
+      "sha256": "ef29c6a70835721988bc1b9308cff298d672e41790f2dd46b0aa4f1cca0805fc",
+      "size_bytes": 1239
+    },
+    {
+      "path": "stage-07-experiment_design/experiment_plan.yaml",
+      "sha256": "2cd3276656bb8b51c37546952c6665fd9bb9ef1686761393680c2ac8e9d6159a",
+      "size_bytes": 3224
+    },
+    {
+      "path": "stage-07-experiment_design/protocol_validation.json",
+      "sha256": "411db0ae88bad9a655f8789adf7df7d602216a358f50a9e790cbb3e7de99c846",
+      "size_bytes": 78
+    },
+    {
+      "path": "stage-07-experiment_design/skill_context.md",
+      "sha256": "e163dea5fee2f2d8c080c6d614b98bbb99a6ff9f053bea3d71d4325f971e3f67",
+      "size_bytes": 1338
+    },
+    {
+      "path": "stage-07-experiment_design/skills_applied.json",
+      "sha256": "9232b2ba8b37d350fc680ccf2b56801898f8a2ecb97662ea5c525277ea82460c",
+      "size_bytes": 1303
+    },
+    {
+      "path": "stage-08-experiment_generation/experiment/README.md",
+      "sha256": "96f61e661b6b3711bb92bb9845c7fac80801ba6020b710a3a5603adc4694f843",
+      "size_bytes": 170
+    },
+    {
+      "path": "stage-08-experiment_generation/experiment/data/amazon.tsv",
+      "sha256": "47003fc0a0d4840b00e96e715b6189bad09e7443a3da41c4cbe12ffc79f86ae3",
+      "size_bytes": 58226
+    },
+    {
+      "path": "stage-08-experiment_generation/experiment/data/imdb.tsv",
+      "sha256": "aef2e49e3da25714d61175e3a6e68eeef74a20a2f914318dc3be9947ea86512d",
+      "size_bytes": 85285
+    },
+    {
+      "path": "stage-08-experiment_generation/experiment/data/yelp.tsv",
+      "sha256": "c76468b7b5c6e56a0804d728345c5f84aa2142ddb214420f61cc9cfd4c00d2ea",
+      "size_bytes": 61320
+    },
+    {
+      "path": "stage-08-experiment_generation/experiment/experiment.py",
+      "sha256": "791d73995674b8a79f6f4b1d0ff924b8f1e344f0ebf55ac9ed65671b904844f7",
+      "size_bytes": 8539
+    },
+    {
+      "path": "stage-08-experiment_generation/experiment/experiment_plan.yaml",
+      "sha256": "2cd3276656bb8b51c37546952c6665fd9bb9ef1686761393680c2ac8e9d6159a",
+      "size_bytes": 3224
+    },
+    {
+      "path": "stage-08-experiment_generation/experiment/split_manifest.json",
+      "sha256": "b42024423ebdc0a32b530f525d0825b4d834cc93bdad981d85a935f41891fc3d",
+      "size_bytes": 395474
+    },
+    {
+      "path": "stage-08-experiment_generation/experiment_spec.md",
+      "sha256": "2b202f1b0dbc0f10c467c514b5fe37068b8498e9363a48da889aec135be7b5e0",
+      "size_bytes": 759
+    },
+    {
+      "path": "stage-08-experiment_generation/skill_context.md",
+      "sha256": "c11dbfe1287686f238e9bada834ecaeb6aa0b6d64561e7f03a28a529fbb78c96",
+      "size_bytes": 221
+    },
+    {
+      "path": "stage-08-experiment_generation/skills_applied.json",
+      "sha256": "d7bc68d5c49e023490c251b224234446600a81f960ea08fa8ffaedc246543d80",
+      "size_bytes": 125
+    },
+    {
+      "path": "stage-09-experiment_loop/ledger.jsonl",
+      "sha256": "7e71400e2a74920d11270785a9d3b9d9c871628c642118aa328acb53d32dd89d",
+      "size_bytes": 8114
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-bigram-minfreq2-seed4/metrics.json",
+      "sha256": "28826aa3c307bd890f8f8d2521d1ef1e62f4eada003ca19a419e377e5c46d660",
+      "size_bytes": 748
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-bigram-minfreq2-seed4/predictions.jsonl",
+      "sha256": "67df2abaeaafe16146688e983d82d88c69ef88676954cf23f7a4504340d7859b",
+      "size_bytes": 104909
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-bigram-minfreq2-seed4/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-bigram-minfreq2-seed4/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-bigram-seed3/metrics.json",
+      "sha256": "7ad0a5064c0e3ecb56a760fda2651b5e9e5568fe4fa7c2534e1861f755ee287f",
+      "size_bytes": 740
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-bigram-seed3/predictions.jsonl",
+      "sha256": "754ddae3f68d45f2c1a0347a9903e8f013e6ce3c096bd0946510362b886fac4e",
+      "size_bytes": 104948
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-bigram-seed3/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-bigram-seed3/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-unigram-alpha05-seed1/metrics.json",
+      "sha256": "cc66e794070e8a478ad2fc3561e036fabb2138073b05f0df07a3f31a819ae497",
+      "size_bytes": 748
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-unigram-alpha05-seed1/predictions.jsonl",
+      "sha256": "f554c6d25144060daf9228d395ada2b5f7466cc45289cb50c72a3eb3ed32fffc",
+      "size_bytes": 104851
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-unigram-alpha05-seed1/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-unigram-alpha05-seed1/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-unigram-minfreq2-seed2/metrics.json",
+      "sha256": "77d35267d8d14638bf986528e30746e24c052e991f3be85ad99dc9397d7ab77b",
+      "size_bytes": 749
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-unigram-minfreq2-seed2/predictions.jsonl",
+      "sha256": "f2b577112f98e2f4dc7ae9340f0f86e47783441edc37f49e6aa9131079eab1ef",
+      "size_bytes": 104752
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-unigram-minfreq2-seed2/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-unigram-minfreq2-seed2/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-length-seed1/metrics.json",
+      "sha256": "7877bad250d68ee0eac9edefcba181a52db98ba37bbec7904b630aa1ebe5e662",
+      "size_bytes": 746
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-length-seed1/predictions.jsonl",
+      "sha256": "cd885515753628ab19368f180408f319860a5e9bda3ed143101c174dbdc99d53",
+      "size_bytes": 95835
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-length-seed1/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-length-seed1/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-lexicon-seed2/metrics.json",
+      "sha256": "768bdeece890d55877f8c452574eec207fb51f154f582b892c67ff0312fd4b38",
+      "size_bytes": 727
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-lexicon-seed2/predictions.jsonl",
+      "sha256": "8895550cc4a39406e1c4816727d35f315c69ac8618a3ae6d93f80f21f033408f",
+      "size_bytes": 98128
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-lexicon-seed2/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-lexicon-seed2/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-majority-seed0/metrics.json",
+      "sha256": "3d68ede6b12b710a81ea7b006aefff54fe82dfefb7eecb07e5d361f501b96737",
+      "size_bytes": 700
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-majority-seed0/predictions.jsonl",
+      "sha256": "bd63b3c897fee6daa089e1f9d8152ec65e6e91463385579055f26dcccc22eb05",
+      "size_bytes": 95576
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-majority-seed0/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-majority-seed0/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-unigram-seed3/metrics.json",
+      "sha256": "fe8f077ffb5248c5f62f8b79f78da8ea8b9d1c72e9c703604159cc3de24dd67a",
+      "size_bytes": 742
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-unigram-seed3/predictions.jsonl",
+      "sha256": "969edea6e0b99d30787d87e7ce6978a2b8f0c0f910fea5349dad72b7661c462d",
+      "size_bytes": 104802
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-unigram-seed3/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-unigram-seed3/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/skill_context.md",
+      "sha256": "6662be686a1915dd5c2be0400a3af35930d8851015db4e27d02bd3ed7412c320",
+      "size_bytes": 1299
+    },
+    {
+      "path": "stage-09-experiment_loop/skills_applied.json",
+      "sha256": "ba2808f8ff237131b9dbd8f792fd3f579a8d672fc427947c3e0b288c3dc519e0",
+      "size_bytes": 1282
+    },
+    {
+      "path": "stage-10-result_analysis_decision/analysis.md",
+      "sha256": "d3677714f58f0f1644a71ceab2fe7bb6b34d7e60a42f257b01bf235e5b6e49e6",
+      "size_bytes": 776
+    },
+    {
+      "path": "stage-10-result_analysis_decision/decision.md",
+      "sha256": "05892c484fe918e3923e0ad11eda8ef34f4b440475a06662d6fc167a81995a64",
+      "size_bytes": 126
+    },
+    {
+      "path": "stage-10-result_analysis_decision/hypothesis_outcomes.json",
+      "sha256": "7ddc2a10243bff2a5ada417c10c901bca856d64c71822f48b41d1d5d40c20002",
+      "size_bytes": 1008
+    },
+    {
+      "path": "stage-10-result_analysis_decision/skill_context.md",
+      "sha256": "a421f1c3e01c5a7c1fe4babdb6819c2437637d5f880ec878a31a8fdc9b67ebac",
+      "size_bytes": 1318
+    },
+    {
+      "path": "stage-10-result_analysis_decision/skills_applied.json",
+      "sha256": "4c4161f8ea406c2fbdf236afbc018d6a4a3ce771942cc3e3a1986d49ce7dd1ac",
+      "size_bytes": 1292
+    },
+    {
+      "path": "stage-11-paper_draft_revision/empirical_claims.json",
+      "sha256": "9fbe712746c79aed978fb428f4013f5cc814b6b76f5b4f4cc508e91ba480414a",
+      "size_bytes": 2543
+    },
+    {
+      "path": "stage-11-paper_draft_revision/paper_draft.md",
+      "sha256": "5a008b2f069a2f958a4bebf78ffe3ff93374bacfa27786211ce58203f109baac",
+      "size_bytes": 45070
+    },
+    {
+      "path": "stage-11-paper_draft_revision/paper_revised.md",
+      "sha256": "61cc36f8fee46ce82d5677c4d0efa4bbdc8304ccb93565e54d448557856e2250",
+      "size_bytes": 22760
+    },
+    {
+      "path": "stage-11-paper_draft_revision/reviews.md",
+      "sha256": "c4b633f0ca5842fce2d332f4d131917faeb6df7cd5bcdc57c64dd8987a85e84e",
+      "size_bytes": 311
+    },
+    {
+      "path": "stage-11-paper_draft_revision/skill_context.md",
+      "sha256": "bc4353ca9bf08576e562643f52e9f5c30b9f40668c4ac77c51ea1787882c17c8",
+      "size_bytes": 830
+    },
+    {
+      "path": "stage-11-paper_draft_revision/skills_applied.json",
+      "sha256": "c75f9c40bbaadd8cc5e0ffa3f8ad54140779f719f5804abd4d21b270cca3bbd0",
+      "size_bytes": 1239
+    },
+    {
+      "path": "stage-12-final_verification_export/bundle_index.json",
+      "sha256": "2587aceaf706497cc18a6107284ecc856563a103fc649532bf07d9b18adf0c39",
+      "size_bytes": 321
+    },
+    {
+      "path": "stage-12-final_verification_export/evidence_graph.json",
+      "sha256": "afea5152c55741f87915b09cad9928c4c900a0566966e3143f6826c3333c48e5",
+      "size_bytes": 485169
+    },
+    {
+      "path": "stage-12-final_verification_export/governance_report.json",
+      "sha256": "3490ace61db05bc3dfd8813a7894a257c1bda21e35d2a6b05070c9559818ce9a",
+      "size_bytes": 2261
+    },
+    {
+      "path": "stage-12-final_verification_export/paper.tex",
+      "sha256": "76b02cb5bdebddaee01b392f89f58e368cebc985783851b4f25c7ef99843f658",
+      "size_bytes": 23754
+    },
+    {
+      "path": "stage-12-final_verification_export/paper_evidence.json",
+      "sha256": "81931e00ce1244e3194bb689c54c7ace8a9b7ecffcbc4dc6a393524be0a93cf6",
+      "size_bytes": 4328
+    },
+    {
+      "path": "stage-12-final_verification_export/quality_report.json",
+      "sha256": "685a9380f7b304e85472ebc9a535efb3e00fd88f6b0c70def129de33a1de38ef",
+      "size_bytes": 6085
+    },
+    {
+      "path": "stage-12-final_verification_export/references.bib",
+      "sha256": "3964d5d03a8246e7e955d7238862b414878fee86fb90783fbff6da4be07739e4",
+      "size_bytes": 59597
+    },
+    {
+      "path": "stage-12-final_verification_export/skill_context.md",
+      "sha256": "cf47e7e1b220e348f09d1fa27481d3fa47dea540bb9b2a10c4a1bca07a10fc75",
+      "size_bytes": 1318
+    },
+    {
+      "path": "stage-12-final_verification_export/skills_applied.json",
+      "sha256": "347e691829275a971f8eedd6d326b57c5e60bb65561ff19cf3c18f3510065734",
+      "size_bytes": 1299
+    },
+    {
+      "path": "stage-12-final_verification_export/venue_export.json",
+      "sha256": "1567aa34a3d9d2eaf95c8877e672f965db616e7dda46cd7a867950211dd98a94",
+      "size_bytes": 170
+    },
+    {
+      "path": "stage-12-final_verification_export/verification_report.json",
+      "sha256": "d9f3228bda969a76932a10d00f98ac9a9ecec0af94d0a8358b8ebda1cca87279",
+      "size_bytes": 13502
+    }
+  ]
+}

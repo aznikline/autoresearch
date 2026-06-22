@@ -1,0 +1,28 @@
+synthetic: true
+plugin_id: data-management-mining
+protocol:
+  confirmatory: true
+  hypotheses: [h1, h2]
+  primary_metrics: [latency]
+  exclusions: [corrupt input]
+  evaluator_hash: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  stopping_rule: fixed budget
+  resource_budget: matched
+  seeds: [1, 2, 3]
+  uncertainty: bootstrap confidence interval
+  system_versions: [db-v1, db-v2]
+  schema_hash: 1111111111111111111111111111111111111111111111111111111111111111
+  workload_hash: 2222222222222222222222222222222222222222222222222222222222222222
+  scale_factor: 10
+  indexes: [primary, secondary]
+  optimizer_config: default plus tuned
+  hardware_storage: same host and NVMe
+  concurrency: 8
+  isolation_level: snapshot
+  cache_policy: cold and warm reported separately
+  warmup: five unmeasured rounds
+  repetitions: 10
+  timeout_policy: 60 seconds recorded as timeout
+  latency_distribution: [p50, p95, p99]
+  correctness_check: result checksum
+  matched_hardware: true

@@ -1,0 +1,47 @@
+project: {name: nlp-real-reference}
+research:
+  topic: Transparent sentiment baselines across Amazon IMDb and Yelp reviews
+  quality_threshold: 4.0
+  profile: natural-language-processing
+  depth: top_venue
+  target_venues: [ACL, EMNLP]
+  primary_claim_type: evaluation or information extraction method
+  venue_id: acl
+  venue_year: 2026
+  venue_track: main
+runtime:
+  artifacts_root: docs/audits/reference-work/natural-language-processing
+  max_iterations: 3
+  max_artifact_bytes: 1000000000
+llm: {mode: synthetic}
+literature:
+  mode: live
+  sources: [openalex, crossref]
+  per_source_limit: 30
+  max_retries: 2
+  timeout_sec: 30
+  queries:
+    - sentiment classification domain adaptation review datasets
+    - sentiment classification Amazon IMDb Yelp domain shift
+    - Naive Bayes sentiment classification Amazon IMDb Yelp
+    - transparent lexical sentiment baselines cross-domain reviews
+    - exact UCI sentiment labelled sentences cross-domain macro F1
+    - exact UCI Amazon IMDb Yelp sentiment bigram ablation macro F1
+    - exact UCI Amazon IMDb Yelp sentiment bigram ablation macro F1 bootstrap
+    - exact UCI Amazon IMDb Yelp sentiment bigram ablation macro F1 bootstrap fixed split
+  saturation_patience: 2
+  saturation_max_new_ratio: 0.15
+governance:
+  assets_file: reference-projects/natural-language-processing/assets.yaml
+experiment:
+  mode: local
+  evidence_mode: real
+  workspace_source: reference-projects/natural-language-processing/workspace
+  allowed_imports: [collections, hashlib, math, random, re, time]
+  code_trust: trusted_generated
+  time_budget_sec: 30
+  metric_key: primary_metric
+  metric_direction: maximize
+  total_compute_budget: eight local CPU trials, at most 30 seconds each
+hitl: {mode: gate-only}
+skills: {enabled: true, directories: [skills], max_per_stage: 3}

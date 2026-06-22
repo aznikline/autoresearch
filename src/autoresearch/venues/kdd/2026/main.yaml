@@ -1,0 +1,26 @@
+schema_version: 1
+venue_id: kdd
+display_name: KDD
+year: 2026
+track: main
+status: verified
+compatible_profiles: [data-management-mining]
+official_sources:
+  - url: https://kdd2026.kdd.org/research-track-call-for-papers/
+    retrieved_at: 2026-06-20
+    sha256: ffe5738fd4d5889d9decd380b82d4223f0899e2a2817a1fbdc3f60e5b1fcb7eb
+template:
+  identity: acmart-v2.18-sigconf
+  source_url: https://mirrors.ctan.org/macros/latex/contrib/acmart.zip
+  sha256: 312ce7036cc69e3b7416da80234bceba84601bf509078a74368889e164f77798
+policy:
+  anonymity: double_blind
+  page_limit: 8
+  supplement_allowed: true
+  checklist_required: false
+  checklist_delivery: none
+  ethics_required: false
+  limitations_required: false
+  artifact_policy: encouraged
+  required_sections: []
+valid_until: 2026-12-31

@@ -1,0 +1,22 @@
+{
+  "requirement_id": "MD-003",
+  "status": "passed",
+  "synthetic": false,
+  "credentialed": false,
+  "spec_sha256": "dec133ac1e4ab5bb0c453e4bf69371853269864584f6169ab3b849e2da80e1e6",
+  "plan_sha256": "ceefba5f08f58a47edd9797607dd590bfb25c6e79a398f3ceb481fb35796024b",
+  "artifacts": [
+    {
+      "path": "docs/audits/test-results/profile-venue-contracts.xml",
+      "sha256": "11c309361a3468fefaf4e9ba2b9e4d90492f21d1cfa8159b71c4c16490d5bc71"
+    },
+    {
+      "path": "tests/test_venue_registry.py",
+      "sha256": "8eb0f405a8b8c98c4f5cfe82e7e9a04de20a3b09cd3ab9e1a179b3b70408b9db"
+    },
+    {
+      "path": "tests/e2e/test_profile_venue_matrix.py",
+      "sha256": "8696729eeb5dc6716943f8caf54eebd3aa70c9c891f14dfc314d0745af606084"
+    }
+  ]
+}

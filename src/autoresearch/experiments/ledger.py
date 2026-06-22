@@ -14,6 +14,15 @@ class LedgerEntry:
     description: str
     reason: str
     metrics_path: str
+    run_id: str = ""
+    metric_definition: str = ""
+    experiment_spec_sha256: str = ""
+    code_sha256: str = ""
+    config_sha256: str = ""
+    protocol_fingerprint: str = ""
+    environment: str = ""
+    raw_outputs: tuple[str, ...] = ()
+    evaluator_immutable: bool = True
 
     def to_dict(self) -> dict[str, object]:
         return asdict(self)
@@ -46,6 +55,15 @@ def read_ledger(path: Path) -> list[LedgerEntry]:
                 description=str(data.get("description", "")),
                 reason=str(data.get("reason", "")),
                 metrics_path=str(data.get("metrics_path", "")),
+                run_id=str(data.get("run_id", data["trial_id"])),
+                metric_definition=str(data.get("metric_definition", "")),
+                experiment_spec_sha256=str(data.get("experiment_spec_sha256", "")),
+                code_sha256=str(data.get("code_sha256", "")),
+                config_sha256=str(data.get("config_sha256", "")),
+                protocol_fingerprint=str(data.get("protocol_fingerprint", "")),
+                environment=str(data.get("environment", "")),
+                raw_outputs=tuple(str(item) for item in data.get("raw_outputs", ())),
+                evaluator_immutable=bool(data.get("evaluator_immutable", True)),
             )
         )
     return entries

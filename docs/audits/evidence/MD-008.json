@@ -1,0 +1,38 @@
+{
+  "requirement_id": "MD-008",
+  "status": "passed",
+  "synthetic": false,
+  "credentialed": false,
+  "spec_sha256": "dec133ac1e4ab5bb0c453e4bf69371853269864584f6169ab3b849e2da80e1e6",
+  "plan_sha256": "ceefba5f08f58a47edd9797607dd590bfb25c6e79a398f3ceb481fb35796024b",
+  "artifacts": [
+    {
+      "path": "docs/audits/test-results/claim-evidence-graph.xml",
+      "sha256": "da46c137f543c86abf128a8faa310ee8992e6e9335ffebabad20e43c9bcaee3f"
+    },
+    {
+      "path": "tests/test_evidence_graph.py",
+      "sha256": "17a5f378495238181c9790dca6331e3077061b2d98ee7631b36c93bccb5e9400"
+    },
+    {
+      "path": "tests/test_paper_evidence.py",
+      "sha256": "830d8fdf8816f2ced7c6354e10ef6199fa9e454b4bc07b327187a4a9039eecac"
+    },
+    {
+      "path": "src/autoresearch/evidence/graph.py",
+      "sha256": "274538d4b805e4a3ca9ac08864967591da3017203ee3520bbca8dab17e4408cc"
+    },
+    {
+      "path": "src/autoresearch/paper/evidence.py",
+      "sha256": "6685d778643429a05c11e4be9b2934043bc4a1d9683a2844c90c566a25796eb8"
+    },
+    {
+      "path": "tests/test_citation_verification.py",
+      "sha256": "8ada72e26e288bfeeee3e39ca35f3fdcd379baef13f04df93cf15b635f76230f"
+    },
+    {
+      "path": "tests/test_claim_verification.py",
+      "sha256": "81d8fbe631dfeecfdf94fd26bf003d97699dd954d89b8e07243edc87e689a3e1"
+    }
+  ]
+}

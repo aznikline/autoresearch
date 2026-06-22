@@ -1,0 +1,1 @@
+PASS only when every normative Research Alignment Spec clause has traceable implementation and tests; all tests and skill validation pass; CLI/docs match behavior; no unsupported readiness claims remain

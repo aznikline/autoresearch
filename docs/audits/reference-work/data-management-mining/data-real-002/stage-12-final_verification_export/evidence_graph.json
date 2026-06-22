@@ -1,0 +1,3092 @@
+{
+  "nodes": [
+    {
+      "node_id": "literature:86d877c541cda884ba71917c0c46632f3913fc3637f0b5ea036742a84fce79a1",
+      "kind": "literature",
+      "sha256": "86d877c541cda884ba71917c0c46632f3913fc3637f0b5ea036742a84fce79a1",
+      "path": "",
+      "payload": {
+        "paper_id": "openalex:W3166292164",
+        "title": "MOSIQS: Persistent Memory Object Storage With Metadata Indexing and Querying for Scientific Computing",
+        "authors": [
+          "Awais Khan",
+          "Hyogi Sim",
+          "Sudharshan S. Vazhkudai",
+          "Youngjae Kim"
+        ],
+        "year": 2021,
+        "abstract": "Scientific applications often require high-bandwidth shared storage to perform joint simulations and collaborative data analytics. Shared memory pools provide a chance to satisfy such needs. Recently, a high-speed network such as Gen-Z utilizing persistent memory (PM) offers an opportunity to create a shared memory pool connected to compute nodes. However, there are several challenges to use scientific applications on the shared memory pool directly such as scalability, failure-atomicity, and lack of scientific metadata-based search and query. In this paper, we propose MOSIQS, a persistent memory object storage framework with metadata indexing and querying for scientific computing. We design MOSIQS based on the key idea that memory objects on PM pool can live beyond the application lifetime and can become the sharing currency for applications and scientists. MOSIQS provides an aggregate memory pool atop an array of persistent memory devices to store and access memory objects to accelerate scientific computing. MOSIQS uses a lightweight persistent memory key-value store to manage the metadata of memory objects, which enables memory object sharing. To facilitate metadata search and query over millions of memory objects resident on memory pool, we introduce Group Split and Merge (GSM), a novel persistent index data structure designed primarily for scientific datasets. GSM splits and merges dynamically to minimize the query search space and maintains low query processing time while overcoming the index storage overhead. MOSIQS is implemented on top of PMDK. We evaluate the proposed approach on many-core server with an array of real PM devices. Experimental results show that MOSIQS gains a 100% write performance improvement and executes multi-attribute queries efficiently with 2.7\u00d7 less index storage overhead offering significant potential to speed up scientific computing applications.",
+        "url": "https://doi.org/10.1109/access.2021.3087502",
+        "source": "openalex",
+        "venue": "IEEE Access",
+        "doi": "10.1109/access.2021.3087502",
+        "citation_key": "khan2021mosiqs"
+      }
+    },
+    {
+      "node_id": "citation:938c05f13555afb691b603035e8b3867b9e773aea03e4af2a24658e4b3b9ac6a",
+      "kind": "citation",
+      "sha256": "938c05f13555afb691b603035e8b3867b9e773aea03e4af2a24658e4b3b9ac6a",
+      "path": "",
+      "payload": {
+        "citation_key": "khan2021mosiqs"
+      }
+    },
+    {
+      "node_id": "literature:f0f22278e784d5c52190b19507c9be1c6f1c9e9ab1a00e9a484813ce32f58775",
+      "kind": "literature",
+      "sha256": "f0f22278e784d5c52190b19507c9be1c6f1c9e9ab1a00e9a484813ce32f58775",
+      "path": "",
+      "payload": {
+        "paper_id": "openalex:W4382322785",
+        "title": "AirIndex: Versatile Index Tuning Through Data and Storage",
+        "authors": [
+          "Supawit Chockchowwat",
+          "Wenjie Liu",
+          "Yongjoo Park"
+        ],
+        "year": 2023,
+        "abstract": "The end-to-end lookup latency of a hierarchical index---such as a B-tree or a learned index---is determined by its structure such as the number of layers, the kinds of branching functions appearing in each layer, the amount of data we must fetch from layers, etc. Our primary observation is that by optimizing those structural parameters (or designs) specifically to a target system's I/O characteristics (e.g., latency, bandwidth), we can offer a faster lookup compared to the ones that are not optimized. Can we develop a systematic method for finding those optimal design parameters? Ideally, the method must have the potential to generate almost any existing index or a novel combination of them for the fastest possible lookup. In this work, we present new data and an I/O-aware index builder (called AirIndex) that can find high-speed hierarchical index designs in a principled way. Specifically, AirIndex minimizes an objective function expressing the end-to-end latency in terms of various designs---the number of layers, types of layers, and more---for given data and a storage profile, using a graph-based optimization method purpose-built to address the computational challenges rising from the inter-dependencies among index layers and the exponentially many candidate parameters in a large search space. Our empirical studies confirm that AirIndex can find optimal index designs, build optimal indexes within the times comparable to existing methods, and deliver up to 4.1x faster lookup than a lightweight B-tree library (LMDB), 3.3x--46.3x faster than state-of-the-art learned indexes (RMI/CDFShop, PGM-index, ALEX/APEX, PLEX), and 2.0 faster than Data Calculator's suggestion on various dataset and storage settings.",
+        "url": "https://doi.org/10.1145/3617308",
+        "source": "openalex",
+        "venue": "Proceedings of the ACM on Management of Data",
+        "doi": "10.1145/3617308",
+        "citation_key": "chockchowwat2023airindex"
+      }
+    },
+    {
+      "node_id": "citation:2fed7e09078c8b42c4328e5389c0f5edaff7d89dfad7418a241d6621e0e31534",
+      "kind": "citation",
+      "sha256": "2fed7e09078c8b42c4328e5389c0f5edaff7d89dfad7418a241d6621e0e31534",
+      "path": "",
+      "payload": {
+        "citation_key": "chockchowwat2023airindex"
+      }
+    },
+    {
+      "node_id": "literature:aa7adc04f529aeb1dd56c4f320a085140aa562ffa773bbb04cc06cc547603008",
+      "kind": "literature",
+      "sha256": "aa7adc04f529aeb1dd56c4f320a085140aa562ffa773bbb04cc06cc547603008",
+      "path": "",
+      "payload": {
+        "paper_id": "openalex:W2896461002",
+        "title": "DART",
+        "authors": [
+          "Wei Zhang",
+          "Houjun Tang",
+          "Suren Byna",
+          "Yong Chen"
+        ],
+        "year": 2018,
+        "abstract": "Affix-based search is a fundamental functionality for storage systems. It allows users to find desired datasets, where attributes of a dataset match an affix. While building inverted index to facilitate efficient affix-based keyword search is a common practice for standalone databases and for desktop file systems, building local indexes or adopting indexing techniques used in a standalone data store is insufficient for high-performance computing (HPC) systems due to the massive amount of data and distributed nature of the storage devices within a system. In this paper, we propose Distributed Adaptive Radix Tree (DART), to address the challenge of distributed affix-based keyword search on HPC systems. This trie-based approach is scalable in achieving efficient affix-based search and alleviating imbalanced keyword distribution and excessive requests on keywords at scale. Our evaluation at different scales shows that, comparing with the \"full string hashing\" use case of the most popular distributed indexing technique - Distributed Hash Table (DHT), DART achieves up to 55\u00d7 better throughput with prefix search and with suffix search, while achieving comparable throughput with exact and infix searches. Also, comparing to the \"initial hashing\" use case of DHT, DART maintains a balanced keyword distribution on distributed nodes and alleviates excessive query workload against popular keywords.",
+        "url": "https://doi.org/10.1145/3243176.3243207",
+        "source": "openalex",
+        "venue": "",
+        "doi": "10.1145/3243176.3243207",
+        "citation_key": "zhang2018dart"
+      }
+    },
+    {
+      "node_id": "citation:66d69c4ab4b90c8d5daca780a814d1ed6e3ed50fcf9df0d20258d805df0184fd",
+      "kind": "citation",
+      "sha256": "66d69c4ab4b90c8d5daca780a814d1ed6e3ed50fcf9df0d20258d805df0184fd",
+      "path": "",
+      "payload": {
+        "citation_key": "zhang2018dart"
+      }
+    },
+    {
+      "node_id": "literature:82e59e12a6318b3bb5ad165b6210b44f27550e7b0e4ee6a942edad204d76e23d",
+      "kind": "literature",
+      "sha256": "82e59e12a6318b3bb5ad165b6210b44f27550e7b0e4ee6a942edad204d76e23d",
+      "path": "",
+      "payload": {
+        "paper_id": "openalex:W2793488776",
+        "title": "mCerebrum",
+        "authors": [
+          "Syed Monowar Hossain",
+          "Timothy Hnat",
+          "Nazir Saleheen",
+          "Nusrat Jahan Nasrin",
+          "Joseph Noor",
+          "Bo-Jhang Ho",
+          "Tyson Condie",
+          "Mani Srivastava",
+          "Santosh Kumar"
+        ],
+        "year": 2017,
+        "abstract": "The development and validation studies of new multisensory biomarkers and sensor-triggered interventions requires collecting raw sensor data with associated labels in the natural field environment. Unlike platforms for traditional mHealth apps, a software platform for such studies needs to not only support high-rate data ingestion, but also share raw high-rate sensor data with researchers, while supporting high-rate sense-analyze-act functionality in real-time. We present mCerebrum, a realization of such a platform, which supports high-rate data collections from multiple sensors with realtime assessment of data quality. A scalable storage architecture (with near optimal performance) ensures quick response despite rapidly growing data volume. Micro-batching and efficient sharing of data among multiple source and sink apps allows reuse of computations to enable real-time computation of multiple biomarkers without saturating the CPU or memory. Finally, it has a reconfigurable scheduler which manages all prompts to participants that is burden- and context-aware. With a modular design currently spanning 23+ apps, mCerebrum provides a comprehensive ecosystem of system services and utility apps. The design of mCerebrum has evolved during its concurrent use in scientific field studies at ten sites spanning 106,806 person days. Evaluations show that compared with other platforms, mCerebrum's architecture and design choices support 1.5 times higher data rates and 4.3 times higher storage throughput, while causing 8.4 times lower CPU usage.",
+        "url": "https://doi.org/10.1145/3131672.3131694",
+        "source": "openalex",
+        "venue": "",
+        "doi": "10.1145/3131672.3131694",
+        "citation_key": "hossain2017mcerebrum"
+      }
+    },
+    {
+      "node_id": "citation:df8d9c0c17dcdefd7daf594fd96d9ce303c96d9d009e32fd9aaac10b4ffcd468",
+      "kind": "citation",
+      "sha256": "df8d9c0c17dcdefd7daf594fd96d9ce303c96d9d009e32fd9aaac10b4ffcd468",
+      "path": "",
+      "payload": {
+        "citation_key": "hossain2017mcerebrum"
+      }
+    },
+    {
+      "node_id": "literature:09306b56abb7db44c6a7b5cc9e5734709fc802d7e1f506d19c1dd49e08897f10",
+      "kind": "literature",
+      "sha256": "09306b56abb7db44c6a7b5cc9e5734709fc802d7e1f506d19c1dd49e08897f10",
+      "path": "",
+      "payload": {
+        "paper_id": "openalex:W7116700259",
+        "title": "Benchmarking PHP\u2013MySQL Communication: A Comparative Study of MySQLi and PDO Under Varying Query Complexity",
+        "authors": [
+          "Neboj\u0161a Andrijevi\u0107",
+          "Zoran Lovrekovi\u0107",
+          "Had\u017eib Salki\u0107",
+          "\u0110or\u0111e \u0160ar\u010devi\u0107",
+          "Jasmina Peri\u0161i\u0107"
+        ],
+        "year": 2025,
+        "abstract": "Efficient interaction between PHP (Hypertext Preprocessor) applications and MySQL databases is essential for the performance of modern web systems. This study systematically compares the two most widely used PHP APIs for working with MySQL databases\u2014MySQLi (MySQL Improved extension) and PDO (PHP Data Objects)\u2014under identical experimental conditions. The analysis covers execution time, memory consumption, and the stability and variability of results across different types of SQL (Structured Query Language) queries (simple queries, complex JOIN, GROUP BY/HAVING). A specialized benchmarking tool was developed to collect detailed metrics over several hundred repetitions and to enable graphical and statistical evaluation. Across the full benchmark suite, MySQLi exhibits the lowest mean wall-clock execution time on average (\u224815% overall). However, under higher query complexity and in certain connection-handling regimes, PDO prepared statement modes provide competitive latency with improved predictability. These results should be interpreted as context-aware rankings for the tested single-host environment and workload design, and as a reusable benchmarking framework intended for replication under alternative deployment models. Statistical analysis (Kruskal\u2013Wallis and Mann\u2013Whitney tests) confirms significant differences between the methods, while Box-plots and histograms visualize deviations and the presence of outliers. Unlike earlier studies, this work provides a controlled and replicable benchmarking environment that tests both MySQLi and PDO across multiple API modes and isolates the impact of native versus emulated prepared statements. It also evaluates performance under complex-query workloads that reflect typical reporting and analytics patterns on the ClassicModels schema. To our knowledge, no previous study has analyzed these factors jointly or provided a reusable tool enabling transparent comparison across PHP\u2013MySQL access layers. The findings provide empirical evidence and practical guidelines for choosing the optimal API depending on the application scenario, as well as a tool that can be applied for further testing in various web environments.",
+        "url": "https://doi.org/10.3390/electronics15010021",
+        "source": "openalex",
+        "venue": "Electronics",
+        "doi": "10.3390/electronics15010021",
+        "citation_key": "andrijevi2025benchmarking"
+      }
+    },
+    {
+      "node_id": "citation:bd8bba13ed4282ebf370acb3bbb93e4cdb16d761e9de47039c6202579207452a",
+      "kind": "citation",
+      "sha256": "bd8bba13ed4282ebf370acb3bbb93e4cdb16d761e9de47039c6202579207452a",
+      "path": "",
+      "payload": {
+        "citation_key": "andrijevi2025benchmarking"
+      }
+    },
+    {
+      "node_id": "literature:95e104f3e6dcc5792878cfc78bc7a3e7336f9e912657b037733d522b9c3807cc",
+      "kind": "literature",
+      "sha256": "95e104f3e6dcc5792878cfc78bc7a3e7336f9e912657b037733d522b9c3807cc",
+      "path": "",
+      "payload": {
+        "paper_id": "openalex:W3033010671",
+        "title": "TASM: A Tile-Based Storage Manager for Video Analytics",
+        "authors": [
+          "Maureen Daum",
+          "Brandon Haynes",
+          "Dong He",
+          "Amrita Mazumdar",
+          "Magdalena Ba\u0142azi\u0144ska"
+        ],
+        "year": 2021,
+        "abstract": "Modern video data management systems store videos as a single encoded file, which significantly limits possible storage level optimizations. We design, implement, and evaluate TASM, a new tile-based storage manager for video data. TASM uses a feature in modern video codecs called \"tiles\" that enables spatial random access into encoded videos. TASM physically tunes stored videos by optimizing their tile layouts given the video content and a query workload. Additionally, TASM dynamically tunes that layout in response to changes in the query workload or if the query workload and video contents are incrementally discovered. Finally, TASM also produces efficient initial tile layouts for newly ingested videos. We demonstrate that TASM can speed up subframe selection queries by an average of over 50% and up to 94%. TASM can also improve the throughput of the full scan phase of object detection queries by up to 2\u00d7.",
+        "url": "https://doi.org/10.1109/icde51399.2021.00156",
+        "source": "openalex",
+        "venue": "",
+        "doi": "10.1109/icde51399.2021.00156",
+        "citation_key": "daum2021tasm"
+      }
+    },
+    {
+      "node_id": "citation:7076533c598c5b01e312a34d8b6b0fe346b50f0e715b0933b42a62fa71d1926b",
+      "kind": "citation",
+      "sha256": "7076533c598c5b01e312a34d8b6b0fe346b50f0e715b0933b42a62fa71d1926b",
+      "path": "",
+      "payload": {
+        "citation_key": "daum2021tasm"
+      }
+    },
+    {
+      "node_id": "literature:9f62ed673ba1b1d8697c3c09afdf3761add24e78164ea55fd71406ef1e467b7e",
+      "kind": "literature",
+      "sha256": "9f62ed673ba1b1d8697c3c09afdf3761add24e78164ea55fd71406ef1e467b7e",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.2307/j.ctvc77jrc.25",
+        "title": "Index of SQLite Commands",
+        "authors": [],
+        "year": 2019,
+        "abstract": "",
+        "url": "https://doi.org/10.2307/j.ctvc77jrc.25",
+        "source": "crossref",
+        "venue": "Computing Skills for Biologists",
+        "doi": "10.2307/j.ctvc77jrc.25",
+        "citation_key": "paper2019index"
+      }
+    },
+    {
+      "node_id": "citation:1aeca64c248d01949fa4e2350ac39632914f7bbaaec74eb6b062d265f3f3a740",
+      "kind": "citation",
+      "sha256": "1aeca64c248d01949fa4e2350ac39632914f7bbaaec74eb6b062d265f3f3a740",
+      "path": "",
+      "payload": {
+        "citation_key": "paper2019index"
+      }
+    },
+    {
+      "node_id": "literature:80cd26cdd16da802182b3bcea4435302c06e2b7538aa06c84f2ac8c87d0f0d42",
+      "kind": "literature",
+      "sha256": "80cd26cdd16da802182b3bcea4435302c06e2b7538aa06c84f2ac8c87d0f0d42",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1007/978-1-4842-3888-2_27",
+        "title": "Database Workload Optimization",
+        "authors": [
+          "Grant Fritchey"
+        ],
+        "year": 2018,
+        "abstract": "",
+        "url": "https://doi.org/10.1007/978-1-4842-3888-2_27",
+        "source": "crossref",
+        "venue": "SQL Server 2017 Query Performance Tuning",
+        "doi": "10.1007/978-1-4842-3888-2_27",
+        "citation_key": "fritchey2018database"
+      }
+    },
+    {
+      "node_id": "citation:45bf213e05b4808d087628295268dfeb82a603d13e8fe7bb173d0f35a186b5bc",
+      "kind": "citation",
+      "sha256": "45bf213e05b4808d087628295268dfeb82a603d13e8fe7bb173d0f35a186b5bc",
+      "path": "",
+      "payload": {
+        "citation_key": "fritchey2018database"
+      }
+    },
+    {
+      "node_id": "literature:1f428ccb760fe09c5c38c8f3f7b64faf0fc43a9ce9028e6fefd1288098e641fe",
+      "kind": "literature",
+      "sha256": "1f428ccb760fe09c5c38c8f3f7b64faf0fc43a9ce9028e6fefd1288098e641fe",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1016/j.is.2004.04.003",
+        "title": "An adaptive path index for XML data using the query workload",
+        "authors": [
+          "Jun-Ki Min",
+          "Chin-Wan Chung",
+          "Kyuseok Shim"
+        ],
+        "year": 2005,
+        "abstract": "",
+        "url": "https://doi.org/10.1016/j.is.2004.04.003",
+        "source": "crossref",
+        "venue": "Information Systems",
+        "doi": "10.1016/j.is.2004.04.003",
+        "citation_key": "min2005adaptive"
+      }
+    },
+    {
+      "node_id": "citation:978c96cf9d993913f7991a67018ab0a4201d701d95670485d57a8b577eaf9a78",
+      "kind": "citation",
+      "sha256": "978c96cf9d993913f7991a67018ab0a4201d701d95670485d57a8b577eaf9a78",
+      "path": "",
+      "payload": {
+        "citation_key": "min2005adaptive"
+      }
+    },
+    {
+      "node_id": "literature:67f0164973cc59021fa3d8283621fc4352f230553f3003f20c1536401a301d3b",
+      "kind": "literature",
+      "sha256": "67f0164973cc59021fa3d8283621fc4352f230553f3003f20c1536401a301d3b",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.2139/ssrn.6144506",
+        "title": "AI-Based Automated SQL Query Generation for SQLite Databases in Mobile Forensics",
+        "authors": [
+          "Dirk Pawlaszczyk",
+          "Ronny Bodach",
+          "Christian Hummert",
+          "Dirk Labudde",
+          "Philipp Engler",
+          "Micheal Spranger",
+          "Jan Kolouch"
+        ],
+        "year": 2026,
+        "abstract": "",
+        "url": "https://doi.org/10.2139/ssrn.6144506",
+        "source": "crossref",
+        "venue": "",
+        "doi": "10.2139/ssrn.6144506",
+        "citation_key": "pawlaszczyk2026aibased"
+      }
+    },
+    {
+      "node_id": "citation:a6f21143d65e7bfc5e5d8d228b83efad0d726aef38fd2dbf04f62fbc89f4dc67",
+      "kind": "citation",
+      "sha256": "a6f21143d65e7bfc5e5d8d228b83efad0d726aef38fd2dbf04f62fbc89f4dc67",
+      "path": "",
+      "payload": {
+        "citation_key": "pawlaszczyk2026aibased"
+      }
+    },
+    {
+      "node_id": "literature:de31b11a197b3e784a456aa229cdc7b1f25a76bb3ce0ba1c4f0d2e509b4d5516",
+      "kind": "literature",
+      "sha256": "de31b11a197b3e784a456aa229cdc7b1f25a76bb3ce0ba1c4f0d2e509b4d5516",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.32614/cran.package.snowquery",
+        "title": "snowquery: SQL Interface to 'Snowflake', 'Redshift', 'Postgres', 'SQLite', and 'DuckDB'",
+        "authors": [
+          "Dani Mermelstein"
+        ],
+        "year": 2023,
+        "abstract": "",
+        "url": "https://doi.org/10.32614/cran.package.snowquery",
+        "source": "crossref",
+        "venue": "CRAN: Contributed Packages",
+        "doi": "10.32614/cran.package.snowquery",
+        "citation_key": "mermelstein2023snowquery"
+      }
+    },
+    {
+      "node_id": "citation:f20ec754ef59b9802a4e41b5cce1a4f84a598bac6045c48fbd4aa472e9a6ec2f",
+      "kind": "citation",
+      "sha256": "f20ec754ef59b9802a4e41b5cce1a4f84a598bac6045c48fbd4aa472e9a6ec2f",
+      "path": "",
+      "payload": {
+        "citation_key": "mermelstein2023snowquery"
+      }
+    },
+    {
+      "node_id": "literature:f444bb459e3eaa7c8d2593ccabcb31f06fddf2dc0e397a8bde5ea7b457d5bcaf",
+      "kind": "literature",
+      "sha256": "f444bb459e3eaa7c8d2593ccabcb31f06fddf2dc0e397a8bde5ea7b457d5bcaf",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1016/j.is.2005.09.001",
+        "title": "Erratum to: \u201cAn adaptive path index for XML data using the query workload\u201d",
+        "authors": [
+          "Jun-Ki Min",
+          "Chin-Wan Chung",
+          "Kyuseok Shim"
+        ],
+        "year": 2006,
+        "abstract": "",
+        "url": "https://doi.org/10.1016/j.is.2005.09.001",
+        "source": "crossref",
+        "venue": "Information Systems",
+        "doi": "10.1016/j.is.2005.09.001",
+        "citation_key": "min2006erratum"
+      }
+    },
+    {
+      "node_id": "citation:00d9efefffd1854dbcdde7f018f75779514e182062c152dcd40acfdb338896d6",
+      "kind": "citation",
+      "sha256": "00d9efefffd1854dbcdde7f018f75779514e182062c152dcd40acfdb338896d6",
+      "path": "",
+      "payload": {
+        "citation_key": "min2006erratum"
+      }
+    },
+    {
+      "node_id": "literature:91351699bb0b910a464cbf152a8e1a050cee4b5ac0b4b38d1fef73b8bf54be02",
+      "kind": "literature",
+      "sha256": "91351699bb0b910a464cbf152a8e1a050cee4b5ac0b4b38d1fef73b8bf54be02",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1007/978-1-4302-1903-3_15",
+        "title": "Database Workload Optimization",
+        "authors": [],
+        "year": 2009,
+        "abstract": "",
+        "url": "https://doi.org/10.1007/978-1-4302-1903-3_15",
+        "source": "crossref",
+        "venue": "SQL Server 2008 Query Performance Tuning Distilled",
+        "doi": "10.1007/978-1-4302-1903-3_15",
+        "citation_key": "paper2009database"
+      }
+    },
+    {
+      "node_id": "citation:7a42f808c27a6a42faa56f91d5a57e77f5111b10bc4f86bdbbb1ae26b1cbb02a",
+      "kind": "citation",
+      "sha256": "7a42f808c27a6a42faa56f91d5a57e77f5111b10bc4f86bdbbb1ae26b1cbb02a",
+      "path": "",
+      "payload": {
+        "citation_key": "paper2009database"
+      }
+    },
+    {
+      "node_id": "literature:3d731d9b956012b4e9e5d1b1275b0388ff9077af2fe0dc2b645c8ab915050d73",
+      "kind": "literature",
+      "sha256": "3d731d9b956012b4e9e5d1b1275b0388ff9077af2fe0dc2b645c8ab915050d73",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1007/978-1-4302-6742-3_25",
+        "title": "Database Workload Optimization",
+        "authors": [
+          "Grant Fritchey"
+        ],
+        "year": 2014,
+        "abstract": "",
+        "url": "https://doi.org/10.1007/978-1-4302-6742-3_25",
+        "source": "crossref",
+        "venue": "SQL Server Query Performance Tuning",
+        "doi": "10.1007/978-1-4302-6742-3_25",
+        "citation_key": "fritchey2014database"
+      }
+    },
+    {
+      "node_id": "citation:a795bab7c5a4c1ba32e63766157d83d005507905b250d2eda18c5ae04e626775",
+      "kind": "citation",
+      "sha256": "a795bab7c5a4c1ba32e63766157d83d005507905b250d2eda18c5ae04e626775",
+      "path": "",
+      "payload": {
+        "citation_key": "fritchey2014database"
+      }
+    },
+    {
+      "node_id": "literature:e0d6ff2d4c6025353bb753d8dc1968a6841fdc7de2b4c0e3f0188a488134bafc",
+      "kind": "literature",
+      "sha256": "e0d6ff2d4c6025353bb753d8dc1968a6841fdc7de2b4c0e3f0188a488134bafc",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.21275/v5i5.nov163902",
+        "title": "Text Document Annotation and Retrieval Based on Content of the Document and Query Workload",
+        "authors": [],
+        "year": 2016,
+        "abstract": "",
+        "url": "https://doi.org/10.21275/v5i5.nov163902",
+        "source": "crossref",
+        "venue": "International Journal of Science and Research (IJSR)",
+        "doi": "10.21275/v5i5.nov163902",
+        "citation_key": "paper2016text"
+      }
+    },
+    {
+      "node_id": "citation:6cff27ea26866308dfb83842ac26ae292ec415d8969bb60a60d4882b7cd095ec",
+      "kind": "citation",
+      "sha256": "6cff27ea26866308dfb83842ac26ae292ec415d8969bb60a60d4882b7cd095ec",
+      "path": "",
+      "payload": {
+        "citation_key": "paper2016text"
+      }
+    },
+    {
+      "node_id": "literature:c18302576daee0cfa305d7dde88819614a20fe2dd40d1bd4188cf9d36f43859b",
+      "kind": "literature",
+      "sha256": "c18302576daee0cfa305d7dde88819614a20fe2dd40d1bd4188cf9d36f43859b",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1007/978-1-4302-0172-4_1",
+        "title": "Introducing SQLite",
+        "authors": [],
+        "year": null,
+        "abstract": "",
+        "url": "https://doi.org/10.1007/978-1-4302-0172-4_1",
+        "source": "crossref",
+        "venue": "The Definitive Guide to SQLite",
+        "doi": "10.1007/978-1-4302-0172-4_1",
+        "citation_key": "paperndintroducing"
+      }
+    },
+    {
+      "node_id": "citation:20df9fcd2f0df64ba229ba18557745bfdb9f699717e9c542db47d8fd7034e999",
+      "kind": "citation",
+      "sha256": "20df9fcd2f0df64ba229ba18557745bfdb9f699717e9c542db47d8fd7034e999",
+      "path": "",
+      "payload": {
+        "citation_key": "paperndintroducing"
+      }
+    },
+    {
+      "node_id": "literature:1a0c4d5e083e9b415500246abc78acfb57aeb0f14e7b0789d4de35b1dd6db7d8",
+      "kind": "literature",
+      "sha256": "1a0c4d5e083e9b415500246abc78acfb57aeb0f14e7b0789d4de35b1dd6db7d8",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.5220/0014799100004030",
+        "title": "Driving through the Network: Performance and Workload under Latency and Video Impairments",
+        "authors": [
+          "Ines Trautmannsheimer",
+          "Ahmed Azab",
+          "Frank Diermeyer"
+        ],
+        "year": 2026,
+        "abstract": "",
+        "url": "https://doi.org/10.5220/0014799100004030",
+        "source": "crossref",
+        "venue": "Proceedings of the 12th International Conference on Vehicle Technology and Intelligent Transport Systems",
+        "doi": "10.5220/0014799100004030",
+        "citation_key": "trautmannsheimer2026driving"
+      }
+    },
+    {
+      "node_id": "citation:1b935666bdafc30ba981e1b9970c795106bcd676ff73b8a519bad8adc028f65c",
+      "kind": "citation",
+      "sha256": "1b935666bdafc30ba981e1b9970c795106bcd676ff73b8a519bad8adc028f65c",
+      "path": "",
+      "payload": {
+        "citation_key": "trautmannsheimer2026driving"
+      }
+    },
+    {
+      "node_id": "literature:2efd94b610817aa2d8ee0c64c8666055e075a3bc5aba77e286e9104d4b92112f",
+      "kind": "literature",
+      "sha256": "2efd94b610817aa2d8ee0c64c8666055e075a3bc5aba77e286e9104d4b92112f",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1587/transinf.e96.d.643",
+        "title": "ATTI: Workload-Aware Query Adaptive OcTree Based Trajectory Index",
+        "authors": [
+          "Xiangxu MENG",
+          "Xiaodong WANG",
+          "Xinye LIN"
+        ],
+        "year": 2013,
+        "abstract": "",
+        "url": "https://doi.org/10.1587/transinf.e96.d.643",
+        "source": "crossref",
+        "venue": "IEICE Transactions on Information and Systems",
+        "doi": "10.1587/transinf.e96.d.643",
+        "citation_key": "meng2013atti"
+      }
+    },
+    {
+      "node_id": "citation:4b56a4ea55b09e5039a778877d97333a7d41311ef471a2938aaf3e94ff590bf8",
+      "kind": "citation",
+      "sha256": "4b56a4ea55b09e5039a778877d97333a7d41311ef471a2938aaf3e94ff590bf8",
+      "path": "",
+      "payload": {
+        "citation_key": "meng2013atti"
+      }
+    },
+    {
+      "node_id": "literature:6295f859c5bcc5b2551dcaec3e68f660f52e1293751eeaf6aafa09ed2df3dbcd",
+      "kind": "literature",
+      "sha256": "6295f859c5bcc5b2551dcaec3e68f660f52e1293751eeaf6aafa09ed2df3dbcd",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1109/p2p.2008.34",
+        "title": "Query Workload Driven Summarization for P2P Query Routing",
+        "authors": [
+          "Linh Thai Nguyen",
+          "Wai Gen Yee",
+          "Ophir Frieder"
+        ],
+        "year": 2008,
+        "abstract": "",
+        "url": "https://doi.org/10.1109/p2p.2008.34",
+        "source": "crossref",
+        "venue": "2008 Eighth International Conference on Peer-to-Peer Computing",
+        "doi": "10.1109/p2p.2008.34",
+        "citation_key": "nguyen2008query"
+      }
+    },
+    {
+      "node_id": "citation:149e5cb134861e8953a1e3a92cb8d4223dfffd2fa600ecab56b783dfd07ead7c",
+      "kind": "citation",
+      "sha256": "149e5cb134861e8953a1e3a92cb8d4223dfffd2fa600ecab56b783dfd07ead7c",
+      "path": "",
+      "payload": {
+        "citation_key": "nguyen2008query"
+      }
+    },
+    {
+      "node_id": "literature:abf8d27dc28d4d4a44665bbc57b3c6f7af1658d37f32ea9525a6b2f2a08c9b12",
+      "kind": "literature",
+      "sha256": "abf8d27dc28d4d4a44665bbc57b3c6f7af1658d37f32ea9525a6b2f2a08c9b12",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1007/978-1-4302-4204-8_16",
+        "title": "Database Workload Optimization",
+        "authors": [
+          "Grant Fritchey"
+        ],
+        "year": 2012,
+        "abstract": "",
+        "url": "https://doi.org/10.1007/978-1-4302-4204-8_16",
+        "source": "crossref",
+        "venue": "SQL Server 2012 Query Performance Tuning",
+        "doi": "10.1007/978-1-4302-4204-8_16",
+        "citation_key": "fritchey2012database"
+      }
+    },
+    {
+      "node_id": "citation:a3989e930684d09e4368c7a7cf2c0a85d66cec55ca6b43496419a9da54bc6787",
+      "kind": "citation",
+      "sha256": "a3989e930684d09e4368c7a7cf2c0a85d66cec55ca6b43496419a9da54bc6787",
+      "path": "",
+      "payload": {
+        "citation_key": "fritchey2012database"
+      }
+    },
+    {
+      "node_id": "literature:84409f980517bec0b5c82ab56fbb9b25bce6f3eee6ed79406dcdc635fbdaf757",
+      "kind": "literature",
+      "sha256": "84409f980517bec0b5c82ab56fbb9b25bce6f3eee6ed79406dcdc635fbdaf757",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1007/978-1-4302-0172-4_9",
+        "title": "SQLite Internals",
+        "authors": [],
+        "year": null,
+        "abstract": "",
+        "url": "https://doi.org/10.1007/978-1-4302-0172-4_9",
+        "source": "crossref",
+        "venue": "The Definitive Guide to SQLite",
+        "doi": "10.1007/978-1-4302-0172-4_9",
+        "citation_key": "paperndsqlite"
+      }
+    },
+    {
+      "node_id": "citation:f2da4261a665229d5757b2448f9286fcba308cf49a55c42dbfcc2b5696a5af2d",
+      "kind": "citation",
+      "sha256": "f2da4261a665229d5757b2448f9286fcba308cf49a55c42dbfcc2b5696a5af2d",
+      "path": "",
+      "payload": {
+        "citation_key": "paperndsqlite"
+      }
+    },
+    {
+      "node_id": "literature:9a3bd8c2163ae8f2e0da7ade089673b30cf0af70ad5caa18b3d18cb84fa2c590",
+      "kind": "literature",
+      "sha256": "9a3bd8c2163ae8f2e0da7ade089673b30cf0af70ad5caa18b3d18cb84fa2c590",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.14257/ijdta.2016.9.4.22",
+        "title": "Research on SQLite Database Query Optimization Based on Improved PSO Algorithm",
+        "authors": [
+          "Aite Zhao",
+          "Zhiqiang Wei",
+          "Yongquan Yang"
+        ],
+        "year": 2016,
+        "abstract": "",
+        "url": "https://doi.org/10.14257/ijdta.2016.9.4.22",
+        "source": "crossref",
+        "venue": "International Journal of Database Theory and Application",
+        "doi": "10.14257/ijdta.2016.9.4.22",
+        "citation_key": "zhao2016research"
+      }
+    },
+    {
+      "node_id": "citation:1af928262551870079828b1b70818f5d2e5b3a26cf3e0871ec8a5e8c68f97e78",
+      "kind": "citation",
+      "sha256": "1af928262551870079828b1b70818f5d2e5b3a26cf3e0871ec8a5e8c68f97e78",
+      "path": "",
+      "payload": {
+        "citation_key": "zhao2016research"
+      }
+    },
+    {
+      "node_id": "literature:f2e1a515a4d4e7dce382d2b85d38abd0b0511efcd245f447f63efe83ee88b9d6",
+      "kind": "literature",
+      "sha256": "f2e1a515a4d4e7dce382d2b85d38abd0b0511efcd245f447f63efe83ee88b9d6",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.70675/13ffa7b8z5860z4a2aza67ezcda408e1071f",
+        "title": "A Cost-Effective Query Optimizer for Multi-Tenant Parallel RDBMSs Leveraging Workload Prediction",
+        "authors": [
+          "",
+          "Mira El Danaoui"
+        ],
+        "year": null,
+        "abstract": "Un optimiseur de requ\u00eates rentable pour des SGBDRs parall\u00e8les multi-locataires exploitant la pr\u00e9diction de charges de travail Dans le domaine du \"Database-as-a-Service\" (DBaaS), la multi location (multi-tenancy) est devenue un concept cl\u00e9, permettant \u00e0 une seule instance de base de donn\u00e9es d'\u00eatre partag\u00e9e entre plusieurs locataires. Au sein d'un SGBDR parall\u00e8le multi-locataires, de nombreux locataires peuvent soumettre des requ\u00eates SQL en parall\u00e8le, chacune associ\u00e9e \u00e0 un SLO (Service Level Objective). Toute violation de ces SLOs entra\u00eene des p\u00e9nalit\u00e9s pour le fournisseur. Ainsi, le SGBDR, responsable de l'int\u00e9r\u00eat \u00e0 long terme du fournisseur, doit trouver un compromis entre les co\u00fbts financiers li\u00e9s \u00e0 la consommation des ressources et la satisfaction des SLOs. Ce compromis doit \u00eatre bien \u00e9valu\u00e9 \u00e0 cause de l'instabilit\u00e9 des charges de travail dans les environnements multi-locataires. \u00c9tant donn\u00e9 cette instabilit\u00e9, ainsi que la n\u00e9cessit\u00e9 de respecter des objectifs de performance stricts SLOs, des strat\u00e9gies d'optimisation des requ\u00eates innovantes sont requises. Ces strat\u00e9gies doivent \u00eatre adapt\u00e9es aux besoins sp\u00e9cifiques des environnements multi-locataires tout en garantissant la rentabilit\u00e9 du fournisseur de services. Tout d'abord, nous avons d\u00e9velopp\u00e9 une strat\u00e9gie de s\u00e9lection de plan d'ex\u00e9cution qui adapte l'objectif d'optimisation en fonction de la charge de travail. Cette information sur la charge de travail est fournie par le gestionnaire de file d'attente, un nouveau composant int\u00e9gr\u00e9 dans l'optimiseur de requ\u00eates, qui contr\u00f4le \u00e0 la fois la planification des plans d'ex\u00e9cution s\u00e9lectionn\u00e9s et l'allocation de ressources. De plus, nous avons introduit une strat\u00e9gie de segmentation de plan d'ex\u00e9cution. Celle-ci permet de segmenter les plans d'ex\u00e9cution de longue dur\u00e9e en sous-plans tout en limitant la sur-segmentation et les co\u00fbts suppl\u00e9mentaires associ\u00e9s. Ensuite, nous avons d\u00e9velopp\u00e9 un syst\u00e8me de gestion de pr\u00e9diction de la charge de travail (ou Gestionnaire de Pr\u00e9diction) au sein de l'optimiseur de requ\u00eates. L'objectif principal de ce gestionnaire est de pr\u00e9dire de mani\u00e8re continue la charge de travail \u00e0 venir et de rendre ces informations accessibles \u00e0 l'optimiseur. Cela contribue \u00e0 une strat\u00e9gie de s\u00e9lection de plan d'ex\u00e9cution plus affin\u00e9e, notamment lorsque la charge de travail des requ\u00eates peut fluctuer significativement \u00e0 court terme. Ainsi, cela permet \u00e0 l'optimiseur de requ\u00eates de d\u00e9cider quand et quel plan d'ex\u00e9cution s\u00e9lectionner, tout en tenant compte des SLOs. Les r\u00e9sultats exp\u00e9rimentaux ont montr\u00e9 que la premi\u00e8re strat\u00e9gie de s\u00e9lection de plan d'ex\u00e9cution propos\u00e9e utilisant le syst\u00e8me de gestion de file d'attente, ainsi que la strat\u00e9gie de s\u00e9lection de plan d'ex\u00e9cution am\u00e9lior\u00e9e, ont permis d'obtenir une grande efficacit\u00e9 en termes de profit \u00e0 long terme pour le fournisseur, par rapport aux strat\u00e9gies existantes dans la litt\u00e9rature.",
+        "url": "https://doi.org/10.70675/13ffa7b8z5860z4a2aza67ezcda408e1071f",
+        "source": "crossref",
+        "venue": "",
+        "doi": "10.70675/13ffa7b8z5860z4a2aza67ezcda408e1071f",
+        "citation_key": "danaouindcosteffective"
+      }
+    },
+    {
+      "node_id": "citation:72f6f18c6b358f1f382a23b5797cb8babe8f0f6045042206d262ba1033cd09af",
+      "kind": "citation",
+      "sha256": "72f6f18c6b358f1f382a23b5797cb8babe8f0f6045042206d262ba1033cd09af",
+      "path": "",
+      "payload": {
+        "citation_key": "danaouindcosteffective"
+      }
+    },
+    {
+      "node_id": "literature:a596c467b6c8e1aa3e22413009b182b82dde5361939c1ac747f39b60a1023bbb",
+      "kind": "literature",
+      "sha256": "a596c467b6c8e1aa3e22413009b182b82dde5361939c1ac747f39b60a1023bbb",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1007/978-1-4302-3226-1_11",
+        "title": "SQLite Internals and New Features",
+        "authors": [
+          "Grant Allen",
+          "Mike Owens"
+        ],
+        "year": 2010,
+        "abstract": "",
+        "url": "https://doi.org/10.1007/978-1-4302-3226-1_11",
+        "source": "crossref",
+        "venue": "The Definitive Guide to SQLite",
+        "doi": "10.1007/978-1-4302-3226-1_11",
+        "citation_key": "allen2010sqlite"
+      }
+    },
+    {
+      "node_id": "citation:539aecc30ba13f80ef610905b4abc71e73cb20bf6859ad23abad05fd512cfdec",
+      "kind": "citation",
+      "sha256": "539aecc30ba13f80ef610905b4abc71e73cb20bf6859ad23abad05fd512cfdec",
+      "path": "",
+      "payload": {
+        "citation_key": "allen2010sqlite"
+      }
+    },
+    {
+      "node_id": "literature:2fd9849a6f704d53748ea3dbcbac8c01ed14217c432c39d6d9e5e0601177cd01",
+      "kind": "literature",
+      "sha256": "2fd9849a6f704d53748ea3dbcbac8c01ed14217c432c39d6d9e5e0601177cd01",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.32614/cran.package.adbcsqlite",
+        "title": "adbcsqlite: 'Arrow' Database Connectivity ('ADBC') 'SQLite' Driver",
+        "authors": [
+          "Dewey Dunnington",
+          ""
+        ],
+        "year": 2023,
+        "abstract": "",
+        "url": "https://doi.org/10.32614/cran.package.adbcsqlite",
+        "source": "crossref",
+        "venue": "CRAN: Contributed Packages",
+        "doi": "10.32614/cran.package.adbcsqlite",
+        "citation_key": "dunnington2023adbcsqlite"
+      }
+    },
+    {
+      "node_id": "citation:2cf3a2f329958f52bf7f6b8fdeb71ad309874aafb509846f5da8ce95d8ef3bda",
+      "kind": "citation",
+      "sha256": "2cf3a2f329958f52bf7f6b8fdeb71ad309874aafb509846f5da8ce95d8ef3bda",
+      "path": "",
+      "payload": {
+        "citation_key": "dunnington2023adbcsqlite"
+      }
+    },
+    {
+      "node_id": "literature:3da96aade870b0fa94affa281d9e9a76c1cc35ba77b4cd786202a16f98786bde",
+      "kind": "literature",
+      "sha256": "3da96aade870b0fa94affa281d9e9a76c1cc35ba77b4cd786202a16f98786bde",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1007/978-1-4842-2232-4_12",
+        "title": "Analyzing SQLite Databases",
+        "authors": [
+          "Kevin Languedoc"
+        ],
+        "year": 2016,
+        "abstract": "",
+        "url": "https://doi.org/10.1007/978-1-4842-2232-4_12",
+        "source": "crossref",
+        "venue": "Build iOS Database Apps with Swift and SQLite",
+        "doi": "10.1007/978-1-4842-2232-4_12",
+        "citation_key": "languedoc2016analyzing"
+      }
+    },
+    {
+      "node_id": "citation:7f759012d4d076865dc36c66422edb037feec623c441dd7073b74746ffd901c9",
+      "kind": "citation",
+      "sha256": "7f759012d4d076865dc36c66422edb037feec623c441dd7073b74746ffd901c9",
+      "path": "",
+      "payload": {
+        "citation_key": "languedoc2016analyzing"
+      }
+    },
+    {
+      "node_id": "literature:0a907f6cb39c27a251c561a304e4ad485e564d3713ead2773c2f4f68277dec24",
+      "kind": "literature",
+      "sha256": "0a907f6cb39c27a251c561a304e4ad485e564d3713ead2773c2f4f68277dec24",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.70729/ijser15987",
+        "title": "Decentralized, Energy-Efficient, Low Latency and Less Homogeneous Settings based Workload Management in Enterprise Clouds",
+        "authors": [
+          "M Bhuvaneshwari",
+          "J Yogapriya"
+        ],
+        "year": 2016,
+        "abstract": "",
+        "url": "https://doi.org/10.70729/ijser15987",
+        "source": "crossref",
+        "venue": "International Journal of Scientific Engineering and Research",
+        "doi": "10.70729/ijser15987",
+        "citation_key": "bhuvaneshwari2016decentralized"
+      }
+    },
+    {
+      "node_id": "citation:1768b52dcd4a88e1d98bc06b1381d0a3533c26742bcbe3e1e4f2d028e9550e9d",
+      "kind": "citation",
+      "sha256": "1768b52dcd4a88e1d98bc06b1381d0a3533c26742bcbe3e1e4f2d028e9550e9d",
+      "path": "",
+      "payload": {
+        "citation_key": "bhuvaneshwari2016decentralized"
+      }
+    },
+    {
+      "node_id": "literature:7383da5afb5981d7d6ee251b8f150b9a707d8b2a6e469010eafc9842c44a6f9c",
+      "kind": "literature",
+      "sha256": "7383da5afb5981d7d6ee251b8f150b9a707d8b2a6e469010eafc9842c44a6f9c",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1007/978-1-4842-1766-5_6",
+        "title": "Using SQLite with PHP",
+        "authors": [
+          "Jesse Feiler"
+        ],
+        "year": 2015,
+        "abstract": "",
+        "url": "https://doi.org/10.1007/978-1-4842-1766-5_6",
+        "source": "crossref",
+        "venue": "Introducing SQLite for Mobile Developers",
+        "doi": "10.1007/978-1-4842-1766-5_6",
+        "citation_key": "feiler2015using"
+      }
+    },
+    {
+      "node_id": "citation:1befb2a52f48e685dac6af86c2091a45e530908d6150687bcf0bd536ffb150ec",
+      "kind": "citation",
+      "sha256": "1befb2a52f48e685dac6af86c2091a45e530908d6150687bcf0bd536ffb150ec",
+      "path": "",
+      "payload": {
+        "citation_key": "feiler2015using"
+      }
+    },
+    {
+      "node_id": "literature:2884d6baf9937971854c6d068a903f1e3b802d44eab3ea62a067f9ae2b95e146",
+      "kind": "literature",
+      "sha256": "2884d6baf9937971854c6d068a903f1e3b802d44eab3ea62a067f9ae2b95e146",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1109/ispan.2002.1004299",
+        "title": "Parallel selection query processing involving index in parallel database systems",
+        "authors": [
+          "J.W. Rahayu",
+          "D. Taniar"
+        ],
+        "year": null,
+        "abstract": "",
+        "url": "https://doi.org/10.1109/ispan.2002.1004299",
+        "source": "crossref",
+        "venue": "Proceedings International Symposium on Parallel Architectures, Algorithms and Networks. I-SPAN'02",
+        "doi": "10.1109/ispan.2002.1004299",
+        "citation_key": "rahayundparallel"
+      }
+    },
+    {
+      "node_id": "citation:b54cb0beef5d4bfc11a724620ba0076aad8ffbae0477d2c0235e42dce062632d",
+      "kind": "citation",
+      "sha256": "b54cb0beef5d4bfc11a724620ba0076aad8ffbae0477d2c0235e42dce062632d",
+      "path": "",
+      "payload": {
+        "citation_key": "rahayundparallel"
+      }
+    },
+    {
+      "node_id": "literature:6aca0ba7b60c38648a8932dfe3b388ac2627ccef98b512b393acdb8d5a8fe984",
+      "kind": "literature",
+      "sha256": "6aca0ba7b60c38648a8932dfe3b388ac2627ccef98b512b393acdb8d5a8fe984",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1145/2513228.2513253",
+        "title": "Index selection",
+        "authors": [
+          "Junping Sun",
+          "Jiman Hong"
+        ],
+        "year": 2013,
+        "abstract": "",
+        "url": "https://doi.org/10.1145/2513228.2513253",
+        "source": "crossref",
+        "venue": "Proceedings of the 2013 Research in Adaptive and Convergent Systems",
+        "doi": "10.1145/2513228.2513253",
+        "citation_key": "sun2013index"
+      }
+    },
+    {
+      "node_id": "citation:7ab75b7836cd5985597a489e2a97330d4f1f5a75d23656104d03dcd9b9681edd",
+      "kind": "citation",
+      "sha256": "7ab75b7836cd5985597a489e2a97330d4f1f5a75d23656104d03dcd9b9681edd",
+      "path": "",
+      "payload": {
+        "citation_key": "sun2013index"
+      }
+    },
+    {
+      "node_id": "literature:73c67ada18bf5605bdb273ebcf0a47bcd89feb3b06526975ab9314eaa83aa45b",
+      "kind": "literature",
+      "sha256": "73c67ada18bf5605bdb273ebcf0a47bcd89feb3b06526975ab9314eaa83aa45b",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.2139/ssrn.4896273",
+        "title": "A Copula-Based Sample Selection Binary Choice Model for Difference Analysis Among Private Bike and Bike Sharing in Lyon (France)",
+        "authors": [
+          "Nathalie Havet",
+          "Louafi BOUZOUINA"
+        ],
+        "year": 2024,
+        "abstract": "",
+        "url": "https://doi.org/10.2139/ssrn.4896273",
+        "source": "crossref",
+        "venue": "",
+        "doi": "10.2139/ssrn.4896273",
+        "citation_key": "havet2024copulabased"
+      }
+    },
+    {
+      "node_id": "citation:35b8f52dd29896704c811e7ce498ab174b442b8d85c03163e5de84750724fcd8",
+      "kind": "citation",
+      "sha256": "35b8f52dd29896704c811e7ce498ab174b442b8d85c03163e5de84750724fcd8",
+      "path": "",
+      "payload": {
+        "citation_key": "havet2024copulabased"
+      }
+    },
+    {
+      "node_id": "literature:316c2cfc99d5a17012896e6a48a92fa2d3e562d50d8f9fa67a34179219c35640",
+      "kind": "literature",
+      "sha256": "316c2cfc99d5a17012896e6a48a92fa2d3e562d50d8f9fa67a34179219c35640",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1515/9780295805993-015",
+        "title": "Index",
+        "authors": [],
+        "year": 2015,
+        "abstract": "",
+        "url": "https://doi.org/10.1515/9780295805993-015",
+        "source": "crossref",
+        "venue": "Bike Battles",
+        "doi": "10.1515/9780295805993-015",
+        "citation_key": "paper2015index"
+      }
+    },
+    {
+      "node_id": "citation:144ea5f7c5a0f737362f0d503747b9f0ddbc888af28e3bb68a083d7cfbbcf1b8",
+      "kind": "citation",
+      "sha256": "144ea5f7c5a0f737362f0d503747b9f0ddbc888af28e3bb68a083d7cfbbcf1b8",
+      "path": "",
+      "payload": {
+        "citation_key": "paper2015index"
+      }
+    },
+    {
+      "node_id": "literature:72d06b13bb3f65f5663fc648e9c51baffba5a308266e910c6bab520117d8ec6c",
+      "kind": "literature",
+      "sha256": "72d06b13bb3f65f5663fc648e9c51baffba5a308266e910c6bab520117d8ec6c",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.2139/ssrn.4059129",
+        "title": "Large-Scale Dockless Bike Sharing Repositioning Considering Future Usage and Workload Balance",
+        "authors": [
+          "Mingzhuang Hua",
+          "Xuewu Chen",
+          "Jingxu Chen",
+          "Di Huang",
+          "Long Cheng"
+        ],
+        "year": 2022,
+        "abstract": "",
+        "url": "https://doi.org/10.2139/ssrn.4059129",
+        "source": "crossref",
+        "venue": "SSRN Electronic Journal",
+        "doi": "10.2139/ssrn.4059129",
+        "citation_key": "hua2022largescale"
+      }
+    },
+    {
+      "node_id": "citation:38f5018037e4fd7f1e7c0d8f7e23d2d45abaa03689cf731b8f8710f6f26c4292",
+      "kind": "citation",
+      "sha256": "38f5018037e4fd7f1e7c0d8f7e23d2d45abaa03689cf731b8f8710f6f26c4292",
+      "path": "",
+      "payload": {
+        "citation_key": "hua2022largescale"
+      }
+    },
+    {
+      "node_id": "literature:42901b4d8ea2d7bdad0af4889ea484c469f2ca8e0809d7ffa17d58b07fc7afab",
+      "kind": "literature",
+      "sha256": "42901b4d8ea2d7bdad0af4889ea484c469f2ca8e0809d7ffa17d58b07fc7afab",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.26128/2023.32",
+        "title": "Bike Sharing Systems",
+        "authors": [],
+        "year": 2012,
+        "abstract": "",
+        "url": "https://doi.org/10.26128/2023.32",
+        "source": "crossref",
+        "venue": "",
+        "doi": "10.26128/2023.32",
+        "citation_key": "paper2012bike"
+      }
+    },
+    {
+      "node_id": "citation:2c08301fb8741929d5476d449054de6607a29e15b5e7aa2ef71c945875995e35",
+      "kind": "citation",
+      "sha256": "2c08301fb8741929d5476d449054de6607a29e15b5e7aa2ef71c945875995e35",
+      "path": "",
+      "payload": {
+        "citation_key": "paper2012bike"
+      }
+    },
+    {
+      "node_id": "literature:6ead6e15ab944a311720023577769912d2eaed79deb6b90abbaa1da35eca59c0",
+      "kind": "literature",
+      "sha256": "6ead6e15ab944a311720023577769912d2eaed79deb6b90abbaa1da35eca59c0",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.3233/faia230447",
+        "title": "Dynamic Workload-Aware Bike Rebalancing for Bike-Sharing Systems",
+        "authors": [
+          "Yuan Luo"
+        ],
+        "year": 2023,
+        "abstract": "Bike Sharing Systems (BSSs) offer a flexible and sustainable transport option that has gained popularity in urban areas globally. However, as users move bikes according to their own needs, imbalanced bike distribution becomes a significant challenge for BSS operators. To address this problem, we propose a Workload Awareness (WA) approach that considers the rebalancing workload of BSS sub-networks and congestion issues when repositioning bikes dynamically. Our algorithm, WA, identifies sub-networks in a BSS and ensures a similar rebalancing load for each sub-network. Our mixed integer nonlinear programming (MINLP) model then finds a repositioning policy for each sub-network, taking into account operator capacity, bike and dock information, and minimizing total losses due to bike shortages and dock congestion. Our experiments on the Ningbo City Bike system demonstrate that our approach outperforms state-of-the-art methods by reducing the loss of the system by up to 60% and significantly reducing computational time by up to 36%.",
+        "url": "https://doi.org/10.3233/faia230447",
+        "source": "crossref",
+        "venue": "Frontiers in Artificial Intelligence and Applications",
+        "doi": "10.3233/faia230447",
+        "citation_key": "luo2023dynamic"
+      }
+    },
+    {
+      "node_id": "citation:127d2685921dfd3057af47e179bde3d3dfc8ff1a34aa3f4c7e747ce6ef2966b9",
+      "kind": "citation",
+      "sha256": "127d2685921dfd3057af47e179bde3d3dfc8ff1a34aa3f4c7e747ce6ef2966b9",
+      "path": "",
+      "payload": {
+        "citation_key": "luo2023dynamic"
+      }
+    },
+    {
+      "node_id": "literature:ae6b4ef69014cbac7783e68cd49176fa4f5b0dc7f743f9f6a1481f38c2f2813c",
+      "kind": "literature",
+      "sha256": "ae6b4ef69014cbac7783e68cd49176fa4f5b0dc7f743f9f6a1481f38c2f2813c",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1109/iiai-aai.2013.9",
+        "title": "Analyzing Bike Repositioning Strategies Based on Simulations for Public Bike Sharing Systems: Simulating Bike Repositioning Strategies for Bike Sharing Systems",
+        "authors": [
+          "I-Lin Wang",
+          "Chun-Wei Wang"
+        ],
+        "year": 2013,
+        "abstract": "",
+        "url": "https://doi.org/10.1109/iiai-aai.2013.9",
+        "source": "crossref",
+        "venue": "2013 Second IIAI International Conference on Advanced Applied Informatics",
+        "doi": "10.1109/iiai-aai.2013.9",
+        "citation_key": "wang2013analyzing"
+      }
+    },
+    {
+      "node_id": "citation:e93df139fcfd593de5283f5379d8eb80b8a6b27a6b5a4e21857349c55e067cb6",
+      "kind": "citation",
+      "sha256": "e93df139fcfd593de5283f5379d8eb80b8a6b27a6b5a4e21857349c55e067cb6",
+      "path": "",
+      "payload": {
+        "citation_key": "wang2013analyzing"
+      }
+    },
+    {
+      "node_id": "literature:96a340512469bd139e3fe7478b0668afa5b0be6d47e9862329b074bf40ac838c",
+      "kind": "literature",
+      "sha256": "96a340512469bd139e3fe7478b0668afa5b0be6d47e9862329b074bf40ac838c",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1007/978-3-030-35012-3_2",
+        "title": "Bike Sharing Systems",
+        "authors": [
+          "Jan Brinkmann"
+        ],
+        "year": 2020,
+        "abstract": "",
+        "url": "https://doi.org/10.1007/978-3-030-35012-3_2",
+        "source": "crossref",
+        "venue": "Lecture Notes in Mobility",
+        "doi": "10.1007/978-3-030-35012-3_2",
+        "citation_key": "brinkmann2020bike"
+      }
+    },
+    {
+      "node_id": "citation:2626e356fed44e5f9687b529e6962a37dcca48415175f39b6b33e97209711774",
+      "kind": "citation",
+      "sha256": "2626e356fed44e5f9687b529e6962a37dcca48415175f39b6b33e97209711774",
+      "path": "",
+      "payload": {
+        "citation_key": "brinkmann2020bike"
+      }
+    },
+    {
+      "node_id": "literature:949768134ba201337c74e071039a0db63e59e64912f86545db7e1dab502a8035",
+      "kind": "literature",
+      "sha256": "949768134ba201337c74e071039a0db63e59e64912f86545db7e1dab502a8035",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.2139/ssrn.6137227",
+        "title": "Bikeability Index in Bike-Sharing Systems: A Dual-Level Assessment Integrating Station Accessibility and Cycling Environment",
+        "authors": [
+          "Xuxilu Zhang",
+          "Lingqi Gu",
+          "Francesc Soriguera",
+          "Nan Zhao"
+        ],
+        "year": 2026,
+        "abstract": "",
+        "url": "https://doi.org/10.2139/ssrn.6137227",
+        "source": "crossref",
+        "venue": "",
+        "doi": "10.2139/ssrn.6137227",
+        "citation_key": "zhang2026bikeability"
+      }
+    },
+    {
+      "node_id": "citation:d23eed2a48119eb6d8d2e57a79d9f84b819a5568767510c2f041d0300eaa333c",
+      "kind": "citation",
+      "sha256": "d23eed2a48119eb6d8d2e57a79d9f84b819a5568767510c2f041d0300eaa333c",
+      "path": "",
+      "payload": {
+        "citation_key": "zhang2026bikeability"
+      }
+    },
+    {
+      "node_id": "literature:e0eb11bb944a1c53435e2b096cbd37bc7660c8d950489cf4a308db14d7d203be",
+      "kind": "literature",
+      "sha256": "e0eb11bb944a1c53435e2b096cbd37bc7660c8d950489cf4a308db14d7d203be",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.2139/ssrn.4629298",
+        "title": "The impact of the introduction of e-bike sharing on the usage of bike sharing",
+        "authors": [
+          "QIUMENG LI",
+          "Davide Luca",
+          "Franz Fuerst"
+        ],
+        "year": 2023,
+        "abstract": "",
+        "url": "https://doi.org/10.2139/ssrn.4629298",
+        "source": "crossref",
+        "venue": "SSRN Electronic Journal",
+        "doi": "10.2139/ssrn.4629298",
+        "citation_key": "li2023impact"
+      }
+    },
+    {
+      "node_id": "citation:3d02a2b0e317857c094926a50387dfeaa90816b2e953dcee50bdd6a73771d410",
+      "kind": "citation",
+      "sha256": "3d02a2b0e317857c094926a50387dfeaa90816b2e953dcee50bdd6a73771d410",
+      "path": "",
+      "payload": {
+        "citation_key": "li2023impact"
+      }
+    },
+    {
+      "node_id": "literature:3f748e64255bc0cabbcbf6dc41b1d83751da541f9b429483cc72dad58961ebdb",
+      "kind": "literature",
+      "sha256": "3f748e64255bc0cabbcbf6dc41b1d83751da541f9b429483cc72dad58961ebdb",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.21203/rs.3.rs-3303152/v1",
+        "title": "Investigation on the impact of new bike stations on a bike-share system based on a complex bike-sharing network",
+        "authors": [
+          "Kyoungok Kim"
+        ],
+        "year": 2023,
+        "abstract": "Abstract The effect of newly introduced bike stations on bike-share systems at the system, community, and station levels is investigated in this study. Changes in the topological properties of a bike-share traffic network and its subnetworks defined through community detection are examined using a network analysis methodology that has been relatively underexplored in previous studies despite its significance and utility. Centrality and network flow measures are employed to assess the effects of new bike stations on both individual stations and communities. The findings reveal that introducing new bike stations significantly enhances station connectivity and overall bike usage. However, the impact varies across communities and existing bike stations; notably, spatial relationships with preexisting stations tend to diminish the influence of new stations. This study also establishes a correlation between the utilization of new bike stations and the centrality and network flow of existing neighboring stations.",
+        "url": "https://doi.org/10.21203/rs.3.rs-3303152/v1",
+        "source": "crossref",
+        "venue": "",
+        "doi": "10.21203/rs.3.rs-3303152/v1",
+        "citation_key": "kim2023investigation"
+      }
+    },
+    {
+      "node_id": "citation:5bc2cb2c9371608b58d5656add66623b9f104ce1483498683e0ed817ba8d5501",
+      "kind": "citation",
+      "sha256": "5bc2cb2c9371608b58d5656add66623b9f104ce1483498683e0ed817ba8d5501",
+      "path": "",
+      "payload": {
+        "citation_key": "kim2023investigation"
+      }
+    },
+    {
+      "node_id": "literature:ea1209c89ad506347ed447361f96a06eeab6d55d23ac569056b841ae0a047d3e",
+      "kind": "literature",
+      "sha256": "ea1209c89ad506347ed447361f96a06eeab6d55d23ac569056b841ae0a047d3e",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.2139/ssrn.5012732",
+        "title": "Shared Bike Demand Prediction by Using Metro and Bike Sharing Networks\u2019 Features",
+        "authors": [
+          "Hamzeh Sadeghraimoghaddam",
+          "Sina Bahrami"
+        ],
+        "year": 2024,
+        "abstract": "",
+        "url": "https://doi.org/10.2139/ssrn.5012732",
+        "source": "crossref",
+        "venue": "",
+        "doi": "10.2139/ssrn.5012732",
+        "citation_key": "sadeghraimoghaddam2024shared"
+      }
+    },
+    {
+      "node_id": "citation:0f24a96327c38fbb6d58496924e6787d6ce0fa52c384826739dd22d131fd553b",
+      "kind": "citation",
+      "sha256": "0f24a96327c38fbb6d58496924e6787d6ce0fa52c384826739dd22d131fd553b",
+      "path": "",
+      "payload": {
+        "citation_key": "sadeghraimoghaddam2024shared"
+      }
+    },
+    {
+      "node_id": "literature:6f6351097a8d0cd5b8a0d115023999abe37587b678afc024f221df4c9a31ee0b",
+      "kind": "literature",
+      "sha256": "6f6351097a8d0cd5b8a0d115023999abe37587b678afc024f221df4c9a31ee0b",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1007/978-3-319-27735-6_6",
+        "title": "Service Network Design of Bike Sharing Systems",
+        "authors": [
+          "Patrick Vogel"
+        ],
+        "year": 2016,
+        "abstract": "",
+        "url": "https://doi.org/10.1007/978-3-319-27735-6_6",
+        "source": "crossref",
+        "venue": "Lecture Notes in Mobility",
+        "doi": "10.1007/978-3-319-27735-6_6",
+        "citation_key": "vogel2016service"
+      }
+    },
+    {
+      "node_id": "citation:9a5156f1ca15ea65ec165fcf4c967265f68e5f7092ed4370cc5a11b3272f395e",
+      "kind": "citation",
+      "sha256": "9a5156f1ca15ea65ec165fcf4c967265f68e5f7092ed4370cc5a11b3272f395e",
+      "path": "",
+      "payload": {
+        "citation_key": "vogel2016service"
+      }
+    },
+    {
+      "node_id": "literature:16211fa0241b71f342c9049f6e0d5a16a42978d801983cf87533e8249247f647",
+      "kind": "literature",
+      "sha256": "16211fa0241b71f342c9049f6e0d5a16a42978d801983cf87533e8249247f647",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.14257/ijt.2018.6.1.01",
+        "title": "Bike Sharing Atlas: Visual Analysis of Bike-Sharing Networks",
+        "authors": [
+          "Michael Oppermann",
+          "Torsten M\u00f6ller",
+          "Michael Sedlmair"
+        ],
+        "year": 2018,
+        "abstract": "",
+        "url": "https://doi.org/10.14257/ijt.2018.6.1.01",
+        "source": "crossref",
+        "venue": "International Journal of Transportation",
+        "doi": "10.14257/ijt.2018.6.1.01",
+        "citation_key": "oppermann2018bike"
+      }
+    },
+    {
+      "node_id": "citation:73b83539fc839f26c78caf5f54a9663ac5e65c5f1ada3d67190a078568922363",
+      "kind": "citation",
+      "sha256": "73b83539fc839f26c78caf5f54a9663ac5e65c5f1ada3d67190a078568922363",
+      "path": "",
+      "payload": {
+        "citation_key": "oppermann2018bike"
+      }
+    },
+    {
+      "node_id": "literature:7b343b30e0ff8c612613c8b8a582c2fb4ed6242cd9b7420a19aa13acef2ff160",
+      "kind": "literature",
+      "sha256": "7b343b30e0ff8c612613c8b8a582c2fb4ed6242cd9b7420a19aa13acef2ff160",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1007/978-3-319-27735-6_2",
+        "title": "Bike Sharing in the Context of Urban Mobility",
+        "authors": [
+          "Patrick Vogel"
+        ],
+        "year": 2016,
+        "abstract": "",
+        "url": "https://doi.org/10.1007/978-3-319-27735-6_2",
+        "source": "crossref",
+        "venue": "Lecture Notes in Mobility",
+        "doi": "10.1007/978-3-319-27735-6_2",
+        "citation_key": "vogel2016bike"
+      }
+    },
+    {
+      "node_id": "citation:ce252024a9db31bdc1a1735c3d80152cbd975786f29ca03727c6a8122e8f3c51",
+      "kind": "citation",
+      "sha256": "ce252024a9db31bdc1a1735c3d80152cbd975786f29ca03727c6a8122e8f3c51",
+      "path": "",
+      "payload": {
+        "citation_key": "vogel2016bike"
+      }
+    },
+    {
+      "node_id": "literature:04f96b11ba7d1980fb607406e32cd8d752d6e75a0fe2430728ca828ac3a681b0",
+      "kind": "literature",
+      "sha256": "04f96b11ba7d1980fb607406e32cd8d752d6e75a0fe2430728ca828ac3a681b0",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1016/j.physa.2022.127991",
+        "title": "Large-scale dockless bike sharing repositioning considering future usage and workload balance",
+        "authors": [
+          "Mingzhuang Hua",
+          "Xuewu Chen",
+          "Jingxu Chen",
+          "Di Huang",
+          "Long Cheng"
+        ],
+        "year": 2022,
+        "abstract": "",
+        "url": "https://doi.org/10.1016/j.physa.2022.127991",
+        "source": "crossref",
+        "venue": "Physica A: Statistical Mechanics and its Applications",
+        "doi": "10.1016/j.physa.2022.127991",
+        "citation_key": "hua2022largescale"
+      }
+    },
+    {
+      "node_id": "literature:c1bb9e150d7cb55fcbbf9ba32f077de36f07b13b2ce32ce348801360c6edfad3",
+      "kind": "literature",
+      "sha256": "c1bb9e150d7cb55fcbbf9ba32f077de36f07b13b2ce32ce348801360c6edfad3",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.33915/etd.7875",
+        "title": "Impacts of Bike Sharing on Transit Ridership",
+        "authors": [
+          "Moathe Salah Aljeri"
+        ],
+        "year": null,
+        "abstract": "",
+        "url": "https://doi.org/10.33915/etd.7875",
+        "source": "crossref",
+        "venue": "",
+        "doi": "10.33915/etd.7875",
+        "citation_key": "aljerindimpacts"
+      }
+    },
+    {
+      "node_id": "citation:dd618f8867eb3a57b85003fb5e9e62072cec24d63b869fff1676561fdcd80346",
+      "kind": "citation",
+      "sha256": "dd618f8867eb3a57b85003fb5e9e62072cec24d63b869fff1676561fdcd80346",
+      "path": "",
+      "payload": {
+        "citation_key": "aljerindimpacts"
+      }
+    },
+    {
+      "node_id": "literature:7920c7c281e3f13aaf8298ccac46cc7f41ce322c624c921441870ae460ac0295",
+      "kind": "literature",
+      "sha256": "7920c7c281e3f13aaf8298ccac46cc7f41ce322c624c921441870ae460ac0295",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.7717/peerj-cs.3472/fig-4",
+        "title": "Figure 4: The sliding window technique for predicting hourly bike sharing demand.",
+        "authors": [],
+        "year": null,
+        "abstract": "",
+        "url": "https://doi.org/10.7717/peerj-cs.3472/fig-4",
+        "source": "crossref",
+        "venue": "",
+        "doi": "10.7717/peerj-cs.3472/fig-4",
+        "citation_key": "paperndfigure"
+      }
+    },
+    {
+      "node_id": "citation:4cf62f43735ce1a720081cce13d95679709e0763c709629b6acc857491265ecf",
+      "kind": "citation",
+      "sha256": "4cf62f43735ce1a720081cce13d95679709e0763c709629b6acc857491265ecf",
+      "path": "",
+      "payload": {
+        "citation_key": "paperndfigure"
+      }
+    },
+    {
+      "node_id": "literature:60bca02a13d737e40d9f826074ceba595fe8ad5fc58b55044a5fe63220d3eea6",
+      "kind": "literature",
+      "sha256": "60bca02a13d737e40d9f826074ceba595fe8ad5fc58b55044a5fe63220d3eea6",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1007/978-981-13-8683-1_3",
+        "title": "Station-Level Hourly Bike Demand Prediction for Dynamic Repositioning in Bike Sharing Systems",
+        "authors": [
+          "Xinhua Wu",
+          "Cheng Lyu",
+          "Zewen Wang",
+          "Zhiyuan Liu"
+        ],
+        "year": 2019,
+        "abstract": "",
+        "url": "https://doi.org/10.1007/978-981-13-8683-1_3",
+        "source": "crossref",
+        "venue": "Smart Innovation, Systems and Technologies",
+        "doi": "10.1007/978-981-13-8683-1_3",
+        "citation_key": "wu2019stationlevel"
+      }
+    },
+    {
+      "node_id": "citation:c42f83410e22bd01ebebcdd3c97feb81743a7684764fa38ae240cb63dca0bd82",
+      "kind": "citation",
+      "sha256": "c42f83410e22bd01ebebcdd3c97feb81743a7684764fa38ae240cb63dca0bd82",
+      "path": "",
+      "payload": {
+        "citation_key": "wu2019stationlevel"
+      }
+    },
+    {
+      "node_id": "literature:506b957872aa5cf8c0c3b9de5a0ddeac14c620aa837ba4525d6abbd1d3cf6531",
+      "kind": "literature",
+      "sha256": "506b957872aa5cf8c0c3b9de5a0ddeac14c620aa837ba4525d6abbd1d3cf6531",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.2139/ssrn.4231853",
+        "title": "Framework for Hourly Demand Forecasting of Bike-Sharing Stations: Case Study of the Four Main Gate Areas in Seoul",
+        "authors": [
+          "Jungyeol Hong",
+          "Eunryong Han",
+          "Dongjoo Park"
+        ],
+        "year": 2022,
+        "abstract": "",
+        "url": "https://doi.org/10.2139/ssrn.4231853",
+        "source": "crossref",
+        "venue": "SSRN Electronic Journal",
+        "doi": "10.2139/ssrn.4231853",
+        "citation_key": "hong2022framework"
+      }
+    },
+    {
+      "node_id": "citation:616c93bc34651a70bf1ce8b5b7f3607f8bbd710ae60a7f2e1a76665982323a91",
+      "kind": "citation",
+      "sha256": "616c93bc34651a70bf1ce8b5b7f3607f8bbd710ae60a7f2e1a76665982323a91",
+      "path": "",
+      "payload": {
+        "citation_key": "hong2022framework"
+      }
+    },
+    {
+      "node_id": "literature:0f5b8943f7fd507995920365c99519fcd4e135df04ef0d53932dabdcef01289c",
+      "kind": "literature",
+      "sha256": "0f5b8943f7fd507995920365c99519fcd4e135df04ef0d53932dabdcef01289c",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1371/journal.pone.0266221",
+        "title": "Correction: Graph convolutional network approach applied to predict hourly bike-sharing demands considering spatial, temporal, and global effects",
+        "authors": [
+          "Tae San Kim",
+          "Won Kyung Lee",
+          "So Young Sohn"
+        ],
+        "year": 2022,
+        "abstract": "",
+        "url": "https://doi.org/10.1371/journal.pone.0266221",
+        "source": "crossref",
+        "venue": "PLOS ONE",
+        "doi": "10.1371/journal.pone.0266221",
+        "citation_key": "kim2022correction"
+      }
+    },
+    {
+      "node_id": "citation:1c57d7aa7463527b722e6c17e5848ce4bc187e6a7aedbb83b7397498598f9275",
+      "kind": "citation",
+      "sha256": "1c57d7aa7463527b722e6c17e5848ce4bc187e6a7aedbb83b7397498598f9275",
+      "path": "",
+      "payload": {
+        "citation_key": "kim2022correction"
+      }
+    },
+    {
+      "node_id": "literature:c6f17716b509905bcbd5f26128d99f6c5f47e69863af7cacaf9d3d297a539f4a",
+      "kind": "literature",
+      "sha256": "c6f17716b509905bcbd5f26128d99f6c5f47e69863af7cacaf9d3d297a539f4a",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1371/journal.pone.0220782",
+        "title": "Graph convolutional network approach applied to predict hourly bike-sharing demands considering spatial, temporal, and global effects",
+        "authors": [
+          "Tae San Kim",
+          "Won Kyung Lee",
+          "So Young Sohn"
+        ],
+        "year": 2019,
+        "abstract": "",
+        "url": "https://doi.org/10.1371/journal.pone.0220782",
+        "source": "crossref",
+        "venue": "PLOS ONE",
+        "doi": "10.1371/journal.pone.0220782",
+        "citation_key": "kim2019graph"
+      }
+    },
+    {
+      "node_id": "citation:617a2bd028ca97bc542832de4cd61401dd4f65c526d4e8ff86daa09ea864fe69",
+      "kind": "citation",
+      "sha256": "617a2bd028ca97bc542832de4cd61401dd4f65c526d4e8ff86daa09ea864fe69",
+      "path": "",
+      "payload": {
+        "citation_key": "kim2019graph"
+      }
+    },
+    {
+      "node_id": "literature:36eb4c72bb67cf3de3d39cc2d3ba63c4aefed26bc7462c020155145f1d6b0afb",
+      "kind": "literature",
+      "sha256": "36eb4c72bb67cf3de3d39cc2d3ba63c4aefed26bc7462c020155145f1d6b0afb",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1007/s41060-025-00820-0",
+        "title": "Spatiotemporal Data-Driven Hourly Bike-Sharing Demand Prediction Using ApexBoost Regression",
+        "authors": [
+          "Md. Emran Biswas",
+          "Md. Delowar Hossain",
+          "Eui-Nam Huh",
+          "Tangina Sultana"
+        ],
+        "year": 2025,
+        "abstract": "",
+        "url": "https://doi.org/10.1007/s41060-025-00820-0",
+        "source": "crossref",
+        "venue": "International Journal of Data Science and Analytics",
+        "doi": "10.1007/s41060-025-00820-0",
+        "citation_key": "biswas2025spatiotemporal"
+      }
+    },
+    {
+      "node_id": "citation:511536815165345591ee0f7d8416f25536de69d83bb428f3a48f082e77a8439f",
+      "kind": "citation",
+      "sha256": "511536815165345591ee0f7d8416f25536de69d83bb428f3a48f082e77a8439f",
+      "path": "",
+      "payload": {
+        "citation_key": "biswas2025spatiotemporal"
+      }
+    },
+    {
+      "node_id": "literature:e130cc178cc97dedb25fb641e59d7980be1072915083c38b3d6d46aba9533879",
+      "kind": "literature",
+      "sha256": "e130cc178cc97dedb25fb641e59d7980be1072915083c38b3d6d46aba9533879",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1109/iiswc53511.2021.00016",
+        "title": "Analyzing Tail Latency in Serverless Clouds with STeLLAR",
+        "authors": [
+          "Dmitrii Ustiugov",
+          "Theodor Amariucai",
+          "Boris Grot"
+        ],
+        "year": 2021,
+        "abstract": "",
+        "url": "https://doi.org/10.1109/iiswc53511.2021.00016",
+        "source": "crossref",
+        "venue": "2021 IEEE International Symposium on Workload Characterization (IISWC)",
+        "doi": "10.1109/iiswc53511.2021.00016",
+        "citation_key": "ustiugov2021analyzing"
+      }
+    },
+    {
+      "node_id": "citation:e687fa1d39259fd382737d61c954e0dea8246e606925a583bab2dafcf901d7ad",
+      "kind": "citation",
+      "sha256": "e687fa1d39259fd382737d61c954e0dea8246e606925a583bab2dafcf901d7ad",
+      "path": "",
+      "payload": {
+        "citation_key": "ustiugov2021analyzing"
+      }
+    },
+    {
+      "node_id": "literature:f9d523f49c791a77cbd3a16fbefc694779cd5f300a9e1fcf05291330f6f8d46a",
+      "kind": "literature",
+      "sha256": "f9d523f49c791a77cbd3a16fbefc694779cd5f300a9e1fcf05291330f6f8d46a",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.2139/ssrn.4034715",
+        "title": "Road-Specific Exploration of Bike-Sharing Usage Changes after Construction of Bike Lanes",
+        "authors": [
+          "Jie-Yu Li",
+          "Pi-Cheng Chen"
+        ],
+        "year": 2022,
+        "abstract": "",
+        "url": "https://doi.org/10.2139/ssrn.4034715",
+        "source": "crossref",
+        "venue": "SSRN Electronic Journal",
+        "doi": "10.2139/ssrn.4034715",
+        "citation_key": "li2022roadspecific"
+      }
+    },
+    {
+      "node_id": "citation:f8cf2148f12ae34231866c849141b1c9fd21c91f211ac393d8e30b5d356ffe97",
+      "kind": "citation",
+      "sha256": "f8cf2148f12ae34231866c849141b1c9fd21c91f211ac393d8e30b5d356ffe97",
+      "path": "",
+      "payload": {
+        "citation_key": "li2022roadspecific"
+      }
+    },
+    {
+      "node_id": "literature:2e83478bdc74aa53b8728f114ee4648d1a882d40decb702ecd3bfd95592a0435",
+      "kind": "literature",
+      "sha256": "2e83478bdc74aa53b8728f114ee4648d1a882d40decb702ecd3bfd95592a0435",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.2139/ssrn.4040543",
+        "title": "From System-Wide to Road-Specific Exploration of Bike Trips for Changes in Bike Sharing System Usage after Construction of Bike Lanes",
+        "authors": [
+          "Jie-Yu Li",
+          "Pi-Cheng Chen"
+        ],
+        "year": 2022,
+        "abstract": "",
+        "url": "https://doi.org/10.2139/ssrn.4040543",
+        "source": "crossref",
+        "venue": "SSRN Electronic Journal",
+        "doi": "10.2139/ssrn.4040543",
+        "citation_key": "li2022systemwide"
+      }
+    },
+    {
+      "node_id": "citation:c4e0f144293b6f58344f73586c42a19f74984f913db42637851ccf2946ef0f3d",
+      "kind": "citation",
+      "sha256": "c4e0f144293b6f58344f73586c42a19f74984f913db42637851ccf2946ef0f3d",
+      "path": "",
+      "payload": {
+        "citation_key": "li2022systemwide"
+      }
+    },
+    {
+      "node_id": "literature:36baf48b627af6d1ecdb51c2899ea6f005c9d7be7afc66fbe87d7bb4161d57b1",
+      "kind": "literature",
+      "sha256": "36baf48b627af6d1ecdb51c2899ea6f005c9d7be7afc66fbe87d7bb4161d57b1",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1109/iiswc.2014.6983037",
+        "title": "Tradeoffs between power management and tail latency in warehouse-scale applications",
+        "authors": [
+          "Svilen Kanev",
+          "Kim Hazelwood",
+          "Gu-Yeon Wei",
+          "David Brooks"
+        ],
+        "year": 2014,
+        "abstract": "",
+        "url": "https://doi.org/10.1109/iiswc.2014.6983037",
+        "source": "crossref",
+        "venue": "2014 IEEE International Symposium on Workload Characterization (IISWC)",
+        "doi": "10.1109/iiswc.2014.6983037",
+        "citation_key": "kanev2014tradeoffs"
+      }
+    },
+    {
+      "node_id": "citation:1174de13555e83b60e1fcf849511a0371905ce8c27ebc82efcf86089aa7a267e",
+      "kind": "citation",
+      "sha256": "1174de13555e83b60e1fcf849511a0371905ce8c27ebc82efcf86089aa7a267e",
+      "path": "",
+      "payload": {
+        "citation_key": "kanev2014tradeoffs"
+      }
+    },
+    {
+      "node_id": "literature:ccefbe373e6625296d45accdeb73cfbab361c706e42cf2aae7dce4a8c5deb524",
+      "kind": "literature",
+      "sha256": "ccefbe373e6625296d45accdeb73cfbab361c706e42cf2aae7dce4a8c5deb524",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.47688/rba_archives_2006/17498",
+        "title": "Research Department - Prices &amp; Statistics - Price Indexes - Wage Indexes - Minimum Hourly Rates of Wages by Industrial Groups - Correspondence, Memoranda and Blue Sheets - 1950 - 1959",
+        "authors": [],
+        "year": 2022,
+        "abstract": "",
+        "url": "https://doi.org/10.47688/rba_archives_2006/17498",
+        "source": "crossref",
+        "venue": "",
+        "doi": "10.47688/rba_archives_2006/17498",
+        "citation_key": "paper2022research"
+      }
+    },
+    {
+      "node_id": "citation:cba1d07d2ad6150fb6e31cc83cbc6c80660c79f03a2bde708818bd107d8cdb7d",
+      "kind": "citation",
+      "sha256": "cba1d07d2ad6150fb6e31cc83cbc6c80660c79f03a2bde708818bd107d8cdb7d",
+      "path": "",
+      "payload": {
+        "citation_key": "paper2022research"
+      }
+    },
+    {
+      "node_id": "literature:6e1eb15780be1ab91650d6ee731a045b3e07d839f8095447a495b263e9a9125f",
+      "kind": "literature",
+      "sha256": "6e1eb15780be1ab91650d6ee731a045b3e07d839f8095447a495b263e9a9125f",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1016/j.omega.2013.12.001",
+        "title": "The bike sharing rebalancing problem: Mathematical formulations and benchmark instances",
+        "authors": [
+          "Mauro Dell'Amico",
+          "Eleni Hadjicostantinou",
+          "Manuel Iori",
+          "Stefano Novellani"
+        ],
+        "year": 2014,
+        "abstract": "",
+        "url": "https://doi.org/10.1016/j.omega.2013.12.001",
+        "source": "crossref",
+        "venue": "Omega",
+        "doi": "10.1016/j.omega.2013.12.001",
+        "citation_key": "dellamico2014bike"
+      }
+    },
+    {
+      "node_id": "citation:b28ecbf39b39a2739945312784d764d1598c022d319b95d4e7f227e8a7db52b0",
+      "kind": "citation",
+      "sha256": "b28ecbf39b39a2739945312784d764d1598c022d319b95d4e7f227e8a7db52b0",
+      "path": "",
+      "payload": {
+        "citation_key": "dellamico2014bike"
+      }
+    },
+    {
+      "node_id": "literature:8659d6cebaa5fa20639792a391568345eebec547afd47e54db39bafb9b93045e",
+      "kind": "literature",
+      "sha256": "8659d6cebaa5fa20639792a391568345eebec547afd47e54db39bafb9b93045e",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.1007/s11235-020-00667-9",
+        "title": "Query similarity index based query preprocessing mechanism for multiapplication sharing wireless sensor networks",
+        "authors": [
+          "Rahul Kumar Verma",
+          "K. K. Pattanaik",
+          "Sourabh Bharti"
+        ],
+        "year": 2020,
+        "abstract": "",
+        "url": "https://doi.org/10.1007/s11235-020-00667-9",
+        "source": "crossref",
+        "venue": "Telecommunication Systems",
+        "doi": "10.1007/s11235-020-00667-9",
+        "citation_key": "verma2020query"
+      }
+    },
+    {
+      "node_id": "citation:d52b7b858e19dd29d8d29f1424168c426818ce83612b0afa10d3dd979c69c4fe",
+      "kind": "citation",
+      "sha256": "d52b7b858e19dd29d8d29f1424168c426818ce83612b0afa10d3dd979c69c4fe",
+      "path": "",
+      "payload": {
+        "citation_key": "verma2020query"
+      }
+    },
+    {
+      "node_id": "literature:f6c3ffe5a74a39502d5ca7f711b5f026102e1e3765a4e8e0d7d7881d950cfdf1",
+      "kind": "literature",
+      "sha256": "f6c3ffe5a74a39502d5ca7f711b5f026102e1e3765a4e8e0d7d7881d950cfdf1",
+      "path": "",
+      "payload": {
+        "paper_id": "doi:10.7717/peerj-cs.3472/fig-6",
+        "title": "Figure 6: Proposed MLP to predict future bike sharing demand.",
+        "authors": [],
+        "year": null,
+        "abstract": "",
+        "url": "https://doi.org/10.7717/peerj-cs.3472/fig-6",
+        "source": "crossref",
+        "venue": "",
+        "doi": "10.7717/peerj-cs.3472/fig-6",
+        "citation_key": "paperndfigure"
+      }
+    },
+    {
+      "node_id": "numeric_claim:e392a35d0c387292a68e4d4f32355ca4463ee3e5dc6721b3cf423bddd8d6ca5d",
+      "kind": "numeric_claim",
+      "sha256": "e392a35d0c387292a68e4d4f32355ca4463ee3e5dc6721b3cf423bddd8d6ca5d",
+      "path": "",
+      "payload": {
+        "claim_id": "empirical-1",
+        "statement": "The recorded primary metric is 35.3873705.",
+        "run_ids": [
+          "baseline-seed0",
+          "baseline-seed1",
+          "baseline-seed2",
+          "baseline-seed3",
+          "ablation-hour-index-seed1",
+          "ablation-weather-index-seed2",
+          "ablation-season-index-seed3",
+          "ablation-composite-index-seed4"
+        ],
+        "metric_definition": "primary_metric (minimize)",
+        "experiment_spec_sha256": "284f2178f4fc5613e248b18006add3f06b0c242c14ddd93db9e398f147cff425",
+        "code_sha256": "a8054ee557567eec47692f11b900eec6c153295f97cd6a5462458d01d4157d8c",
+        "config_sha256": "e97cf7d786088b2dd50df8283bf43d55deb55150edb028dc3f7e7fcb3fff283b",
+        "environment": "Python 3.12.12 on macOS-15.7.4-arm64-arm-64bit",
+        "raw_outputs": [
+          "runs/baseline-seed0/metrics.json",
+          "runs/baseline-seed0/stdout.txt",
+          "runs/baseline-seed0/stderr.txt",
+          "runs/baseline-seed1/metrics.json",
+          "runs/baseline-seed1/stdout.txt",
+          "runs/baseline-seed1/stderr.txt",
+          "runs/baseline-seed2/metrics.json",
+          "runs/baseline-seed2/stdout.txt",
+          "runs/baseline-seed2/stderr.txt",
+          "runs/baseline-seed3/metrics.json",
+          "runs/baseline-seed3/stdout.txt",
+          "runs/baseline-seed3/stderr.txt",
+          "runs/ablation-hour-index-seed1/metrics.json",
+          "runs/ablation-hour-index-seed1/stdout.txt",
+          "runs/ablation-hour-index-seed1/stderr.txt",
+          "runs/ablation-weather-index-seed2/metrics.json",
+          "runs/ablation-weather-index-seed2/stdout.txt",
+          "runs/ablation-weather-index-seed2/stderr.txt",
+          "runs/ablation-season-index-seed3/metrics.json",
+          "runs/ablation-season-index-seed3/stdout.txt",
+          "runs/ablation-season-index-seed3/stderr.txt",
+          "runs/ablation-composite-index-seed4/metrics.json",
+          "runs/ablation-composite-index-seed4/stdout.txt",
+          "runs/ablation-composite-index-seed4/stderr.txt"
+        ]
+      }
+    },
+    {
+      "node_id": "metric:d4caf00d8b43ac5aa2a2990b99b12a9d33f86790589dd4262eee8c3ed848dccc",
+      "kind": "metric",
+      "sha256": "d4caf00d8b43ac5aa2a2990b99b12a9d33f86790589dd4262eee8c3ed848dccc",
+      "path": "",
+      "payload": {
+        "run_id": "baseline-seed0",
+        "metric": 46.5152229,
+        "metric_definition": "primary_metric (minimize)"
+      }
+    },
+    {
+      "node_id": "raw_output:8099064c02c54899eaaf080c022a0f0fc390c4b9479cbf24bc80680351d8c765",
+      "kind": "raw_output",
+      "sha256": "8099064c02c54899eaaf080c022a0f0fc390c4b9479cbf24bc80680351d8c765",
+      "path": "/Users/wizout/op/autoresearch/docs/audits/reference-work/data-management-mining/data-real-002/stage-09-experiment_loop/runs/baseline-seed0/metrics.json",
+      "payload": null
+    },
+    {
+      "node_id": "raw_output:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "raw_output",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "/Users/wizout/op/autoresearch/docs/audits/reference-work/data-management-mining/data-real-002/stage-09-experiment_loop/runs/ablation-composite-index-seed4/stderr.txt",
+      "payload": null
+    },
+    {
+      "node_id": "metric:67f6cc0c5bb68e2625e15feabb99487b7607deece8c2cf246655c7839229c194",
+      "kind": "metric",
+      "sha256": "67f6cc0c5bb68e2625e15feabb99487b7607deece8c2cf246655c7839229c194",
+      "path": "",
+      "payload": {
+        "run_id": "baseline-seed1",
+        "metric": 38.69099614999999,
+        "metric_definition": "primary_metric (minimize)"
+      }
+    },
+    {
+      "node_id": "raw_output:af414a9cd11433515609391b44aca19951037e8e44425f53f156ffbea42e8941",
+      "kind": "raw_output",
+      "sha256": "af414a9cd11433515609391b44aca19951037e8e44425f53f156ffbea42e8941",
+      "path": "/Users/wizout/op/autoresearch/docs/audits/reference-work/data-management-mining/data-real-002/stage-09-experiment_loop/runs/baseline-seed1/metrics.json",
+      "payload": null
+    },
+    {
+      "node_id": "metric:7cb0e39fd3608e84b58e212cca5770fd15d866bd5a2ef3ce83edd8ed41dc14c1",
+      "kind": "metric",
+      "sha256": "7cb0e39fd3608e84b58e212cca5770fd15d866bd5a2ef3ce83edd8ed41dc14c1",
+      "path": "",
+      "payload": {
+        "run_id": "baseline-seed2",
+        "metric": 45.3883545,
+        "metric_definition": "primary_metric (minimize)"
+      }
+    },
+    {
+      "node_id": "raw_output:879cf0390306d95d449024d301abeb42a6dc5d74a712fc4b29eaee84fbee44fe",
+      "kind": "raw_output",
+      "sha256": "879cf0390306d95d449024d301abeb42a6dc5d74a712fc4b29eaee84fbee44fe",
+      "path": "/Users/wizout/op/autoresearch/docs/audits/reference-work/data-management-mining/data-real-002/stage-09-experiment_loop/runs/baseline-seed2/metrics.json",
+      "payload": null
+    },
+    {
+      "node_id": "metric:2cb39d94dc782a3cb90139da0779131a3a69c24d0c814d154502c508466e8266",
+      "kind": "metric",
+      "sha256": "2cb39d94dc782a3cb90139da0779131a3a69c24d0c814d154502c508466e8266",
+      "path": "",
+      "payload": {
+        "run_id": "baseline-seed3",
+        "metric": 53.22321424999999,
+        "metric_definition": "primary_metric (minimize)"
+      }
+    },
+    {
+      "node_id": "raw_output:24f7135dc8f015969d1681f5f959533927200551b30a6636837c03119e1322aa",
+      "kind": "raw_output",
+      "sha256": "24f7135dc8f015969d1681f5f959533927200551b30a6636837c03119e1322aa",
+      "path": "/Users/wizout/op/autoresearch/docs/audits/reference-work/data-management-mining/data-real-002/stage-09-experiment_loop/runs/baseline-seed3/metrics.json",
+      "payload": null
+    },
+    {
+      "node_id": "metric:f89d652836ea045edca777b4646c9a3cb4ab6041ad1fc0239706679e3f09cf3b",
+      "kind": "metric",
+      "sha256": "f89d652836ea045edca777b4646c9a3cb4ab6041ad1fc0239706679e3f09cf3b",
+      "path": "",
+      "payload": {
+        "run_id": "ablation-hour-index-seed1",
+        "metric": 42.04770625,
+        "metric_definition": "primary_metric (minimize)"
+      }
+    },
+    {
+      "node_id": "raw_output:b3784cd42a014cbdff63fe094addeefc84a51c34a564d63d4b7e1b550b10ed7f",
+      "kind": "raw_output",
+      "sha256": "b3784cd42a014cbdff63fe094addeefc84a51c34a564d63d4b7e1b550b10ed7f",
+      "path": "/Users/wizout/op/autoresearch/docs/audits/reference-work/data-management-mining/data-real-002/stage-09-experiment_loop/runs/ablation-hour-index-seed1/metrics.json",
+      "payload": null
+    },
+    {
+      "node_id": "metric:5e56ae079729d77a85367e2a31c830bfb10a83627303435b68d686d9932be06f",
+      "kind": "metric",
+      "sha256": "5e56ae079729d77a85367e2a31c830bfb10a83627303435b68d686d9932be06f",
+      "path": "",
+      "payload": {
+        "run_id": "ablation-weather-index-seed2",
+        "metric": 49.67862115,
+        "metric_definition": "primary_metric (minimize)"
+      }
+    },
+    {
+      "node_id": "raw_output:a58195fa40bfcd9c44709f8f12a8a30b9f167e547fe1d7b6c3b741c1e4f49a5b",
+      "kind": "raw_output",
+      "sha256": "a58195fa40bfcd9c44709f8f12a8a30b9f167e547fe1d7b6c3b741c1e4f49a5b",
+      "path": "/Users/wizout/op/autoresearch/docs/audits/reference-work/data-management-mining/data-real-002/stage-09-experiment_loop/runs/ablation-weather-index-seed2/metrics.json",
+      "payload": null
+    },
+    {
+      "node_id": "metric:9f7e9e5233ffd913276bbd3cc81ac9e113230f216d0d458b9ae058cb0ec34942",
+      "kind": "metric",
+      "sha256": "9f7e9e5233ffd913276bbd3cc81ac9e113230f216d0d458b9ae058cb0ec34942",
+      "path": "",
+      "payload": {
+        "run_id": "ablation-season-index-seed3",
+        "metric": 32.412629149999994,
+        "metric_definition": "primary_metric (minimize)"
+      }
+    },
+    {
+      "node_id": "raw_output:904e936a25860cafacd8c7b6084a20400cb0d4e3b6e49c0469bff2001d5bc8be",
+      "kind": "raw_output",
+      "sha256": "904e936a25860cafacd8c7b6084a20400cb0d4e3b6e49c0469bff2001d5bc8be",
+      "path": "/Users/wizout/op/autoresearch/docs/audits/reference-work/data-management-mining/data-real-002/stage-09-experiment_loop/runs/ablation-season-index-seed3/metrics.json",
+      "payload": null
+    },
+    {
+      "node_id": "metric:6895060fcb4022ff819b9688a14ba4017978cabf323f9d17c825722298284c9c",
+      "kind": "metric",
+      "sha256": "6895060fcb4022ff819b9688a14ba4017978cabf323f9d17c825722298284c9c",
+      "path": "",
+      "payload": {
+        "run_id": "ablation-composite-index-seed4",
+        "metric": 35.3873705,
+        "metric_definition": "primary_metric (minimize)"
+      }
+    },
+    {
+      "node_id": "raw_output:3723fb6ba4cb807adf3705d2acbb3478c1ddf0daeb6fcaf83c24592403daee6b",
+      "kind": "raw_output",
+      "sha256": "3723fb6ba4cb807adf3705d2acbb3478c1ddf0daeb6fcaf83c24592403daee6b",
+      "path": "/Users/wizout/op/autoresearch/docs/audits/reference-work/data-management-mining/data-real-002/stage-09-experiment_loop/runs/ablation-composite-index-seed4/metrics.json",
+      "payload": null
+    },
+    {
+      "node_id": "raw_output:76789df38a269eff91d4e741779473f2f44c2f72bbc1dcf6a8d938b0a7b828f4",
+      "kind": "raw_output",
+      "sha256": "76789df38a269eff91d4e741779473f2f44c2f72bbc1dcf6a8d938b0a7b828f4",
+      "path": "/Users/wizout/op/autoresearch/docs/audits/reference-work/data-management-mining/data-real-002/stage-07-experiment_design/experiment_plan.yaml",
+      "payload": null
+    },
+    {
+      "node_id": "numeric_claim:e61bb41e0d969e43b6cf19dd926b90017d657fccc5fbd9971f48a7b18ac0b3cd",
+      "kind": "numeric_claim",
+      "sha256": "e61bb41e0d969e43b6cf19dd926b90017d657fccc5fbd9971f48a7b18ac0b3cd",
+      "path": "",
+      "payload": {
+        "index": 0,
+        "text": "We study SQLite index tradeoffs on the UCI Bike Sharing hourly workload with a local, auditable experiment pipeline. The best kept trial was `ablation-season-index-seed3` with primary metric 32.412629149999994."
+      }
+    },
+    {
+      "node_id": "prose_claim:37a16944eb401400ead01c195000f2280b610530db33bfc9aac43c924c26e3c8",
+      "kind": "prose_claim",
+      "sha256": "37a16944eb401400ead01c195000f2280b610530db33bfc9aac43c924c26e3c8",
+      "path": "",
+      "payload": {
+        "index": 1,
+        "text": "The goal is to convert a research idea into a paper candidate without losing provenance."
+      }
+    },
+    {
+      "node_id": "prose_claim:110fdafb3a0a51a9bea0d8323d1ad37fbe373bc12fc698bd7f8292be2322d9d0",
+      "kind": "prose_claim",
+      "sha256": "110fdafb3a0a51a9bea0d8323d1ad37fbe373bc12fc698bd7f8292be2322d9d0",
+      "path": "",
+      "payload": {
+        "index": 2,
+        "text": "This draft only reports evidence that exists in the run artifacts."
+      }
+    },
+    {
+      "node_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "kind": "numeric_claim",
+      "sha256": "2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "path": "",
+      "payload": {
+        "index": 3,
+        "text": "The screened literature includes MOSIQS: Persistent Memory Object Storage With Metadata Indexing and Querying for Scientific Computing [@khan2021mosiqs], AirIndex: Versatile Index Tuning Through Data and Storage [@chockchowwat2023airindex], DART [@zhang2018dart], mCerebrum [@hossain2017mcerebrum], Benchmarking PHP\u2013MySQL Communication: A Comparative Study of MySQLi and PDO Under Varying Query Complexity [@andrijevi2025benchmarking], TASM: A Tile-Based Storage Manager for Video Analytics [@daum2021tasm], Index of SQLite Commands [@paper2019index], Database Workload Optimization [@fritchey2018database], An adaptive path index for XML data using the query workload [@min2005adaptive], AI-Based Automated SQL Query Generation for SQLite Databases in Mobile Forensics [@pawlaszczyk2026aibased], snowquery: SQL Interface to 'Snowflake', 'Redshift', 'Postgres', 'SQLite', and 'DuckDB' [@mermelstein2023snowquery], Erratum to: \u201cAn adaptive path index for XML data using the query workload\u201d [@min2006erratum], Database Workload Optimization [@paper2009database], Database Workload Optimization [@fritchey2014database], Text Document Annotation and Retrieval Based on Content of the Document and Query Workload [@paper2016text], Introducing SQLite [@paperndintroducing], Driving through the Network: Performance and Workload under Latency and Video Impairments [@trautmannsheimer2026driving], ATTI: Workload-Aware Query Adaptive OcTree Based Trajectory Index [@meng2013atti], Query Workload Driven Summarization for P2P Query Routing [@nguyen2008query], Database Workload Optimization [@fritchey2012database], SQLite Internals [@paperndsqlite], Research on SQLite Database Query Optimization Based on Improved PSO Algorithm [@zhao2016research], A Cost-Effective Query Optimizer for Multi-Tenant Parallel RDBMSs Leveraging Workload Prediction [@danaouindcosteffective], SQLite Internals and New Features [@allen2010sqlite], adbcsqlite: 'Arrow' Database Connectivity ('ADBC') 'SQLite' Driver [@dunnington2023adbcsqlite], Analyzing SQLite Databases [@languedoc2016analyzing], Decentralized, Energy-Efficient, Low Latency and Less Homogeneous Settings based Workload Management in Enterprise Clouds [@bhuvaneshwari2016decentralized], Using SQLite with PHP [@feiler2015using], Parallel selection query processing involving index in parallel database systems [@rahayundparallel], Index selection [@sun2013index], A Copula-Based Sample Selection Binary Choice Model for Difference Analysis Among Private Bike and Bike Sharing in Lyon (France) [@havet2024copulabased], Index [@paper2015index], Large-Scale Dockless Bike Sharing Repositioning Considering Future Usage and Workload Balance [@hua2022largescale], Bike Sharing Systems [@paper2012bike], Dynamic Workload-Aware Bike Rebalancing for Bike-Sharing Systems [@luo2023dynamic], Analyzing Bike Repositioning Strategies Based on Simulations for Public Bike Sharing Systems: Simulating Bike Repositioning Strategies for Bike Sharing Systems [@wang2013analyzing], Bike Sharing Systems [@brinkmann2020bike], Bikeability Index in Bike-Sharing Systems: A Dual-Level Assessment Integrating Station Accessibility and Cycling Environment [@zhang2026bikeability], The impact of the introduction of e-bike sharing on the usage of bike sharing [@li2023impact], Investigation on the impact of new bike stations on a bike-share system based on a complex bike-sharing network [@kim2023investigation], Shared Bike Demand Prediction by Using Metro and Bike Sharing Networks\u2019 Features [@sadeghraimoghaddam2024shared], Service Network Design of Bike Sharing Systems [@vogel2016service], Bike Sharing Atlas: Visual Analysis of Bike-Sharing Networks [@oppermann2018bike], Bike Sharing in the Context of Urban Mobility [@vogel2016bike], Large-scale dockless bike sharing repositioning considering future usage and workload balance [@hua2022largescale], Impacts of Bike Sharing on Transit Ridership [@aljerindimpacts], Figure 4: The sliding window technique for predicting hourly bike sharing demand. [@paperndfigure], Station-Level Hourly Bike Demand Prediction for Dynamic Repositioning in Bike Sharing Systems [@wu2019stationlevel], Framework for Hourly Demand Forecasting of Bike-Sharing Stations: Case Study of the Four Main Gate Areas in Seoul [@hong2022framework], Correction: Graph convolutional network approach applied to predict hourly bike-sharing demands considering spatial, temporal, and global effects [@kim2022correction], Graph convolutional network approach applied to predict hourly bike-sharing demands considering spatial, temporal, and global effects [@kim2019graph], Spatiotemporal Data-Driven Hourly Bike-Sharing Demand Prediction Using ApexBoost Regression [@biswas2025spatiotemporal], Analyzing Tail Latency in Serverless Clouds with STeLLAR [@ustiugov2021analyzing], Road-Specific Exploration of Bike-Sharing Usage Changes after Construction of Bike Lanes [@li2022roadspecific], From System-Wide to Road-Specific Exploration of Bike Trips for Changes in Bike Sharing System Usage after Construction of Bike Lanes [@li2022systemwide], Tradeoffs between power management and tail latency in warehouse-scale applications [@kanev2014tradeoffs], Research Department - Prices &amp; Statistics - Price Indexes - Wage Indexes - Minimum Hourly Rates of Wages by Industrial Groups - Correspondence, Memoranda and Blue Sheets - 1950 - 1959 [@paper2022research], The bike sharing rebalancing problem: Mathematical formulations and benchmark instances [@dellamico2014bike], Query similarity index based query preprocessing mechanism for multiapplication sharing wireless sensor networks [@verma2020query], Figure 6: Proposed MLP to predict future bike sharing demand. [@paperndfigure]."
+      }
+    },
+    {
+      "node_id": "prose_claim:69038ef4676a79a26702250261eccfb67a144e2eae0415d865f5144affa883d8",
+      "kind": "prose_claim",
+      "sha256": "69038ef4676a79a26702250261eccfb67a144e2eae0415d865f5144affa883d8",
+      "path": "",
+      "payload": {
+        "index": 4,
+        "text": "The configured domain experiment workspace executes the prespecified trials."
+      }
+    },
+    {
+      "node_id": "prose_claim:bd16e90afc6d85833b10b6790e46bb195a19683257a498b78ec967c7fe6512c9",
+      "kind": "prose_claim",
+      "sha256": "bd16e90afc6d85833b10b6790e46bb195a19683257a498b78ec967c7fe6512c9",
+      "path": "",
+      "payload": {
+        "index": 5,
+        "text": "Each trial writes structured metrics, and the pipeline keeps only metric improvements."
+      }
+    },
+    {
+      "node_id": "numeric_claim:a2c1c495065c94b90d9b5869e59ba08fb470dd57550dbe1d672b9cd2981d825e",
+      "kind": "numeric_claim",
+      "sha256": "a2c1c495065c94b90d9b5869e59ba08fb470dd57550dbe1d672b9cd2981d825e",
+      "path": "",
+      "payload": {
+        "index": 6,
+        "text": "- `baseline-seed0`: metric=46.5152229, decision=keep, status=ok."
+      }
+    },
+    {
+      "node_id": "numeric_claim:bf49e847d43894f34c9d6d3c829a4931357bb0844edc5085dc89948e3dec272e",
+      "kind": "numeric_claim",
+      "sha256": "bf49e847d43894f34c9d6d3c829a4931357bb0844edc5085dc89948e3dec272e",
+      "path": "",
+      "payload": {
+        "index": 7,
+        "text": "- `baseline-seed1`: metric=38.69099614999999, decision=keep, status=ok."
+      }
+    },
+    {
+      "node_id": "numeric_claim:86afaee57799f726cf8d9aa9eb5b48393f68b8d8b794bda0fcacd175e878cd6f",
+      "kind": "numeric_claim",
+      "sha256": "86afaee57799f726cf8d9aa9eb5b48393f68b8d8b794bda0fcacd175e878cd6f",
+      "path": "",
+      "payload": {
+        "index": 8,
+        "text": "- `baseline-seed2`: metric=45.3883545, decision=discard, status=ok."
+      }
+    },
+    {
+      "node_id": "numeric_claim:6fd90bb720c8f8f91105274a2c2cc88f2a37cf6679ccbfb534720417bb1ec91a",
+      "kind": "numeric_claim",
+      "sha256": "6fd90bb720c8f8f91105274a2c2cc88f2a37cf6679ccbfb534720417bb1ec91a",
+      "path": "",
+      "payload": {
+        "index": 9,
+        "text": "- `baseline-seed3`: metric=53.22321424999999, decision=discard, status=ok."
+      }
+    },
+    {
+      "node_id": "numeric_claim:8ac70fe275d30892e52f5083c5d342d916e6004264ff61f68394e78a384eb373",
+      "kind": "numeric_claim",
+      "sha256": "8ac70fe275d30892e52f5083c5d342d916e6004264ff61f68394e78a384eb373",
+      "path": "",
+      "payload": {
+        "index": 10,
+        "text": "- `ablation-hour-index-seed1`: metric=42.04770625, decision=discard, status=ok."
+      }
+    },
+    {
+      "node_id": "numeric_claim:74ced2718b4940634b4678c4c41dc881f6acc136804f63f15d81976dd9f0b40c",
+      "kind": "numeric_claim",
+      "sha256": "74ced2718b4940634b4678c4c41dc881f6acc136804f63f15d81976dd9f0b40c",
+      "path": "",
+      "payload": {
+        "index": 11,
+        "text": "- `ablation-weather-index-seed2`: metric=49.67862115, decision=discard, status=ok."
+      }
+    },
+    {
+      "node_id": "numeric_claim:2d82bab3f79771f5e28c670f6966eed97f035655d8ead19ea6b251373d914193",
+      "kind": "numeric_claim",
+      "sha256": "2d82bab3f79771f5e28c670f6966eed97f035655d8ead19ea6b251373d914193",
+      "path": "",
+      "payload": {
+        "index": 12,
+        "text": "- `ablation-season-index-seed3`: metric=32.412629149999994, decision=keep, status=ok."
+      }
+    },
+    {
+      "node_id": "numeric_claim:0ead064bf435f9dc32d20241e2926129681089dda47a16ce95985b3c369067f7",
+      "kind": "numeric_claim",
+      "sha256": "0ead064bf435f9dc32d20241e2926129681089dda47a16ce95985b3c369067f7",
+      "path": "",
+      "payload": {
+        "index": 13,
+        "text": "- `ablation-composite-index-seed4`: metric=35.3873705, decision=discard, status=ok."
+      }
+    },
+    {
+      "node_id": "numeric_claim:b74ddcd97b658720634bb24a5c139c4e3082974a65e27afa0689b180af434756",
+      "kind": "numeric_claim",
+      "sha256": "b74ddcd97b658720634bb24a5c139c4e3082974a65e27afa0689b180af434756",
+      "path": "",
+      "payload": {
+        "index": 14,
+        "text": "The best kept trial was `ablation-season-index-seed3` with primary metric 32.412629149999994."
+      }
+    },
+    {
+      "node_id": "prose_claim:f0b3dd58a417e98269dca576ce5a8fa211c6a19a4973796e3211364aeac7d2f6",
+      "kind": "prose_claim",
+      "sha256": "f0b3dd58a417e98269dca576ce5a8fa211c6a19a4973796e3211364aeac7d2f6",
+      "path": "",
+      "payload": {
+        "index": 15,
+        "text": "Decision: PROCEED"
+      }
+    },
+    {
+      "node_id": "prose_claim:4104948bf3dc1e66ca72b62b7e3a46a65147a9a0ac4838533a82865d8d0500da",
+      "kind": "prose_claim",
+      "sha256": "4104948bf3dc1e66ca72b62b7e3a46a65147a9a0ac4838533a82865d8d0500da",
+      "path": "",
+      "payload": {
+        "index": 16,
+        "text": "Proceed with trial `ablation-season-index-seed3` as the current evidence baseline."
+      }
+    },
+    {
+      "node_id": "prose_claim:f1a84c193bf34f369ccdc4fa001d77873ed0839d1772cd8837bae6d2f19cfeb8",
+      "kind": "prose_claim",
+      "sha256": "f1a84c193bf34f369ccdc4fa001d77873ed0839d1772cd8837bae6d2f19cfeb8",
+      "path": "",
+      "payload": {
+        "index": 17,
+        "text": "Claims are limited to the registered assets, evaluation units, trials, metrics, and compute budget recorded in this run."
+      }
+    },
+    {
+      "node_id": "prose_claim:f750ff8284c848b5abdd6b8429c3a3e4f6e0f34a3a0a7aad5961b66d36cd85cf",
+      "kind": "prose_claim",
+      "sha256": "f750ff8284c848b5abdd6b8429c3a3e4f6e0f34a3a0a7aad5961b66d36cd85cf",
+      "path": "",
+      "payload": {
+        "index": 18,
+        "text": "The workflow now links literature, experiment metrics, and paper text through auditable artifacts."
+      }
+    },
+    {
+      "node_id": "prose_claim:9bced3dafc3a05e565bc263621a51ee8ea53d4d57fcefdd32e4b5aa242046454",
+      "kind": "prose_claim",
+      "sha256": "9bced3dafc3a05e565bc263621a51ee8ea53d4d57fcefdd32e4b5aa242046454",
+      "path": "",
+      "payload": {
+        "index": 19,
+        "text": "The revision preserves only screened citations and verified experiment metrics. Open reviewer concerns are tracked in `reviews.md`."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "literature:86d877c541cda884ba71917c0c46632f3913fc3637f0b5ea036742a84fce79a1",
+      "target_id": "citation:938c05f13555afb691b603035e8b3867b9e773aea03e4af2a24658e4b3b9ac6a",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:f0f22278e784d5c52190b19507c9be1c6f1c9e9ab1a00e9a484813ce32f58775",
+      "target_id": "citation:2fed7e09078c8b42c4328e5389c0f5edaff7d89dfad7418a241d6621e0e31534",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:aa7adc04f529aeb1dd56c4f320a085140aa562ffa773bbb04cc06cc547603008",
+      "target_id": "citation:66d69c4ab4b90c8d5daca780a814d1ed6e3ed50fcf9df0d20258d805df0184fd",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:82e59e12a6318b3bb5ad165b6210b44f27550e7b0e4ee6a942edad204d76e23d",
+      "target_id": "citation:df8d9c0c17dcdefd7daf594fd96d9ce303c96d9d009e32fd9aaac10b4ffcd468",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:09306b56abb7db44c6a7b5cc9e5734709fc802d7e1f506d19c1dd49e08897f10",
+      "target_id": "citation:bd8bba13ed4282ebf370acb3bbb93e4cdb16d761e9de47039c6202579207452a",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:95e104f3e6dcc5792878cfc78bc7a3e7336f9e912657b037733d522b9c3807cc",
+      "target_id": "citation:7076533c598c5b01e312a34d8b6b0fe346b50f0e715b0933b42a62fa71d1926b",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:9f62ed673ba1b1d8697c3c09afdf3761add24e78164ea55fd71406ef1e467b7e",
+      "target_id": "citation:1aeca64c248d01949fa4e2350ac39632914f7bbaaec74eb6b062d265f3f3a740",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:80cd26cdd16da802182b3bcea4435302c06e2b7538aa06c84f2ac8c87d0f0d42",
+      "target_id": "citation:45bf213e05b4808d087628295268dfeb82a603d13e8fe7bb173d0f35a186b5bc",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:1f428ccb760fe09c5c38c8f3f7b64faf0fc43a9ce9028e6fefd1288098e641fe",
+      "target_id": "citation:978c96cf9d993913f7991a67018ab0a4201d701d95670485d57a8b577eaf9a78",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:67f0164973cc59021fa3d8283621fc4352f230553f3003f20c1536401a301d3b",
+      "target_id": "citation:a6f21143d65e7bfc5e5d8d228b83efad0d726aef38fd2dbf04f62fbc89f4dc67",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:de31b11a197b3e784a456aa229cdc7b1f25a76bb3ce0ba1c4f0d2e509b4d5516",
+      "target_id": "citation:f20ec754ef59b9802a4e41b5cce1a4f84a598bac6045c48fbd4aa472e9a6ec2f",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:f444bb459e3eaa7c8d2593ccabcb31f06fddf2dc0e397a8bde5ea7b457d5bcaf",
+      "target_id": "citation:00d9efefffd1854dbcdde7f018f75779514e182062c152dcd40acfdb338896d6",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:91351699bb0b910a464cbf152a8e1a050cee4b5ac0b4b38d1fef73b8bf54be02",
+      "target_id": "citation:7a42f808c27a6a42faa56f91d5a57e77f5111b10bc4f86bdbbb1ae26b1cbb02a",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:3d731d9b956012b4e9e5d1b1275b0388ff9077af2fe0dc2b645c8ab915050d73",
+      "target_id": "citation:a795bab7c5a4c1ba32e63766157d83d005507905b250d2eda18c5ae04e626775",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:e0d6ff2d4c6025353bb753d8dc1968a6841fdc7de2b4c0e3f0188a488134bafc",
+      "target_id": "citation:6cff27ea26866308dfb83842ac26ae292ec415d8969bb60a60d4882b7cd095ec",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:c18302576daee0cfa305d7dde88819614a20fe2dd40d1bd4188cf9d36f43859b",
+      "target_id": "citation:20df9fcd2f0df64ba229ba18557745bfdb9f699717e9c542db47d8fd7034e999",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:1a0c4d5e083e9b415500246abc78acfb57aeb0f14e7b0789d4de35b1dd6db7d8",
+      "target_id": "citation:1b935666bdafc30ba981e1b9970c795106bcd676ff73b8a519bad8adc028f65c",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:2efd94b610817aa2d8ee0c64c8666055e075a3bc5aba77e286e9104d4b92112f",
+      "target_id": "citation:4b56a4ea55b09e5039a778877d97333a7d41311ef471a2938aaf3e94ff590bf8",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:6295f859c5bcc5b2551dcaec3e68f660f52e1293751eeaf6aafa09ed2df3dbcd",
+      "target_id": "citation:149e5cb134861e8953a1e3a92cb8d4223dfffd2fa600ecab56b783dfd07ead7c",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:abf8d27dc28d4d4a44665bbc57b3c6f7af1658d37f32ea9525a6b2f2a08c9b12",
+      "target_id": "citation:a3989e930684d09e4368c7a7cf2c0a85d66cec55ca6b43496419a9da54bc6787",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:84409f980517bec0b5c82ab56fbb9b25bce6f3eee6ed79406dcdc635fbdaf757",
+      "target_id": "citation:f2da4261a665229d5757b2448f9286fcba308cf49a55c42dbfcc2b5696a5af2d",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:9a3bd8c2163ae8f2e0da7ade089673b30cf0af70ad5caa18b3d18cb84fa2c590",
+      "target_id": "citation:1af928262551870079828b1b70818f5d2e5b3a26cf3e0871ec8a5e8c68f97e78",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:f2e1a515a4d4e7dce382d2b85d38abd0b0511efcd245f447f63efe83ee88b9d6",
+      "target_id": "citation:72f6f18c6b358f1f382a23b5797cb8babe8f0f6045042206d262ba1033cd09af",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:a596c467b6c8e1aa3e22413009b182b82dde5361939c1ac747f39b60a1023bbb",
+      "target_id": "citation:539aecc30ba13f80ef610905b4abc71e73cb20bf6859ad23abad05fd512cfdec",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:2fd9849a6f704d53748ea3dbcbac8c01ed14217c432c39d6d9e5e0601177cd01",
+      "target_id": "citation:2cf3a2f329958f52bf7f6b8fdeb71ad309874aafb509846f5da8ce95d8ef3bda",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:3da96aade870b0fa94affa281d9e9a76c1cc35ba77b4cd786202a16f98786bde",
+      "target_id": "citation:7f759012d4d076865dc36c66422edb037feec623c441dd7073b74746ffd901c9",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:0a907f6cb39c27a251c561a304e4ad485e564d3713ead2773c2f4f68277dec24",
+      "target_id": "citation:1768b52dcd4a88e1d98bc06b1381d0a3533c26742bcbe3e1e4f2d028e9550e9d",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:7383da5afb5981d7d6ee251b8f150b9a707d8b2a6e469010eafc9842c44a6f9c",
+      "target_id": "citation:1befb2a52f48e685dac6af86c2091a45e530908d6150687bcf0bd536ffb150ec",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:2884d6baf9937971854c6d068a903f1e3b802d44eab3ea62a067f9ae2b95e146",
+      "target_id": "citation:b54cb0beef5d4bfc11a724620ba0076aad8ffbae0477d2c0235e42dce062632d",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:6aca0ba7b60c38648a8932dfe3b388ac2627ccef98b512b393acdb8d5a8fe984",
+      "target_id": "citation:7ab75b7836cd5985597a489e2a97330d4f1f5a75d23656104d03dcd9b9681edd",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:73c67ada18bf5605bdb273ebcf0a47bcd89feb3b06526975ab9314eaa83aa45b",
+      "target_id": "citation:35b8f52dd29896704c811e7ce498ab174b442b8d85c03163e5de84750724fcd8",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:316c2cfc99d5a17012896e6a48a92fa2d3e562d50d8f9fa67a34179219c35640",
+      "target_id": "citation:144ea5f7c5a0f737362f0d503747b9f0ddbc888af28e3bb68a083d7cfbbcf1b8",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:72d06b13bb3f65f5663fc648e9c51baffba5a308266e910c6bab520117d8ec6c",
+      "target_id": "citation:38f5018037e4fd7f1e7c0d8f7e23d2d45abaa03689cf731b8f8710f6f26c4292",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:42901b4d8ea2d7bdad0af4889ea484c469f2ca8e0809d7ffa17d58b07fc7afab",
+      "target_id": "citation:2c08301fb8741929d5476d449054de6607a29e15b5e7aa2ef71c945875995e35",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:6ead6e15ab944a311720023577769912d2eaed79deb6b90abbaa1da35eca59c0",
+      "target_id": "citation:127d2685921dfd3057af47e179bde3d3dfc8ff1a34aa3f4c7e747ce6ef2966b9",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:ae6b4ef69014cbac7783e68cd49176fa4f5b0dc7f743f9f6a1481f38c2f2813c",
+      "target_id": "citation:e93df139fcfd593de5283f5379d8eb80b8a6b27a6b5a4e21857349c55e067cb6",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:96a340512469bd139e3fe7478b0668afa5b0be6d47e9862329b074bf40ac838c",
+      "target_id": "citation:2626e356fed44e5f9687b529e6962a37dcca48415175f39b6b33e97209711774",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:949768134ba201337c74e071039a0db63e59e64912f86545db7e1dab502a8035",
+      "target_id": "citation:d23eed2a48119eb6d8d2e57a79d9f84b819a5568767510c2f041d0300eaa333c",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:e0eb11bb944a1c53435e2b096cbd37bc7660c8d950489cf4a308db14d7d203be",
+      "target_id": "citation:3d02a2b0e317857c094926a50387dfeaa90816b2e953dcee50bdd6a73771d410",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:3f748e64255bc0cabbcbf6dc41b1d83751da541f9b429483cc72dad58961ebdb",
+      "target_id": "citation:5bc2cb2c9371608b58d5656add66623b9f104ce1483498683e0ed817ba8d5501",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:ea1209c89ad506347ed447361f96a06eeab6d55d23ac569056b841ae0a047d3e",
+      "target_id": "citation:0f24a96327c38fbb6d58496924e6787d6ce0fa52c384826739dd22d131fd553b",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:6f6351097a8d0cd5b8a0d115023999abe37587b678afc024f221df4c9a31ee0b",
+      "target_id": "citation:9a5156f1ca15ea65ec165fcf4c967265f68e5f7092ed4370cc5a11b3272f395e",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:16211fa0241b71f342c9049f6e0d5a16a42978d801983cf87533e8249247f647",
+      "target_id": "citation:73b83539fc839f26c78caf5f54a9663ac5e65c5f1ada3d67190a078568922363",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:7b343b30e0ff8c612613c8b8a582c2fb4ed6242cd9b7420a19aa13acef2ff160",
+      "target_id": "citation:ce252024a9db31bdc1a1735c3d80152cbd975786f29ca03727c6a8122e8f3c51",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:04f96b11ba7d1980fb607406e32cd8d752d6e75a0fe2430728ca828ac3a681b0",
+      "target_id": "citation:38f5018037e4fd7f1e7c0d8f7e23d2d45abaa03689cf731b8f8710f6f26c4292",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:c1bb9e150d7cb55fcbbf9ba32f077de36f07b13b2ce32ce348801360c6edfad3",
+      "target_id": "citation:dd618f8867eb3a57b85003fb5e9e62072cec24d63b869fff1676561fdcd80346",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:7920c7c281e3f13aaf8298ccac46cc7f41ce322c624c921441870ae460ac0295",
+      "target_id": "citation:4cf62f43735ce1a720081cce13d95679709e0763c709629b6acc857491265ecf",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:60bca02a13d737e40d9f826074ceba595fe8ad5fc58b55044a5fe63220d3eea6",
+      "target_id": "citation:c42f83410e22bd01ebebcdd3c97feb81743a7684764fa38ae240cb63dca0bd82",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:506b957872aa5cf8c0c3b9de5a0ddeac14c620aa837ba4525d6abbd1d3cf6531",
+      "target_id": "citation:616c93bc34651a70bf1ce8b5b7f3607f8bbd710ae60a7f2e1a76665982323a91",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:0f5b8943f7fd507995920365c99519fcd4e135df04ef0d53932dabdcef01289c",
+      "target_id": "citation:1c57d7aa7463527b722e6c17e5848ce4bc187e6a7aedbb83b7397498598f9275",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:c6f17716b509905bcbd5f26128d99f6c5f47e69863af7cacaf9d3d297a539f4a",
+      "target_id": "citation:617a2bd028ca97bc542832de4cd61401dd4f65c526d4e8ff86daa09ea864fe69",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:36eb4c72bb67cf3de3d39cc2d3ba63c4aefed26bc7462c020155145f1d6b0afb",
+      "target_id": "citation:511536815165345591ee0f7d8416f25536de69d83bb428f3a48f082e77a8439f",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:e130cc178cc97dedb25fb641e59d7980be1072915083c38b3d6d46aba9533879",
+      "target_id": "citation:e687fa1d39259fd382737d61c954e0dea8246e606925a583bab2dafcf901d7ad",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:f9d523f49c791a77cbd3a16fbefc694779cd5f300a9e1fcf05291330f6f8d46a",
+      "target_id": "citation:f8cf2148f12ae34231866c849141b1c9fd21c91f211ac393d8e30b5d356ffe97",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:2e83478bdc74aa53b8728f114ee4648d1a882d40decb702ecd3bfd95592a0435",
+      "target_id": "citation:c4e0f144293b6f58344f73586c42a19f74984f913db42637851ccf2946ef0f3d",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:36baf48b627af6d1ecdb51c2899ea6f005c9d7be7afc66fbe87d7bb4161d57b1",
+      "target_id": "citation:1174de13555e83b60e1fcf849511a0371905ce8c27ebc82efcf86089aa7a267e",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:ccefbe373e6625296d45accdeb73cfbab361c706e42cf2aae7dce4a8c5deb524",
+      "target_id": "citation:cba1d07d2ad6150fb6e31cc83cbc6c80660c79f03a2bde708818bd107d8cdb7d",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:6e1eb15780be1ab91650d6ee731a045b3e07d839f8095447a495b263e9a9125f",
+      "target_id": "citation:b28ecbf39b39a2739945312784d764d1598c022d319b95d4e7f227e8a7db52b0",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:8659d6cebaa5fa20639792a391568345eebec547afd47e54db39bafb9b93045e",
+      "target_id": "citation:d52b7b858e19dd29d8d29f1424168c426818ce83612b0afa10d3dd979c69c4fe",
+      "relation": "cites"
+    },
+    {
+      "source_id": "literature:f6c3ffe5a74a39502d5ca7f711b5f026102e1e3765a4e8e0d7d7881d950cfdf1",
+      "target_id": "citation:4cf62f43735ce1a720081cce13d95679709e0763c709629b6acc857491265ecf",
+      "relation": "cites"
+    },
+    {
+      "source_id": "metric:d4caf00d8b43ac5aa2a2990b99b12a9d33f86790589dd4262eee8c3ed848dccc",
+      "target_id": "numeric_claim:e392a35d0c387292a68e4d4f32355ca4463ee3e5dc6721b3cf423bddd8d6ca5d",
+      "relation": "supports"
+    },
+    {
+      "source_id": "raw_output:8099064c02c54899eaaf080c022a0f0fc390c4b9479cbf24bc80680351d8c765",
+      "target_id": "metric:d4caf00d8b43ac5aa2a2990b99b12a9d33f86790589dd4262eee8c3ed848dccc",
+      "relation": "produces"
+    },
+    {
+      "source_id": "raw_output:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_id": "metric:d4caf00d8b43ac5aa2a2990b99b12a9d33f86790589dd4262eee8c3ed848dccc",
+      "relation": "produces"
+    },
+    {
+      "source_id": "raw_output:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_id": "metric:d4caf00d8b43ac5aa2a2990b99b12a9d33f86790589dd4262eee8c3ed848dccc",
+      "relation": "produces"
+    },
+    {
+      "source_id": "metric:67f6cc0c5bb68e2625e15feabb99487b7607deece8c2cf246655c7839229c194",
+      "target_id": "numeric_claim:e392a35d0c387292a68e4d4f32355ca4463ee3e5dc6721b3cf423bddd8d6ca5d",
+      "relation": "supports"
+    },
+    {
+      "source_id": "raw_output:af414a9cd11433515609391b44aca19951037e8e44425f53f156ffbea42e8941",
+      "target_id": "metric:67f6cc0c5bb68e2625e15feabb99487b7607deece8c2cf246655c7839229c194",
+      "relation": "produces"
+    },
+    {
+      "source_id": "raw_output:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_id": "metric:67f6cc0c5bb68e2625e15feabb99487b7607deece8c2cf246655c7839229c194",
+      "relation": "produces"
+    },
+    {
+      "source_id": "raw_output:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_id": "metric:67f6cc0c5bb68e2625e15feabb99487b7607deece8c2cf246655c7839229c194",
+      "relation": "produces"
+    },
+    {
+      "source_id": "metric:7cb0e39fd3608e84b58e212cca5770fd15d866bd5a2ef3ce83edd8ed41dc14c1",
+      "target_id": "numeric_claim:e392a35d0c387292a68e4d4f32355ca4463ee3e5dc6721b3cf423bddd8d6ca5d",
+      "relation": "supports"
+    },
+    {
+      "source_id": "raw_output:879cf0390306d95d449024d301abeb42a6dc5d74a712fc4b29eaee84fbee44fe",
+      "target_id": "metric:7cb0e39fd3608e84b58e212cca5770fd15d866bd5a2ef3ce83edd8ed41dc14c1",
+      "relation": "produces"
+    },
+    {
+      "source_id": "raw_output:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_id": "metric:7cb0e39fd3608e84b58e212cca5770fd15d866bd5a2ef3ce83edd8ed41dc14c1",
+      "relation": "produces"
+    },
+    {
+      "source_id": "raw_output:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_id": "metric:7cb0e39fd3608e84b58e212cca5770fd15d866bd5a2ef3ce83edd8ed41dc14c1",
+      "relation": "produces"
+    },
+    {
+      "source_id": "metric:2cb39d94dc782a3cb90139da0779131a3a69c24d0c814d154502c508466e8266",
+      "target_id": "numeric_claim:e392a35d0c387292a68e4d4f32355ca4463ee3e5dc6721b3cf423bddd8d6ca5d",
+      "relation": "supports"
+    },
+    {
+      "source_id": "raw_output:24f7135dc8f015969d1681f5f959533927200551b30a6636837c03119e1322aa",
+      "target_id": "metric:2cb39d94dc782a3cb90139da0779131a3a69c24d0c814d154502c508466e8266",
+      "relation": "produces"
+    },
+    {
+      "source_id": "raw_output:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_id": "metric:2cb39d94dc782a3cb90139da0779131a3a69c24d0c814d154502c508466e8266",
+      "relation": "produces"
+    },
+    {
+      "source_id": "raw_output:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_id": "metric:2cb39d94dc782a3cb90139da0779131a3a69c24d0c814d154502c508466e8266",
+      "relation": "produces"
+    },
+    {
+      "source_id": "metric:f89d652836ea045edca777b4646c9a3cb4ab6041ad1fc0239706679e3f09cf3b",
+      "target_id": "numeric_claim:e392a35d0c387292a68e4d4f32355ca4463ee3e5dc6721b3cf423bddd8d6ca5d",
+      "relation": "supports"
+    },
+    {
+      "source_id": "raw_output:b3784cd42a014cbdff63fe094addeefc84a51c34a564d63d4b7e1b550b10ed7f",
+      "target_id": "metric:f89d652836ea045edca777b4646c9a3cb4ab6041ad1fc0239706679e3f09cf3b",
+      "relation": "produces"
+    },
+    {
+      "source_id": "raw_output:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_id": "metric:f89d652836ea045edca777b4646c9a3cb4ab6041ad1fc0239706679e3f09cf3b",
+      "relation": "produces"
+    },
+    {
+      "source_id": "raw_output:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_id": "metric:f89d652836ea045edca777b4646c9a3cb4ab6041ad1fc0239706679e3f09cf3b",
+      "relation": "produces"
+    },
+    {
+      "source_id": "metric:5e56ae079729d77a85367e2a31c830bfb10a83627303435b68d686d9932be06f",
+      "target_id": "numeric_claim:e392a35d0c387292a68e4d4f32355ca4463ee3e5dc6721b3cf423bddd8d6ca5d",
+      "relation": "supports"
+    },
+    {
+      "source_id": "raw_output:a58195fa40bfcd9c44709f8f12a8a30b9f167e547fe1d7b6c3b741c1e4f49a5b",
+      "target_id": "metric:5e56ae079729d77a85367e2a31c830bfb10a83627303435b68d686d9932be06f",
+      "relation": "produces"
+    },
+    {
+      "source_id": "raw_output:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_id": "metric:5e56ae079729d77a85367e2a31c830bfb10a83627303435b68d686d9932be06f",
+      "relation": "produces"
+    },
+    {
+      "source_id": "raw_output:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_id": "metric:5e56ae079729d77a85367e2a31c830bfb10a83627303435b68d686d9932be06f",
+      "relation": "produces"
+    },
+    {
+      "source_id": "metric:9f7e9e5233ffd913276bbd3cc81ac9e113230f216d0d458b9ae058cb0ec34942",
+      "target_id": "numeric_claim:e392a35d0c387292a68e4d4f32355ca4463ee3e5dc6721b3cf423bddd8d6ca5d",
+      "relation": "supports"
+    },
+    {
+      "source_id": "raw_output:904e936a25860cafacd8c7b6084a20400cb0d4e3b6e49c0469bff2001d5bc8be",
+      "target_id": "metric:9f7e9e5233ffd913276bbd3cc81ac9e113230f216d0d458b9ae058cb0ec34942",
+      "relation": "produces"
+    },
+    {
+      "source_id": "raw_output:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_id": "metric:9f7e9e5233ffd913276bbd3cc81ac9e113230f216d0d458b9ae058cb0ec34942",
+      "relation": "produces"
+    },
+    {
+      "source_id": "raw_output:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_id": "metric:9f7e9e5233ffd913276bbd3cc81ac9e113230f216d0d458b9ae058cb0ec34942",
+      "relation": "produces"
+    },
+    {
+      "source_id": "metric:6895060fcb4022ff819b9688a14ba4017978cabf323f9d17c825722298284c9c",
+      "target_id": "numeric_claim:e392a35d0c387292a68e4d4f32355ca4463ee3e5dc6721b3cf423bddd8d6ca5d",
+      "relation": "supports"
+    },
+    {
+      "source_id": "raw_output:3723fb6ba4cb807adf3705d2acbb3478c1ddf0daeb6fcaf83c24592403daee6b",
+      "target_id": "metric:6895060fcb4022ff819b9688a14ba4017978cabf323f9d17c825722298284c9c",
+      "relation": "produces"
+    },
+    {
+      "source_id": "raw_output:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_id": "metric:6895060fcb4022ff819b9688a14ba4017978cabf323f9d17c825722298284c9c",
+      "relation": "produces"
+    },
+    {
+      "source_id": "raw_output:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_id": "metric:6895060fcb4022ff819b9688a14ba4017978cabf323f9d17c825722298284c9c",
+      "relation": "produces"
+    },
+    {
+      "source_id": "metric:9f7e9e5233ffd913276bbd3cc81ac9e113230f216d0d458b9ae058cb0ec34942",
+      "target_id": "numeric_claim:e61bb41e0d969e43b6cf19dd926b90017d657fccc5fbd9971f48a7b18ac0b3cd",
+      "relation": "supports"
+    },
+    {
+      "source_id": "raw_output:76789df38a269eff91d4e741779473f2f44c2f72bbc1dcf6a8d938b0a7b828f4",
+      "target_id": "prose_claim:37a16944eb401400ead01c195000f2280b610530db33bfc9aac43c924c26e3c8",
+      "relation": "supports"
+    },
+    {
+      "source_id": "raw_output:76789df38a269eff91d4e741779473f2f44c2f72bbc1dcf6a8d938b0a7b828f4",
+      "target_id": "prose_claim:110fdafb3a0a51a9bea0d8323d1ad37fbe373bc12fc698bd7f8292be2322d9d0",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:938c05f13555afb691b603035e8b3867b9e773aea03e4af2a24658e4b3b9ac6a",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:2fed7e09078c8b42c4328e5389c0f5edaff7d89dfad7418a241d6621e0e31534",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:66d69c4ab4b90c8d5daca780a814d1ed6e3ed50fcf9df0d20258d805df0184fd",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:df8d9c0c17dcdefd7daf594fd96d9ce303c96d9d009e32fd9aaac10b4ffcd468",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:bd8bba13ed4282ebf370acb3bbb93e4cdb16d761e9de47039c6202579207452a",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:7076533c598c5b01e312a34d8b6b0fe346b50f0e715b0933b42a62fa71d1926b",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:1aeca64c248d01949fa4e2350ac39632914f7bbaaec74eb6b062d265f3f3a740",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:45bf213e05b4808d087628295268dfeb82a603d13e8fe7bb173d0f35a186b5bc",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:978c96cf9d993913f7991a67018ab0a4201d701d95670485d57a8b577eaf9a78",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:a6f21143d65e7bfc5e5d8d228b83efad0d726aef38fd2dbf04f62fbc89f4dc67",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:f20ec754ef59b9802a4e41b5cce1a4f84a598bac6045c48fbd4aa472e9a6ec2f",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:00d9efefffd1854dbcdde7f018f75779514e182062c152dcd40acfdb338896d6",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:7a42f808c27a6a42faa56f91d5a57e77f5111b10bc4f86bdbbb1ae26b1cbb02a",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:a795bab7c5a4c1ba32e63766157d83d005507905b250d2eda18c5ae04e626775",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:6cff27ea26866308dfb83842ac26ae292ec415d8969bb60a60d4882b7cd095ec",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:20df9fcd2f0df64ba229ba18557745bfdb9f699717e9c542db47d8fd7034e999",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:1b935666bdafc30ba981e1b9970c795106bcd676ff73b8a519bad8adc028f65c",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:4b56a4ea55b09e5039a778877d97333a7d41311ef471a2938aaf3e94ff590bf8",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:149e5cb134861e8953a1e3a92cb8d4223dfffd2fa600ecab56b783dfd07ead7c",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:a3989e930684d09e4368c7a7cf2c0a85d66cec55ca6b43496419a9da54bc6787",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:f2da4261a665229d5757b2448f9286fcba308cf49a55c42dbfcc2b5696a5af2d",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:1af928262551870079828b1b70818f5d2e5b3a26cf3e0871ec8a5e8c68f97e78",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:72f6f18c6b358f1f382a23b5797cb8babe8f0f6045042206d262ba1033cd09af",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:539aecc30ba13f80ef610905b4abc71e73cb20bf6859ad23abad05fd512cfdec",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:2cf3a2f329958f52bf7f6b8fdeb71ad309874aafb509846f5da8ce95d8ef3bda",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:7f759012d4d076865dc36c66422edb037feec623c441dd7073b74746ffd901c9",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:1768b52dcd4a88e1d98bc06b1381d0a3533c26742bcbe3e1e4f2d028e9550e9d",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:1befb2a52f48e685dac6af86c2091a45e530908d6150687bcf0bd536ffb150ec",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:b54cb0beef5d4bfc11a724620ba0076aad8ffbae0477d2c0235e42dce062632d",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:7ab75b7836cd5985597a489e2a97330d4f1f5a75d23656104d03dcd9b9681edd",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:35b8f52dd29896704c811e7ce498ab174b442b8d85c03163e5de84750724fcd8",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:144ea5f7c5a0f737362f0d503747b9f0ddbc888af28e3bb68a083d7cfbbcf1b8",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:38f5018037e4fd7f1e7c0d8f7e23d2d45abaa03689cf731b8f8710f6f26c4292",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:2c08301fb8741929d5476d449054de6607a29e15b5e7aa2ef71c945875995e35",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:127d2685921dfd3057af47e179bde3d3dfc8ff1a34aa3f4c7e747ce6ef2966b9",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:e93df139fcfd593de5283f5379d8eb80b8a6b27a6b5a4e21857349c55e067cb6",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:2626e356fed44e5f9687b529e6962a37dcca48415175f39b6b33e97209711774",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:d23eed2a48119eb6d8d2e57a79d9f84b819a5568767510c2f041d0300eaa333c",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:3d02a2b0e317857c094926a50387dfeaa90816b2e953dcee50bdd6a73771d410",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:5bc2cb2c9371608b58d5656add66623b9f104ce1483498683e0ed817ba8d5501",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:0f24a96327c38fbb6d58496924e6787d6ce0fa52c384826739dd22d131fd553b",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:9a5156f1ca15ea65ec165fcf4c967265f68e5f7092ed4370cc5a11b3272f395e",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:73b83539fc839f26c78caf5f54a9663ac5e65c5f1ada3d67190a078568922363",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:ce252024a9db31bdc1a1735c3d80152cbd975786f29ca03727c6a8122e8f3c51",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:38f5018037e4fd7f1e7c0d8f7e23d2d45abaa03689cf731b8f8710f6f26c4292",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:dd618f8867eb3a57b85003fb5e9e62072cec24d63b869fff1676561fdcd80346",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:4cf62f43735ce1a720081cce13d95679709e0763c709629b6acc857491265ecf",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:c42f83410e22bd01ebebcdd3c97feb81743a7684764fa38ae240cb63dca0bd82",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:616c93bc34651a70bf1ce8b5b7f3607f8bbd710ae60a7f2e1a76665982323a91",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:1c57d7aa7463527b722e6c17e5848ce4bc187e6a7aedbb83b7397498598f9275",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:617a2bd028ca97bc542832de4cd61401dd4f65c526d4e8ff86daa09ea864fe69",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:511536815165345591ee0f7d8416f25536de69d83bb428f3a48f082e77a8439f",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:e687fa1d39259fd382737d61c954e0dea8246e606925a583bab2dafcf901d7ad",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:f8cf2148f12ae34231866c849141b1c9fd21c91f211ac393d8e30b5d356ffe97",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:c4e0f144293b6f58344f73586c42a19f74984f913db42637851ccf2946ef0f3d",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:1174de13555e83b60e1fcf849511a0371905ce8c27ebc82efcf86089aa7a267e",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:cba1d07d2ad6150fb6e31cc83cbc6c80660c79f03a2bde708818bd107d8cdb7d",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:b28ecbf39b39a2739945312784d764d1598c022d319b95d4e7f227e8a7db52b0",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:d52b7b858e19dd29d8d29f1424168c426818ce83612b0afa10d3dd979c69c4fe",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "citation:4cf62f43735ce1a720081cce13d95679709e0763c709629b6acc857491265ecf",
+      "target_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+      "relation": "supports"
+    },
+    {
+      "source_id": "raw_output:76789df38a269eff91d4e741779473f2f44c2f72bbc1dcf6a8d938b0a7b828f4",
+      "target_id": "prose_claim:69038ef4676a79a26702250261eccfb67a144e2eae0415d865f5144affa883d8",
+      "relation": "supports"
+    },
+    {
+      "source_id": "raw_output:76789df38a269eff91d4e741779473f2f44c2f72bbc1dcf6a8d938b0a7b828f4",
+      "target_id": "prose_claim:bd16e90afc6d85833b10b6790e46bb195a19683257a498b78ec967c7fe6512c9",
+      "relation": "supports"
+    },
+    {
+      "source_id": "metric:d4caf00d8b43ac5aa2a2990b99b12a9d33f86790589dd4262eee8c3ed848dccc",
+      "target_id": "numeric_claim:a2c1c495065c94b90d9b5869e59ba08fb470dd57550dbe1d672b9cd2981d825e",
+      "relation": "supports"
+    },
+    {
+      "source_id": "metric:67f6cc0c5bb68e2625e15feabb99487b7607deece8c2cf246655c7839229c194",
+      "target_id": "numeric_claim:bf49e847d43894f34c9d6d3c829a4931357bb0844edc5085dc89948e3dec272e",
+      "relation": "supports"
+    },
+    {
+      "source_id": "metric:7cb0e39fd3608e84b58e212cca5770fd15d866bd5a2ef3ce83edd8ed41dc14c1",
+      "target_id": "numeric_claim:86afaee57799f726cf8d9aa9eb5b48393f68b8d8b794bda0fcacd175e878cd6f",
+      "relation": "supports"
+    },
+    {
+      "source_id": "metric:2cb39d94dc782a3cb90139da0779131a3a69c24d0c814d154502c508466e8266",
+      "target_id": "numeric_claim:6fd90bb720c8f8f91105274a2c2cc88f2a37cf6679ccbfb534720417bb1ec91a",
+      "relation": "supports"
+    },
+    {
+      "source_id": "metric:f89d652836ea045edca777b4646c9a3cb4ab6041ad1fc0239706679e3f09cf3b",
+      "target_id": "numeric_claim:8ac70fe275d30892e52f5083c5d342d916e6004264ff61f68394e78a384eb373",
+      "relation": "supports"
+    },
+    {
+      "source_id": "metric:5e56ae079729d77a85367e2a31c830bfb10a83627303435b68d686d9932be06f",
+      "target_id": "numeric_claim:74ced2718b4940634b4678c4c41dc881f6acc136804f63f15d81976dd9f0b40c",
+      "relation": "supports"
+    },
+    {
+      "source_id": "metric:9f7e9e5233ffd913276bbd3cc81ac9e113230f216d0d458b9ae058cb0ec34942",
+      "target_id": "numeric_claim:2d82bab3f79771f5e28c670f6966eed97f035655d8ead19ea6b251373d914193",
+      "relation": "supports"
+    },
+    {
+      "source_id": "metric:6895060fcb4022ff819b9688a14ba4017978cabf323f9d17c825722298284c9c",
+      "target_id": "numeric_claim:0ead064bf435f9dc32d20241e2926129681089dda47a16ce95985b3c369067f7",
+      "relation": "supports"
+    },
+    {
+      "source_id": "metric:9f7e9e5233ffd913276bbd3cc81ac9e113230f216d0d458b9ae058cb0ec34942",
+      "target_id": "numeric_claim:b74ddcd97b658720634bb24a5c139c4e3082974a65e27afa0689b180af434756",
+      "relation": "supports"
+    },
+    {
+      "source_id": "raw_output:76789df38a269eff91d4e741779473f2f44c2f72bbc1dcf6a8d938b0a7b828f4",
+      "target_id": "prose_claim:f0b3dd58a417e98269dca576ce5a8fa211c6a19a4973796e3211364aeac7d2f6",
+      "relation": "supports"
+    },
+    {
+      "source_id": "raw_output:76789df38a269eff91d4e741779473f2f44c2f72bbc1dcf6a8d938b0a7b828f4",
+      "target_id": "prose_claim:4104948bf3dc1e66ca72b62b7e3a46a65147a9a0ac4838533a82865d8d0500da",
+      "relation": "supports"
+    },
+    {
+      "source_id": "raw_output:76789df38a269eff91d4e741779473f2f44c2f72bbc1dcf6a8d938b0a7b828f4",
+      "target_id": "prose_claim:f1a84c193bf34f369ccdc4fa001d77873ed0839d1772cd8837bae6d2f19cfeb8",
+      "relation": "supports"
+    },
+    {
+      "source_id": "raw_output:76789df38a269eff91d4e741779473f2f44c2f72bbc1dcf6a8d938b0a7b828f4",
+      "target_id": "prose_claim:f750ff8284c848b5abdd6b8429c3a3e4f6e0f34a3a0a7aad5961b66d36cd85cf",
+      "relation": "supports"
+    },
+    {
+      "source_id": "raw_output:76789df38a269eff91d4e741779473f2f44c2f72bbc1dcf6a8d938b0a7b828f4",
+      "target_id": "prose_claim:9bced3dafc3a05e565bc263621a51ee8ea53d4d57fcefdd32e4b5aa242046454",
+      "relation": "supports"
+    }
+  ],
+  "validation": {
+    "ok": false,
+    "issues": [
+      {
+        "code": "ambiguous_provenance",
+        "node_id": "citation:38f5018037e4fd7f1e7c0d8f7e23d2d45abaa03689cf731b8f8710f6f26c4292",
+        "message": "multiple raw sources require an explicit aggregation record"
+      },
+      {
+        "code": "ambiguous_provenance",
+        "node_id": "citation:38f5018037e4fd7f1e7c0d8f7e23d2d45abaa03689cf731b8f8710f6f26c4292",
+        "message": "multiple raw sources require an explicit aggregation record"
+      },
+      {
+        "code": "ambiguous_provenance",
+        "node_id": "citation:4cf62f43735ce1a720081cce13d95679709e0763c709629b6acc857491265ecf",
+        "message": "multiple raw sources require an explicit aggregation record"
+      },
+      {
+        "code": "ambiguous_provenance",
+        "node_id": "citation:4cf62f43735ce1a720081cce13d95679709e0763c709629b6acc857491265ecf",
+        "message": "multiple raw sources require an explicit aggregation record"
+      },
+      {
+        "code": "source_kind_mismatch",
+        "node_id": "numeric_claim:2aa2a56f4b1bd3738cdac46bce4f72cc2518d787a3c35265dd17a69682f5b84b",
+        "message": "exportable node has no valid typed source provenance"
+      }
+    ]
+  }
+}

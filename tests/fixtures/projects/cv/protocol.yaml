@@ -1,0 +1,23 @@
+synthetic: true
+plugin_id: computer-vision
+protocol:
+  confirmatory: true
+  hypotheses: [h1, h2]
+  primary_metrics: [quality]
+  exclusions: [corrupt input]
+  evaluator_hash: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  stopping_rule: fixed budget
+  resource_budget: matched
+  seeds: [1, 2, 3]
+  uncertainty: bootstrap confidence interval
+  dataset_version: dataset-v1
+  split_hash: cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+  preprocessing: resize-normalize-v1
+  augmentation: train-only flip
+  resolution: 224x224
+  evaluation_implementation_hash: dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+  pretraining_provenance: public corpus manifest
+  duplicate_leakage_analysis: perceptual hash scan
+  robustness_metrics: [corruption accuracy]
+  subgroup_metrics: [class-balanced accuracy]
+  qualitative_selection_policy: fixed first failures per class

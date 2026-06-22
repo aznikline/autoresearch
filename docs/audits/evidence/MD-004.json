@@ -1,0 +1,31 @@
+{
+  "requirement_id": "MD-004",
+  "status": "passed",
+  "synthetic": false,
+  "credentialed": false,
+  "local_model_attested": true,
+  "spec_sha256": "dec133ac1e4ab5bb0c453e4bf69371853269864584f6169ab3b849e2da80e1e6",
+  "plan_sha256": "ceefba5f08f58a47edd9797607dd590bfb25c6e79a398f3ceb481fb35796024b",
+  "artifacts": [
+    {
+      "path": "docs/audits/test-results/real-llm-provider.xml",
+      "sha256": "5936cd4ae09cc460171163bce498c5d957b58865a0ef838fbac5fced7db532c2"
+    },
+    {
+      "path": "docs/audits/live-smoke/llm/smoke.json",
+      "sha256": "4c52bdbaac6abb683288deb90fda84c70438d6cba57a623b94a8df291990e157"
+    },
+    {
+      "path": "docs/audits/live-smoke/llm/llm_calls.jsonl",
+      "sha256": "f8d0c21c5bd47d2dbe695a9d4430c3f459c776be88054c34b5041e19ee6b14d7"
+    },
+    {
+      "path": "tests/adapters/test_llm_contract.py",
+      "sha256": "c6c8159bc9a8665eff3161ef39181dd89aedd5020718acbe39d347c732c69a6c"
+    },
+    {
+      "path": "src/autoresearch/adapters/llm/openai_compatible.py",
+      "sha256": "50fe725b052fa7910ebd54dc09e36cb6ef511b71642c587f8891e8fba25a00bb"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+<h2>GRIO: Group-Relative Intervention Optimization</h2>
+<p class="subtitle">Training-time language supervision, image-only inference, no target-domain data.</p>
+
+<div class="mockup">
+  <div class="mockup-header">Offline intervention construction</div>
+  <div class="mockup-body">
+    <div style="display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap">
+      <div class="placeholder" style="padding:14px"><strong>Open 3B LLM</strong><br>emit JSON intervention programs</div><b>→</b>
+      <div class="placeholder" style="padding:14px"><strong>Safety DSL</strong><br>camera, light, background, blur, occlusion</div><b>→</b>
+      <div class="placeholder" style="padding:14px"><strong>Frozen VLM</strong><br>verify declared nuisance semantics</div><b>→</b>
+      <div class="placeholder" style="padding:14px"><strong>Versioned bank</strong><br>release prompts, seeds, accepted programs</div>
+    </div>
+  </div>
+</div>
+
+<div class="mockup">
+  <div class="mockup-header">Source-domain training loop</div>
+  <div class="mockup-body">
+    <div style="display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap">
+      <div class="placeholder" style="padding:12px"><strong>One labeled image</strong></div><b>→</b>
+      <div class="placeholder" style="padding:12px"><strong>Policy πφ</strong><br>sample K programs</div><b>→</b>
+      <div class="placeholder" style="padding:12px"><strong>K transformed views</strong></div><b>→</b>
+      <div class="placeholder" style="padding:12px"><strong>Frozen backbone<br>+ trainable adapter</strong></div>
+    </div>
+    <div style="margin-top:18px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
+      <div class="placeholder" style="padding:10px"><strong>r_valid</strong><br>allowed transform + VLM agreement</div>
+      <div class="placeholder" style="padding:10px"><strong>r_hard</strong><br>capped increase in retrieval loss</div>
+      <div class="placeholder" style="padding:10px"><strong>r_preserve</strong><br>reference similarity above floor</div>
+      <div class="placeholder" style="padding:10px"><strong>r_diverse</strong><br>non-duplicate interventions</div>
+    </div>
+    <p style="text-align:center;margin-top:14px"><strong>Group advantage:</strong> Aᵢ = (rᵢ − mean(r₁…rₖ)) / (std(r₁…rₖ) + ε)</p>
+    <p style="text-align:center"><strong>Policy:</strong> clipped group-relative update + reference anchoring &nbsp; | &nbsp; <strong>Student:</strong> ID + triplet + intervention-consistency losses</p>
+  </div>
+</div>
+
+<div class="split">
+  <div class="mockup">
+    <div class="mockup-header">What is trained</div>
+    <div class="mockup-body"><ul><li>Small intervention selector πφ</li><li>ReID adapter / BNNeck</li><li>Optional multi-intervention head</li></ul></div>
+  </div>
+  <div class="mockup">
+    <div class="mockup-header">Test-time graph</div>
+    <div class="mockup-body"><p style="text-align:center"><strong>image → frozen encoder + adapter → embedding</strong></p><p>No LLM, VLM text branch, policy, or target-domain adaptation.</p></div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Guardrails</h3>
+  <ul>
+    <li>No generated person images and no identity-changing edits.</li>
+    <li>Programs are cached; paper results never depend on an unreleased API response.</li>
+    <li>Hardness reward is capped so the policy cannot win by destroying the image.</li>
+    <li>All comparisons use the same frozen backbone, adapter budget, augmentations, and training steps.</li>
+  </ul>
+</div>
+
+<div class="options">
+  <div class="option" data-choice="approve-architecture" onclick="toggleSelect(this)"><div class="letter">A</div><div class="content"><h3>Approve this architecture</h3><p>Continue to datasets, baselines, and CVPR evidence matrix.</p></div></div>
+  <div class="option" data-choice="simplify-architecture" onclick="toggleSelect(this)"><div class="letter">B</div><div class="content"><h3>Simplify further</h3><p>Remove policy RL and use group-relative rejection sampling only.</p></div></div>
+</div>

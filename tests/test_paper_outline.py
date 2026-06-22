@@ -31,3 +31,33 @@ def test_outline_and_draft_include_required_sections() -> None:
         assert section in draft
     assert "0.95" in draft
     assert "[@" in draft
+
+
+def test_real_experiment_draft_reports_evidence_without_scaffold_marker() -> None:
+    papers = seed_source().search("machine learning optimization")
+    screened, _ = screen_papers(papers, topic="machine learning optimization")
+    cards = cards_from_screened(screened)
+    ledger = [
+        LedgerEntry(
+            "baseline",
+            1.0,
+            "ok",
+            "keep",
+            "baseline",
+            "first",
+            "runs/baseline/metrics.json",
+        )
+    ]
+
+    draft = draft_paper(
+        topic="machine learning optimization",
+        cards=cards,
+        ledger=ledger,
+        decision_text="Decision: PROCEED",
+        evidence_mode="real",
+    )
+
+    assert "deterministic scaffold" not in draft
+    assert "domain-specific experiments" not in draft
+    assert "## Limitations" in draft
+    assert "1.0" in draft

@@ -1,0 +1,18 @@
+{
+  "venue_id": "neurips",
+  "year": 2026,
+  "track": "main",
+  "sources": [
+    {
+      "url": "https://neurips.cc/Conferences/2026/CallForPapers",
+      "path": "call-for-papers.html",
+      "sha256": "e7a3cad42072c3c702360c9bf1dfa94c31bad906eb75d70df05b3725a0be6a8f"
+    }
+  ],
+  "template": {
+    "identity": "neurips-2026-main",
+    "source_url": "https://media.neurips.cc/Conferences/NeurIPS2026/Formatting_Instructions_For_NeurIPS_2026.zip",
+    "path": "src/autoresearch/templates/neurips/2026/Formatting_Instructions_For_NeurIPS_2026.zip",
+    "sha256": "2acb2fce4b6b0c65bac6243873ab30b61b3361feb09029de731ec7eee36a76bd"
+  }
+}

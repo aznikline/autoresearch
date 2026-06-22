@@ -1,0 +1,36 @@
+{
+  "stage": "result_analysis_decision",
+  "profile_id": "natural-language-processing",
+  "depth": "top_venue",
+  "skills": [
+    {
+      "name": "autoresearch-natural-language-processing",
+      "description": "Run auditable NLP and computational-linguistics research with corpus, language, annotation, tokenization, metric-validity, contamination, subgroup, privacy, and provenance controls. Use for multilingual NLP, generation, dialogue, translation, information extraction, evaluation, and linguistic analysis paper candidates.",
+      "category": "research-workflow",
+      "applicable_stages": [
+        "idea_intake",
+        "literature_collect",
+        "hypothesis_generation",
+        "experiment_design",
+        "experiment_loop",
+        "result_analysis_decision",
+        "paper_draft_revision",
+        "final_verification_export"
+      ],
+      "profiles": [
+        "natural-language-processing"
+      ],
+      "depths": [
+        "exploratory",
+        "publication",
+        "top_venue"
+      ],
+      "priority": 1,
+      "stage_instruction": "Analyze uncertainty language subgroups error types and metric limitations.",
+      "references": [
+        "references/methodology.md"
+      ],
+      "source_dir": "skills/autoresearch-natural-language-processing"
+    }
+  ]
+}

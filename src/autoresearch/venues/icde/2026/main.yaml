@@ -1,0 +1,29 @@
+schema_version: 1
+venue_id: icde
+display_name: ICDE
+year: 2026
+track: main
+status: verified
+compatible_profiles: [data-management-mining]
+official_sources:
+  - url: https://icde2026.github.io/cf-research-papers.html
+    retrieved_at: 2026-06-20
+    sha256: bd783eae73e57ea8668aad4dfd235e9bb3afd3e46ec773d06c391414b9ce3ffa
+  - url: https://icde2026.github.io/formatting-guidelines.html
+    retrieved_at: 2026-06-20
+    sha256: b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368
+template:
+  identity: IEEEtran-v1.8b-conference
+  source_url: https://mirrors.ctan.org/macros/latex/contrib/IEEEtran.zip
+  sha256: e0cd4f5afbd42c8076092280e72b3e0a5111efe501d35de9f715cfb8da313cb4
+policy:
+  anonymity: single_blind
+  page_limit: 12
+  supplement_allowed: true
+  checklist_required: false
+  checklist_delivery: none
+  ethics_required: false
+  limitations_required: false
+  artifact_policy: encouraged
+  required_sections: []
+valid_until: 2026-12-31

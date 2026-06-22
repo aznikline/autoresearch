@@ -1,0 +1,29 @@
+schema_version: 1
+venue_id: vldb
+display_name: VLDB
+year: 2026
+track: main
+status: verified
+compatible_profiles: [data-management-mining]
+official_sources:
+  - url: https://www.vldb.org/pvldb/volumes/19/submission
+    retrieved_at: 2026-06-19
+    sha256: 6d050956ca67f7659a9650f0f9c1a66073bc716d67a40c6ae6cabeb61b922c1c
+  - url: https://www.vldb.org/pvldb/volumes/19/formatting
+    retrieved_at: 2026-06-19
+    sha256: eddf5b70584cb920c6937384ad15c3c5ca495970a4cd37a3d4b1f9bd84aec8e0
+template:
+  identity: pvldb-volume-19-regular-research
+  source_url: https://github.com/cwida/pvldbstyle/archive/refs/heads/master.zip
+  sha256: be95ec26d3927278e22eaebf9a10035ae547837592e2921dfcbb48b52db8b21c
+policy:
+  anonymity: single_blind
+  page_limit: 12
+  supplement_allowed: true
+  checklist_required: false
+  checklist_delivery: none
+  ethics_required: false
+  limitations_required: false
+  artifact_policy: encouraged
+  required_sections: []
+valid_until: 2026-12-31

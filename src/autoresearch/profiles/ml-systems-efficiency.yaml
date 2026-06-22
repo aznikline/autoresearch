@@ -6,6 +6,24 @@ target_venues:
   - ICML
   - ICLR
   - MLSys
+compatible_venue_ids:
+  - mlsys
+  - neurips
+  - icml
+  - iclr
+plugin_id: ml-systems-efficiency
+claim_types:
+  - quality-efficiency tradeoff
+  - systems performance
+  - training or inference method
+governance_checks:
+  - dataset and model license
+  - benchmark contamination
+  - compute and environmental disclosure
+domain_checks:
+  - matched resource budgets
+  - immutable evaluator
+  - latency throughput memory and quality tradeoffs
 
 experiment_paradigm: ablation_study
 focus_areas:

@@ -29,6 +29,7 @@ def test_export_bundle_writes_verification_report(tmp_path: Path) -> None:
         quality_assessment=QualityAssessment(
                 score=5.0,
                 threshold=4.0,
+                evidence_complete=True,
                 submission_ready=True,
                 profile_id="ml-systems-efficiency",
                 depth="top_venue",

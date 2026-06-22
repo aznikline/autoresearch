@@ -3,13 +3,16 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Protocol
 
+from autoresearch.adapters.literature.base import SourceSearchResult
 from autoresearch.literature.models import PaperRecord, tokenize
 
 
 class LiteratureSource(Protocol):
     name: str
 
-    def search(self, query: str, *, limit: int = 10) -> list[PaperRecord]:
+    def search(
+        self, query: str, *, limit: int = 10
+    ) -> list[PaperRecord] | SourceSearchResult:
         """Return normalized paper records for a query."""
 
 

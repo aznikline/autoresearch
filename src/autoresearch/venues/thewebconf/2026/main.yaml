@@ -1,0 +1,26 @@
+schema_version: 1
+venue_id: thewebconf
+display_name: The Web Conference
+year: 2026
+track: main
+status: verified
+compatible_profiles: [data-management-mining]
+official_sources:
+  - url: https://www2026.thewebconf.org/calls/research-tracks.html
+    retrieved_at: 2026-06-20
+    sha256: 52d6b3507eb3d45b75fb5c78b1949750a65cf8579a3664cf9a036018c2776385
+template:
+  identity: acmart-v2.18-sigconf
+  source_url: https://mirrors.ctan.org/macros/latex/contrib/acmart.zip
+  sha256: 312ce7036cc69e3b7416da80234bceba84601bf509078a74368889e164f77798
+policy:
+  anonymity: double_blind
+  page_limit: 8
+  supplement_allowed: true
+  checklist_required: false
+  checklist_delivery: none
+  ethics_required: false
+  limitations_required: false
+  artifact_policy: encouraged
+  required_sections: []
+valid_until: 2026-12-31

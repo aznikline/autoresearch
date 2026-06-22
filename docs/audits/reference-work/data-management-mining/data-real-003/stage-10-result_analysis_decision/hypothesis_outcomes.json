@@ -1,0 +1,32 @@
+[
+  {
+    "hypothesis_id": "H1",
+    "outcome": "inconclusive",
+    "run_ids": [
+      "baseline-seed0",
+      "baseline-seed1",
+      "baseline-seed2",
+      "baseline-seed3",
+      "ablation-hour-index-seed1",
+      "ablation-weather-index-seed2",
+      "ablation-season-index-seed3",
+      "ablation-composite-index-seed4"
+    ],
+    "reason": "All prespecified real-workspace trials are recorded; the current evidence does not resolve the competing hypotheses."
+  },
+  {
+    "hypothesis_id": "H2",
+    "outcome": "inconclusive",
+    "run_ids": [
+      "baseline-seed0",
+      "baseline-seed1",
+      "baseline-seed2",
+      "baseline-seed3",
+      "ablation-hour-index-seed1",
+      "ablation-weather-index-seed2",
+      "ablation-season-index-seed3",
+      "ablation-composite-index-seed4"
+    ],
+    "reason": "All prespecified real-workspace trials are recorded; the current evidence does not resolve the competing hypotheses."
+  }
+]

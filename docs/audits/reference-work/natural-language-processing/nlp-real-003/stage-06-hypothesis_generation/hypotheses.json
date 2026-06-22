@@ -1,0 +1,16 @@
+[
+  {
+    "hypothesis_id": "H1",
+    "statement": "A constrained intervention improves the primary metric for Transparent sentiment baselines across Amazon IMDb and Yelp reviews.",
+    "expected_direction": "improve",
+    "disconfirming_evidence": "No protocol-matched improvement over baseline.",
+    "competes_with": "H2"
+  },
+  {
+    "hypothesis_id": "H2",
+    "statement": "Any observed change is explained by variance or resource mismatch.",
+    "expected_direction": "no material change",
+    "disconfirming_evidence": "A repeated protocol-matched effect with uncertainty bounds.",
+    "competes_with": "H1"
+  }
+]

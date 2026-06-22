@@ -1,0 +1,26 @@
+{
+  "requirement_id": "MD-006",
+  "status": "passed",
+  "synthetic": false,
+  "credentialed": false,
+  "spec_sha256": "dec133ac1e4ab5bb0c453e4bf69371853269864584f6169ab3b849e2da80e1e6",
+  "plan_sha256": "ceefba5f08f58a47edd9797607dd590bfb25c6e79a398f3ceb481fb35796024b",
+  "artifacts": [
+    {
+      "path": "docs/audits/test-results/asset-governance.xml",
+      "sha256": "81887bfd181352e2f9ec4233998f8d2e3a51d83b9a3caf88a8e51d46ec4b1b53"
+    },
+    {
+      "path": "tests/test_asset_governance.py",
+      "sha256": "c9a230cecee2ffddc262abbc30343643cb40563ff3e9bd60ef93cabc18fa77e8"
+    },
+    {
+      "path": "tests/test_asset_registry.py",
+      "sha256": "3d84621b78998a5f79420130b5f3ff6e11972d60fd127786758a96565189d886"
+    },
+    {
+      "path": "src/autoresearch/governance/registry.py",
+      "sha256": "0380d4be18504be0c34f64478a2d4f7ab7a66a559454c7157f80bf4387dae0e1"
+    }
+  ]
+}

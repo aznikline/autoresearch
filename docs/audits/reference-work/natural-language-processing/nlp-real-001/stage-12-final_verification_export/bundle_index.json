@@ -1,0 +1,15 @@
+{
+  "files": [
+    "paper.tex",
+    "references.bib",
+    "verification_report.json",
+    "quality_report.json",
+    "artifact_manifest.json",
+    "evidence_graph.json",
+    "governance_report.json",
+    "venue_export.json",
+    "paper_evidence.json"
+  ],
+  "artifact_verification_ok": true,
+  "submission_ready": false
+}

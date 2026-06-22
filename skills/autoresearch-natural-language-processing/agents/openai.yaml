@@ -1,0 +1,4 @@
+interface:
+  display_name: "AutoResearch NLP"
+  short_description: "Run auditable NLP and computational-linguistics research"
+  default_prompt: "Use $autoresearch-natural-language-processing for an evidence-grounded NLP paper run."

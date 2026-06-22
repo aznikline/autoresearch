@@ -41,19 +41,19 @@ CONTRACTS: dict[Stage, StageContract] = {
     Stage.SYNTHESIS: StageContract(
         stage=Stage.SYNTHESIS,
         input_files=("shortlist.jsonl",),
-        output_files=("synthesis.md", "knowledge_cards.jsonl"),
+        output_files=("synthesis.md", "knowledge_cards.jsonl", "literature_gaps.json"),
         definition_of_done="Research gaps and reusable knowledge cards produced.",
     ),
     Stage.HYPOTHESIS_GENERATION: StageContract(
         stage=Stage.HYPOTHESIS_GENERATION,
         input_files=("synthesis.md",),
-        output_files=("hypotheses.md",),
+        output_files=("hypotheses.md", "hypotheses.json"),
         definition_of_done="Falsifiable hypotheses created from synthesis.",
     ),
     Stage.EXPERIMENT_DESIGN: StageContract(
         stage=Stage.EXPERIMENT_DESIGN,
         input_files=("hypotheses.md",),
-        output_files=("experiment_plan.yaml",),
+        output_files=("experiment_plan.yaml", "protocol_validation.json"),
         definition_of_done="Baselines, ablations, metrics, and resources defined.",
     ),
     Stage.EXPERIMENT_GENERATION: StageContract(
@@ -71,13 +71,18 @@ CONTRACTS: dict[Stage, StageContract] = {
     Stage.RESULT_ANALYSIS_DECISION: StageContract(
         stage=Stage.RESULT_ANALYSIS_DECISION,
         input_files=("runs/", "ledger.jsonl"),
-        output_files=("analysis.md", "decision.md"),
+        output_files=("analysis.md", "decision.md", "hypothesis_outcomes.json"),
         definition_of_done="Results analyzed and proceed/refine/pivot decision made.",
     ),
     Stage.PAPER_DRAFT_REVISION: StageContract(
         stage=Stage.PAPER_DRAFT_REVISION,
         input_files=("analysis.md", "decision.md", "shortlist.jsonl"),
-        output_files=("paper_draft.md", "reviews.md", "paper_revised.md"),
+        output_files=(
+            "paper_draft.md",
+            "reviews.md",
+            "paper_revised.md",
+            "empirical_claims.json",
+        ),
         definition_of_done="Paper drafted, reviewed, and revised.",
     ),
     Stage.FINAL_VERIFICATION_EXPORT: StageContract(
@@ -89,6 +94,11 @@ CONTRACTS: dict[Stage, StageContract] = {
             "verification_report.json",
             "quality_report.json",
             "bundle_index.json",
+            "artifact_manifest.json",
+            "evidence_graph.json",
+            "governance_report.json",
+            "venue_export.json",
+            "paper_evidence.json",
         ),
         definition_of_done="Paper bundle exported with citation and claim verification.",
     ),

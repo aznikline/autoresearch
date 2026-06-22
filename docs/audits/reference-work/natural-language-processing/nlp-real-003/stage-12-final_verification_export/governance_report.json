@@ -1,0 +1,49 @@
+{
+  "ok": true,
+  "source_path": "/Users/wizout/op/autoresearch/reference-projects/natural-language-processing/assets.yaml",
+  "assets": [
+    "uci-sentiment-amazon-2016",
+    "uci-sentiment-imdb-2016",
+    "uci-sentiment-yelp-2016"
+  ],
+  "locally_verified": true,
+  "records": [
+    {
+      "asset_id": "uci-sentiment-amazon-2016",
+      "consent_basis": "public reviews redistributed by UCI under CC BY 4.0",
+      "governance_approval": "public review corpus with no new human subjects collection",
+      "kind": "corpus",
+      "license_id": "CC-BY-4.0",
+      "local_path": "workspace/data/amazon.tsv",
+      "privacy_status": "public-non-sensitive",
+      "sha256": "47003fc0a0d4840b00e96e715b6189bad09e7443a3da41c4cbe12ffc79f86ae3",
+      "source_url": "https://archive.ics.uci.edu/static/public/331/sentiment+labelled+sentences.zip",
+      "split_hash": "b42024423ebdc0a32b530f525d0825b4d834cc93bdad981d85a935f41891fc3d"
+    },
+    {
+      "asset_id": "uci-sentiment-imdb-2016",
+      "consent_basis": "public reviews redistributed by UCI under CC BY 4.0",
+      "governance_approval": "public review corpus with no new human subjects collection",
+      "kind": "corpus",
+      "license_id": "CC-BY-4.0",
+      "local_path": "workspace/data/imdb.tsv",
+      "privacy_status": "public-non-sensitive",
+      "sha256": "aef2e49e3da25714d61175e3a6e68eeef74a20a2f914318dc3be9947ea86512d",
+      "source_url": "https://archive.ics.uci.edu/static/public/331/sentiment+labelled+sentences.zip",
+      "split_hash": "b42024423ebdc0a32b530f525d0825b4d834cc93bdad981d85a935f41891fc3d"
+    },
+    {
+      "asset_id": "uci-sentiment-yelp-2016",
+      "consent_basis": "public reviews redistributed by UCI under CC BY 4.0",
+      "governance_approval": "public review corpus with no new human subjects collection",
+      "kind": "corpus",
+      "license_id": "CC-BY-4.0",
+      "local_path": "workspace/data/yelp.tsv",
+      "privacy_status": "public-non-sensitive",
+      "sha256": "c76468b7b5c6e56a0804d728345c5f84aa2142ddb214420f61cc9cfd4c00d2ea",
+      "source_url": "https://archive.ics.uci.edu/static/public/331/sentiment+labelled+sentences.zip",
+      "split_hash": "b42024423ebdc0a32b530f525d0825b4d834cc93bdad981d85a935f41891fc3d"
+    }
+  ],
+  "issues": []
+}

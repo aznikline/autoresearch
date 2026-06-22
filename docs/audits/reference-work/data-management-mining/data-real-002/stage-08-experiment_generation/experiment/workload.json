@@ -1,0 +1,14 @@
+{
+  "hourly-demand": {
+    "sql": "SELECT hr, ROUND(AVG(cnt), 6), SUM(cnt) FROM rides GROUP BY hr ORDER BY hr",
+    "parameters": []
+  },
+  "weather-filter": {
+    "sql": "SELECT dteday, hr, cnt FROM rides WHERE weathersit = ? AND workingday = ? ORDER BY dteday, hr",
+    "parameters": [2, 1]
+  },
+  "season-summary": {
+    "sql": "SELECT season, yr, COUNT(*), ROUND(AVG(temp), 6), SUM(cnt) FROM rides GROUP BY season, yr ORDER BY season, yr",
+    "parameters": []
+  }
+}

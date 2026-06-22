@@ -1,0 +1,18 @@
+{
+  "venue_id": "colm",
+  "year": 2026,
+  "track": "main",
+  "sources": [
+    {
+      "url": "https://colmweb.org/cfp.html",
+      "path": "call-for-papers.html",
+      "sha256": "77fa692094b1e54cb424779cb4f5be30693b470ffecd0a9c16153961c9ed1957"
+    }
+  ],
+  "template": {
+    "identity": "colm-2026-main",
+    "source_url": "https://github.com/COLM-org/Template/archive/refs/tags/2026.zip",
+    "path": "src/autoresearch/templates/colm/2026/colm-template-2026.zip",
+    "sha256": "24c616f7c37769db12fb2f2064b0f55a710b1503d673ba6a3cc114c54c01335e"
+  }
+}

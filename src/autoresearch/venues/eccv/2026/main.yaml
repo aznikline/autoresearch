@@ -1,0 +1,26 @@
+schema_version: 1
+venue_id: eccv
+display_name: ECCV
+year: 2026
+track: main
+status: verified
+compatible_profiles: [computer-vision]
+official_sources:
+  - url: https://eccv.ecva.net/Conferences/2026/SubmissionPolicies
+    retrieved_at: 2026-06-19
+    sha256: bb2918b9decf273d6aed69b95b0926c614f6e569971b7178397d226c8b5ecf09
+template:
+  identity: eccv-2026-main
+  source_url: https://github.com/paolo-favaro/paper-template/archive/refs/tags/Latest.zip
+  sha256: 8ed161c418f690cc4f48f7c9f57f78b630c2d615d74ebfb3bff37699bd6e4fa1
+policy:
+  anonymity: double_blind
+  page_limit: 14
+  supplement_allowed: true
+  checklist_required: false
+  checklist_delivery: none
+  ethics_required: false
+  limitations_required: false
+  artifact_policy: encouraged
+  required_sections: []
+valid_until: 2026-12-31

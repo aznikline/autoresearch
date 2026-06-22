@@ -1,0 +1,42 @@
+{
+  "requirement_id": "MD-007",
+  "status": "passed",
+  "synthetic": false,
+  "credentialed": false,
+  "spec_sha256": "dec133ac1e4ab5bb0c453e4bf69371853269864584f6169ab3b849e2da80e1e6",
+  "plan_sha256": "ceefba5f08f58a47edd9797607dd590bfb25c6e79a398f3ceb481fb35796024b",
+  "artifacts": [
+    {
+      "path": "docs/audits/test-results/domain-protocols.xml",
+      "sha256": "5b9829e35ff78488f565d304e32f973e05ef0bfe57f8ed20086cd92b7efb8bb6"
+    },
+    {
+      "path": "tests/experiments/test_domain_plugins.py",
+      "sha256": "66d89d6ed1ad38ef1627fd6b80b6b55ee5c43fa0d2fadbad08c5dfc2ab24f38a"
+    },
+    {
+      "path": "src/autoresearch/experiments/plugins/base.py",
+      "sha256": "49a16c2d49c21db2fcd9cf40c3275bd44edc6dd09f62739448dc838db140b482"
+    },
+    {
+      "path": "tests/fixtures/projects/llm/protocol.yaml",
+      "sha256": "61d172d6115f3595906c507eb70e953a941a8b85976d581d547a5282ff9a3fa4"
+    },
+    {
+      "path": "tests/fixtures/projects/cv/protocol.yaml",
+      "sha256": "34e03d3f6ae6ea471339a5c5e6ab0d02bad57258e230866f73ae7ca9ac39dc9a"
+    },
+    {
+      "path": "tests/fixtures/projects/nlp/protocol.yaml",
+      "sha256": "be164f9bade87e1cd296014b4db557dcbdb997232459458881cdf8e5df31ec89"
+    },
+    {
+      "path": "tests/fixtures/projects/data/protocol.yaml",
+      "sha256": "677145f66bb9985fe7f59d5d6428a96044008ca748c108c4a3dcf0ae66d8d173"
+    },
+    {
+      "path": "tests/fixtures/projects/mlsystems/protocol.yaml",
+      "sha256": "9f3c663b2711ab476f516a0d7c51a5034903dc0180b1d9d07606cf6d23e8dba7"
+    }
+  ]
+}

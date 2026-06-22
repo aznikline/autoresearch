@@ -1,0 +1,42 @@
+{
+  "query": "autonomous research agents",
+  "synthetic": false,
+  "sources": [
+    {
+      "source": "arxiv",
+      "status": "ok",
+      "attempts": 1,
+      "raw_sha256": "a81a625d78511054e69dc987377caca9cfeccb48c85b184fd9fb6802a19ad65a",
+      "paper_count": 2,
+      "paper_ids": [
+        "arxiv:2602.04518",
+        "arxiv:2305.09349"
+      ],
+      "error": ""
+    },
+    {
+      "source": "openalex",
+      "status": "ok",
+      "attempts": 1,
+      "raw_sha256": "c3ce2de3c9755652ce65d1a4ecf911dcdfce8f8eb0298bdb5a16e7e59ccbf796",
+      "paper_count": 2,
+      "paper_ids": [
+        "openalex:W2165744313",
+        "openalex:W2128672031"
+      ],
+      "error": ""
+    },
+    {
+      "source": "crossref",
+      "status": "ok",
+      "attempts": 1,
+      "raw_sha256": "774e4d2bef54245b494ae5647c1d42fe10c9b3d591a90f611eba60ce121fcc7f",
+      "paper_count": 2,
+      "paper_ids": [
+        "doi:10.1007/978-1-4615-5739-5_5",
+        "doi:10.1145/267658.267784"
+      ],
+      "error": ""
+    }
+  ]
+}

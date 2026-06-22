@@ -1,0 +1,55 @@
+<h2>Evidence plan: zero-budget discovery to submission candidate</h2>
+<p class="subtitle">DukeMTMC-ReID is excluded. Every comparison is rerun under the same Duke-free protocol.</p>
+
+<div class="mockup">
+  <div class="mockup-header">Dataset protocol</div>
+  <div class="mockup-body">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+      <div class="placeholder" style="padding:14px"><strong>Proxy</strong><br>Market-1501 → MSMT17 subset<br>1 seed, cached frozen features</div>
+      <div class="placeholder" style="padding:14px"><strong>Core</strong><br>Market-1501 / CUHK03-NP / MSMT17<br>single-source cross-domain pairs</div>
+      <div class="placeholder" style="padding:14px"><strong>Publication</strong><br>3-domain leave-one-out<br>5 seeds, full query/gallery, no re-ranking</div>
+    </div>
+  </div>
+</div>
+
+<div class="mockup">
+  <div class="mockup-header">Required baseline ladder</div>
+  <div class="mockup-body">
+    <ol>
+      <li>Frozen OpenCLIP feature baseline.</li>
+      <li>Same adapter with identity classification + triplet loss.</li>
+      <li>Same compute with standard color/blur/erasing augmentation.</li>
+      <li>Random intervention bank + consistency loss.</li>
+      <li>Hard intervention selection without group-relative optimization.</li>
+      <li>GRIO without VLM validation; GRIO without diversity; full GRIO.</li>
+      <li>At least one reproducible recent DG-ReID baseline under the same Duke-free data.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="split">
+  <div class="mockup">
+    <div class="mockup-header">Primary evidence</div>
+    <div class="mockup-body"><ul><li>mAP and Rank-1</li><li>Mean ± 95% bootstrap CI over seeds</li><li>Cross-domain average and worst target</li><li>Adapter parameters, wall time, peak VRAM</li><li>Policy entropy and intervention acceptance rate</li></ul></div>
+  </div>
+  <div class="mockup">
+    <div class="mockup-header">Falsification tests</div>
+    <div class="mockup-body"><ul><li>Shuffled LLM programs</li><li>Generic augmentations at equal budget</li><li>Invalid/destructive intervention rate</li><li>In-domain accuracy tradeoff</li><li>Different LLM/VLM teacher sensitivity</li><li>Reward-component ablations</li></ul></div>
+  </div>
+</div>
+
+<div class="mockup">
+  <div class="mockup-header">Venue routing (sequential, never simultaneous)</div>
+  <div class="mockup-body">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+      <div class="placeholder" style="padding:14px"><strong>CVPR / ECCV / ICCV</strong><br>Primary route if the visual retrieval method wins across Duke-free ReID protocols with strong ablations.</div>
+      <div class="placeholder" style="padding:14px"><strong>ICLR</strong><br>Only if GRIO generalizes beyond ReID and the optimization principle is the central contribution.</div>
+      <div class="placeholder" style="padding:14px"><strong>NeurIPS</strong><br>Only with broader retrieval evidence, deeper analysis, and a generally useful learning formulation.</div>
+    </div>
+  </div>
+</div>
+
+<div class="options">
+  <div class="option" data-choice="approve-evidence" onclick="toggleSelect(this)"><div class="letter">A</div><div class="content"><h3>Approve evidence plan</h3><p>Write the design spec and prepare the implementation plan.</p></div></div>
+  <div class="option" data-choice="rework-evidence" onclick="toggleSelect(this)"><div class="letter">B</div><div class="content"><h3>Rework protocol</h3><p>Change datasets, baselines, or venue target before implementation.</p></div></div>
+</div>

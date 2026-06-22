@@ -1,0 +1,26 @@
+category: research-workflow
+trigger_keywords: [vision, image, video, detection, segmentation, diffusion, multimodal]
+applicable_stages:
+  - idea_intake
+  - literature_collect
+  - hypothesis_generation
+  - experiment_design
+  - experiment_loop
+  - result_analysis_decision
+  - paper_draft_revision
+  - final_verification_export
+profiles: [computer-vision]
+depths: [exploratory, publication, top_venue]
+priority: 1
+stage_instructions:
+  hypothesis_generation: Define competing mechanism robustness subgroup and data-overlap hypotheses.
+  experiment_design: Freeze datasets splits preprocessing augmentation resolution weights evaluators seeds and budgets.
+  experiment_loop: Preserve predictions checkpoints per-example outputs failures and resource traces.
+  result_analysis_decision: Analyze uncertainty robustness calibration subgroups and qualitative failures.
+  paper_draft_revision: Link visuals to source examples and a declared selection policy.
+  final_verification_export: Block on unknown rights pretraining overlap leakage or missing robustness evidence.
+references:
+  experiment_design: [references/methodology.md]
+  experiment_loop: [references/methodology.md]
+  result_analysis_decision: [references/methodology.md]
+  final_verification_export: [references/methodology.md]

@@ -1,0 +1,232 @@
+{
+  "score": 4.3,
+  "threshold": 4.0,
+  "evidence_complete": false,
+  "submission_ready": false,
+  "profile_id": "natural-language-processing",
+  "depth": "top_venue",
+  "checks": [
+    {
+      "requirement": "citation_integrity",
+      "required": true,
+      "observed": true,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "numeric_claim_integrity",
+      "required": true,
+      "observed": true,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "screened_papers",
+      "required": 25,
+      "observed": 215,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "baselines",
+      "required": 4,
+      "observed": 4,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "evaluation_units",
+      "required": 3,
+      "observed": 3,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "seeds",
+      "required": 5,
+      "observed": 5,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "ablations",
+      "required": 3,
+      "observed": 4,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "verified_metrics",
+      "required": 7,
+      "observed": 12,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "confidence_intervals",
+      "required": true,
+      "observed": true,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "effect_sizes",
+      "required": true,
+      "observed": true,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "compute_reporting",
+      "required": true,
+      "observed": true,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "hypothesis_outcomes",
+      "required": true,
+      "observed": true,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "literature_gap_records",
+      "required": true,
+      "observed": true,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "literature_retrieval_integrity",
+      "required": true,
+      "observed": false,
+      "passed": false,
+      "blocking_reason": "required literature_retrieval_integrity evidence is missing"
+    },
+    {
+      "requirement": "domain_protocol_valid",
+      "required": true,
+      "observed": true,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "evidence_graph_valid",
+      "required": true,
+      "observed": true,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "asset_governance_valid",
+      "required": true,
+      "observed": true,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "venue_export_valid",
+      "required": true,
+      "observed": false,
+      "passed": false,
+      "blocking_reason": "required venue_export_valid evidence is missing"
+    },
+    {
+      "requirement": "empirical_claim_links",
+      "required": true,
+      "observed": true,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "preregistered_confirmatory_spec",
+      "required": true,
+      "observed": true,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "immutable_evaluation",
+      "required": true,
+      "observed": true,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "protocol_parity",
+      "required": true,
+      "observed": true,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "failed_runs_accounted",
+      "required": true,
+      "observed": true,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "limitations",
+      "required": true,
+      "observed": true,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "artifact_manifest",
+      "required": true,
+      "observed": true,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "artifact_provenance",
+      "required": true,
+      "observed": true,
+      "passed": true,
+      "blocking_reason": ""
+    },
+    {
+      "requirement": "competing_hypotheses",
+      "required": true,
+      "observed": true,
+      "passed": true,
+      "blocking_reason": ""
+    }
+  ],
+  "blocking_issues": [
+    "Depth requirement failed: literature_retrieval_integrity requires True, observed False.",
+    "Depth requirement failed: venue_export_valid requires True, observed False."
+  ],
+  "strengths": [
+    "All citations resolve to the screened bibliography.",
+    "All numeric claims resolve to experiment ledger values.",
+    "Depth requirement passed: citation_integrity.",
+    "Depth requirement passed: numeric_claim_integrity.",
+    "Depth requirement passed: screened_papers.",
+    "Depth requirement passed: baselines.",
+    "Depth requirement passed: evaluation_units.",
+    "Depth requirement passed: seeds.",
+    "Depth requirement passed: ablations.",
+    "Depth requirement passed: verified_metrics.",
+    "Depth requirement passed: confidence_intervals.",
+    "Depth requirement passed: effect_sizes.",
+    "Depth requirement passed: compute_reporting.",
+    "Depth requirement passed: hypothesis_outcomes.",
+    "Depth requirement passed: literature_gap_records.",
+    "Depth requirement passed: domain_protocol_valid.",
+    "Depth requirement passed: evidence_graph_valid.",
+    "Depth requirement passed: asset_governance_valid.",
+    "Depth requirement passed: empirical_claim_links.",
+    "Depth requirement passed: preregistered_confirmatory_spec.",
+    "Depth requirement passed: immutable_evaluation.",
+    "Depth requirement passed: protocol_parity.",
+    "Depth requirement passed: failed_runs_accounted.",
+    "Depth requirement passed: limitations.",
+    "Depth requirement passed: artifact_manifest.",
+    "Depth requirement passed: artifact_provenance.",
+    "Depth requirement passed: competing_hypotheses."
+  ]
+}

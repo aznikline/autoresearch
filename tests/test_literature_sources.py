@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from autoresearch.literature.models import PaperRecord
 from autoresearch.literature.search import collect_candidates
 from autoresearch.literature.sources import seed_source
 
@@ -28,3 +29,17 @@ def test_citation_keys_are_deterministic() -> None:
 
     assert paper.citation_key == paper.citation_key
     assert paper.citation_key
+
+
+def test_citation_key_tolerates_blank_live_source_authors() -> None:
+    paper = PaperRecord(
+        paper_id="blank-author",
+        title="Database Index Selection",
+        authors=("", "Ada Lovelace"),
+        year=2026,
+        abstract="",
+        url="https://example.test/paper",
+        source="crossref",
+    )
+
+    assert paper.citation_key.startswith("lovelace2026database")

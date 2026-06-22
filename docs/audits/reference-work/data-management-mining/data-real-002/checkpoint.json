@@ -1,0 +1,8 @@
+{
+  "run_id": "data-real-002",
+  "stage": 12,
+  "stage_name": "FINAL_VERIFICATION_EXPORT",
+  "stage_slug": "final_verification_export",
+  "status": "done",
+  "message": "Paper bundle exported with citation and claim verification."
+}

@@ -1,0 +1,1 @@
+"""Deterministic stage prompt composition."""

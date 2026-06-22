@@ -1,0 +1,29 @@
+{
+  "primary_metric": 0.4807446118530743,
+  "accuracy": 0.5680672268907563,
+  "macro_f1": 0.4807446118530743,
+  "precision": 0.531021897810219,
+  "recall": 1.0,
+  "brier_score": 0.20758019723339216,
+  "domain_gap": 0.05359451163468387,
+  "ci_low": 0.4406384498890678,
+  "ci_high": 0.5136011275546158,
+  "effect_size": 0.30140944732505914,
+  "runtime_sec": 0.21152287499990052,
+  "compute_units": 122000.0,
+  "seed": 2,
+  "evaluation_units": [
+    "amazon",
+    "imdb",
+    "yelp"
+  ],
+  "trial_id": "baseline-lexicon-seed2",
+  "model": "lexicon",
+  "train_examples": 2405,
+  "test_examples": 595,
+  "per_domain_macro_f1": {
+    "amazon": 0.4648392198207697,
+    "imdb": 0.5147316353805033,
+    "yelp": 0.4611371237458194
+  }
+}

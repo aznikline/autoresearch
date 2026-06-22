@@ -1,0 +1,43 @@
+topic: Transparent sentiment baselines across Amazon IMDb and Yelp reviews
+metric_key: primary_metric
+metric_direction: maximize
+time_budget_sec: 30
+trials:
+  - {trial_id: baseline-majority-seed0, description: Majority-class baseline with bootstrap seed 0., parameters: {seed: 0, model: 0}}
+  - {trial_id: baseline-length-seed1, description: Message-length heuristic with bootstrap seed 1., parameters: {seed: 1, model: 1}}
+  - {trial_id: baseline-lexicon-seed2, description: Fixed sentiment lexicon with bootstrap seed 2., parameters: {seed: 2, model: 2}}
+  - {trial_id: baseline-unigram-seed3, description: Laplace-smoothed unigram Naive Bayes with bootstrap seed 3., parameters: {seed: 3, model: 3}}
+  - {trial_id: ablation-unigram-alpha05-seed1, description: Unigram smoothing ablation., parameters: {seed: 1, alpha: 0.5}}
+  - {trial_id: ablation-unigram-minfreq2-seed2, description: Unigram vocabulary-frequency ablation., parameters: {seed: 2, min_frequency: 2}}
+  - {trial_id: ablation-bigram-seed3, description: Add adjacent-token bigrams., parameters: {seed: 3, model: 4}}
+  - {trial_id: ablation-bigram-minfreq2-seed4, description: Bigram frequency-filter ablation., parameters: {seed: 4, min_frequency: 2}}
+confirmatory: true
+hypotheses:
+  - H1 token likelihoods outperform nonlexical and fixed-lexicon baselines across all three domains
+  - H2 domain shift and sparse bigrams limit uniform gains across review sources
+primary_metrics: [macro_f1]
+exclusions: [lines without a tab-separated binary label, evaluator failure]
+evaluator_hash: 791d73995674b8a79f6f4b1d0ff924b8f1e344f0ebf55ac9ed65671b904844f7
+stopping_rule: execute every prespecified trial once
+evaluation_units: [amazon, imdb, yelp]
+seeds: [0, 1, 2, 3, 4]
+metrics: [primary_metric, accuracy, macro_f1, precision, recall, brier_score, domain_gap, ci_low, ci_high, effect_size, runtime_sec, compute_units]
+confidence_intervals: true
+effect_sizes: true
+compute_reporting: true
+data_split: content-addressed immutable split_manifest.json
+tuning_allowance: prespecified alpha feature and minimum-frequency variants only
+resource_budget: one local CPU process and 30 seconds per trial
+uncertainty: 200-sample nonparametric bootstrap over the fixed test set
+corpus_version: UCI Sentiment Labelled Sentences dataset 331, 2016 archive
+languages: [English]
+domains: [Amazon product reviews, IMDb movie reviews, Yelp business reviews]
+tokenization: lowercase ASCII-alphanumeric word tokens with optional adjacent bigrams
+normalization: lowercase only; punctuation excluded by frozen evaluator
+split_hash: b42024423ebdc0a32b530f525d0825b4d834cc93bdad981d85a935f41891fc3d
+evaluation_script_hash: 791d73995674b8a79f6f4b1d0ff924b8f1e344f0ebf55ac9ed65671b904844f7
+annotation_protocol: use released binary sentiment labels; no new annotations
+human_evaluation: not conducted; evaluation is against released gold labels
+contamination_analysis: no pretrained model; content-hash split is disjoint and fixed before trials
+license_privacy_review: UCI page records CC BY 4.0 public review text; no new personal data collection
+subgroup_error_analysis: per-domain macro F1 and maximum domain gap are recorded for every trial

@@ -1,0 +1,220 @@
+# Synthesis
+
+Topic: Transparent sentiment baselines across Amazon IMDb and Yelp reviews
+
+## Grounded Starting Points
+- `glorot2011domainb905a703`: The exponential increase in the availability of online reviews and recommendations makes sentiment classification an interesting topic in academic and industrial research
+- `taboada2011lexiconbasedc1eaa880`: We present a lexicon-based approach to extracting sentiment from text
+- `tang2014learning98a135fa`: We present a method that learns word embedding for Twitter sentiment classification in this paper
+- `tang2016aspecte780e266`: We introduce a deep memory network for aspect level sentiment classification
+- `zhang2018deepc5431074`: Deep learning has emerged as a powerful machine learning technique that learns multiple layers of representations or features of the data and produces state‐of‐the‐art prediction results
+- `li2017endtoendaadc69e5`: Domain adaptation tasks such as cross-domain sentiment classification have raised much attention in recent years
+- `shen2018wassersteinb4d359ec`: Domain adaptation aims at generalizing a high-performance learner on a target domain via utilizing the knowledge distilled from a source domain which has a different but related data distribution
+- `wankhade2022surveybd7af33b`: A survey on sentiment analysis methods, applications, and challenges
+- `pontiki2014semeval2014ddaa69ec`: Maria Pontiki, Dimitris Galanis, John Pavlopoulos, Harris Papageorgiou, Ion Androutsopoulos, Suresh Manandhar
+- `chen2016improving0fec043c`: Different types of sentences express sentiment in very different ways
+- `zhang2019aspectbased9a079057`: Chen Zhang, Qiuchi Li, Dawei Song
+- `wan2009cotrainingf7cb4166`: The lack of Chinese sentiment corpora limits the research progress on Chinese sentiment classification
+- `chen2016neural0df7d563`: Document-level sentiment classification aims to predict user's overall sentiment in a document about a product
+- `li2008multidomain127a52f4`: This paper addresses a new task in sentiment classification, called multi-domain sentiment classification, that aims to improve performance through fusing training data from multiple domains
+- `weiss2016surveydb7dbd8b`: Machine learning and data mining techniques have been used in numerous real-world applications
+- `li2018hierarchical7d97e416`: Cross-domain sentiment classification aims to leverage useful information in a source domain to help do sentiment classification in a target domain that has no or little supervised information
+- `tang2015learninge778b40f`: Duyu Tang, Bing Qin, Ting Liu
+- `rodrguezibez2023review357d59da`: Sentiment analysis has proven to be a valuable tool to gauge public opinion in different disciplines
+- `ligthart2021systematic61a34904`: Abstract With advanced digitalisation, we can observe a massive increase of user-generated content on the web that provides opinions of people on different subjects
+- `wu2016sentiment3761d7c5`: Domain adaptation is an important research topic in sentiment analysis area
+- `zhang2019interactive2aa8ed3c`: Cross-domain sentiment classification refers to utilizing useful knowledge in the source domain to help sentiment classification in the target domain which has few or no labeled data
+- `du2020adversarial0e9baf5d`: Cross-domain sentiment classification aims to address the lack of massive amounts of labeled data
+- `uribe2010domain6fd982cc`: Domain Adaptation in Sentiment Classification
+- `beigi2021automaticef9b17f2`: Automatic construction of domain-specific sentiment lexicon for unsupervised domain adaptation and sentiment classification
+- `kasthuriarachchy2012review1bc25f5f`: A review of domain adaptation for opinion detection and sentiment classification
+- `pournaras2021exploitingd282c12a`: Exploiting Out-of-Domain Datasets and Visual Representations for Image Sentiment Classification
+- `cao2023tlbert0f143b29`: Cross-domain sentiment classification transfers the knowledge from the source domain to the target domain lacking supervised information for sentiment classification
+- `pu2019attention5327674b`: Attention Based GRU Network for Domain Adaptation in Sentiment Classification
+- `pu2019attentione6b21266`: Attention Based GRU Network for Domain Adaptation in Sentiment Classification
+- `toms2025multidomain33316bb2`: Multi-Domain Aspect-Based Sentiment Analysis Using Domain Adaptation Techniques
+- `hu2012multidomainbcc75de0`: A Multi-domain Adaptation for sentiment classification algorithm based on Class Distribution
+- `huang2019improveda508c460`: An Improved Spectral Feature Alignment for Domain Adaptation in Sentiment Classification
+- `zhao2020multisource7b0cdd65`: Multi-source domain adaptation with joint learning for cross-domain sentiment classification
+- `fu2022domain8bfe3f26`: Domain adaptation with a shrinkable discrepancy strategy for cross-domain sentiment classification
+- `singh2025transfer1f0335ee`: Transfer Learning for Cross-Domain Sentiment Classification via Domain Adaptation
+- `aparovich2023fitc3d3d015`: FIT BUT at SemEval-2023 Task 12: Sentiment Without Borders - Multilingual Domain Adaptation for Low-Resource Sentiment Classification
+- `dehkharghani2012adaptation0425a16e`: Adaptation and Use of Subjectivity Lexicons for Domain Dependent Sentiment Classification
+- `xia2013feature0e6c6b6d`: Feature Ensemble Plus Sample Selection: Domain Adaptation for Sentiment Classification
+- `denecke2023datasets03b63e0c`: Datasets for Medical Sentiment Analysis
+- `abdelwahab2018deep9757ef1c`: Deep Learning Based vs. Markov Chain Based Text Generation for Cross Domain Adaptation for Sentiment Classification
+- `gao2011crossdomainf0de5e2c`: A cross-domain adaptation method for sentiment classification using probabilistic latent analysis
+- `krishnakumari2019hyperparameter922e22d8`: Hyperparameter tuning in convolutional neural networks for domain adaptation in sentiment classification (HTCNN-DASC)
+- `domeniconi2015markov6c95be6c`: Markov Chain based Method for In-Domain and Cross-Domain Sentiment Classification
+- `kadli2019cross469bc0a0`: Cross Domain Sentiment Classification Techniques: A Review
+- `fu2022contrastivee139263a`: Contrastive transformer based domain adaptation for multi-source cross-domain sentiment classification
+- `kim2019sentiment615c3ca2`: As the number of textual data is exponentially increasing, it becomes more important to develop models to analyze the text data automatically
+- `zhang2024sentimentc6eb6828`: Sentiment analysis (SA) has been a longstanding research area in natural language processing
+- `bordoloi2023sentimentdb283d12`: Sentiment analysis: A survey on design framework, applications and future scopes
+- `xue2020improvingdba2f6c5`: Domain-adapted sentiment classification refers to training on a labeled source domain to well infer document-level sentiment on an unlabeled target domain
+- `sazzed2020crosslingual181c8ce3`: Sentiment analysis research in low-resource languages such as Bengali is still unexplored due to the scarcity of annotated data and the lack of text processing tools
+- `chen2019sentimente5e5b9d2`: Traditional methods of annotating the sentiment of an unlabeled document are based on sentiment lexicons or machine learning algorithms, which have shown low computational cost or competitive performance
+- `kurita2020weight048d91fe`: Recently, NLP has seen a surge in the usage of large pre-trained models
+- `choi2020improving432d296c`: Previous researchers have considered sentiment analysis as a document classification task, in which input documents are classified into predefined sentiment classes
+- `islam2024challenges02fd95a5`: Abstract Social media is used to categorise products or services, but analysing vast comments is time-consuming
+- `feizollah2019halalf402d6f1`: Twitter is a leading platform among social media networks
+- `areshey2024exploring4f38bf39`: Abstract Transfer learning models have proven superior to classical machine learning approaches in various text classification tasks, such as sentiment analysis, question answering, news categorization, and natural language inference
+- `zhang2023sentimentb4b66e57`: Sentiment analysis (SA) has been a long-standing research area in natural language processing
+- `daniel2021novel127fb151`: Sentiment analysis of online product reviews has become a mainstream way for businesses on e-commerce platforms to promote their products and improve user satisfaction
+- `erkan2023analysis6633bdc1`: Sentiment classification is a natural language processing task to identify opinions expressed in texts such as product or service reviews
+- `poria2020beneath22cf40d2`: Sentiment analysis as a field has come a long way since it was first introduced as a task nearly 20 years ago
+- `yang2021exploring1e053e64`: Linyi Yang, Jiazheng Li, Padraig Cunningham, Yue Zhang, Barry Smyth, Ruihai Dong
+- `kumar2025evolving5a044b19`: With the rapid expansion of social media and e-commerce platforms, an unprecedented volume of user-generated content has emerged, offering organizations, governments, and researchers invaluable insights into public sentiment
+- `yu2024comparative4e50d20b`: Sentiment analysis serves as a crucial approach for gauging public opinion across various sectors, including the realm of product reviews
+- `alahmadi2025generalizing369ede0a`: Abstract Sentiment analysis is an increasingly vital technique within natural language processing for interpreting human emotions expressed in text
+- `choi2024unigen4fb2ffdf`: Although pre-trained language models have exhibited great flexibility and versatility with prompt-based few-shot learning, they suffer from the extensive parameter size and limited applicability for inference
+- `banbhrani2022spiderd7fe2b64`: The prediction of review rating is an imperative sentiment assessment task that aims to discover the intensity of users’ sentiment toward a target product from several reviews
+- `huber2019predictingfa36d1ac`: Patrick Huber, Giuseppe Carenini
+- `boumhidi2021leveraging6c43877c`: Advanced reputation generation systems analyze user-generated content such as opinions and reviews expressed in natural language in order to produce a reliable and trusted reputation value
+- `belaroussi2025polarity26a67026`: With the rapid growth in social network comments, the need for more effective methods to classify their polarity—negative, neutral, or positive—has become essential
+- `paperndsupplementald5b276ae`: Supplemental Information 2: The text based review dataset taken from Amazon, Imdb, and Yelp websites
+- `paperndsupplemental8b6472a3`: Supplemental Information 1: The YELP-5 dataset is a sentiment classification task dataset used for sentiment analysis. It comprises user reviews sourced from the Yelp website
+- `paperndfigure92a99ba4`: Figure 4: The mean index for the sentiment classification on IMDb dataset.
+- `cao2025enhancing52f2345f`: Sentiment analysis has become crucial for understanding consumer behavior in e-commerce and social media
+- `paperndsupplementale2a50a6f`: Supplemental Information 6: The IMDB dataset is a sentiment classification task dataset used for sentiment analysis. It consists of sentences extracted from movie reviews
+- `wen2018recurrent306cb42f`: Recurrent Convolutional Neural Network with Attention for Twitter and Yelp Sentiment Classification
+- `paperndtableaaf66ed6`: Table 3: Extended binary metrics on IMDb and Amazon dataset.
+- `paperndfigure967211c9`: Figure 6: The mean index for the sentiment classification on Amazon dataset.
+- `gehring2008musikerwikice99da7d`: Wer schon immer an der Biographie/Diskographie seiner Lieblingsmusiker und -innen herumbasteln wollte, darf sich ab sofort bei SoundUnwound, einer Art Musiker-Wiki von IMDb und Amazon austoben
+- `gehring2008musikerwiki92fe96c0`: Wer schon immer an der Biographie/Diskographie seiner Lieblingsmusiker und -innen herumbasteln wollte, darf sich ab sofort bei SoundUnwound, einer Art Musiker-Wiki von IMDb und Amazon austoben
+- `lindsentiment6c9bc9d6`: SENTIMENT FEATURES FOR YELP NOT-RECOMMENDED ONLINE REVIEWS STUDY
+- `kaushik2022imdb7b5a4856`: IMDb Movie Data Classification using Voting Classifier for Sentiment Analysis
+- `yang2025modelling8e1aaa88`: Modelling and control of an intelligent communication system for IMDB sentiment classification
+- `yuan2026empirical5a975446`: Sentiment analysis of user reviews is a core Natural Language Processing (NLP) task with practical uses in real scenarios like recommendation
+- `choudhary2025sentimenta52cc157`: Sentiment Analysis on IMDB Movie Reviews using LSTM
+- `wu2026empirical56d5f7df`: Pre-trained transformer models are now the most common choices for sentiment analysis and other text classification tasks
+- `ghosh2022sentiment2060df3c`: Sentiment Analysis of IMDb Movie Reviews : A comparative study on Performance of Hyperparameter-tuned Classification Algorithms
+- `kalla2025spanc8735c67`: &lt;span&gt;Deep Learning-Based Sentiment Analysis: Enhancing IMDb Review Classification with LSTM Models&lt;/span&gt;
+- `chiavetta2016lexiconbased0860c873`: A Lexicon-based Approach for Sentiment Classification of Amazon Books Reviews in Italian Language
+- `orimaye2012buyd50ada57`: Buy It - Don’t Buy It: Sentiment Classification on Amazon Reviews Using Sentence Polarity Shift
+- `korada2025leveraging6ec8db92`: Leveraging Yelp Data for Business Strategy Optimization through Sentiment Analysis and Predictive Modeling
+- `varadharajan2025deep223eb57d`: Deep Learning-Based Sentiment Analysis: Enhancing IMDb Review Classification with LSTM Models
+- `x2026sentiment260218c3`: Sentiment Analysis Research Based on IMDb Movie Reviews
+- `domeniconi2017deep593e4546`: On Deep Learning in Cross-Domain Sentiment Classification
+- `dongre2025binary665b372b`: Binary Sentiment Classification on the IMDB Movie Review Dataset Using an Ensemble Approach
+- `jacoby2024yelpa2b73b30`: Yelp Consumption Sentiment and Asset Pricing
+- `sanju2013cross26b4ce16`: Cross domain sentiment classification using enhanced sentiment sensitive thesaurus (ESST)
+- `alamoudi2021sentiment4d4dddd6`: Sentiment classification and aspect-based sentiment analysis on yelp reviews using deep learning and word embeddings
+- `babu2021sentiment5b478c38`: Sentiment Analysis in Social Media Data for Depression Detection Using Artificial Intelligence: A Review
+- `tan2022sentiment4832d81e`: The rapid development of mobile technologies has made social media a vital platform for people to express their feelings and opinions
+- `nafis2021enhanced8d424bec`: Sentiment classification is increasingly used to automatically identify a positive or negative sentiment in a text review
+- `liu2019survey6f8551f6`: With the rapid development of the Internet industry, sentiment analysis has grown into one of the popular areas of natural language processing (NLP)
+- `umer2022impact43feb507`: Abstract Efficient word representation techniques (word embeddings) with modern machine learning models have shown reasonable improvement on automatic text classification tasks
+- `iqbal2019hybridf5ede317`: Due to the rapid development of Internet technologies and social media, sentiment analysis has become an important opinion mining technique
+- `iqbal2022sentimentd18b9ffb`: Internet and social media platforms such as Twitter, Facebook, and several blogs provide various types of helpful information worldwide
+- `mabrouk2020deepe59e339e`: Recently, Deep Learning (DL) approaches have been applied to solve the Sentiment Classification (SC) problem, which is a core task in reviews mining or Sentiment Analysis (SA)
+- `bangyal2021detection2da80cf9`: A vast amount of data is generated every second for microblogs, content sharing via social media sites, and social networking
+- `umarani2021sentiment5263777e`: Sentiment analysis has gained a lot of attention from researchers in the last year because it has been widely applied to a variety of application domains such as business, government, education, sports, tourism, biomedicine, and telecommunication services
+- `behdenna2018document0f28a934`: Sentiment analysis becomes a very active research area in the text mining field
+- `durairaj2021transformer24fb64c1`: The Bidirectional Encoder Representations from Transformers (BERT) is a state-of-the-art language model used for multiple natural language processing tasks and sequential modeling applications
+- `baarslan2021sentimentfa026eca`: Thanks to social media, people are now able to leave guiding comments quickly about their favorite restaurants, movies, etc
+- `gupta2023combined9632e9b1`: Sentiment analysis is a vital area of current research
+- `jnoub2020domainindependentbc6a4e2b`: Most people nowadays depend on the Web as a primary source of information
+- `sayeed2023bert678d1641`: E-commerce reviews are becoming more valued by both customers and companies
+- `jain2018efficientdf1b7bd2`: This paper proposes a novel feature selection method for Sentiment Classification
+- `ojo2021performanceb18b3098`: In this work, a study investigation was carried out using n-grams to classify sentiments with different machine learning and deep learning methods
+- `ghosh2020comparative0d185490`: Sentiment analysis denotes the analysis of emotions and opinions from text
+- `palanivinayagam2023twentyf98b0ff7`: Machine-learning-based text classification is one of the leading research areas and has a wide range of applications, which include spam detection, hate speech identification, reviews, rating summarization, sentiment analysis, and topic modelling
+- `reddy2025exploringf74fbe8e`: Exploring Hybrid Approaches for Sentiment Classification: A Comparative Study of LSTM, Naive Bayes, and Bayesian Network on IMDB Reviews
+- `mishra2025imdb53a34975`: This study presents a sentiment analysis system for IMDb movie reviews using Multinomial and Bernoulli Naive Bayes classifiers with Laplace smoothing
+- `zakaria2023hybrid9f347a22`: Hybrid Sentiment Analysis: Majority Voting with Multinomial Naive Bayes and Logistic Regression on IMDB Dataset
+- `subedi2025sentiment4d1e1933`: Sentiment analysis is a powerful tool for understanding public opinion, especially in the entertainment industry
+- `mahyarani2021implementation92725ed4`: Implementation of Sentiment Analysis Movie Review based on IMDB with Naive Bayes Using Information Gain on Feature Selection
+- `putri2025opinion5a9abee2`: This study aims to classify user opinions on IMDb movie reviews using the Multinomial Naïve Bayes algorithm
+- `meghana2023sentiment07e1ff10`: Sentiment Analysis on Amazon Product Reviews using LSTM and Naive Bayes
+- `muharram2025tweet16e8b037`: This research focuses on sentiment classification of Indonesian-language tweets related to mobile service providers by integrating Support Vector Machine (SVM) and Term Frequency-Inverse Document Frequency (TF-IDF) as the main text representation method
+- `mohamed2022svm467a111d`: Abstract Sentiment analysis has emerged as a powerful method to extract polarization of opinion from text
+- `paperndcomparisoneeaa2824`: The Comparison of Sentiment Analysis of Moon Knight Movie Reviews between Multinomial Naive Bayes and Support Vector Machine
+- `paperndcomparison449db446`: The Comparison of Sentiment Analysis of Moon Knight Movie Reviews between Multinomial Naive Bayes and Support Vector Machine
+- `rahman2025sentimentf05200fe`: Analisis sentimen adalah proses mengidentifikasi dan mengklasifikasikan opini dalam teks menjadi kategori tertentu seperti positif, negatif, atau netral
+- `andini2025sentimentbab5ad43`: Sentiment Analysis of Tantan Application Users: A Performance Comparison Between Naive Bayes and SVM
+- `elvina2026perbandingan1009c644`: Analisis sentimen merupakan pendekatan dalam penambangan teks untuk mengelompokkan opini pengguna berdasarkan data teks
+- `seref2018sentiment122903c0`: Sentiment Analysis using Naive Bayes and Complement Naive Bayes Classifier Algorithms on Hadoop Framework
+- `affandi2026sentimentc63a31c8`: Sentiment Analysis of Public Reviews of the Brompit Application Using Naive Bayes and SVM Algorithms
+- `astriani2025classificationb0008571`: The rapid development of e-commerce in Indonesia has led to an increase in the number of consumer reviews containing opinions and experiences of using products
+- `papadimitriou2024advancing9c718735`: Advancing Sentiment Analysis of IMDB Movie Reviews with a Hybrid Multinomial Naive Bayes and LSTM Approach
+- `yuniar2025sentimentaf01069c`: The rapid advancement of technology has encouraged the use of Artificial Intelligence in various sectors, including higher education
+- `zhirui2020analysis7e9df95c`: Analysis of Sentiment Classification of Hotel Reviews Based on Multinomial Naive Bayes
+- `ibrahim2015twitter8ea1c52b`: Twitter sentiment classification using Naive Bayes based on trainer perception
+- `asri2023sentiment06c2da18`: Sentiment Analysis of PLN Mobile Review Data Using Lexicon Vader and Naive Bayes Classification
+- `kalaivaani2016enhancingb2fe69c8`: Enhancing the Classification Accuracy in Sentiment Analysis using Joint Sentiment Topic Detection with Naive Bayes Classifier
+- `hamid2025sentimente313680b`: Sentiment Analysis of Wordpress Application Satisfaction Level Using K-Nearest Neighbor and Naive Bayes Methods
+- `crossley2016sentimente6f85bf3`: Sentiment Analysis and Social Cognition Engine (SEANCE): An automatic tool for sentiment, social cognition, and social-order analysis
+- `miah2024multimodal6ed04e56`: Sentiment analysis is an essential task in natural language processing that involves identifying a text's polarity, whether it expresses positive, negative, or neutral sentiments
+- `adak2022sentiment1dd3a5fa`: During the COVID-19 crisis, customers' preference in having food delivered to their doorstep instead of waiting in a restaurant has propelled the growth of food delivery services (FDSs)
+- `brauwers2021survey18bf5cde`: With the constantly growing number of reviews and other sentiment-bearing texts on the Web, the demand for automatic sentiment analysis algorithms continues to expand
+- `abercrombie2020sentimenta45f4c5f`: Abstract Parliamentary and legislative debate transcripts provide access to information concerning the opinions, positions, and policy preferences of elected politicians
+- `li2020quantuminspireddea5ae5a`: Quantum-inspired multimodal fusion for video sentiment analysis
+- `hogenboom2015usingbcdd5ee6`: A deep, fine-grain analysis of rhetorical structure highlights crucial sentiment-carrying text segments
+- `kabir2023banglabook8f8d1681`: The analysis of consumer sentiment, as expressed through reviews, can provide a wealth of insight regarding the quality of a product
+- `alwakid2022muldasa494768c0`: The semantically complicated Arabic natural vocabulary, and the shortage of available techniques and skills to capture Arabic emotions from text hinder Arabic sentiment analysis (ASA)
+- `ohana2009opinionb1086ed1`: Sentiment classification concerns the application of automatic methods for predicting the orientation of sentiment present on text documents
+- `joshi2017proceedingsb60a4ff4`: There has been a good amount of progress in sentiment analysis over the past 10 years, including the proposal of new methods and the creation of benchmark datasets
+- `yu2023conkif6d19a04`: Multimodal Sentiment Analysis leverages multimodal signals to detect the sentiment of a speaker
+- `yacoub2024surveyec309e9e`: In recent years, more people have been using the internet and social media to express their opinions on various subjects, such as institutions, services, or specific ideas
+- `hogenboom2009sentiment12bb51d1`: As moods and opinions play a pivotal role in various business and economic processes, keeping track of one's stakeholders' sentiment can be of crucial importance to decision makers
+- `ma2023amrbased5cc90650`: Aspect-based sentiment analysis (ABSA) is a fine-grained sentiment classification task
+- `santos2023oilf649334f`: Oil markets reveal considerably volatile behaviour due to a range of factors
+- `zhang2023neurosymbolic2490f8a5`: Sentiment analysis is a task that highly depends on the understanding of word senses
+- `mao2023systematic791ed455`: Assessing mental health disorders and determining treatment can be difficult for a number of reasons, including access to healthcare providers
+- `alam2025sentiment284f7433`: This systematic literature review investigates the advancements, methodologies, challenges, and application domains of sentiment analysis with a particular focus on informal digital text such as social media content
+- `cutler2022deep59d94f2d`: Recent advances in natural language processing (NLP) have produced general models that can perform complex tasks such as summarizing long passages and translating across languages
+- `hamilton2022neurosymbolicf89bd5ec`: Advocates for Neuro-Symbolic Artificial Intelligence (NeSy) assert that combining deep learning with symbolic reasoning will lead to stronger AI than either paradigm on its own
+- `neha2025retrievalaugmented537affb3`: Retrieval-Augmented Generation (RAG) enhances large language models (LLMs) by integrating external knowledge retrieval to improve factual consistency and reduce hallucinations
+- `zhang2023tsetline116ff6e`: In Natural Language Processing (NLP), deep-learning neural networks have superior performance but pose transparency and explainability barriers, due to their black box nature, and, thus, there is lack of trustworthiness
+- `zhai2023ussa558da815`: Most previous studies on Structured Sentiment Analysis (SSA) have cast it as a problem of bi-lexical dependency parsing, which cannot address issues of overlap and discontinuity simultaneously
+- `denecke2023lexical0ce5c76a`: Lexical Resources for Medical Sentiment Analysis
+- `yar2026semantic1a0d3949`: Semantic clause retrieval for trademark law using transformer encoders and lexical baselines: a cross-domain agri-robotics compliance case study
+- `zhu2013employing7d8ad7a7`: Employing Emotion Keywords to Improve Cross-Domain Sentiment Classification
+- `lindneural20d3c2bc`: Neural knowledge transfer for low-source sentiment analysis : cross-domain, cross-task &amp; cross-lingual
+- `boonpetch2019cross70b4aff1`: Cross domain sentiment classification of Thai reviews using co-train model
+- `dey2017lexicald21adc8f`: Lexical TF-IDF: An n-gram Feature Space for Cross-Domain Classification of Sentiment Reviews
+- `zhao2025optimizinge8bd49e6`: Keywords: Sentiment classification; Product review; Domain similarity; BERT embeddings; Siamese neural network; Similarity metric; Cross-domain sentiment analysis
+- `chen2025crossdomain4a587ac2`: Cross-Domain Transfer Learning for Aspect-Based Sentiment Analysis
+- `t2025crossdomaina88df84b`: Cross-Domain Sentiment Analysis and Abstractive Summarization of Reviews in X (Twitter)
+- `grer2018aspectbasedf79dc6a6`: Aspect-Based Sentiment Analysis of Drug Reviews Applying Cross-Domain and Cross-Data Learning
+- `dsouza2023sentiment9a66f432`: Sentiment Analysis on IMDB Movie Reviews using VADER with Lexical Affinity and Semantic Sentiment Expansion
+- `moro2018crossdomainf1d5ffae`: Cross-domain &amp; In-domain Sentiment Analysis with Memory-based Deep Neural Networks
+- `zhang2024simplified92949bd4`: Simplified Syntax-Guided Domain-Shared Representation Learning for Cross-Domain Aspect-Based Sentiment Analysis
+- `sahoo2025llmaugmented7e9a0705`: An LLM-Augmented ML Framework for Cross-Domain Sentiment Analysis
+- `chockalingam2018simplea3346a5f`: Simple and Effective Feature Based Sentiment Analysis on Product Reviews using Domain Specific Sentiment Scores
+- `remus2012domain12c3f822`: Domain Adaptation Using Domain Similarity- and Domain Complexity-Based Instance Selection for Cross-Domain Sentiment Analysis
+- `chockalingam2018simple07544c9d`: Simple and Effective Feature Based Sentiment Analysis on Product Reviews using Domain Specific Sentiment Scores
+- `peng2020weighedfbbea8f6`: Weighed Domain-Invariant Representation Learning for Cross-domain Sentiment Analysis
+- `li2024structuree8ea4f03`: Structure Generation for Cross-Domain Aspect-Based Sentiment Classification
+- `paper2020encoding262d2bc9`: Encoding cross-domain sentiment by Stochastic Word Embedding
+- `kumari2022deep1ee0f0fb`: Sentiment analysis is used to detect the opinion/sentiment expressed from the unstructured text
+- `kansal2022literature8a27f43d`: Sentiment analysis is the field of NLP which analyzes the sentiments of text written by users on online sites in the form of reviews
+- `jingwen2024crossdomain316fd614`: Cross-Domain Recommendation Algorithm Based on Sentiment Analysis of Reviews and Early Warning Field Side Information
+- `complexity2024retracted7ea6a1ca`: Retracted: Cross-Domain End-To-End Aspect-Based Sentiment Analysis with Domain-Dependent Embeddings
+- `kumar2025sentxformere1166f91`: Abstract Cross domain sentiment analysis is still a difficult task because of vocabulary changes, context change and domain specific sentiment
+- `serna2022discovery2f5ae476`: In recent years, digital technology and research methods have developed natural language processing for better understanding consumers and what they share in social media
+- `golagana2025adversariala98f84f6`: Multimodal sentiment analysis faces significant challenges due to data scarcity and domain shift, which hinder model generalization across different datasets
+- `t2023multifaceted30921198`: Sentiment analysis with machine learning plays a vital role in Higher Educational Institutions (HEI) for decision making
+- `mukherjee2024detection1f9cc3ec`: Autistic children will often exhibit certain behaviors that are unique to them and that are not typical of neurotypical children
+- `soysald2026revisiting0c8a8c5a`: The proliferation of unsolicited short messages (SMS spam) poses persistent challenges to mobile communication security and user privacy
+- `ruan2024languageed4af37b`: Tabular data, a prevalent data type across various domains, presents unique challenges due to its heterogeneous nature and complex structural relationships
+- `proscia2017sentiment7ae0491a`: In recent years more and more people have been connecting with Social Networks
+- `xie2024demoshapley0eb98bc5`: Large language models (LLMs) using in-context learning (ICL) excel in many tasks without task-specific fine-tuning
+- `harrando2022representation75f8b324`: Whether on TV or on the internet, video content production is seeing an unprecedented rise
+- `benyamani2026sentiment9b767c99`: This study investigates the implementation of different sentiment analysis models, exploring their theoretical foundations, robust evaluation criteria, and significant findings, and integrating natural language processing methods to preprocess data collected from social media, the main source of information
+- `cenacchi2026sparsebydesign83f7d32c`: Predictive systems increasingly span heterogeneous modalities such as graphs, language, and tabular records, but sparsity and efficiency remain modality-specific (graph edge or neighborhood sparsification, Transformer head or layer pruning, and separate tabular feature-selection pipelines)
+- `trotskii2023shapley828133b0`: The Shapley value is one of the most popular frameworks for explaining black-box machine learning models, originating from cooperative game theory
+- `yue2024positionfd8c4283`: Large language models (LLMs) have gained considerable attention for their excellent natural language processing capabilities
+- `paperndtable3751644a`: Table 1: Sentiment classification performance (Accuracy/Macro-F1) on four financial tweet datasets.
+- `si2011identifying6d01276f`: This paper describes a system that can automatically extract the topics from subjective Chinese sentences and identify their emotional tendencies
+- `leeftink2019towards27160a6c`: Towards Controlled Transformation of Sentiment in Sentences
+- `yang2013determine6d69c868`: Text sentiment analysis is a new branch of computational linguistics which is widely concerned
+- `paperndfigure6b82e845`: Figure 10: The ablation experiment for the positive and negative emotion on IMDB datasets.
+- `paperndfigure49caf9ce`: Figure 11: Macro F1 (%) score improvement across ablation experiments for CICIDS 2017 and CTU-IoT-malware datasets with ± SD error bars (5 × 5-fold CV).
+- `balamurali2022develop3ea66269`: A Bag-of-Words model is widely used to extract the features from text, which is given as input to machine learning algorithm like MLP, neural network
+- `shaout2019sentiment15df16e4`: Sentiment Analysis of Yelp using Advanced V Model
+- `ouyang2023analyze6d51f5aa`: Movie is an important cultural form, carrying multiple levels and meanings such as art, entertainment and social value
+- `paper2026sentiment19dab9d7`: Sentiment Analysis of IMDB Movie Reviews: Natural Language Processing for Opinion Mining
+- `bizel2020extraction580394cd`: Extraction of Aspects and Opinion Indicators from Yelp Reviews Using Different Methods of Sentiment Analysis
+- `ajmera2022sentiment9a5a9e51`: Abstract: Sentiment analysis is an artificial intelligence branch that focuses on expressing human emotions and opinions in the sense of data

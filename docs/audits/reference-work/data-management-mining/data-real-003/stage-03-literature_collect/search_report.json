@@ -1,0 +1,160 @@
+{
+  "query": "SQLite index selection query workload latency | SQLite index selection bike sharing workload latency | SQLite index selection UCI Bike Sharing hourly query latency | SQLite workload-specific indexes UCI Bike Sharing hourly tail latency | exact SQLite UCI Bike Sharing three-query index ablation benchmark | exact SQLite UCI Bike Sharing p95 latency index ablation correctness benchmark",
+  "source_names": [
+    "openalex",
+    "crossref"
+  ],
+  "candidate_count": 112,
+  "status": "ok",
+  "synthetic": false,
+  "saturated": true,
+  "saturation_max_new_ratio": 0.15,
+  "query_rounds": [
+    {
+      "query": "SQLite index selection query workload latency",
+      "candidate_count": 60,
+      "new_candidates": 60,
+      "status": "ok"
+    },
+    {
+      "query": "SQLite index selection bike sharing workload latency",
+      "candidate_count": 34,
+      "new_candidates": 33,
+      "status": "ok"
+    },
+    {
+      "query": "SQLite index selection UCI Bike Sharing hourly query latency",
+      "candidate_count": 30,
+      "new_candidates": 6,
+      "status": "ok"
+    },
+    {
+      "query": "SQLite workload-specific indexes UCI Bike Sharing hourly tail latency",
+      "candidate_count": 30,
+      "new_candidates": 7,
+      "status": "ok"
+    },
+    {
+      "query": "exact SQLite UCI Bike Sharing three-query index ablation benchmark",
+      "candidate_count": 30,
+      "new_candidates": 4,
+      "status": "ok"
+    },
+    {
+      "query": "exact SQLite UCI Bike Sharing p95 latency index ablation correctness benchmark",
+      "candidate_count": 30,
+      "new_candidates": 2,
+      "status": "ok"
+    }
+  ],
+  "source_results": [
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "91ac9ede816685550571d5e201eda1824747d9c429e8cc05f0c6140901af4028",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "44281c4c2dd3cafa5eb897cde5a0927be59be7345ad480977e444490564bcdec",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "da805aea41d545e6852f3ce31c47fa7aa1a8a7f5687a4911972089017c348646",
+      "error": "",
+      "paper_count": 4
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "ec87a9d65beab117668853662287910f6a9be1ea7e5742dedc5bec0803351a53",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "8397cf6b8258bab93381d0af131f4b00f81a70b8cee1a65759c56b39f4c317d3",
+      "error": "",
+      "paper_count": 0
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "11cab83ec7125ca55ae787e8ec287828cebae44939284b30369d60c90840dbfe",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "bf5cf29e314008819ae9e992552fc9c20b6d028a8f9e5134300ef2f5c7ab0681",
+      "error": "",
+      "paper_count": 0
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "2f3c4dd425250fcb0efe805b8223c2d1d8733dff4895c477884e9fb8b6ce3d7e",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "6e56b05381a220eb720960be2b0abec49e9d1b2acc582eb43a26d62fae04951a",
+      "error": "",
+      "paper_count": 0
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "f4055e5a04936561052d278e397dc12c042f6793610afc97a73aaa6d358848d1",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "35ef8120d0798851dd3e775a45406f9dbea84da9aa1dc2472455eca5447fb988",
+      "error": "",
+      "paper_count": 0
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "8ebe9fb29ac75681f1d66122f96d454f9fd5a7c0952dfe2d951eb6757b8b4c09",
+      "error": "",
+      "paper_count": 30
+    }
+  ]
+}

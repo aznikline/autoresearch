@@ -1,7 +1,11 @@
 # Research Alignment Spec
 
 Created: 2026-06-18
-Status: normative for the default profile
+Status: normative subprofile contract
+
+This ML-systems contract is governed by
+`docs/specs/multidomain-top-venue-autoresearch.md`. It does not establish
+multidomain or all-venue support by itself.
 
 ## Product Claim
 

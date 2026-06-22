@@ -1,0 +1,160 @@
+{
+  "query": "sentiment classification domain adaptation review datasets | sentiment classification Amazon IMDb Yelp domain shift | Naive Bayes sentiment classification Amazon IMDb Yelp | transparent lexical sentiment baselines cross-domain reviews | exact UCI sentiment labelled sentences cross-domain macro F1 | exact UCI Amazon IMDb Yelp sentiment bigram ablation macro F1",
+  "source_names": [
+    "openalex",
+    "crossref"
+  ],
+  "candidate_count": 262,
+  "status": "ok",
+  "synthetic": false,
+  "saturated": false,
+  "saturation_max_new_ratio": 0.15,
+  "query_rounds": [
+    {
+      "query": "sentiment classification domain adaptation review datasets",
+      "candidate_count": 54,
+      "new_candidates": 54,
+      "status": "ok"
+    },
+    {
+      "query": "sentiment classification Amazon IMDb Yelp domain shift",
+      "candidate_count": 60,
+      "new_candidates": 58,
+      "status": "ok"
+    },
+    {
+      "query": "Naive Bayes sentiment classification Amazon IMDb Yelp",
+      "candidate_count": 60,
+      "new_candidates": 46,
+      "status": "ok"
+    },
+    {
+      "query": "transparent lexical sentiment baselines cross-domain reviews",
+      "candidate_count": 60,
+      "new_candidates": 55,
+      "status": "ok"
+    },
+    {
+      "query": "exact UCI sentiment labelled sentences cross-domain macro F1",
+      "candidate_count": 52,
+      "new_candidates": 41,
+      "status": "ok"
+    },
+    {
+      "query": "exact UCI Amazon IMDb Yelp sentiment bigram ablation macro F1",
+      "candidate_count": 30,
+      "new_candidates": 8,
+      "status": "ok"
+    }
+  ],
+  "source_results": [
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "de6281b06d02d046be062a681fa459ac72f416ab2667c445e32a056b8fdc87af",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "72354a9c43cccb82116a02806dbac1cda7875d6a44ec7822c225a4475d0dd887",
+      "error": "",
+      "paper_count": 24
+    },
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "1b962ff2ed28b906c56094e3091ee1271d92f57d8a8d2d9ce5317cfe52709207",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "bd244fa24d4b684d5ff4b1feef3b4161727401ef1f38cce84c4d3a2133b5a95e",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "07efea52206dc769505921b15dbef56508bcc80c7c2de9e60ad032513509ce7c",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "7fdb5d6e7552212ba77c91d2251bf1e60987dfa88975f925550b72b0ca0b1177",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "ec0756c03e84847a87bd1eec7321f203b8a8bc85e92e208b5696bcb2d071068d",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "02c98aedee41886072affb11135640413380a0bbc747a73d269edc13810fb3aa",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "84d616005f258ebd5a3d2aaf54fc6c930a6b65985e904183336e08daa2eb7e19",
+      "error": "",
+      "paper_count": 22
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "d5417511c151c989c460a1775052c54321fa95d6e4d6845e0edb12da586ea2dd",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "6312b0a5161c7b8a3fc18b1eda42e6e7347f54a86984f8adbd12e9b17eea405c",
+      "error": "",
+      "paper_count": 0
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "76d1e165c2ddb311c99e8bc1ddde78fe93d97c05398b63be65fae4f40430a274",
+      "error": "",
+      "paper_count": 30
+    }
+  ]
+}

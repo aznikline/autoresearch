@@ -1,0 +1,86 @@
+profile_id: foundation-models-llm
+display_name: Foundation Models and LLMs
+parent_domain: machine-learning
+target_venues: [NeurIPS, ICML, ICLR, COLM, ACL, EMNLP]
+compatible_venue_ids: [neurips, icml, iclr, colm, acl, emnlp]
+plugin_id: foundation-models-llm
+claim_types:
+  - model capability
+  - training or post-training method
+  - evaluation or alignment finding
+governance_checks:
+  - model and dataset license
+  - benchmark contamination and memorization
+  - safety dual-use and model assistance disclosure
+domain_checks:
+  - model tokenizer prompt and decoding identity
+  - judge bias and human validation
+  - quality safety latency token and cost tradeoffs
+experiment_paradigm: stochastic_model_evaluation
+focus_areas:
+  - language model pretraining and post-training
+  - reasoning retrieval agents and tool use
+  - model evaluation alignment and safety
+biases:
+  - contamination-aware evaluation
+  - matched model access and compute
+  - multiple evaluators over single judge scores
+anti_patterns:
+  - treat model-judge preference as ground truth
+  - hide prompts decoding or model versions
+  - claim general capability from one benchmark
+standard_baselines:
+  - strongest accessible model baseline
+  - simple prompting or decoding baseline
+  - compute and access matched baseline
+metric_types:
+  - task quality
+  - calibration and safety
+  - latency throughput tokens and cost
+statistical_tests:
+  - bootstrap confidence interval
+  - paired permutation test
+  - judge agreement and bias analysis
+detector_keywords: [llm, language model, reasoning, alignment, retrieval, agent]
+skill_tags: [llm, foundation-models, evaluation, alignment]
+depth_requirements:
+  exploratory: &exploratory
+    min_screened_papers: 10
+    min_baselines: 2
+    min_evaluation_units: 1
+    min_seeds: 2
+    min_ablations: 1
+    min_verified_metrics: 3
+    require_confidence_intervals: false
+    require_effect_sizes: false
+    require_compute_reporting: true
+    require_hypothesis_outcomes: true
+  publication: &publication
+    min_screened_papers: 20
+    min_baselines: 3
+    min_evaluation_units: 2
+    min_seeds: 3
+    min_ablations: 2
+    min_verified_metrics: 6
+    require_confidence_intervals: true
+    require_effect_sizes: true
+    require_compute_reporting: true
+    require_hypothesis_outcomes: true
+  top_venue:
+    min_screened_papers: 30
+    min_baselines: 4
+    min_evaluation_units: 3
+    min_seeds: 5
+    min_ablations: 3
+    min_verified_metrics: 8
+    require_confidence_intervals: true
+    require_effect_sizes: true
+    require_compute_reporting: true
+    require_hypothesis_outcomes: true
+stage_guidance:
+  hypothesis_generation: Form competing capability and artifact hypotheses with contamination risks.
+  experiment_design: Freeze model versions prompts decoding judges datasets and budgets.
+  experiment_loop: Preserve samples judge outputs failures token usage latency and cost.
+  result_analysis_decision: Analyze uncertainty judge agreement contamination and safety tradeoffs.
+  paper_draft_revision: Link every capability and cost claim to immutable runs.
+  final_verification_export: Block on missing model identity contamination analysis or judge validation.

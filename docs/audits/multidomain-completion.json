@@ -1,0 +1,197 @@
+{
+  "complete": false,
+  "spec_sha256": "dec133ac1e4ab5bb0c453e4bf69371853269864584f6169ab3b849e2da80e1e6",
+  "plan_sha256": "ceefba5f08f58a47edd9797607dd590bfb25c6e79a398f3ceb481fb35796024b",
+  "blocked_requirements": [
+    "MD-002",
+    "MD-009",
+    "MD-013"
+  ],
+  "requirements": {
+    "MD-001": {
+      "requirement_id": "MD-001",
+      "passed": true,
+      "blockers": [],
+      "artifacts": [
+        "docs/audits/test-results/profile-venue-contracts.xml",
+        "tests/test_profile_matrix.py",
+        "tests/test_skill_matrix.py"
+      ]
+    },
+    "MD-002": {
+      "requirement_id": "MD-002",
+      "passed": false,
+      "blockers": [
+        "venue registry has 17 contracts",
+        "venue contract coling/2026/main is not verified",
+        "venue contract iccv/2027/main is not verified",
+        "venue contract naacl/2026/main is not verified",
+        "venue contract sigmod/2026/main is not verified",
+        "current direct attestation is missing"
+      ],
+      "artifacts": []
+    },
+    "MD-003": {
+      "requirement_id": "MD-003",
+      "passed": true,
+      "blockers": [],
+      "artifacts": [
+        "docs/audits/test-results/profile-venue-contracts.xml",
+        "tests/test_venue_registry.py",
+        "tests/e2e/test_profile_venue_matrix.py"
+      ]
+    },
+    "MD-004": {
+      "requirement_id": "MD-004",
+      "passed": true,
+      "blockers": [],
+      "artifacts": [
+        "docs/audits/test-results/real-llm-provider.xml",
+        "docs/audits/live-smoke/llm/smoke.json",
+        "docs/audits/live-smoke/llm/llm_calls.jsonl",
+        "tests/adapters/test_llm_contract.py",
+        "src/autoresearch/adapters/llm/openai_compatible.py"
+      ]
+    },
+    "MD-005": {
+      "requirement_id": "MD-005",
+      "passed": true,
+      "blockers": [],
+      "artifacts": [
+        "docs/audits/test-results/live-literature.xml",
+        "docs/audits/live-smoke/literature/smoke.json",
+        "docs/audits/live-smoke/literature/arxiv/requests.jsonl",
+        "docs/audits/live-smoke/literature/openalex/requests.jsonl",
+        "docs/audits/live-smoke/literature/crossref/requests.jsonl",
+        "tests/test_literature_saturation.py"
+      ]
+    },
+    "MD-006": {
+      "requirement_id": "MD-006",
+      "passed": true,
+      "blockers": [],
+      "artifacts": [
+        "docs/audits/test-results/asset-governance.xml",
+        "tests/test_asset_governance.py",
+        "tests/test_asset_registry.py",
+        "src/autoresearch/governance/registry.py"
+      ]
+    },
+    "MD-007": {
+      "requirement_id": "MD-007",
+      "passed": true,
+      "blockers": [],
+      "artifacts": [
+        "docs/audits/test-results/domain-protocols.xml",
+        "tests/experiments/test_domain_plugins.py",
+        "src/autoresearch/experiments/plugins/base.py",
+        "tests/fixtures/projects/llm/protocol.yaml",
+        "tests/fixtures/projects/cv/protocol.yaml",
+        "tests/fixtures/projects/nlp/protocol.yaml",
+        "tests/fixtures/projects/data/protocol.yaml",
+        "tests/fixtures/projects/mlsystems/protocol.yaml"
+      ]
+    },
+    "MD-008": {
+      "requirement_id": "MD-008",
+      "passed": true,
+      "blockers": [],
+      "artifacts": [
+        "docs/audits/test-results/claim-evidence-graph.xml",
+        "tests/test_evidence_graph.py",
+        "tests/test_paper_evidence.py",
+        "src/autoresearch/evidence/graph.py",
+        "src/autoresearch/paper/evidence.py",
+        "tests/test_citation_verification.py",
+        "tests/test_claim_verification.py"
+      ]
+    },
+    "MD-009": {
+      "requirement_id": "MD-009",
+      "passed": false,
+      "blockers": [
+        "venue contract coling/2026/main is not verified",
+        "venue contract iccv/2027/main is not verified",
+        "venue contract naacl/2026/main is not verified",
+        "venue contract sigmod/2026/main is not verified",
+        "current direct attestation is missing"
+      ],
+      "artifacts": []
+    },
+    "MD-010": {
+      "requirement_id": "MD-010",
+      "passed": true,
+      "blockers": [],
+      "artifacts": [
+        "docs/audits/test-results/orchestration-recovery.xml",
+        "tests/test_hitl_session.py",
+        "tests/test_recovery.py",
+        "tests/test_cancellation.py",
+        "tests/test_memory.py",
+        "tests/test_plan_verify.py",
+        "tests/e2e/test_stage_boundary_recovery.py"
+      ]
+    },
+    "MD-011": {
+      "requirement_id": "MD-011",
+      "passed": true,
+      "blockers": [],
+      "artifacts": [
+        "docs/audits/test-results/security-controls.xml",
+        "tests/adapters/test_llm_contract.py",
+        "tests/adapters/test_literature_contract.py",
+        "tests/test_live_reasoning.py",
+        "tests/test_prompt_manager.py",
+        "tests/test_local_sandbox.py",
+        "tests/test_artifact_budget.py"
+      ]
+    },
+    "MD-012": {
+      "requirement_id": "MD-012",
+      "passed": true,
+      "blockers": [],
+      "artifacts": [
+        "docs/audits/test-results/capability-levels.xml",
+        "tests/test_capabilities.py",
+        "tests/test_cli.py",
+        "tests/test_alignment_spec.py",
+        "README.md"
+      ]
+    },
+    "MD-013": {
+      "requirement_id": "MD-013",
+      "passed": false,
+      "blockers": [
+        "missing real reference bundle: foundation-models-llm",
+        "missing real reference bundle: computer-vision",
+        "missing real reference bundle: natural-language-processing",
+        "current direct attestation is missing"
+      ],
+      "artifacts": []
+    },
+    "MD-014": {
+      "requirement_id": "MD-014",
+      "passed": true,
+      "blockers": [],
+      "artifacts": [
+        "docs/audits/test-results/readiness-composition.xml",
+        "tests/paper/test_readiness_matrix.py",
+        "tests/paper/test_venue_export.py",
+        "tests/test_quality_gate.py",
+        "src/autoresearch/paper/quality.py",
+        "tests/test_experiment_evidence.py"
+      ]
+    },
+    "MD-015": {
+      "requirement_id": "MD-015",
+      "passed": true,
+      "blockers": [],
+      "artifacts": [
+        "docs/audits/test-results/operator-runbook.xml",
+        "tests/e2e/test_operator_workflow.py",
+        "docs/runbook.md",
+        "README.md"
+      ]
+    }
+  }
+}

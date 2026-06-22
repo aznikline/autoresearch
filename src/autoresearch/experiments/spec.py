@@ -39,6 +39,17 @@ class ExperimentSpec:
     metric_direction: str
     time_budget_sec: int
     trials: tuple[TrialSpec, ...]
+    confirmatory: bool = True
+    hypotheses: tuple[str, ...] = ("H1", "H2")
+    exclusions: tuple[str, ...] = ()
+    stopping_rule: str = "execute every prespecified trial once"
+    evaluation_units: tuple[str, ...] = ("toy-objective",)
+    seeds: tuple[int, ...] = (0,)
+    metrics: tuple[str, ...] = ("primary_metric", "loss")
+    compute_reporting: bool = True
+    data_split: str = "fixed toy split"
+    tuning_allowance: str = "none"
+    resource_budget: str = "identical per-trial wall-clock budget"
 
     @classmethod
     def default(
@@ -82,6 +93,19 @@ class ExperimentSpec:
             metric_direction=str(data["metric_direction"]),
             time_budget_sec=int(data["time_budget_sec"]),
             trials=tuple(TrialSpec.from_dict(item) for item in data.get("trials", ())),
+            confirmatory=bool(data.get("confirmatory", True)),
+            hypotheses=tuple(str(item) for item in data.get("hypotheses", ("H1", "H2"))),
+            exclusions=tuple(str(item) for item in data.get("exclusions", ())),
+            stopping_rule=str(data.get("stopping_rule", "execute every prespecified trial once")),
+            evaluation_units=tuple(str(item) for item in data.get("evaluation_units", ("toy-objective",))),
+            seeds=tuple(int(item) for item in data.get("seeds", (0,))),
+            metrics=tuple(str(item) for item in data.get("metrics", ("primary_metric", "loss"))),
+            compute_reporting=bool(data.get("compute_reporting", True)),
+            data_split=str(data.get("data_split", "fixed toy split")),
+            tuning_allowance=str(data.get("tuning_allowance", "none")),
+            resource_budget=str(
+                data.get("resource_budget", "identical per-trial wall-clock budget")
+            ),
         )
 
     def write_yaml(self, path: Path) -> None:
@@ -95,4 +119,15 @@ class ExperimentSpec:
             "metric_direction": self.metric_direction,
             "time_budget_sec": self.time_budget_sec,
             "trials": [trial.to_dict() for trial in self.trials],
+            "confirmatory": self.confirmatory,
+            "hypotheses": list(self.hypotheses),
+            "exclusions": list(self.exclusions),
+            "stopping_rule": self.stopping_rule,
+            "evaluation_units": list(self.evaluation_units),
+            "seeds": list(self.seeds),
+            "metrics": list(self.metrics),
+            "compute_reporting": self.compute_reporting,
+            "data_split": self.data_split,
+            "tuning_allowance": self.tuning_allowance,
+            "resource_budget": self.resource_budget,
         }

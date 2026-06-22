@@ -1,0 +1,29 @@
+{
+  "primary_metric": 0.8285709443427565,
+  "accuracy": 0.8285714285714286,
+  "macro_f1": 0.8285709443427565,
+  "precision": 0.8118811881188119,
+  "recall": 0.845360824742268,
+  "brier_score": 0.12804433518195552,
+  "domain_gap": 0.06125213402374563,
+  "ci_low": 0.7982230059685296,
+  "ci_high": 0.8553931542774462,
+  "effect_size": 1.0366456351968163,
+  "runtime_sec": 0.2523960830003489,
+  "compute_units": 122000.0,
+  "seed": 4,
+  "evaluation_units": [
+    "amazon",
+    "imdb",
+    "yelp"
+  ],
+  "trial_id": "ablation-bigram-minfreq2-seed4",
+  "model": "bigram",
+  "train_examples": 2405,
+  "test_examples": 595,
+  "per_domain_macro_f1": {
+    "amazon": 0.8506412438996709,
+    "imdb": 0.7893891098759253,
+    "yelp": 0.8443084455324358
+  }
+}

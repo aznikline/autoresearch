@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "workflow": "autoresearch-goal",
+  "slug": "autoresearch-docs-specs-research-alignment-md",
+  "topic": "落实 autoresearch 的规范：实现 docs/specs/research-alignment.md 的全部机器可执行要求",
+  "rubric": "PASS only when every normative Research Alignment Spec clause has traceable implementation and tests; all tests and skill validation pass; CLI/docs match behavior; no unsupported readiness claims remain",
+  "critic_command": "uv run --extra dev pytest -q && uv run python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/autoresearch-ml-systems",
+  "status": "complete",
+  "created_at": "2026-06-18T13:47:40.441Z",
+  "updated_at": "2026-06-18T13:58:45.424Z",
+  "mission_path": ".omx/goals/autoresearch/autoresearch-docs-specs-research-alignment-md/mission.json",
+  "rubric_path": ".omx/goals/autoresearch/autoresearch-docs-specs-research-alignment-md/rubric.md",
+  "ledger_path": ".omx/goals/autoresearch/autoresearch-docs-specs-research-alignment-md/ledger.jsonl",
+  "completion_path": ".omx/goals/autoresearch/autoresearch-docs-specs-research-alignment-md/completion.json",
+  "completed_at": "2026-06-18T13:58:45.424Z"
+}

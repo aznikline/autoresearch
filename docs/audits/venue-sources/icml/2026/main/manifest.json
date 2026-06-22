@@ -1,0 +1,18 @@
+{
+  "venue_id": "icml",
+  "year": 2026,
+  "track": "main",
+  "sources": [
+    {
+      "url": "https://icml.cc/Conferences/2026/CallForPapers",
+      "path": "call-for-papers.html",
+      "sha256": "19abe3d4ae596f2249a771407c14aeca49e1a40f6288af719fa6034f093d7e17"
+    }
+  ],
+  "template": {
+    "identity": "icml-2026-main",
+    "source_url": "https://media.icml.cc/Conferences/ICML2026/Styles/icml2026.zip",
+    "path": "src/autoresearch/templates/icml/2026/icml2026.zip",
+    "sha256": "8b29290f5828e176debb57ea9cc00252502973d55ea561a2f18a7f0a326bfc6c"
+  }
+}

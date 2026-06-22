@@ -1,0 +1,26 @@
+schema_version: 1
+venue_id: iclr
+display_name: ICLR
+year: 2026
+track: main
+status: verified
+compatible_profiles: [foundation-models-llm, computer-vision, natural-language-processing, ml-systems-efficiency]
+official_sources:
+  - url: https://iclr.cc/Conferences/2026/AuthorGuide
+    retrieved_at: 2026-06-19
+    sha256: 37370d3bb0c4cc951b629573c0a97f36f34f393913854ddb98e2b426e2662a61
+template:
+  identity: iclr-2026-main
+  source_url: https://github.com/ICLR/Master-Template/raw/master/iclr2026.zip
+  sha256: b6d63b29992e153f804bb6d170c57db156c011b5bedf96a9f31d58813b909acf
+policy:
+  anonymity: double_blind
+  page_limit: 9
+  supplement_allowed: true
+  checklist_required: false
+  checklist_delivery: none
+  ethics_required: false
+  limitations_required: false
+  artifact_policy: encouraged
+  required_sections: []
+valid_until: 2026-12-31

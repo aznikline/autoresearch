@@ -1,0 +1,135 @@
+{
+  "query": "SQLite index selection query workload latency | SQLite index selection bike sharing workload latency | SQLite index selection UCI Bike Sharing hourly query latency | SQLite workload-specific indexes UCI Bike Sharing hourly tail latency | exact SQLite UCI Bike Sharing three-query index ablation benchmark",
+  "source_names": [
+    "openalex",
+    "crossref"
+  ],
+  "candidate_count": 110,
+  "status": "ok",
+  "synthetic": false,
+  "saturated": false,
+  "query_rounds": [
+    {
+      "query": "SQLite index selection query workload latency",
+      "candidate_count": 60,
+      "new_candidates": 60,
+      "status": "ok"
+    },
+    {
+      "query": "SQLite index selection bike sharing workload latency",
+      "candidate_count": 34,
+      "new_candidates": 33,
+      "status": "ok"
+    },
+    {
+      "query": "SQLite index selection UCI Bike Sharing hourly query latency",
+      "candidate_count": 30,
+      "new_candidates": 6,
+      "status": "ok"
+    },
+    {
+      "query": "SQLite workload-specific indexes UCI Bike Sharing hourly tail latency",
+      "candidate_count": 30,
+      "new_candidates": 7,
+      "status": "ok"
+    },
+    {
+      "query": "exact SQLite UCI Bike Sharing three-query index ablation benchmark",
+      "candidate_count": 30,
+      "new_candidates": 4,
+      "status": "ok"
+    }
+  ],
+  "source_results": [
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "a300736bad2496179ce8ec1df72c4d8ae48baf6f7ca323fcff326196560ff447",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "05d6957055111012621a70d5f86888f060e4b2b152ec58de4ea61f2306668542",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "34a94f15371cb617901a6633f626db686554454997fc41b0ce5fa541fb49dfff",
+      "error": "",
+      "paper_count": 4
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "f24e9e38650126f461b840bf717c93edb72908cf8d6de803dffbd17f880353ab",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "46a1034df10edb8ca0ba31d3215358b0e0d14000718db2f3e61bc0a041df7af2",
+      "error": "",
+      "paper_count": 0
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "d0b951737316f2fdc99b91b509b2a5c39e6867c4b06bf0c9eef162ccad8de2a2",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "3de594cd4532faa7c97d33ed4a124a7721312b6e889202d02e672f6f561806e5",
+      "error": "",
+      "paper_count": 0
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "ec4846b4381ff761a0cd8fa4c0bfb956af85f3ace82242ef9f02d78ed6e2aa69",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "2fb00088eabde3644b0428020033646f5d20cfa891cbf48112f1efd5d7c182a1",
+      "error": "",
+      "paper_count": 0
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "b96e274889e08f2a35b9719f91250067cbff68dac9a671267a12e03dedbafc55",
+      "error": "",
+      "paper_count": 30
+    }
+  ]
+}

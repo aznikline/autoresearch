@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 import tempfile
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -19,6 +20,7 @@ def write_checkpoint(
     stage: Stage,
     status: StageStatus,
     message: str = "",
+    details: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     run_dir.mkdir(parents=True, exist_ok=True)
     checkpoint: dict[str, Any] = {
@@ -29,6 +31,8 @@ def write_checkpoint(
         "status": status.value,
         "message": message,
     }
+    if details:
+        checkpoint.update(details)
     fd, tmp_name = tempfile.mkstemp(
         dir=run_dir, prefix="checkpoint-", suffix=".tmp", text=True
     )
@@ -36,6 +40,16 @@ def write_checkpoint(
         with os.fdopen(fd, "w", encoding="utf-8") as handle:
             json.dump(checkpoint, handle, indent=2)
         Path(tmp_name).replace(run_dir / CHECKPOINT_FILE)
+        event = {
+            **checkpoint,
+            "recorded_at": datetime.now(timezone.utc).isoformat().replace(
+                "+00:00", "Z"
+            ),
+        }
+        with (run_dir / "checkpoint_events.jsonl").open(
+            "a", encoding="utf-8"
+        ) as history:
+            history.write(json.dumps(event, sort_keys=True) + "\n")
     except BaseException:
         Path(tmp_name).unlink(missing_ok=True)
         raise

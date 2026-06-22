@@ -1,0 +1,26 @@
+schema_version: 1
+venue_id: colm
+display_name: COLM
+year: 2026
+track: main
+status: verified
+compatible_profiles: [foundation-models-llm]
+official_sources:
+  - url: https://colmweb.org/cfp.html
+    retrieved_at: 2026-06-19
+    sha256: 77fa692094b1e54cb424779cb4f5be30693b470ffecd0a9c16153961c9ed1957
+template:
+  identity: colm-2026-main
+  source_url: https://github.com/COLM-org/Template/archive/refs/tags/2026.zip
+  sha256: 24c616f7c37769db12fb2f2064b0f55a710b1503d673ba6a3cc114c54c01335e
+policy:
+  anonymity: double_blind
+  page_limit: 9
+  supplement_allowed: true
+  checklist_required: false
+  checklist_delivery: none
+  ethics_required: false
+  limitations_required: false
+  artifact_policy: encouraged
+  required_sections: []
+valid_until: 2026-12-31

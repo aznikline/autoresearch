@@ -1,0 +1,23 @@
+{
+  "primary_metric": 30.673462499999996,
+  "p50_latency_ms": 19.745354,
+  "p95_latency_ms": 30.673462499999996,
+  "p99_latency_ms": 34.799090339999985,
+  "throughput_qps": 52.930775355280666,
+  "correctness_rate": 1.0,
+  "ci_low": 16.95774547661087,
+  "ci_high": 20.827455790055797,
+  "effect_size": 0.696185986092044,
+  "runtime_sec": 3.280475500000648,
+  "compute_units": 120.0,
+  "seed": 4,
+  "evaluation_units": [
+    "hourly-demand",
+    "weather-filter",
+    "season-summary"
+  ],
+  "trial_id": "ablation-composite-index-seed4",
+  "index_mode": "composite",
+  "row_count": 17379,
+  "sqlite_version": "3.50.4"
+}

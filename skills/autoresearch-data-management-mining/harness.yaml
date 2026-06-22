@@ -1,0 +1,26 @@
+category: research-workflow
+trigger_keywords: [database, query, data mining, graph, workload, latency, throughput]
+applicable_stages:
+  - idea_intake
+  - literature_collect
+  - hypothesis_generation
+  - experiment_design
+  - experiment_loop
+  - result_analysis_decision
+  - paper_draft_revision
+  - final_verification_export
+profiles: [data-management-mining]
+depths: [exploratory, publication, top_venue]
+priority: 1
+stage_instructions:
+  hypothesis_generation: Define workload scale correctness and mechanism hypotheses.
+  experiment_design: Freeze systems schema workloads scale indexes hardware cache warmup concurrency and timeouts.
+  experiment_loop: Preserve queries plans configs logs timeouts failures and resource traces.
+  result_analysis_decision: Analyze distributions tail latency correctness scale and resource tradeoffs.
+  paper_draft_revision: Scope claims to tested workloads systems hardware and scale.
+  final_verification_export: Block on mismatched systems hidden tuning leakage or missing workload provenance.
+references:
+  experiment_design: [references/methodology.md]
+  experiment_loop: [references/methodology.md]
+  result_analysis_decision: [references/methodology.md]
+  final_verification_export: [references/methodology.md]

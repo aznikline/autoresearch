@@ -1,0 +1,23 @@
+{
+  "primary_metric": 38.69099614999999,
+  "p50_latency_ms": 27.646583,
+  "p95_latency_ms": 38.69099614999999,
+  "p99_latency_ms": 47.26120974999999,
+  "throughput_qps": 38.61510469310451,
+  "correctness_rate": 1.0,
+  "ci_low": 23.138002453825877,
+  "ci_high": 28.655201679507456,
+  "effect_size": -0.010931860507006749,
+  "runtime_sec": 3.572764499999721,
+  "compute_units": 120.0,
+  "seed": 1,
+  "evaluation_units": [
+    "hourly-demand",
+    "weather-filter",
+    "season-summary"
+  ],
+  "trial_id": "baseline-seed1",
+  "index_mode": "none",
+  "row_count": 17379,
+  "sqlite_version": "3.50.4"
+}

@@ -1,0 +1,208 @@
+{
+  "query": "sentiment classification domain adaptation review datasets | sentiment classification Amazon IMDb Yelp domain shift | Naive Bayes sentiment classification Amazon IMDb Yelp | transparent lexical sentiment baselines cross-domain reviews | exact UCI sentiment labelled sentences cross-domain macro F1 | exact UCI Amazon IMDb Yelp sentiment bigram ablation macro F1 | exact UCI Amazon IMDb Yelp sentiment bigram ablation macro F1 bootstrap | exact UCI Amazon IMDb Yelp sentiment bigram ablation macro F1 bootstrap fixed split",
+  "source_names": [
+    "openalex",
+    "crossref"
+  ],
+  "candidate_count": 232,
+  "status": "degraded",
+  "synthetic": false,
+  "saturated": false,
+  "saturation_max_new_ratio": 0.15,
+  "query_rounds": [
+    {
+      "query": "sentiment classification domain adaptation review datasets",
+      "candidate_count": 60,
+      "new_candidates": 60,
+      "status": "ok"
+    },
+    {
+      "query": "sentiment classification Amazon IMDb Yelp domain shift",
+      "candidate_count": 60,
+      "new_candidates": 58,
+      "status": "ok"
+    },
+    {
+      "query": "Naive Bayes sentiment classification Amazon IMDb Yelp",
+      "candidate_count": 45,
+      "new_candidates": 33,
+      "status": "ok"
+    },
+    {
+      "query": "transparent lexical sentiment baselines cross-domain reviews",
+      "candidate_count": 30,
+      "new_candidates": 28,
+      "status": "degraded"
+    },
+    {
+      "query": "exact UCI sentiment labelled sentences cross-domain macro F1",
+      "candidate_count": 22,
+      "new_candidates": 22,
+      "status": "degraded"
+    },
+    {
+      "query": "exact UCI Amazon IMDb Yelp sentiment bigram ablation macro F1",
+      "candidate_count": 30,
+      "new_candidates": 16,
+      "status": "ok"
+    },
+    {
+      "query": "exact UCI Amazon IMDb Yelp sentiment bigram ablation macro F1 bootstrap",
+      "candidate_count": 30,
+      "new_candidates": 0,
+      "status": "ok"
+    },
+    {
+      "query": "exact UCI Amazon IMDb Yelp sentiment bigram ablation macro F1 bootstrap fixed split",
+      "candidate_count": 30,
+      "new_candidates": 15,
+      "status": "ok"
+    }
+  ],
+  "source_results": [
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "62013d55df829d82af7340fb5a4f9e3a195ed537fec9beed5e2fd417f3f4cdd8",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "1064cf61da17136c3cbfb1f3d76d75faaa2a95cd682e30749e6d1a4e634ac3f8",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "a5dec63a44bc0b45b6d2ce65ce6ffe6dfb8f1e6293c10e01405765ad1bb490be",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "0e44f91016702b1dcc322e3d89ccb5e3afb7fbede8c9ad0b573a253900e0adad",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "a6cc01b2188da449de9b6944fb45189851c2474c56bd37ae4afe38bab5db764f",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "edd1bda00c154d779a094b577bac90a771959675bee07c40604484e04007f766",
+      "error": "",
+      "paper_count": 15
+    },
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "8051a104dce4bc2e9ba934af5bfe993fb84d4689e02c7886a9fcdd119bea8f64",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "crossref",
+      "status": "degraded",
+      "synthetic": false,
+      "attempts": 3,
+      "raw_sha256": "",
+      "error": "network timeout: The read operation timed out",
+      "paper_count": 0
+    },
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "135e4bd9015bf91183976770ac50e87a4eec9f9a5eeb7e15a0861a08b6dfc1d2",
+      "error": "",
+      "paper_count": 22
+    },
+    {
+      "source_name": "crossref",
+      "status": "degraded",
+      "synthetic": false,
+      "attempts": 3,
+      "raw_sha256": "",
+      "error": "network timeout: The read operation timed out",
+      "paper_count": 0
+    },
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "494127fab21565ed25b2c49913e62da28800689b8f756921ed1542fa193c70b4",
+      "error": "",
+      "paper_count": 0
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "b19ddb5828cdd54c57c80622c2f11d4cf41fa35846978ad759607518074bdf36",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "01e1f65f0609eab8ab5c5bac3c9088ac84b36e39e4c1956d7f16175ff193bf33",
+      "error": "",
+      "paper_count": 0
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "69bb35cd7cd7eb1d95c4cc72610fe960676982ae84b001742d1117033977dee0",
+      "error": "",
+      "paper_count": 30
+    },
+    {
+      "source_name": "openalex",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "359300b6d87e1621c0be9e303b66784806700318228b19217405e5e37ec357e8",
+      "error": "",
+      "paper_count": 0
+    },
+    {
+      "source_name": "crossref",
+      "status": "ok",
+      "synthetic": false,
+      "attempts": 1,
+      "raw_sha256": "74abf37642966dc4ead2a5395b785ef9548472706569012d2ae81d69010493fa",
+      "error": "",
+      "paper_count": 30
+    }
+  ]
+}

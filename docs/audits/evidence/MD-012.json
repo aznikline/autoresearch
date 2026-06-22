@@ -1,0 +1,30 @@
+{
+  "requirement_id": "MD-012",
+  "status": "passed",
+  "synthetic": false,
+  "credentialed": false,
+  "spec_sha256": "dec133ac1e4ab5bb0c453e4bf69371853269864584f6169ab3b849e2da80e1e6",
+  "plan_sha256": "ceefba5f08f58a47edd9797607dd590bfb25c6e79a398f3ceb481fb35796024b",
+  "artifacts": [
+    {
+      "path": "docs/audits/test-results/capability-levels.xml",
+      "sha256": "6af0d795b388018cffa382822a14c4ea6d0109785ab72f008adb82893e231a3d"
+    },
+    {
+      "path": "tests/test_capabilities.py",
+      "sha256": "d61a93e55f328f4b0537dc648ffa271a09e0ae6ae7a6c211321b798c8652b814"
+    },
+    {
+      "path": "tests/test_cli.py",
+      "sha256": "43203ea48e926feb1ff1c191e7b7c9f94c552b9157777a698b59a3a04b9945bc"
+    },
+    {
+      "path": "tests/test_alignment_spec.py",
+      "sha256": "ffdfbc1f3860c3547d7ccf5422b764d327c6e9cbe940fa3f3dd653fbf09554b8"
+    },
+    {
+      "path": "README.md",
+      "sha256": "04feb38e9803cafdebf838db870971f2369be9277e17900543fae6c73ea8bc81"
+    }
+  ]
+}

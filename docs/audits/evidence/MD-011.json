@@ -1,0 +1,38 @@
+{
+  "requirement_id": "MD-011",
+  "status": "passed",
+  "synthetic": false,
+  "credentialed": false,
+  "spec_sha256": "dec133ac1e4ab5bb0c453e4bf69371853269864584f6169ab3b849e2da80e1e6",
+  "plan_sha256": "ceefba5f08f58a47edd9797607dd590bfb25c6e79a398f3ceb481fb35796024b",
+  "artifacts": [
+    {
+      "path": "docs/audits/test-results/security-controls.xml",
+      "sha256": "36f17862e1e42cf42d19e667407aa5cc9756e9703bad828ca5935f843792cf19"
+    },
+    {
+      "path": "tests/adapters/test_llm_contract.py",
+      "sha256": "c6c8159bc9a8665eff3161ef39181dd89aedd5020718acbe39d347c732c69a6c"
+    },
+    {
+      "path": "tests/adapters/test_literature_contract.py",
+      "sha256": "46ce5f6196be74e1685f1b2c7f985e530992b54d1d314da95e92aec842aab890"
+    },
+    {
+      "path": "tests/test_live_reasoning.py",
+      "sha256": "ff19adcf386f641d860e54f3645b4a2eb50cb6d6e2205e26eaad3a2cda5a15d2"
+    },
+    {
+      "path": "tests/test_prompt_manager.py",
+      "sha256": "11881bc4e7fe5401273e7d27539b567e107ee7c52047d453072297ce684511a7"
+    },
+    {
+      "path": "tests/test_local_sandbox.py",
+      "sha256": "1939fff54ba046d67642c103b06a3561941b5d9c4b72f3c9d561f54a98f433bc"
+    },
+    {
+      "path": "tests/test_artifact_budget.py",
+      "sha256": "a622141f8c80332fdd05d721147c2e9c243bc536a832c436b5eff068d130a09d"
+    }
+  ]
+}

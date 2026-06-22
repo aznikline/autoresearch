@@ -1,0 +1,4 @@
+interface:
+  display_name: "AutoResearch Foundation Models"
+  short_description: "Run auditable LLM and foundation-model research"
+  default_prompt: "Use $autoresearch-foundation-models-llm for an evidence-grounded LLM paper run."

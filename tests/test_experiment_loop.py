@@ -32,4 +32,11 @@ def test_experiment_loop_keeps_improvements_and_discards_regressions(
 
     assert [entry.decision for entry in entries] == ["keep", "keep", "discard"]
     assert entries[0].metrics_path == "runs/baseline/metrics.json"
+    assert all(entry.run_id for entry in entries)
+    assert all(entry.metric_definition for entry in entries)
+    assert all(entry.experiment_spec_sha256 for entry in entries)
+    assert all(entry.code_sha256 for entry in entries)
+    assert all(entry.protocol_fingerprint for entry in entries)
+    assert len({entry.protocol_fingerprint for entry in entries}) == 1
+    assert all(entry.raw_outputs for entry in entries)
     assert read_ledger(ledger_path) == entries

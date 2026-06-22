@@ -1,0 +1,34 @@
+{
+  "stage": "idea_intake",
+  "profile_id": "data-management-mining",
+  "depth": "top_venue",
+  "skills": [
+    {
+      "name": "autoresearch-data-management-mining",
+      "description": "Run auditable data-management, database-systems, web/graph-data, and data-mining research with workload, schema, scale, system, hardware, cache, concurrency, correctness, leakage, latency-distribution, resource, cost, and provenance controls.",
+      "category": "research-workflow",
+      "applicable_stages": [
+        "idea_intake",
+        "literature_collect",
+        "hypothesis_generation",
+        "experiment_design",
+        "experiment_loop",
+        "result_analysis_decision",
+        "paper_draft_revision",
+        "final_verification_export"
+      ],
+      "profiles": [
+        "data-management-mining"
+      ],
+      "depths": [
+        "exploratory",
+        "publication",
+        "top_venue"
+      ],
+      "priority": 1,
+      "stage_instruction": "",
+      "references": [],
+      "source_dir": "skills/autoresearch-data-management-mining"
+    }
+  ]
+}

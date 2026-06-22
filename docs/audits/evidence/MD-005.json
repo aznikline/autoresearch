@@ -1,0 +1,34 @@
+{
+  "requirement_id": "MD-005",
+  "status": "passed",
+  "synthetic": false,
+  "credentialed": false,
+  "spec_sha256": "dec133ac1e4ab5bb0c453e4bf69371853269864584f6169ab3b849e2da80e1e6",
+  "plan_sha256": "ceefba5f08f58a47edd9797607dd590bfb25c6e79a398f3ceb481fb35796024b",
+  "artifacts": [
+    {
+      "path": "docs/audits/test-results/live-literature.xml",
+      "sha256": "21dbf2ee3ce764b22ccf54c9b20d63b1ef7524c83180040a5e40894cb9ecde1a"
+    },
+    {
+      "path": "docs/audits/live-smoke/literature/smoke.json",
+      "sha256": "17673b54a276e6780f4bc214e65e05d4e04cd9a56db59af3f9fafeee5193ce0b"
+    },
+    {
+      "path": "docs/audits/live-smoke/literature/arxiv/requests.jsonl",
+      "sha256": "f6737b468891e76f1531803023fca97d908d226533bf0af782f4313da9d876c8"
+    },
+    {
+      "path": "docs/audits/live-smoke/literature/openalex/requests.jsonl",
+      "sha256": "5c32392754105435fae4e603c83427d773fc37c7571976cd1140c480627b17f5"
+    },
+    {
+      "path": "docs/audits/live-smoke/literature/crossref/requests.jsonl",
+      "sha256": "3dfbf812f95f5fdcff0a55f0dd12be620102c73afbc105a6cc12c72a292fed03"
+    },
+    {
+      "path": "tests/test_literature_saturation.py",
+      "sha256": "ba3d495b1f579b86ce46b832f081164a13913a610a0c0cb3133b41491de59e85"
+    }
+  ]
+}

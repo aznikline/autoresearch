@@ -1,0 +1,12 @@
+schema_version: 1
+assets:
+  - asset_id: uci-bike-sharing-hourly-2013
+    kind: dataset
+    source_url: https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip
+    sha256: e03de4ee4ef4dc376ac6e04bf829673c6269e8eba5c60fa121640fa2f829504f
+    license_id: CC-BY-4.0
+    privacy_status: public-non-sensitive
+    split_hash: e03de4ee4ef4dc376ac6e04bf829673c6269e8eba5c60fa121640fa2f829504f
+    governance_approval: public UCI dataset; no direct personal identifiers
+    consent_basis: public aggregate bike rental records under CC BY 4.0
+    local_path: workspace/data/hour.csv

@@ -63,6 +63,13 @@ class SkillHarness:
             rendered=rendered,
         )
 
+    def supports(self, *, profile_id: str, depth: str) -> bool:
+        return any(
+            (not skill.profiles or profile_id in skill.profiles)
+            and (not skill.depths or depth in skill.depths)
+            for skill in self._skills
+        )
+
     def write_stage_context(self, stage_path: Path, context: SkillContext) -> None:
         stage_path.mkdir(parents=True, exist_ok=True)
         (stage_path / "skill_context.md").write_text(context.rendered, encoding="utf-8")

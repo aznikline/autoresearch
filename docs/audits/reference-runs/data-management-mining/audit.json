@@ -1,0 +1,431 @@
+{
+  "profile_id": "data-management-mining",
+  "synthetic": false,
+  "capability": "evidence_complete",
+  "depth": "top_venue",
+  "literature_mode": "live",
+  "experiment_mode": "real",
+  "llm_mode": "not_applicable",
+  "artifacts": [
+    {
+      "path": "run/alignment.json",
+      "sha256": "b635d171a249726c349c5b628a633b8f6a95724435ac891234a7849134c0b466"
+    },
+    {
+      "path": "run/checkpoint.json",
+      "sha256": "fa8acac6ff925fb5c3393a74d340efe3635422e04ebb43f0a7ccf021674bbc44"
+    },
+    {
+      "path": "run/checkpoint_events.jsonl",
+      "sha256": "cea89dcad0b380ef3a2cffa6a2b42dc8878f4cb8589d07610ec5342b4c4c59ad"
+    },
+    {
+      "path": "run/stage-01-idea_intake/goal.md",
+      "sha256": "2cbd4b2e6c7c76730e82f37b26ce45b9c84a581e9407fb8944ce1378acee0d00"
+    },
+    {
+      "path": "run/stage-01-idea_intake/run_config.json",
+      "sha256": "1511167c3f558f9092be90cd9c4f84eae9ed6bf9474f321eb9acdcfcf31f8444"
+    },
+    {
+      "path": "run/stage-01-idea_intake/skill_context.md",
+      "sha256": "a334658ac88d052fdee1f2c3017bacec47335f53c92f2373cd1a37a47b3fb154"
+    },
+    {
+      "path": "run/stage-01-idea_intake/skills_applied.json",
+      "sha256": "a99468a39b82d1fa451efdc6a816a33fbfc4db5ece0dae86f825355655bdc287"
+    },
+    {
+      "path": "run/stage-02-problem_decompose/problem_tree.md",
+      "sha256": "683650c89e0d766f7567e55486255bddc4615a57443bca5f4eea53a40e730d15"
+    },
+    {
+      "path": "run/stage-02-problem_decompose/skill_context.md",
+      "sha256": "b51406844c36227c57d7542d3aa0083faac00aba86aa8254786985ce929d5721"
+    },
+    {
+      "path": "run/stage-02-problem_decompose/skills_applied.json",
+      "sha256": "d8308b0e22c2f3bd8eb854437e23fd6e7545622acadb87844e2858610662c32a"
+    },
+    {
+      "path": "run/stage-03-literature_collect/candidates.jsonl",
+      "sha256": "fd7af369cd1abc71911ccb530238bd82d33d3fa29491f175b0e1c5d20d03ad3d"
+    },
+    {
+      "path": "run/stage-03-literature_collect/retrieval/crossref/raw/11cab83ec7125ca55ae787e8ec287828cebae44939284b30369d60c90840dbfe.bin",
+      "sha256": "11cab83ec7125ca55ae787e8ec287828cebae44939284b30369d60c90840dbfe"
+    },
+    {
+      "path": "run/stage-03-literature_collect/retrieval/crossref/raw/2f3c4dd425250fcb0efe805b8223c2d1d8733dff4895c477884e9fb8b6ce3d7e.bin",
+      "sha256": "2f3c4dd425250fcb0efe805b8223c2d1d8733dff4895c477884e9fb8b6ce3d7e"
+    },
+    {
+      "path": "run/stage-03-literature_collect/retrieval/crossref/raw/44281c4c2dd3cafa5eb897cde5a0927be59be7345ad480977e444490564bcdec.bin",
+      "sha256": "44281c4c2dd3cafa5eb897cde5a0927be59be7345ad480977e444490564bcdec"
+    },
+    {
+      "path": "run/stage-03-literature_collect/retrieval/crossref/raw/8ebe9fb29ac75681f1d66122f96d454f9fd5a7c0952dfe2d951eb6757b8b4c09.bin",
+      "sha256": "8ebe9fb29ac75681f1d66122f96d454f9fd5a7c0952dfe2d951eb6757b8b4c09"
+    },
+    {
+      "path": "run/stage-03-literature_collect/retrieval/crossref/raw/ec87a9d65beab117668853662287910f6a9be1ea7e5742dedc5bec0803351a53.bin",
+      "sha256": "ec87a9d65beab117668853662287910f6a9be1ea7e5742dedc5bec0803351a53"
+    },
+    {
+      "path": "run/stage-03-literature_collect/retrieval/crossref/raw/f4055e5a04936561052d278e397dc12c042f6793610afc97a73aaa6d358848d1.bin",
+      "sha256": "f4055e5a04936561052d278e397dc12c042f6793610afc97a73aaa6d358848d1"
+    },
+    {
+      "path": "run/stage-03-literature_collect/retrieval/crossref/requests.jsonl",
+      "sha256": "ac3abfa2ba07a84eb4db1903baa4549a0968565d6921814cccdab10d9e578585"
+    },
+    {
+      "path": "run/stage-03-literature_collect/retrieval/openalex/raw/35ef8120d0798851dd3e775a45406f9dbea84da9aa1dc2472455eca5447fb988.bin",
+      "sha256": "35ef8120d0798851dd3e775a45406f9dbea84da9aa1dc2472455eca5447fb988"
+    },
+    {
+      "path": "run/stage-03-literature_collect/retrieval/openalex/raw/6e56b05381a220eb720960be2b0abec49e9d1b2acc582eb43a26d62fae04951a.bin",
+      "sha256": "6e56b05381a220eb720960be2b0abec49e9d1b2acc582eb43a26d62fae04951a"
+    },
+    {
+      "path": "run/stage-03-literature_collect/retrieval/openalex/raw/8397cf6b8258bab93381d0af131f4b00f81a70b8cee1a65759c56b39f4c317d3.bin",
+      "sha256": "8397cf6b8258bab93381d0af131f4b00f81a70b8cee1a65759c56b39f4c317d3"
+    },
+    {
+      "path": "run/stage-03-literature_collect/retrieval/openalex/raw/91ac9ede816685550571d5e201eda1824747d9c429e8cc05f0c6140901af4028.bin",
+      "sha256": "91ac9ede816685550571d5e201eda1824747d9c429e8cc05f0c6140901af4028"
+    },
+    {
+      "path": "run/stage-03-literature_collect/retrieval/openalex/raw/bf5cf29e314008819ae9e992552fc9c20b6d028a8f9e5134300ef2f5c7ab0681.bin",
+      "sha256": "bf5cf29e314008819ae9e992552fc9c20b6d028a8f9e5134300ef2f5c7ab0681"
+    },
+    {
+      "path": "run/stage-03-literature_collect/retrieval/openalex/raw/da805aea41d545e6852f3ce31c47fa7aa1a8a7f5687a4911972089017c348646.bin",
+      "sha256": "da805aea41d545e6852f3ce31c47fa7aa1a8a7f5687a4911972089017c348646"
+    },
+    {
+      "path": "run/stage-03-literature_collect/retrieval/openalex/requests.jsonl",
+      "sha256": "032168de150c29fd0bb8649989f257960e02a6c3547d4d493fb3f44a4db70d48"
+    },
+    {
+      "path": "run/stage-03-literature_collect/search_report.json",
+      "sha256": "411a46d6df95bb1b0abba6e50096693e1103d6c4468e5a0c3e5d4c42581f3d55"
+    },
+    {
+      "path": "run/stage-03-literature_collect/search_report.md",
+      "sha256": "712382fc75f7b5e1a59d005ce580b137d8d22f213ced20327985b011b179314f"
+    },
+    {
+      "path": "run/stage-03-literature_collect/skill_context.md",
+      "sha256": "ce0cc3fb79927becc42ec00ada219f8233a95614c02b00735ef233ccdf4c8889"
+    },
+    {
+      "path": "run/stage-03-literature_collect/skills_applied.json",
+      "sha256": "9b3ec65b833a7eadffcd02c02471e9674b4bd83e8755f8b8c9d74f3c166c40a2"
+    },
+    {
+      "path": "run/stage-04-literature_screen/screening_report.md",
+      "sha256": "796c45f878be8f50aac79a4c7268bf0bd3d1fbcc3e2a78a247b6935df6405db4"
+    },
+    {
+      "path": "run/stage-04-literature_screen/shortlist.jsonl",
+      "sha256": "20caa9cff1df823c088438d6d00efe2888411de34dd501955a4b1cb5a4fb3bd5"
+    },
+    {
+      "path": "run/stage-04-literature_screen/skill_context.md",
+      "sha256": "037f99bdf431e50847a3e4d572e136b54e6f92d4ad932b31fb6f2dd4c5fcce83"
+    },
+    {
+      "path": "run/stage-04-literature_screen/skills_applied.json",
+      "sha256": "e42843e15369d4a9aaca369207d03435b939c60d0b7914a86c74ff13c4998788"
+    },
+    {
+      "path": "run/stage-05-synthesis/knowledge_cards.jsonl",
+      "sha256": "83dedd993bed1f9a38d7b6910235b438611ee3e9c34c044a96f5e306cc3b2a58"
+    },
+    {
+      "path": "run/stage-05-synthesis/literature_gaps.json",
+      "sha256": "293d1e609ba3be9adfbbc8c565249815040e32b56c47fbadaf70d7decc7c98e4"
+    },
+    {
+      "path": "run/stage-05-synthesis/skill_context.md",
+      "sha256": "326f2f3c0b5f7c284b3de8c1554c566cf57b2e8d3d60a2e7067f167867151e46"
+    },
+    {
+      "path": "run/stage-05-synthesis/skills_applied.json",
+      "sha256": "778ecbe4cb44484d902653784af9706ff95f16b6b2ec5105df6a8433f0b7cac3"
+    },
+    {
+      "path": "run/stage-05-synthesis/synthesis.md",
+      "sha256": "ad43df4f5f536b926f4fe76cd12890339d19328d05eefbfe61a090fd30f69038"
+    },
+    {
+      "path": "run/stage-06-hypothesis_generation/hypotheses.json",
+      "sha256": "3ee86cae5bd1addbee7e481bdd0d7631dda689a875117d3ed35cb58ee2572a1a"
+    },
+    {
+      "path": "run/stage-06-hypothesis_generation/hypotheses.md",
+      "sha256": "3869b6cc3c9269c958ac7209ac5147b5cc79e7fe77a44c4a30c80948f93a2198"
+    },
+    {
+      "path": "run/stage-06-hypothesis_generation/skill_context.md",
+      "sha256": "0f2e825ab3179ff6587f7d2c0449a723b963bf8d0a5d624606036a349784ac50"
+    },
+    {
+      "path": "run/stage-06-hypothesis_generation/skills_applied.json",
+      "sha256": "ea6daccd4e0ffbf3f7d1e3143b7b0b8137ea17c069d10a97ce88af9314c58b10"
+    },
+    {
+      "path": "run/stage-07-experiment_design/experiment_plan.yaml",
+      "sha256": "76789df38a269eff91d4e741779473f2f44c2f72bbc1dcf6a8d938b0a7b828f4"
+    },
+    {
+      "path": "run/stage-07-experiment_design/protocol_validation.json",
+      "sha256": "2d219fe8f9a725cd967495a381bdc03cb84dc5e53a2896086db86f74d84b78cb"
+    },
+    {
+      "path": "run/stage-07-experiment_design/skill_context.md",
+      "sha256": "a6b14912347593fefd72f96012f3e31216692fd204b4803d82678cad54e23c91"
+    },
+    {
+      "path": "run/stage-07-experiment_design/skills_applied.json",
+      "sha256": "c399db564688740aba470de6b196214fedda961e8c5490c88d5569d2d5ef918a"
+    },
+    {
+      "path": "run/stage-08-experiment_generation/experiment/README.md",
+      "sha256": "bc37a1468fb83fc4e6e1d284ef41dd0d992b7443ef1dbc7f3f369ac43c66f55c"
+    },
+    {
+      "path": "run/stage-08-experiment_generation/experiment/data/hour.csv",
+      "sha256": "e03de4ee4ef4dc376ac6e04bf829673c6269e8eba5c60fa121640fa2f829504f"
+    },
+    {
+      "path": "run/stage-08-experiment_generation/experiment/experiment.py",
+      "sha256": "a8054ee557567eec47692f11b900eec6c153295f97cd6a5462458d01d4157d8c"
+    },
+    {
+      "path": "run/stage-08-experiment_generation/experiment/experiment_plan.yaml",
+      "sha256": "76789df38a269eff91d4e741779473f2f44c2f72bbc1dcf6a8d938b0a7b828f4"
+    },
+    {
+      "path": "run/stage-08-experiment_generation/experiment/schema.sql",
+      "sha256": "0f0dafb6a6372163bc051b9baadc5ad138400abd399c6ab07f6f3d4086d714dc"
+    },
+    {
+      "path": "run/stage-08-experiment_generation/experiment/workload.json",
+      "sha256": "e74875500cc2c0fb31451e3912fc71772fdc6344a41fb015ebdabe3c0c861af6"
+    },
+    {
+      "path": "run/stage-08-experiment_generation/experiment_spec.md",
+      "sha256": "7311588099309707ba370a4103cc9c4f2f5d364824b5a2bfa2d34100b994986f"
+    },
+    {
+      "path": "run/stage-08-experiment_generation/skill_context.md",
+      "sha256": "e9e90fc5617f2b5ab7fe92a65fc07c0fab269e64da978e0bf397264282d6327c"
+    },
+    {
+      "path": "run/stage-08-experiment_generation/skills_applied.json",
+      "sha256": "eb134b3d13c18bb23b9cc91fbf49847a580f2b81c9090bf181d57f11e8639886"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/ledger.jsonl",
+      "sha256": "f36a404f4429532d4bd117a92cf841c37a036ef3c100ab77d66c5f11647d78af"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/ablation-composite-index-seed4/metrics.json",
+      "sha256": "e0530ac0c953eb7e56b8ac46878c1c6309b2621bc1f43831196020038419ef9c"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/ablation-composite-index-seed4/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/ablation-composite-index-seed4/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/ablation-hour-index-seed1/metrics.json",
+      "sha256": "1079326286866b06de68c4d6b1a590c66a8e53468caa3d51c8986a5bcbf69d7a"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/ablation-hour-index-seed1/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/ablation-hour-index-seed1/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/ablation-season-index-seed3/metrics.json",
+      "sha256": "c3e78937f7421a48980c9941ebc741061a5493aec9791ab2e09da619519afcf9"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/ablation-season-index-seed3/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/ablation-season-index-seed3/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/ablation-weather-index-seed2/metrics.json",
+      "sha256": "2d15ab720c42ef4b2e98154cf91422261a4b7ff7b2b9e25c97a0e9fb5930cdf2"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/ablation-weather-index-seed2/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/ablation-weather-index-seed2/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/baseline-seed0/metrics.json",
+      "sha256": "bfbdac93770980f9fe1884210b27d7a5ef03bb857230e9d8b5143ac36d013609"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/baseline-seed0/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/baseline-seed0/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/baseline-seed1/metrics.json",
+      "sha256": "009b0a2bac81572c73385301e16c6646872c2dcb2350c4c3171163462d70c679"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/baseline-seed1/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/baseline-seed1/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/baseline-seed2/metrics.json",
+      "sha256": "e3445ada32937b9bcc02df1ced5a4cc7c82e990dbba5f95038254c0c70ccdd57"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/baseline-seed2/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/baseline-seed2/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/baseline-seed3/metrics.json",
+      "sha256": "1d53d81bfdc881c7231246673b79ca5122aa05d1fc3405da6444e4baa051033a"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/baseline-seed3/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/runs/baseline-seed3/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/skill_context.md",
+      "sha256": "1a6e349e4c0c21f285c228f92c00692292b82fcbbef771df1773ab2b650d440d"
+    },
+    {
+      "path": "run/stage-09-experiment_loop/skills_applied.json",
+      "sha256": "27d7e88ccfdd515737f7b29c8f6a5bec29864350214a36420a3c28dae0954097"
+    },
+    {
+      "path": "run/stage-10-result_analysis_decision/analysis.md",
+      "sha256": "b66626c07940fb8bef50d1d0d722d45dcfadc6adc68ce908e60bc285156725bb"
+    },
+    {
+      "path": "run/stage-10-result_analysis_decision/decision.md",
+      "sha256": "a390f5a6ce2790ec83ee134a7abd11290da3f08ce4e96f111b374035a5ab2572"
+    },
+    {
+      "path": "run/stage-10-result_analysis_decision/hypothesis_outcomes.json",
+      "sha256": "f48c92009a24fa4d94847c61cd89e1e3f11faabc5f163bda80c3256d7bf1a014"
+    },
+    {
+      "path": "run/stage-10-result_analysis_decision/skill_context.md",
+      "sha256": "3053b6b9e904a7bca34bdd8b78b6ce29ce536428d3409460573935a6ac1ed801"
+    },
+    {
+      "path": "run/stage-10-result_analysis_decision/skills_applied.json",
+      "sha256": "440c786c088abc597557da6c2726629e39bc20a8869c7159caf71c161a3a563c"
+    },
+    {
+      "path": "run/stage-11-paper_draft_revision/empirical_claims.json",
+      "sha256": "085fc86f802728cd708aeb84e8c49d4060018661e98a09ca2fc263330e7fc896"
+    },
+    {
+      "path": "run/stage-11-paper_draft_revision/paper_draft.md",
+      "sha256": "db386ecbd0196a7575d13aa052a44ce6803a2bf41d14ca6a6b7c3dc7f6144806"
+    },
+    {
+      "path": "run/stage-11-paper_draft_revision/paper_revised.md",
+      "sha256": "899dcedddb1215a6980afc3c80dfc283049e9e386b12852479ce11a6b59aaa68"
+    },
+    {
+      "path": "run/stage-11-paper_draft_revision/reviews.md",
+      "sha256": "c4b633f0ca5842fce2d332f4d131917faeb6df7cd5bcdc57c64dd8987a85e84e"
+    },
+    {
+      "path": "run/stage-11-paper_draft_revision/skill_context.md",
+      "sha256": "30b240b9d238db7a198a1f553a1b5a4c8bf7f0d177e366422f375bf0c0bb78fe"
+    },
+    {
+      "path": "run/stage-11-paper_draft_revision/skills_applied.json",
+      "sha256": "2c29fe28f29f4b649f2a175881fccf7e2936eed04c92e936196c0c2da657c267"
+    },
+    {
+      "path": "run/stage-12-final_verification_export/artifact_manifest.json",
+      "sha256": "0c836d511c7295c8f28bd6d2f20bfb4ceb4fd329154ccdb8a4bcd8a1e3ae3b13"
+    },
+    {
+      "path": "run/stage-12-final_verification_export/bundle_index.json",
+      "sha256": "2587aceaf706497cc18a6107284ecc856563a103fc649532bf07d9b18adf0c39"
+    },
+    {
+      "path": "run/stage-12-final_verification_export/evidence_graph.json",
+      "sha256": "ef18474fb67287f22bf72218c92d56792f628012fab9b24be955a53d61051070"
+    },
+    {
+      "path": "run/stage-12-final_verification_export/governance_report.json",
+      "sha256": "f852ae5dba98a019970d1a549fbd11111bfdbd8efbad9bd78387b46fd412a5c3"
+    },
+    {
+      "path": "run/stage-12-final_verification_export/paper.tex",
+      "sha256": "eb52667a950ee013a21e82b1da0b7cdf44533aa56fb1427b74874fa8293278f9"
+    },
+    {
+      "path": "run/stage-12-final_verification_export/paper_evidence.json",
+      "sha256": "2512f08645e3a724888d855ee4c863d4d0e2f3d78e060f053e32c0cefbe54cee"
+    },
+    {
+      "path": "run/stage-12-final_verification_export/quality_report.json",
+      "sha256": "d594ba8af7b8175ff59fed2c616684f3992aeb7e214b42b9cb79362088a82e21"
+    },
+    {
+      "path": "run/stage-12-final_verification_export/references.bib",
+      "sha256": "6a86d752c0048428f7deb1be747d545e14b95f7c6daa16f234b8e3fac0cfcb2f"
+    },
+    {
+      "path": "run/stage-12-final_verification_export/skill_context.md",
+      "sha256": "7e2568aaa8a317783b0f6ab986dd919d3e546bb87b26a97f98d41b07a6db199c"
+    },
+    {
+      "path": "run/stage-12-final_verification_export/skills_applied.json",
+      "sha256": "8fc9c4d7c13f23a17faba5f6b7bf5f80374beed3af37500507a3fb723dd3d239"
+    },
+    {
+      "path": "run/stage-12-final_verification_export/venue_export.json",
+      "sha256": "5b984e14521681834d0d45687446b0efa854f3d8a4149178fcac7b3e347906bb"
+    },
+    {
+      "path": "run/stage-12-final_verification_export/verification_report.json",
+      "sha256": "e16166600c1fd9183ee6912f05bedc103e3757559340f8bbca80f71de97d1bd7"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "slug": "autoresearch-docs-specs-research-alignment-md",
+  "verdict": "pass",
+  "passed": true,
+  "summary": "Research Alignment Spec enforcement implemented and verified",
+  "evidence": "66 pytest tests passed; project skill validator passed; compileall and git diff --check exited 0; CLI help exposes the README-documented init/run/status commands; readiness remains blocked for scaffold evidence.",
+  "artifact_path": "tests/test_alignment_spec.py",
+  "critic_command": "uv run --extra dev pytest -q && uv run python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/autoresearch-ml-systems",
+  "recorded_at": "2026-06-18T13:57:59.634Z"
+}

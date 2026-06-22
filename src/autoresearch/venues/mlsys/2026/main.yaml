@@ -1,0 +1,26 @@
+schema_version: 1
+venue_id: mlsys
+display_name: MLSys
+year: 2026
+track: main
+status: verified
+compatible_profiles: [ml-systems-efficiency]
+official_sources:
+  - url: https://mlsys.org/Conferences/2026/CallForPapers
+    retrieved_at: 2026-06-20
+    sha256: 256326b602dd9704a8e428906ff71cad5e85bef6860978c0cab89c25b30fb935
+template:
+  identity: mlsys-2025-style-for-2026
+  source_url: https://media.mlsys.org/Conferences/MLSYS2025/mlsys2025style.zip
+  sha256: 04e77090038f78c985154c71f7a57b7fbb2553ddd3e4e62f431ed420ba3768ef
+policy:
+  anonymity: double_blind
+  page_limit: 10
+  supplement_allowed: true
+  checklist_required: false
+  checklist_delivery: none
+  ethics_required: false
+  limitations_required: false
+  artifact_policy: encouraged
+  required_sections: []
+valid_until: 2026-12-31

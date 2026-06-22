@@ -1,0 +1,47 @@
+[
+  {
+    "claim_id": "empirical-1",
+    "statement": "The recorded primary metric is 35.3873705.",
+    "run_ids": [
+      "baseline-seed0",
+      "baseline-seed1",
+      "baseline-seed2",
+      "baseline-seed3",
+      "ablation-hour-index-seed1",
+      "ablation-weather-index-seed2",
+      "ablation-season-index-seed3",
+      "ablation-composite-index-seed4"
+    ],
+    "metric_definition": "primary_metric (minimize)",
+    "experiment_spec_sha256": "284f2178f4fc5613e248b18006add3f06b0c242c14ddd93db9e398f147cff425",
+    "code_sha256": "a8054ee557567eec47692f11b900eec6c153295f97cd6a5462458d01d4157d8c",
+    "config_sha256": "e97cf7d786088b2dd50df8283bf43d55deb55150edb028dc3f7e7fcb3fff283b",
+    "environment": "Python 3.12.12 on macOS-15.7.4-arm64-arm-64bit",
+    "raw_outputs": [
+      "runs/baseline-seed0/metrics.json",
+      "runs/baseline-seed0/stdout.txt",
+      "runs/baseline-seed0/stderr.txt",
+      "runs/baseline-seed1/metrics.json",
+      "runs/baseline-seed1/stdout.txt",
+      "runs/baseline-seed1/stderr.txt",
+      "runs/baseline-seed2/metrics.json",
+      "runs/baseline-seed2/stdout.txt",
+      "runs/baseline-seed2/stderr.txt",
+      "runs/baseline-seed3/metrics.json",
+      "runs/baseline-seed3/stdout.txt",
+      "runs/baseline-seed3/stderr.txt",
+      "runs/ablation-hour-index-seed1/metrics.json",
+      "runs/ablation-hour-index-seed1/stdout.txt",
+      "runs/ablation-hour-index-seed1/stderr.txt",
+      "runs/ablation-weather-index-seed2/metrics.json",
+      "runs/ablation-weather-index-seed2/stdout.txt",
+      "runs/ablation-weather-index-seed2/stderr.txt",
+      "runs/ablation-season-index-seed3/metrics.json",
+      "runs/ablation-season-index-seed3/stdout.txt",
+      "runs/ablation-season-index-seed3/stderr.txt",
+      "runs/ablation-composite-index-seed4/metrics.json",
+      "runs/ablation-composite-index-seed4/stdout.txt",
+      "runs/ablation-composite-index-seed4/stderr.txt"
+    ]
+  }
+]

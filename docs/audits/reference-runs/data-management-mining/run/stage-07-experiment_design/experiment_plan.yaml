@@ -1,0 +1,112 @@
+topic: SQLite index tradeoffs on the UCI Bike Sharing hourly workload
+metric_key: primary_metric
+metric_direction: minimize
+time_budget_sec: 30
+trials:
+- trial_id: baseline-seed0
+  description: No secondary indexes, seed 0.
+  parameters:
+    seed: 0
+    index_count: 0
+- trial_id: baseline-seed1
+  description: No secondary indexes, seed 1.
+  parameters:
+    seed: 1
+    index_count: 0
+- trial_id: baseline-seed2
+  description: No secondary indexes, seed 2.
+  parameters:
+    seed: 2
+    index_count: 0
+- trial_id: baseline-seed3
+  description: No secondary indexes, seed 3.
+  parameters:
+    seed: 3
+    index_count: 0
+- trial_id: ablation-hour-index-seed1
+  description: Add only an hour index.
+  parameters:
+    seed: 1
+    index_count: 1
+- trial_id: ablation-weather-index-seed2
+  description: Add only a weather and working-day index.
+  parameters:
+    seed: 2
+    index_count: 1
+- trial_id: ablation-season-index-seed3
+  description: Add only a season and year index.
+  parameters:
+    seed: 3
+    index_count: 1
+- trial_id: ablation-composite-index-seed4
+  description: Add all three workload-specific indexes.
+  parameters:
+    seed: 4
+    index_count: 3
+confirmatory: true
+hypotheses:
+- H1 workload-matched indexes reduce read-query tail latency
+- H2 index maintenance and query shape prevent uniform latency gains
+primary_metrics:
+- p95_latency_ms
+exclusions:
+- CSV parse failure
+- SQLite execution failure
+- incorrect query result
+evaluator_hash: a8054ee557567eec47692f11b900eec6c153295f97cd6a5462458d01d4157d8c
+stopping_rule: execute every prespecified trial once
+evaluation_units:
+- hourly-demand
+- weather-filter
+- season-summary
+seeds:
+- 0
+- 1
+- 2
+- 3
+- 4
+metrics:
+- primary_metric
+- p50_latency_ms
+- p95_latency_ms
+- p99_latency_ms
+- throughput_qps
+- correctness_rate
+- ci_low
+- ci_high
+- effect_size
+- runtime_sec
+- compute_units
+confidence_intervals: true
+effect_sizes: true
+compute_reporting: true
+data_split: immutable full hourly workload; no learned model or train/test split
+tuning_allowance: prespecified indexes only; no post-result tuning
+resource_budget: one local CPU process and 30 seconds per trial
+uncertainty: normal-approximation confidence interval over repeated query latency
+system_versions:
+- Python stdlib sqlite3
+- SQLite version recorded per trial
+schema_hash: 0f0dafb6a6372163bc051b9baadc5ad138400abd399c6ab07f6f3d4086d714dc
+workload_hash: e74875500cc2c0fb31451e3912fc71772fdc6344a41fb015ebdabe3c0c861af6
+scale_factor: 17379
+indexes:
+- none
+- hour
+- weather-workingday
+- season-year
+- combined
+optimizer_config: SQLite defaults with temp_store MEMORY
+hardware_storage: same host, in-memory SQLite database for every trial
+concurrency: 1
+isolation_level: single connection with completed load transaction
+cache_policy: identical warm query before 20 measured repetitions
+warmup: one unmeasured execution of every query per database
+repetitions: 20
+timeout_policy: 30-second hard process timeout recorded in ledger
+latency_distribution:
+- p50
+- p95
+- p99
+correctness_check: exact result equality against a no-secondary-index database
+matched_hardware: true

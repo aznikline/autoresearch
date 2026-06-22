@@ -1,0 +1,26 @@
+category: research-workflow
+trigger_keywords: [nlp, language, multilingual, dialogue, translation, extraction, corpus]
+applicable_stages:
+  - idea_intake
+  - literature_collect
+  - hypothesis_generation
+  - experiment_design
+  - experiment_loop
+  - result_analysis_decision
+  - paper_draft_revision
+  - final_verification_export
+profiles: [natural-language-processing]
+depths: [exploratory, publication, top_venue]
+priority: 1
+stage_instructions:
+  hypothesis_generation: Bound hypotheses by language domain annotation and metric validity.
+  experiment_design: Freeze corpora splits normalization tokenization prompts evaluators and annotation protocol.
+  experiment_loop: Preserve predictions annotations disagreements failures and resource use.
+  result_analysis_decision: Analyze uncertainty language subgroups error types and metric limitations.
+  paper_draft_revision: Match every generalization to observed language and domain coverage.
+  final_verification_export: Block on unknown corpus rights contamination invalid metrics or annotation gaps.
+references:
+  experiment_design: [references/methodology.md]
+  experiment_loop: [references/methodology.md]
+  result_analysis_decision: [references/methodology.md]
+  final_verification_export: [references/methodology.md]

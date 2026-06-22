@@ -1,0 +1,8 @@
+{
+  "run_id": "data-real-001",
+  "stage": 3,
+  "stage_name": "LITERATURE_COLLECT",
+  "stage_slug": "literature_collect",
+  "status": "running",
+  "message": "running literature_collect"
+}

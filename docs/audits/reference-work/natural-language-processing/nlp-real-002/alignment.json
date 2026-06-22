@@ -1,0 +1,62 @@
+{
+  "topic": "Transparent sentiment baselines across Amazon IMDb and Yelp reviews",
+  "profile": "natural-language-processing",
+  "depth": "top_venue",
+  "target_venue_family": [
+    "ACL",
+    "EMNLP"
+  ],
+  "primary_claim_type": "evaluation or information extraction method",
+  "resource_budget": {
+    "time_budget_sec": 30,
+    "max_iterations": 3,
+    "total_compute_budget": "eight local CPU trials, at most 30 seconds each"
+  },
+  "threshold_waivers": [],
+  "config_fingerprint": "16c6453777b88314a2a59cd87c3e8aa5cc4e51916ad14966602f3fa679157643",
+  "venue_contract": {
+    "venue_id": "acl",
+    "display_name": "ACL",
+    "year": 2026,
+    "track": "main",
+    "status": "verified",
+    "source_path": "/Users/wizout/op/autoresearch/src/autoresearch/venues/acl/2026/main.yaml"
+  },
+  "capability": {
+    "level": "contract_supported",
+    "blockers": [
+      "real integration evidence missing"
+    ]
+  },
+  "llm": {
+    "mode": "synthetic",
+    "provider": "openai-compatible",
+    "model": "gpt-4.1",
+    "synthetic": true
+  },
+  "literature": {
+    "mode": "live",
+    "sources": [
+      "openalex",
+      "crossref"
+    ],
+    "synthetic": false
+  },
+  "experiment": {
+    "mode": "local",
+    "evidence_mode": "real",
+    "synthetic": false,
+    "workspace_source": "reference-projects/natural-language-processing/workspace",
+    "allowed_imports": [
+      "collections",
+      "hashlib",
+      "math",
+      "random",
+      "re",
+      "time"
+    ]
+  },
+  "memory": {
+    "human_lesson_count": 1
+  }
+}

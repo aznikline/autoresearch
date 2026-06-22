@@ -1,0 +1,86 @@
+profile_id: data-management-mining
+display_name: Data Management and Mining
+parent_domain: data-systems
+target_venues: [SIGMOD, VLDB, ICDE, KDD, TheWebConf]
+compatible_venue_ids: [sigmod, vldb, icde, kdd, thewebconf]
+plugin_id: data-management-mining
+claim_types:
+  - systems performance or correctness
+  - query optimization or data management method
+  - data mining ranking or predictive method
+governance_checks:
+  - dataset workload and software license
+  - privacy PII and temporal leakage review
+  - system artifact and configuration provenance
+domain_checks:
+  - schema workload scale and system configuration identity
+  - warmup cache concurrency isolation and timeout policy
+  - latency distribution throughput resources correctness and cost
+experiment_paradigm: workload_system_evaluation
+focus_areas:
+  - database systems and query processing
+  - data management graph and web data
+  - data mining ranking and predictive systems
+biases:
+  - workload and scale representativeness
+  - tuned strong systems under matched hardware
+  - latency distributions and resource accounting
+anti_patterns:
+  - report only mean latency
+  - compare untuned systems or mismatched hardware
+  - hide warm cache concurrency or timeout policy
+standard_baselines:
+  - strongest comparable system
+  - simple algorithmic baseline
+  - hardware and resource matched baseline
+metric_types:
+  - latency distribution and throughput
+  - correctness availability and resource use
+  - ranking predictive quality and monetary cost
+statistical_tests:
+  - bootstrap confidence interval
+  - paired workload analysis
+  - tail-latency and subgroup effect analysis
+detector_keywords: [database, query, data mining, graph, workload, latency, throughput]
+skill_tags: [data-management, database-systems, data-mining, benchmarking]
+depth_requirements:
+  exploratory:
+    min_screened_papers: 8
+    min_baselines: 1
+    min_evaluation_units: 1
+    min_seeds: 1
+    min_ablations: 1
+    min_verified_metrics: 3
+    require_confidence_intervals: false
+    require_effect_sizes: false
+    require_compute_reporting: true
+    require_hypothesis_outcomes: true
+  publication:
+    min_screened_papers: 15
+    min_baselines: 3
+    min_evaluation_units: 2
+    min_seeds: 3
+    min_ablations: 2
+    min_verified_metrics: 5
+    require_confidence_intervals: true
+    require_effect_sizes: true
+    require_compute_reporting: true
+    require_hypothesis_outcomes: true
+  top_venue:
+    min_screened_papers: 25
+    min_baselines: 4
+    min_evaluation_units: 3
+    min_seeds: 5
+    min_ablations: 3
+    min_verified_metrics: 8
+    require_confidence_intervals: true
+    require_effect_sizes: true
+    require_compute_reporting: true
+    require_hypothesis_outcomes: true
+stage_guidance:
+  hypothesis_generation: Define workload scale correctness and mechanism hypotheses.
+  experiment_design: Freeze system versions schema workload scale indexes hardware cache warmup and concurrency.
+  experiment_loop: Preserve queries plans configs logs timeouts failures and resource traces.
+  result_analysis_decision: Analyze distributions tail latency correctness scale and resource tradeoffs.
+  paper_draft_revision: Scope claims to tested workloads systems hardware and scale.
+  final_verification_export: Block on mismatched systems hidden tuning or missing workload provenance.

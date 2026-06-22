@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import re
 from dataclasses import asdict, dataclass
 from pathlib import Path
@@ -21,10 +22,19 @@ class PaperRecord:
 
     @property
     def citation_key(self) -> str:
-        lead = self.authors[0].split()[-1] if self.authors else "paper"
+        lead = next(
+            (
+                parts[-1]
+                for author in self.authors
+                if (parts := author.split())
+            ),
+            "paper",
+        )
         year = str(self.year or "nd")
         title_word = next(iter(ordered_tokens(self.title)), "work")
-        return f"{slugify(lead)}{year}{slugify(title_word)}"
+        identity = self.doi or self.paper_id or f"{self.title}:{self.url}"
+        suffix = hashlib.sha256(identity.encode("utf-8")).hexdigest()[:8]
+        return f"{slugify(lead)}{year}{slugify(title_word)}{suffix}"
 
     def to_dict(self) -> dict[str, object]:
         data = asdict(self)

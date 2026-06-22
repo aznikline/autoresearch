@@ -1,0 +1,38 @@
+{
+  "requirement_id": "MD-010",
+  "status": "passed",
+  "synthetic": false,
+  "credentialed": false,
+  "spec_sha256": "dec133ac1e4ab5bb0c453e4bf69371853269864584f6169ab3b849e2da80e1e6",
+  "plan_sha256": "ceefba5f08f58a47edd9797607dd590bfb25c6e79a398f3ceb481fb35796024b",
+  "artifacts": [
+    {
+      "path": "docs/audits/test-results/orchestration-recovery.xml",
+      "sha256": "3b80ba17a4a6692dc6a49f0b150405103bd4f90425f874dfb5f95912a8b2489c"
+    },
+    {
+      "path": "tests/test_hitl_session.py",
+      "sha256": "286127b9ca1387b355859008e88e072797a68bc5e4cab4787d73a44ebfd0868d"
+    },
+    {
+      "path": "tests/test_recovery.py",
+      "sha256": "c6c51205cb0ec12d54e6778fe813db340468be95ab1cf91dbb7ad85b921ec568"
+    },
+    {
+      "path": "tests/test_cancellation.py",
+      "sha256": "c58a47b020528ab3962fba80c3a4958ea6737e3a1a450f1f5420978fd4296a96"
+    },
+    {
+      "path": "tests/test_memory.py",
+      "sha256": "735adf66fc63daf623ae4ef7b14a6d6cf6b6bbbf619b8ce2dcaa4acdf468ed8e"
+    },
+    {
+      "path": "tests/test_plan_verify.py",
+      "sha256": "54f4f65672cd4eaceeb87864a62d8b654fec71a62199424c5be7d4c74b918a53"
+    },
+    {
+      "path": "tests/e2e/test_stage_boundary_recovery.py",
+      "sha256": "16c89ca11f270c9d0aae5fcd730597fbefaad209efbbc1c2a53733395dc71224"
+    }
+  ]
+}

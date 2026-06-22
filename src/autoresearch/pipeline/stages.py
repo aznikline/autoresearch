@@ -28,6 +28,7 @@ class StageStatus(str, Enum):
     DONE = "done"
     PAUSED = "paused"
     FAILED = "failed"
+    CANCELLED = "cancelled"
 
 
 STAGE_SEQUENCE: tuple[Stage, ...] = tuple(Stage)

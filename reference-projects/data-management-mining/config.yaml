@@ -1,0 +1,51 @@
+project:
+  name: data-management-real-reference
+research:
+  topic: SQLite index tradeoffs on the UCI Bike Sharing hourly workload
+  quality_threshold: 4.0
+  profile: data-management-mining
+  depth: top_venue
+  target_venues: [VLDB, ICDE, KDD, TheWebConf]
+  primary_claim_type: systems performance or correctness
+  venue_id: vldb
+  venue_year: 2026
+  venue_track: main
+runtime:
+  artifacts_root: docs/audits/reference-work/data-management-mining
+  max_iterations: 3
+  max_artifact_bytes: 1000000000
+llm:
+  mode: synthetic
+literature:
+  mode: live
+  sources: [openalex, crossref]
+  per_source_limit: 30
+  max_retries: 2
+  timeout_sec: 30
+  queries:
+    - SQLite index selection query workload latency
+    - SQLite index selection bike sharing workload latency
+    - SQLite index selection UCI Bike Sharing hourly query latency
+    - SQLite workload-specific indexes UCI Bike Sharing hourly tail latency
+    - exact SQLite UCI Bike Sharing three-query index ablation benchmark
+    - exact SQLite UCI Bike Sharing p95 latency index ablation correctness benchmark
+  saturation_patience: 2
+  saturation_max_new_ratio: 0.15
+governance:
+  assets_file: reference-projects/data-management-mining/assets.yaml
+experiment:
+  mode: local
+  evidence_mode: real
+  workspace_source: reference-projects/data-management-mining/workspace
+  allowed_imports: [csv, math, random, sqlite3, statistics, time]
+  code_trust: trusted_generated
+  time_budget_sec: 30
+  metric_key: primary_metric
+  metric_direction: minimize
+  total_compute_budget: eight local CPU trials, at most 30 seconds each
+hitl:
+  mode: gate-only
+skills:
+  enabled: true
+  directories: [skills]
+  max_per_stage: 3

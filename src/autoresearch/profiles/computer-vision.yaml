@@ -1,0 +1,86 @@
+profile_id: computer-vision
+display_name: Computer Vision
+parent_domain: machine-learning
+target_venues: [CVPR, ICCV, ECCV, NeurIPS, ICML, ICLR]
+compatible_venue_ids: [cvpr, iccv, eccv, neurips, icml, iclr]
+plugin_id: computer-vision
+claim_types:
+  - visual recognition or generation method
+  - multimodal or video capability
+  - robustness or efficiency finding
+governance_checks:
+  - image video and model license
+  - privacy biometric and sensitive attribute review
+  - pretraining overlap and duplicate analysis
+domain_checks:
+  - preprocessing augmentation resolution and split identity
+  - robustness calibration and subgroup analysis
+  - declared qualitative example selection
+experiment_paradigm: multi_dataset_visual_evaluation
+focus_areas:
+  - image and video recognition
+  - visual generation multimodal vision and 3D
+  - robustness calibration and efficient vision
+biases:
+  - multi-dataset evidence
+  - matched training and tuning budgets
+  - failures and subgroup outcomes
+anti_patterns:
+  - select only favorable qualitative examples
+  - hide pretraining data overlap
+  - compare mismatched resolution or augmentation budgets
+standard_baselines:
+  - strongest task-standard baseline
+  - simple architecture baseline
+  - compute and parameter matched baseline
+metric_types:
+  - task-standard quality
+  - calibration robustness and subgroup quality
+  - latency throughput memory and compute
+statistical_tests:
+  - bootstrap confidence interval
+  - paired permutation test
+  - subgroup effect analysis
+detector_keywords: [vision, image, video, detection, segmentation, diffusion, multimodal]
+skill_tags: [computer-vision, multimodal, robustness, visual-evaluation]
+depth_requirements:
+  exploratory:
+    min_screened_papers: 10
+    min_baselines: 2
+    min_evaluation_units: 1
+    min_seeds: 2
+    min_ablations: 1
+    min_verified_metrics: 3
+    require_confidence_intervals: false
+    require_effect_sizes: false
+    require_compute_reporting: true
+    require_hypothesis_outcomes: true
+  publication:
+    min_screened_papers: 20
+    min_baselines: 3
+    min_evaluation_units: 2
+    min_seeds: 3
+    min_ablations: 2
+    min_verified_metrics: 6
+    require_confidence_intervals: true
+    require_effect_sizes: true
+    require_compute_reporting: true
+    require_hypothesis_outcomes: true
+  top_venue:
+    min_screened_papers: 30
+    min_baselines: 4
+    min_evaluation_units: 3
+    min_seeds: 5
+    min_ablations: 3
+    min_verified_metrics: 8
+    require_confidence_intervals: true
+    require_effect_sizes: true
+    require_compute_reporting: true
+    require_hypothesis_outcomes: true
+stage_guidance:
+  hypothesis_generation: Define competing mechanism robustness and data-overlap hypotheses.
+  experiment_design: Freeze datasets splits preprocessing augmentation resolution seeds and budgets.
+  experiment_loop: Preserve predictions checkpoints failures and per-example outputs.
+  result_analysis_decision: Analyze uncertainty robustness subgroups and qualitative failures.
+  paper_draft_revision: Use declared qualitative selection and evidence-linked visuals.
+  final_verification_export: Block on unknown pretraining provenance leakage or missing robustness evidence.

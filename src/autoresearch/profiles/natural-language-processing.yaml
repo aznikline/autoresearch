@@ -1,0 +1,86 @@
+profile_id: natural-language-processing
+display_name: Natural Language Processing
+parent_domain: computational-linguistics
+target_venues: [ACL, EMNLP, NAACL, COLING, NeurIPS, ICML, ICLR]
+compatible_venue_ids: [acl, emnlp, naacl, coling, neurips, icml, iclr]
+plugin_id: natural-language-processing
+claim_types:
+  - language modeling or generation method
+  - multilingual or linguistic finding
+  - evaluation or information extraction method
+governance_checks:
+  - corpus dataset and model license
+  - privacy annotation and compensation review
+  - contamination language and demographic scope
+domain_checks:
+  - corpus tokenization normalization and split identity
+  - human and automatic evaluation validity
+  - multilingual subgroup and error analysis
+experiment_paradigm: multilingual_task_evaluation
+focus_areas:
+  - language understanding and generation
+  - multilingual NLP and information extraction
+  - dialogue evaluation and linguistic analysis
+biases:
+  - language and domain scoped claims
+  - task-valid evaluation over metric convenience
+  - annotation and error transparency
+anti_patterns:
+  - generalize from one language without scope
+  - rely on an invalid automatic metric
+  - omit annotation protocol or corpus rights
+standard_baselines:
+  - strongest task and language matched baseline
+  - simple lexical or model baseline
+  - data and compute matched baseline
+metric_types:
+  - task quality
+  - human evaluation and agreement
+  - subgroup calibration latency and cost
+statistical_tests:
+  - paired bootstrap
+  - approximate randomization
+  - annotator agreement and subgroup effect analysis
+detector_keywords: [nlp, language, multilingual, dialogue, translation, extraction, corpus]
+skill_tags: [nlp, computational-linguistics, multilingual, human-evaluation]
+depth_requirements:
+  exploratory:
+    min_screened_papers: 10
+    min_baselines: 2
+    min_evaluation_units: 1
+    min_seeds: 2
+    min_ablations: 1
+    min_verified_metrics: 3
+    require_confidence_intervals: false
+    require_effect_sizes: false
+    require_compute_reporting: true
+    require_hypothesis_outcomes: true
+  publication:
+    min_screened_papers: 18
+    min_baselines: 3
+    min_evaluation_units: 2
+    min_seeds: 3
+    min_ablations: 2
+    min_verified_metrics: 5
+    require_confidence_intervals: true
+    require_effect_sizes: true
+    require_compute_reporting: true
+    require_hypothesis_outcomes: true
+  top_venue:
+    min_screened_papers: 25
+    min_baselines: 4
+    min_evaluation_units: 3
+    min_seeds: 5
+    min_ablations: 3
+    min_verified_metrics: 7
+    require_confidence_intervals: true
+    require_effect_sizes: true
+    require_compute_reporting: true
+    require_hypothesis_outcomes: true
+stage_guidance:
+  hypothesis_generation: Bound hypotheses by language domain annotation and metric validity.
+  experiment_design: Freeze corpora splits normalization tokenization prompts evaluators and annotation.
+  experiment_loop: Preserve predictions annotations disagreements failures and cost.
+  result_analysis_decision: Analyze uncertainty language subgroups error types and metric limitations.
+  paper_draft_revision: Match every generalization to observed language and domain coverage.
+  final_verification_export: Block on unknown corpus rights contamination or invalid evaluation.

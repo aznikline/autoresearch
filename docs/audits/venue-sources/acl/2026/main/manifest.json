@@ -1,0 +1,23 @@
+{
+  "venue_id": "acl",
+  "year": 2026,
+  "track": "main",
+  "sources": [
+    {
+      "url": "https://2026.aclweb.org/calls/main_conference_papers/",
+      "path": "conference-call.html",
+      "sha256": "e3634b5dd0830edb2df53f69554a0819fa700887f5c10f1b743cab272da0836d"
+    },
+    {
+      "url": "https://aclrollingreview.org/cfp",
+      "path": "arr-cfp.html",
+      "sha256": "eb52ae0d76e0ee812549a807ed39bfc88729fcd4c69e7e84d9f94cb61e8863c3"
+    }
+  ],
+  "template": {
+    "identity": "acl-arr-2026-main",
+    "source_url": "https://github.com/acl-org/acl-style-files/archive/refs/heads/master.zip",
+    "path": "src/autoresearch/templates/acl/2026/acl-style-files.zip",
+    "sha256": "e08eb1852615515df9a38900b5fd766965d7d0e7925bd51fe262eb32b4d59407"
+  }
+}

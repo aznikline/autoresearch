@@ -1,0 +1,64 @@
+{
+  "topic": "SQLite index tradeoffs on the UCI Bike Sharing hourly workload",
+  "profile": "data-management-mining",
+  "depth": "top_venue",
+  "target_venue_family": [
+    "VLDB",
+    "ICDE",
+    "KDD",
+    "TheWebConf"
+  ],
+  "primary_claim_type": "systems performance or correctness",
+  "resource_budget": {
+    "time_budget_sec": 30,
+    "max_iterations": 3,
+    "total_compute_budget": "eight local CPU trials, at most 30 seconds each"
+  },
+  "threshold_waivers": [],
+  "config_fingerprint": "c3778d97f867d83e8381917fa506d70a4c8e5a296df6d790fb985a829f2e7b17",
+  "venue_contract": {
+    "venue_id": "vldb",
+    "display_name": "VLDB",
+    "year": 2026,
+    "track": "main",
+    "status": "verified",
+    "source_path": "/Users/wizout/op/autoresearch/src/autoresearch/venues/vldb/2026/main.yaml"
+  },
+  "capability": {
+    "level": "contract_supported",
+    "blockers": [
+      "real integration evidence missing"
+    ]
+  },
+  "llm": {
+    "mode": "synthetic",
+    "provider": "openai-compatible",
+    "model": "gpt-4.1",
+    "synthetic": true
+  },
+  "literature": {
+    "mode": "live",
+    "sources": [
+      "openalex",
+      "crossref"
+    ],
+    "synthetic": false
+  },
+  "experiment": {
+    "mode": "local",
+    "evidence_mode": "real",
+    "synthetic": false,
+    "workspace_source": "reference-projects/data-management-mining/workspace",
+    "allowed_imports": [
+      "csv",
+      "math",
+      "random",
+      "sqlite3",
+      "statistics",
+      "time"
+    ]
+  },
+  "memory": {
+    "human_lesson_count": 1
+  }
+}

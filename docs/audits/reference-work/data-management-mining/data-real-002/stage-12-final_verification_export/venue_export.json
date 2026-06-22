@@ -1,0 +1,10 @@
+{
+  "ok": false,
+  "venue_id": "vldb",
+  "year": 2026,
+  "track": "main",
+  "template_identity": "pvldb-volume-19-regular-research",
+  "blockers": [
+    "template_not_materialized"
+  ]
+}

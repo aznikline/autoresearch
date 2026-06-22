@@ -1,0 +1,18 @@
+{
+  "venue_id": "thewebconf",
+  "year": 2026,
+  "track": "main",
+  "sources": [
+    {
+      "url": "https://www2026.thewebconf.org/calls/research-tracks.html",
+      "path": "research-tracks.html",
+      "sha256": "52d6b3507eb3d45b75fb5c78b1949750a65cf8579a3664cf9a036018c2776385"
+    }
+  ],
+  "template": {
+    "identity": "acmart-v2.18-sigconf",
+    "source_url": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+    "path": "src/autoresearch/templates/thewebconf/2026/acmart-v2.18.zip",
+    "sha256": "312ce7036cc69e3b7416da80234bceba84601bf509078a74368889e164f77798"
+  }
+}

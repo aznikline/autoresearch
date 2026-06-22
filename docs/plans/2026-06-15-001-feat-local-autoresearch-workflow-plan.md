@@ -21,10 +21,15 @@ The target is not to promise top-conference acceptance. The target is a local wo
 The repository now has an executable 12-stage scaffold with contracts,
 checkpoints, seed literature, local toy experiments, citation and numeric-claim
 verification, paper export, an ML-systems domain profile, a stage-aware skill
-harness, and profile/depth quality checks. The scaffold is tested but is not yet
-a real venue-ready idea-to-paper system: provider adapters, live scholarly
-retrieval, claim-scoped novelty search, real generated experiments, statistical
-evidence registries, resume/approve/reject flows, and durable memory remain open.
+harness, profile/depth quality checks, a pre-run alignment manifest, structured
+literature-gap/hypothesis/empirical-claim records, provenance-rich experiment
+ledgers, immutable-evaluator enforcement, protocol fingerprints, and a hashed
+artifact manifest. The scaffold is tested but is not yet a real venue-ready
+idea-to-paper system: provider adapters, live scholarly retrieval, saturated
+claim-scoped novelty search, real generated experiments, statistical evidence,
+SmartPause and advanced HITL modes, and durable memory remain open. The local
+CLI now supports auditable approve/reject decisions, checkpoint resume with
+config identity validation, rejection rollback, and completed-bundle export.
 
 The normative domain and harness contract is
 `docs/specs/research-alignment.md`. Numeric depth floors are local operating

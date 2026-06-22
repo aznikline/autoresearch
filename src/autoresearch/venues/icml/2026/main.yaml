@@ -1,0 +1,26 @@
+schema_version: 1
+venue_id: icml
+display_name: ICML
+year: 2026
+track: main
+status: verified
+compatible_profiles: [foundation-models-llm, computer-vision, natural-language-processing, ml-systems-efficiency]
+official_sources:
+  - url: https://icml.cc/Conferences/2026/CallForPapers
+    retrieved_at: 2026-06-19
+    sha256: 19abe3d4ae596f2249a771407c14aeca49e1a40f6288af719fa6034f093d7e17
+template:
+  identity: icml-2026-main
+  source_url: https://media.icml.cc/Conferences/ICML2026/Styles/icml2026.zip
+  sha256: 8b29290f5828e176debb57ea9cc00252502973d55ea561a2f18a7f0a326bfc6c
+policy:
+  anonymity: double_blind
+  page_limit: 8
+  supplement_allowed: true
+  checklist_required: false
+  checklist_delivery: none
+  ethics_required: false
+  limitations_required: false
+  artifact_policy: optional
+  required_sections: [Impact Statement]
+valid_until: 2026-12-31

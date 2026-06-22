@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/gOgRsfHfvcH2am63G9M6K2i/7co</id>
+  <title>arXiv Query: search_query=all:autonomous OR all:research OR all:agents&amp;id_list=&amp;start=0&amp;max_results=2</title>
+  <updated>2026-06-19T09:33:48Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:autonomous+OR+(all:research+OR+all:agents)&amp;start=0&amp;max_results=2&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>2</opensearch:itemsPerPage>
+  <opensearch:totalResults>289968</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2602.04518v1</id>
+    <title>Learning the Value Systems of Agents with Preference-based and Inverse Reinforcement Learning</title>
+    <updated>2026-02-04T13:07:15Z</updated>
+    <link href="https://arxiv.org/abs/2602.04518v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.04518v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Agreement Technologies refer to open computer systems in which autonomous software agents interact with one another, typically on behalf of humans, in order to come to mutually acceptable agreements. With the advance of AI systems in recent years, it has become apparent that such agreements, in order to be acceptable to the involved parties, must remain aligned with ethical principles and moral values. However, this is notoriously difficult to ensure, especially as different human users (and their software agents) may hold different value systems, i.e. they may differently weigh the importance of individual moral values. Furthermore, it is often hard to specify the precise meaning of a value in a particular context in a computational manner. Methods to estimate value systems based on human-engineered specifications, e.g. based on value surveys, are limited in scale due to the need for intense human moderation. In this article, we propose a novel method to automatically \emph{learn} value systems from observations and human demonstrations. In particular, we propose a formal model of the \emph{value system learning} problem, its instantiation to sequential decision-making domains based on multi-objective Markov decision processes, as well as tailored preference-based and inverse reinforcement learning algorithms to infer value grounding functions and value systems. The approach is illustrated and evaluated by two simulated use cases.</summary>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-04T13:07:15Z</published>
+    <arxiv:comment>42 pages, 5 figures. Published in Journal of Autonomous Agents and Multi-Agent Systems</arxiv:comment>
+    <arxiv:primary_category term="cs.CY"/>
+    <arxiv:journal_ref>Holgado-Sánchez, A., Billhardt, H., Fernández, A., Ossowski, S. Learning the value systems of agents with preference-based and inverse reinforcement learning. Autonomous Agents Multi-Agent Systems 40, 4 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Andrés Holgado-Sánchez</name>
+    </author>
+    <author>
+      <name>Holger Billhardt</name>
+    </author>
+    <author>
+      <name>Alberto Fernández</name>
+    </author>
+    <author>
+      <name>Sascha Ossowski</name>
+    </author>
+    <arxiv:doi>10.1007/s10458-026-09732-0</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s10458-026-09732-0" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.09349v1</id>
+    <title>Establishing Shared Query Understanding in an Open Multi-Agent System</title>
+    <updated>2023-05-16T11:07:05Z</updated>
+    <link href="https://arxiv.org/abs/2305.09349v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.09349v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a method that allows to develop shared understanding between two agents for the purpose of performing a task that requires cooperation. Our method focuses on efficiently establishing successful task-oriented communication in an open multi-agent system, where the agents do not know anything about each other and can only communicate via grounded interaction. The method aims to assist researchers that work on human-machine interaction or scenarios that require a human-in-the-loop, by defining interaction restrictions and efficiency metrics. To that end, we point out the challenges and limitations of such a (diverse) setup, while also restrictions and requirements which aim to ensure that high task performance truthfully reflects the extent to which the agents correctly understand each other. Furthermore, we demonstrate a use-case where our method can be applied for the task of cooperative query answering. We design the experiments by modifying an established ontology alignment benchmark. In this example, the agents want to query each other, while representing different databases, defined in their own ontologies that contain different and incomplete knowledge. Grounded interaction here has the form of examples that consists of common instances, for which the agents are expected to have similar knowledge. Our experiments demonstrate successful communication establishment under the required restrictions, and compare different agent policies that aim to solve the task in an efficient manner.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-16T11:07:05Z</published>
+    <arxiv:comment>9 pages. International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2023), London, United Kingdom</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <arxiv:journal_ref>In Proceedings of the 2023 International Conference on Autonomous Agents and Multiagent Systems (AAMAS 23). International Foundation for Autonomous Agents and Multiagent Systems, Richland</arxiv:journal_ref>
+    <author>
+      <name>Nikolaos Kondylidis</name>
+    </author>
+    <author>
+      <name>Ilaria Tiddi</name>
+    </author>
+    <author>
+      <name>Annette ten Teije</name>
+    </author>
+  </entry>
+</feed>

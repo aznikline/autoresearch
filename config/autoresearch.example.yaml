@@ -11,22 +11,75 @@ research:
     - "ICML"
     - "ICLR"
     - "MLSys"
+  primary_claim_type: "empirical efficiency"
+  # A waiver must name the affected claim, rationale, and alternative test.
+  # citation_integrity, immutable_evaluation, protocol_parity, and
+  # artifact_provenance can never be waived.
+  threshold_waivers: []
+  venue_id: "mlsys"
+  venue_year: "latest_available"
+  venue_track: "main"
 
 runtime:
   artifacts_root: "artifacts"
   max_iterations: 3
+  max_artifact_bytes: 1000000000
 
 llm:
+  mode: "synthetic"
   provider: "openai-compatible"
   base_url: "https://api.openai.com/v1"
+  allowed_hosts:
+    - "api.openai.com"
+  auth_mode: "bearer_env"
   api_key_env: "OPENAI_API_KEY"
   primary_model: "gpt-4.1"
+  max_requests: 20
+  max_retries: 2
+  timeout_sec: 60
+  input_cost_per_million: 0.0
+  output_cost_per_million: 0.0
+
+literature:
+  # synthetic uses the bundled seed corpus. live accepts arxiv, openalex,
+  # and crossref and stores content-addressed raw responses in each run.
+  mode: "synthetic"
+  sources:
+    - "seed"
+  per_source_limit: 10
+  max_retries: 2
+  timeout_sec: 30
+  # Publish-targeted runs should provide a reviewed query sequence. Novelty is
+  # blocked until the last saturation_patience rounds add no new candidates.
+  queries: []
+  saturation_patience: 2
+
+governance:
+  # Required for any evidence-complete run. The registry resolves hashes,
+  # licenses, privacy, consent/approval, and immutable data splits.
+  assets_file: ""
 
 experiment:
   mode: "local"
+  # Must be explicitly changed to real for evidence-complete reference runs.
+  evidence_mode: "synthetic"
+  # Real mode requires a directory containing experiment.py. The directory is
+  # copied into the run so its exact code and supporting files are hashed.
+  workspace_source: ""
+  # Additional top-level imports accepted by the local evaluator validator.
+  # Keep this list minimal; local execution is not an isolation boundary.
+  allowed_imports: []
+  # local is allowed only for trusted generated fixtures. Untrusted code
+  # requires a real container/equivalent backend and fails closed today.
+  code_trust: "trusted_generated"
   time_budget_sec: 300
   metric_key: "primary_metric"
   metric_direction: "minimize"
+  total_compute_budget: "local CPU within the per-trial time budget"
+  # Add the selected profile's frozen scientific protocol fields here.
+  # Execution fields such as topic, trials, metric_key, and time_budget_sec
+  # cannot be overridden from this mapping.
+  protocol: {}
 
 hitl:
   mode: "gate-only"

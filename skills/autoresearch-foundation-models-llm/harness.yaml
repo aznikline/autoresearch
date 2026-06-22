@@ -1,0 +1,26 @@
+category: research-workflow
+trigger_keywords: [llm, language model, reasoning, alignment, retrieval, agent]
+applicable_stages:
+  - idea_intake
+  - literature_collect
+  - hypothesis_generation
+  - experiment_design
+  - experiment_loop
+  - result_analysis_decision
+  - paper_draft_revision
+  - final_verification_export
+profiles: [foundation-models-llm]
+depths: [exploratory, publication, top_venue]
+priority: 1
+stage_instructions:
+  hypothesis_generation: Define competing capability and artifact hypotheses with contamination and judge-validity risks.
+  experiment_design: Freeze models tokenizers prompts decoding datasets judges seeds and resource budgets.
+  experiment_loop: Preserve generations judge outputs safety outcomes failures latency tokens and cost.
+  result_analysis_decision: Analyze uncertainty judge agreement contamination and quality-safety-cost tradeoffs.
+  paper_draft_revision: Scope capability claims to tested models tasks and evaluators.
+  final_verification_export: Block on missing model identity contamination analysis judge validation or provenance.
+references:
+  experiment_design: [references/methodology.md]
+  experiment_loop: [references/methodology.md]
+  result_analysis_decision: [references/methodology.md]
+  final_verification_export: [references/methodology.md]

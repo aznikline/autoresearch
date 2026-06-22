@@ -10,6 +10,7 @@ def draft_paper(
     cards: list[KnowledgeCard],
     ledger: list[LedgerEntry],
     decision_text: str,
+    evidence_mode: str = "synthetic",
 ) -> str:
     best = _best_kept(ledger)
     citation_sentence = _related_work_sentence(cards)
@@ -22,6 +23,20 @@ def draft_paper(
         f"- `{entry.trial_id}`: metric={entry.metric}, decision={entry.decision}, status={entry.status}."
         for entry in ledger
     ]
+    real = evidence_mode == "real"
+    method_text = (
+        "The configured domain experiment workspace executes the prespecified trials."
+        if real
+        else "The current method uses a deterministic local experiment workspace with configured trials."
+    )
+    limitations_text = (
+        "Claims are limited to the registered assets, evaluation units, trials, metrics, "
+        "and compute budget recorded in this run."
+        if real
+        else "This is not yet a top-conference submission. The current experiment is a "
+        "deterministic scaffold, so domain-specific experiments and stronger novelty "
+        "analysis are still required."
+    )
     return "\n".join(
         [
             f"# Evidence-Grounded Study of {topic}",
@@ -37,7 +52,7 @@ def draft_paper(
             citation_sentence,
             "",
             "## Method",
-            "The current method uses a deterministic local experiment workspace with configured trials.",
+            method_text,
             "Each trial writes structured metrics, and the pipeline keeps only metric improvements.",
             "",
             "## Experiments",
@@ -48,7 +63,7 @@ def draft_paper(
             decision_text.strip(),
             "",
             "## Limitations",
-            "This is not yet a top-conference submission. The current experiment is a deterministic scaffold, so domain-specific experiments and stronger novelty analysis are still required.",
+            limitations_text,
             "",
             "## Conclusion",
             "The workflow now links literature, experiment metrics, and paper text through auditable artifacts.",

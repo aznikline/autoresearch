@@ -1,0 +1,4 @@
+interface:
+  display_name: "AutoResearch Data"
+  short_description: "Run auditable database and data-mining research"
+  default_prompt: "Use $autoresearch-data-management-mining for an evidence-grounded data paper run."

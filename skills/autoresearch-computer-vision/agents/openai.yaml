@@ -1,0 +1,4 @@
+interface:
+  display_name: "AutoResearch Computer Vision"
+  short_description: "Run evidence-grounded vision research workflows"
+  default_prompt: "Use $autoresearch-computer-vision for an auditable vision paper run."

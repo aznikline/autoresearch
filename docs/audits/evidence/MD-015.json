@@ -1,0 +1,26 @@
+{
+  "requirement_id": "MD-015",
+  "status": "passed",
+  "synthetic": false,
+  "credentialed": false,
+  "spec_sha256": "dec133ac1e4ab5bb0c453e4bf69371853269864584f6169ab3b849e2da80e1e6",
+  "plan_sha256": "ceefba5f08f58a47edd9797607dd590bfb25c6e79a398f3ceb481fb35796024b",
+  "artifacts": [
+    {
+      "path": "docs/audits/test-results/operator-runbook.xml",
+      "sha256": "41452b9a29dd38692c4789646d16c1b10be8aad23ae6d599d8c51d383e07c1a4"
+    },
+    {
+      "path": "tests/e2e/test_operator_workflow.py",
+      "sha256": "cf16f855e8143f3657ca13746b0882acad108b99a49ba2ef600330360b585966"
+    },
+    {
+      "path": "docs/runbook.md",
+      "sha256": "0f9eb58d42cc2bd9e1bda761846a39f4c53e071a2e77b43584ba963a4de89a41"
+    },
+    {
+      "path": "README.md",
+      "sha256": "04feb38e9803cafdebf838db870971f2369be9277e17900543fae6c73ea8bc81"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "synthetic": false,
+  "provider": "ollama-openai-compatible",
+  "endpoint": "loopback",
+  "model": "translategemma:4b",
+  "requested_model": "translategemma:4b",
+  "model_digest": "c49d986b0764f5881c476eb21435bb62b7abc62347aab3d4a6071e811be510a1",
+  "request_id": "chatcmpl-261",
+  "usage": {
+    "prompt_tokens": 26,
+    "completion_tokens": 13,
+    "total_tokens": 39
+  },
+  "response_data_sha256": "be349da92af399dc34ca43650b5c68e96486dfeb38c5f70222fce9d8abec1692"
+}

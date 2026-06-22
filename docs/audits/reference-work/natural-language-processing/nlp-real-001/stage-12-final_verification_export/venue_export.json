@@ -1,0 +1,10 @@
+{
+  "ok": false,
+  "venue_id": "acl",
+  "year": 2026,
+  "track": "main",
+  "template_identity": "acl-arr-2026-main",
+  "blockers": [
+    "template_not_materialized"
+  ]
+}

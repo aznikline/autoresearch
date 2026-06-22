@@ -1,0 +1,20 @@
+synthetic: true
+plugin_id: ml-systems-efficiency
+protocol:
+  confirmatory: true
+  hypotheses: [h1, h2]
+  primary_metrics: [quality]
+  exclusions: [corrupt input]
+  evaluator_hash: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  stopping_rule: fixed budget
+  resource_budget: matched
+  seeds: [1, 2, 3]
+  uncertainty: bootstrap confidence interval
+  dataset_version: dataset-v1
+  split_hash: 3333333333333333333333333333333333333333333333333333333333333333
+  model_checkpoint: model-v1
+  matched_resource_budgets: true
+  immutable_evaluator: true
+  quality_metrics: [accuracy]
+  efficiency_metrics: [latency, throughput, memory, compute]
+  baseline_tuning_policy: same budget

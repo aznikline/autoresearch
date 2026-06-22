@@ -1,0 +1,29 @@
+{
+  "primary_metric": 0.8335965241857798,
+  "accuracy": 0.8336134453781513,
+  "macro_f1": 0.8335965241857798,
+  "precision": 0.8221476510067114,
+  "recall": 0.8419243986254296,
+  "brier_score": 0.11903710989156575,
+  "domain_gap": 0.04067552634473204,
+  "ci_low": 0.8066156250618237,
+  "ci_high": 0.8637408432546133,
+  "effect_size": 1.0472687186740834,
+  "runtime_sec": 0.11500237499967625,
+  "compute_units": 122000.0,
+  "seed": 3,
+  "evaluation_units": [
+    "amazon",
+    "imdb",
+    "yelp"
+  ],
+  "trial_id": "baseline-unigram-seed3",
+  "model": "unigram",
+  "train_examples": 2405,
+  "test_examples": 595,
+  "per_domain_macro_f1": {
+    "amazon": 0.8509119746233149,
+    "imdb": 0.8102364482785829,
+    "yelp": 0.8392650075818391
+  }
+}

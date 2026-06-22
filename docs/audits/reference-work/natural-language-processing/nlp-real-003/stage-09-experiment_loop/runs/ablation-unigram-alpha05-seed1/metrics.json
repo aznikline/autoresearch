@@ -1,0 +1,29 @@
+{
+  "primary_metric": 0.8403343304493236,
+  "accuracy": 0.8403361344537815,
+  "macro_f1": 0.8403343304493236,
+  "precision": 0.8245033112582781,
+  "recall": 0.8556701030927835,
+  "brier_score": 0.12187885278115343,
+  "domain_gap": 0.05169744345002092,
+  "ci_low": 0.8067030331450977,
+  "ci_high": 0.865542800325409,
+  "effect_size": 1.0615111107217683,
+  "runtime_sec": 0.11853466699994897,
+  "compute_units": 122000.0,
+  "seed": 1,
+  "evaluation_units": [
+    "amazon",
+    "imdb",
+    "yelp"
+  ],
+  "trial_id": "ablation-unigram-alpha05-seed1",
+  "model": "unigram",
+  "train_examples": 2405,
+  "test_examples": 595,
+  "per_domain_macro_f1": {
+    "amazon": 0.8722102639628413,
+    "imdb": 0.8205128205128204,
+    "yelp": 0.829946524064171
+  }
+}

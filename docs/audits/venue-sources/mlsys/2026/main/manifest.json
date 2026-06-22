@@ -1,0 +1,18 @@
+{
+  "venue_id": "mlsys",
+  "year": 2026,
+  "track": "main",
+  "sources": [
+    {
+      "url": "https://mlsys.org/Conferences/2026/CallForPapers",
+      "path": "call-for-papers.html",
+      "sha256": "256326b602dd9704a8e428906ff71cad5e85bef6860978c0cab89c25b30fb935"
+    }
+  ],
+  "template": {
+    "identity": "mlsys-2025-style-for-2026",
+    "source_url": "https://media.mlsys.org/Conferences/MLSYS2025/mlsys2025style.zip",
+    "path": "src/autoresearch/templates/mlsys/2026/mlsys2025style.zip",
+    "sha256": "04e77090038f78c985154c71f7a57b7fbb2553ddd3e4e62f431ed420ba3768ef"
+  }
+}

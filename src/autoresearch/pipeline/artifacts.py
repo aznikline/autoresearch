@@ -18,5 +18,5 @@ def artifact_exists(run_dir: Path, stage: Stage, relative_path: str) -> bool:
     return path.is_file()
 
 
-def write_json(path: Path, data: dict[str, Any]) -> None:
+def write_json(path: Path, data: Any) -> None:
     path.write_text(json.dumps(data, indent=2), encoding="utf-8")

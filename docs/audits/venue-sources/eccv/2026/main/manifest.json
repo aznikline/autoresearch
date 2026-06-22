@@ -1,0 +1,18 @@
+{
+  "venue_id": "eccv",
+  "year": 2026,
+  "track": "main",
+  "sources": [
+    {
+      "url": "https://eccv.ecva.net/Conferences/2026/SubmissionPolicies",
+      "path": "submission-policies.html",
+      "sha256": "bb2918b9decf273d6aed69b95b0926c614f6e569971b7178397d226c8b5ecf09"
+    }
+  ],
+  "template": {
+    "identity": "eccv-2026-main",
+    "source_url": "https://github.com/paolo-favaro/paper-template/archive/refs/tags/Latest.zip",
+    "path": "src/autoresearch/templates/eccv/2026/eccv2026-author-kit.zip",
+    "sha256": "8ed161c418f690cc4f48f7c9f57f78b630c2d615d74ebfb3bff37699bd6e4fa1"
+  }
+}

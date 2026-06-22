@@ -1,0 +1,504 @@
+{
+  "artifacts": [
+    {
+      "path": "alignment.json",
+      "sha256": "cc06e8d488079045164e64898b2f0e051b40d9852a5b117e994293f04efd1a01",
+      "size_bytes": 1524
+    },
+    {
+      "path": "stage-01-idea_intake/goal.md",
+      "sha256": "2cbd4b2e6c7c76730e82f37b26ce45b9c84a581e9407fb8944ce1378acee0d00",
+      "size_bytes": 108
+    },
+    {
+      "path": "stage-01-idea_intake/run_config.json",
+      "sha256": "1511167c3f558f9092be90cd9c4f84eae9ed6bf9474f321eb9acdcfcf31f8444",
+      "size_bytes": 175
+    },
+    {
+      "path": "stage-01-idea_intake/skill_context.md",
+      "sha256": "a334658ac88d052fdee1f2c3017bacec47335f53c92f2373cd1a37a47b3fb154",
+      "size_bytes": 653
+    },
+    {
+      "path": "stage-01-idea_intake/skills_applied.json",
+      "sha256": "a99468a39b82d1fa451efdc6a816a33fbfc4db5ece0dae86f825355655bdc287",
+      "size_bytes": 1064
+    },
+    {
+      "path": "stage-02-problem_decompose/problem_tree.md",
+      "sha256": "683650c89e0d766f7567e55486255bddc4615a57443bca5f4eea53a40e730d15",
+      "size_bytes": 114
+    },
+    {
+      "path": "stage-02-problem_decompose/skill_context.md",
+      "sha256": "b51406844c36227c57d7542d3aa0083faac00aba86aa8254786985ce929d5721",
+      "size_bytes": 211
+    },
+    {
+      "path": "stage-02-problem_decompose/skills_applied.json",
+      "sha256": "d8308b0e22c2f3bd8eb854437e23fd6e7545622acadb87844e2858610662c32a",
+      "size_bytes": 116
+    },
+    {
+      "path": "stage-03-literature_collect/candidates.jsonl",
+      "sha256": "002486ed20324b25a7ba95e48aff982f24ee6507cf5d92b6760a5d6bc9a8e6f6",
+      "size_bytes": 99580
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/crossref/raw/05d6957055111012621a70d5f86888f060e4b2b152ec58de4ea61f2306668542.bin",
+      "sha256": "05d6957055111012621a70d5f86888f060e4b2b152ec58de4ea61f2306668542",
+      "size_bytes": 73749
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/crossref/raw/b96e274889e08f2a35b9719f91250067cbff68dac9a671267a12e03dedbafc55.bin",
+      "sha256": "b96e274889e08f2a35b9719f91250067cbff68dac9a671267a12e03dedbafc55",
+      "size_bytes": 211994
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/crossref/raw/d0b951737316f2fdc99b91b509b2a5c39e6867c4b06bf0c9eef162ccad8de2a2.bin",
+      "sha256": "d0b951737316f2fdc99b91b509b2a5c39e6867c4b06bf0c9eef162ccad8de2a2",
+      "size_bytes": 213681
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/crossref/raw/ec4846b4381ff761a0cd8fa4c0bfb956af85f3ace82242ef9f02d78ed6e2aa69.bin",
+      "sha256": "ec4846b4381ff761a0cd8fa4c0bfb956af85f3ace82242ef9f02d78ed6e2aa69",
+      "size_bytes": 164598
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/crossref/raw/f24e9e38650126f461b840bf717c93edb72908cf8d6de803dffbd17f880353ab.bin",
+      "sha256": "f24e9e38650126f461b840bf717c93edb72908cf8d6de803dffbd17f880353ab",
+      "size_bytes": 234999
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/crossref/requests.jsonl",
+      "sha256": "212f4572264d6c3a5ccdedc0e90e998102ff2adff34dbd0288959a6d91705954",
+      "size_bytes": 1909
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/openalex/raw/2fb00088eabde3644b0428020033646f5d20cfa891cbf48112f1efd5d7c182a1.bin",
+      "sha256": "2fb00088eabde3644b0428020033646f5d20cfa891cbf48112f1efd5d7c182a1",
+      "size_bytes": 579
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/openalex/raw/34a94f15371cb617901a6633f626db686554454997fc41b0ce5fa541fb49dfff.bin",
+      "sha256": "34a94f15371cb617901a6633f626db686554454997fc41b0ce5fa541fb49dfff",
+      "size_bytes": 57395
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/openalex/raw/3de594cd4532faa7c97d33ed4a124a7721312b6e889202d02e672f6f561806e5.bin",
+      "sha256": "3de594cd4532faa7c97d33ed4a124a7721312b6e889202d02e672f6f561806e5",
+      "size_bytes": 588
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/openalex/raw/46a1034df10edb8ca0ba31d3215358b0e0d14000718db2f3e61bc0a041df7af2.bin",
+      "sha256": "46a1034df10edb8ca0ba31d3215358b0e0d14000718db2f3e61bc0a041df7af2",
+      "size_bytes": 561
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/openalex/raw/a300736bad2496179ce8ec1df72c4d8ae48baf6f7ca323fcff326196560ff447.bin",
+      "sha256": "a300736bad2496179ce8ec1df72c4d8ae48baf6f7ca323fcff326196560ff447",
+      "size_bytes": 755289
+    },
+    {
+      "path": "stage-03-literature_collect/retrieval/openalex/requests.jsonl",
+      "sha256": "71e953e6b0e0ab3787c2248cd18b1386e3b257f1a90866e074ddadcec2521437",
+      "size_bytes": 1934
+    },
+    {
+      "path": "stage-03-literature_collect/search_report.json",
+      "sha256": "53122ae1dcfee2274cc5342cf22d53e2ccf5f448b949a34a6679e783cd86949a",
+      "size_bytes": 3810
+    },
+    {
+      "path": "stage-03-literature_collect/search_report.md",
+      "sha256": "602191c72049263f5ac5e293ed312501c83f926ff7500dd778db77d05df90048",
+      "size_bytes": 610
+    },
+    {
+      "path": "stage-03-literature_collect/skill_context.md",
+      "sha256": "ce0cc3fb79927becc42ec00ada219f8233a95614c02b00735ef233ccdf4c8889",
+      "size_bytes": 660
+    },
+    {
+      "path": "stage-03-literature_collect/skills_applied.json",
+      "sha256": "9b3ec65b833a7eadffcd02c02471e9674b4bd83e8755f8b8c9d74f3c166c40a2",
+      "size_bytes": 1071
+    },
+    {
+      "path": "stage-04-literature_screen/screening_report.md",
+      "sha256": "cf4fff27cf610d0d3c701cedb3a4134298d593e287739c3f74f6b8596d674740",
+      "size_bytes": 147
+    },
+    {
+      "path": "stage-04-literature_screen/shortlist.jsonl",
+      "sha256": "1d4d1c69be08a3ac6ed9370a0dea02f19b6c7a88c8407a98010c74b9e35ae5b3",
+      "size_bytes": 45292
+    },
+    {
+      "path": "stage-04-literature_screen/skill_context.md",
+      "sha256": "037f99bdf431e50847a3e4d572e136b54e6f92d4ad932b31fb6f2dd4c5fcce83",
+      "size_bytes": 211
+    },
+    {
+      "path": "stage-04-literature_screen/skills_applied.json",
+      "sha256": "e42843e15369d4a9aaca369207d03435b939c60d0b7914a86c74ff13c4998788",
+      "size_bytes": 116
+    },
+    {
+      "path": "stage-05-synthesis/knowledge_cards.jsonl",
+      "sha256": "7ed8e503520554d41cd9b9ce1b7ce0865a9d2e7bd258ef0b614c21fd8b33f6e8",
+      "size_bytes": 27363
+    },
+    {
+      "path": "stage-05-synthesis/literature_gaps.json",
+      "sha256": "f40d1a16dbaa7029a03ebc0243aa8fa5cc06545f6afc4bd2b498db214182cdc7",
+      "size_bytes": 2107
+    },
+    {
+      "path": "stage-05-synthesis/skill_context.md",
+      "sha256": "326f2f3c0b5f7c284b3de8c1554c566cf57b2e8d3d60a2e7067f167867151e46",
+      "size_bytes": 203
+    },
+    {
+      "path": "stage-05-synthesis/skills_applied.json",
+      "sha256": "778ecbe4cb44484d902653784af9706ff95f16b6b2ec5105df6a8433f0b7cac3",
+      "size_bytes": 108
+    },
+    {
+      "path": "stage-05-synthesis/synthesis.md",
+      "sha256": "6829568d36d16d478a34eddfe43eb19692c8b16c209f5fef3eaef85d44987c95",
+      "size_bytes": 6824
+    },
+    {
+      "path": "stage-06-hypothesis_generation/hypotheses.json",
+      "sha256": "3ee86cae5bd1addbee7e481bdd0d7631dda689a875117d3ed35cb58ee2572a1a",
+      "size_bytes": 614
+    },
+    {
+      "path": "stage-06-hypothesis_generation/hypotheses.md",
+      "sha256": "3869b6cc3c9269c958ac7209ac5147b5cc79e7fe77a44c4a30c80948f93a2198",
+      "size_bytes": 234
+    },
+    {
+      "path": "stage-06-hypothesis_generation/skill_context.md",
+      "sha256": "0f2e825ab3179ff6587f7d2c0449a723b963bf8d0a5d624606036a349784ac50",
+      "size_bytes": 829
+    },
+    {
+      "path": "stage-06-hypothesis_generation/skills_applied.json",
+      "sha256": "ea6daccd4e0ffbf3f7d1e3143b7b0b8137ea17c069d10a97ce88af9314c58b10",
+      "size_bytes": 1133
+    },
+    {
+      "path": "stage-07-experiment_design/experiment_plan.yaml",
+      "sha256": "76789df38a269eff91d4e741779473f2f44c2f72bbc1dcf6a8d938b0a7b828f4",
+      "size_bytes": 3096
+    },
+    {
+      "path": "stage-07-experiment_design/protocol_validation.json",
+      "sha256": "2d219fe8f9a725cd967495a381bdc03cb84dc5e53a2896086db86f74d84b78cb",
+      "size_bytes": 73
+    },
+    {
+      "path": "stage-07-experiment_design/skill_context.md",
+      "sha256": "a6b14912347593fefd72f96012f3e31216692fd204b4803d82678cad54e23c91",
+      "size_bytes": 1433
+    },
+    {
+      "path": "stage-07-experiment_design/skills_applied.json",
+      "sha256": "c399db564688740aba470de6b196214fedda961e8c5490c88d5569d2d5ef918a",
+      "size_bytes": 1206
+    },
+    {
+      "path": "stage-08-experiment_generation/experiment/README.md",
+      "sha256": "bc37a1468fb83fc4e6e1d284ef41dd0d992b7443ef1dbc7f3f369ac43c66f55c",
+      "size_bytes": 165
+    },
+    {
+      "path": "stage-08-experiment_generation/experiment/data/hour.csv",
+      "sha256": "e03de4ee4ef4dc376ac6e04bf829673c6269e8eba5c60fa121640fa2f829504f",
+      "size_bytes": 1156736
+    },
+    {
+      "path": "stage-08-experiment_generation/experiment/experiment.py",
+      "sha256": "a8054ee557567eec47692f11b900eec6c153295f97cd6a5462458d01d4157d8c",
+      "size_bytes": 6133
+    },
+    {
+      "path": "stage-08-experiment_generation/experiment/experiment_plan.yaml",
+      "sha256": "76789df38a269eff91d4e741779473f2f44c2f72bbc1dcf6a8d938b0a7b828f4",
+      "size_bytes": 3096
+    },
+    {
+      "path": "stage-08-experiment_generation/experiment/schema.sql",
+      "sha256": "0f0dafb6a6372163bc051b9baadc5ad138400abd399c6ab07f6f3d4086d714dc",
+      "size_bytes": 447
+    },
+    {
+      "path": "stage-08-experiment_generation/experiment/workload.json",
+      "sha256": "e74875500cc2c0fb31451e3912fc71772fdc6344a41fb015ebdabe3c0c861af6",
+      "size_bytes": 471
+    },
+    {
+      "path": "stage-08-experiment_generation/experiment_spec.md",
+      "sha256": "7311588099309707ba370a4103cc9c4f2f5d364824b5a2bfa2d34100b994986f",
+      "size_bytes": 650
+    },
+    {
+      "path": "stage-08-experiment_generation/skill_context.md",
+      "sha256": "e9e90fc5617f2b5ab7fe92a65fc07c0fab269e64da978e0bf397264282d6327c",
+      "size_bytes": 215
+    },
+    {
+      "path": "stage-08-experiment_generation/skills_applied.json",
+      "sha256": "eb134b3d13c18bb23b9cc91fbf49847a580f2b81c9090bf181d57f11e8639886",
+      "size_bytes": 120
+    },
+    {
+      "path": "stage-09-experiment_loop/ledger.jsonl",
+      "sha256": "32150525d0df60e9b120c9ebf69173eca1769440f59330c3532428a20d534e9c",
+      "size_bytes": 7403
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-composite-index-seed4/metrics.json",
+      "sha256": "3723fb6ba4cb807adf3705d2acbb3478c1ddf0daeb6fcaf83c24592403daee6b",
+      "size_bytes": 601
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-composite-index-seed4/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-composite-index-seed4/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-hour-index-seed1/metrics.json",
+      "sha256": "b3784cd42a014cbdff63fe094addeefc84a51c34a564d63d4b7e1b550b10ed7f",
+      "size_bytes": 588
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-hour-index-seed1/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-hour-index-seed1/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-season-index-seed3/metrics.json",
+      "sha256": "904e936a25860cafacd8c7b6084a20400cb0d4e3b6e49c0469bff2001d5bc8be",
+      "size_bytes": 614
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-season-index-seed3/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-season-index-seed3/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-weather-index-seed2/metrics.json",
+      "sha256": "a58195fa40bfcd9c44709f8f12a8a30b9f167e547fe1d7b6c3b741c1e4f49a5b",
+      "size_bytes": 604
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-weather-index-seed2/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/ablation-weather-index-seed2/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-seed0/metrics.json",
+      "sha256": "8099064c02c54899eaaf080c022a0f0fc390c4b9479cbf24bc80680351d8c765",
+      "size_bytes": 583
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-seed0/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-seed0/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-seed1/metrics.json",
+      "sha256": "af414a9cd11433515609391b44aca19951037e8e44425f53f156ffbea42e8941",
+      "size_bytes": 598
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-seed1/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-seed1/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-seed2/metrics.json",
+      "sha256": "879cf0390306d95d449024d301abeb42a6dc5d74a712fc4b29eaee84fbee44fe",
+      "size_bytes": 591
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-seed2/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-seed2/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-seed3/metrics.json",
+      "sha256": "24f7135dc8f015969d1681f5f959533927200551b30a6636837c03119e1322aa",
+      "size_bytes": 597
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-seed3/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/runs/baseline-seed3/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "stage-09-experiment_loop/skill_context.md",
+      "sha256": "1a6e349e4c0c21f285c228f92c00692292b82fcbbef771df1773ab2b650d440d",
+      "size_bytes": 1395
+    },
+    {
+      "path": "stage-09-experiment_loop/skills_applied.json",
+      "sha256": "27d7e88ccfdd515737f7b29c8f6a5bec29864350214a36420a3c28dae0954097",
+      "size_bytes": 1185
+    },
+    {
+      "path": "stage-10-result_analysis_decision/analysis.md",
+      "sha256": "2e796ab38967c8f38650a6b37a240835ac2c26e7881fb72544b641911e097c9a",
+      "size_bytes": 704
+    },
+    {
+      "path": "stage-10-result_analysis_decision/decision.md",
+      "sha256": "99b966cfefc7fea60c1898f20000cc67bafe4c994541a5c6ffe42890f379cc5a",
+      "size_bytes": 123
+    },
+    {
+      "path": "stage-10-result_analysis_decision/hypothesis_outcomes.json",
+      "sha256": "f48c92009a24fa4d94847c61cd89e1e3f11faabc5f163bda80c3256d7bf1a014",
+      "size_bytes": 940
+    },
+    {
+      "path": "stage-10-result_analysis_decision/skill_context.md",
+      "sha256": "3053b6b9e904a7bca34bdd8b78b6ce29ce536428d3409460573935a6ac1ed801",
+      "size_bytes": 1408
+    },
+    {
+      "path": "stage-10-result_analysis_decision/skills_applied.json",
+      "sha256": "440c786c088abc597557da6c2726629e39bc20a8869c7159caf71c161a3a563c",
+      "size_bytes": 1196
+    },
+    {
+      "path": "stage-11-paper_draft_revision/empirical_claims.json",
+      "sha256": "44eb9a05d7a9876f7d06bc1369f5b9f71e65d55159d59f5ee7c9db785b029206",
+      "size_bytes": 1935
+    },
+    {
+      "path": "stage-11-paper_draft_revision/paper_draft.md",
+      "sha256": "5dd62b694caa2c6caf32a6a9b5e484d0cd9be02d420074d41b37e746442312a5",
+      "size_bytes": 14542
+    },
+    {
+      "path": "stage-11-paper_draft_revision/paper_revised.md",
+      "sha256": "b4b0af95b9ec4999703d192e025cc1d4fbcadd4709fb3cfaa25e5f90508862b6",
+      "size_bytes": 8036
+    },
+    {
+      "path": "stage-11-paper_draft_revision/reviews.md",
+      "sha256": "c4b633f0ca5842fce2d332f4d131917faeb6df7cd5bcdc57c64dd8987a85e84e",
+      "size_bytes": 311
+    },
+    {
+      "path": "stage-11-paper_draft_revision/skill_context.md",
+      "sha256": "30b240b9d238db7a198a1f553a1b5a4c8bf7f0d177e366422f375bf0c0bb78fe",
+      "size_bytes": 830
+    },
+    {
+      "path": "stage-11-paper_draft_revision/skills_applied.json",
+      "sha256": "2c29fe28f29f4b649f2a175881fccf7e2936eed04c92e936196c0c2da657c267",
+      "size_bytes": 1133
+    },
+    {
+      "path": "stage-12-final_verification_export/bundle_index.json",
+      "sha256": "2587aceaf706497cc18a6107284ecc856563a103fc649532bf07d9b18adf0c39",
+      "size_bytes": 321
+    },
+    {
+      "path": "stage-12-final_verification_export/evidence_graph.json",
+      "sha256": "0d39bbbd313082a870821beb32afd9072a88715d78c9e038d752266f9c5cf480",
+      "size_bytes": 144650
+    },
+    {
+      "path": "stage-12-final_verification_export/governance_report.json",
+      "sha256": "f852ae5dba98a019970d1a549fbd11111bfdbd8efbad9bd78387b46fd412a5c3",
+      "size_bytes": 880
+    },
+    {
+      "path": "stage-12-final_verification_export/paper.tex",
+      "sha256": "e5b65137d72474cca9896f85d2d29bd2bddc9cfbd24c7c59484b362cee6651d7",
+      "size_bytes": 8562
+    },
+    {
+      "path": "stage-12-final_verification_export/paper_evidence.json",
+      "sha256": "b8315ec311f10ea3c5ed1a5c6466194429e2f0532f74c45e16087b65d5160e48",
+      "size_bytes": 4330
+    },
+    {
+      "path": "stage-12-final_verification_export/quality_report.json",
+      "sha256": "b4cdec94e00c9fb40c0279f3f30c3afb63955f142df53ba8d0327a88edcfb02d",
+      "size_bytes": 6161
+    },
+    {
+      "path": "stage-12-final_verification_export/references.bib",
+      "sha256": "fb5d3ad32072ecd5d1e9b413b0dfd6c1228a7aad767ceb8bf47e9d43a46dcc9e",
+      "size_bytes": 16857
+    },
+    {
+      "path": "stage-12-final_verification_export/skill_context.md",
+      "sha256": "7e2568aaa8a317783b0f6ab986dd919d3e546bb87b26a97f98d41b07a6db199c",
+      "size_bytes": 1411
+    },
+    {
+      "path": "stage-12-final_verification_export/skills_applied.json",
+      "sha256": "8fc9c4d7c13f23a17faba5f6b7bf5f80374beed3af37500507a3fb723dd3d239",
+      "size_bytes": 1202
+    },
+    {
+      "path": "stage-12-final_verification_export/venue_export.json",
+      "sha256": "5b984e14521681834d0d45687446b0efa854f3d8a4149178fcac7b3e347906bb",
+      "size_bytes": 186
+    },
+    {
+      "path": "stage-12-final_verification_export/verification_report.json",
+      "sha256": "aca6452baf6bd4aa535385d316eed5ae868e69b477c33b1bf4c212f25b3d6157",
+      "size_bytes": 4012
+    }
+  ]
+}

@@ -12,6 +12,7 @@ class SandboxResult:
     stdout: str
     stderr: str
     returncode: int
+    evaluator_immutable: bool = True
 
     @property
     def ok(self) -> bool:
