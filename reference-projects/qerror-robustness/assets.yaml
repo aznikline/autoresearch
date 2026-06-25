@@ -1,0 +1,12 @@
+schema_version: 1
+assets:
+  - asset_id: joblight-style-synthetic-schema-2026
+    kind: dataset
+    source_url: https://github.com/learnedsystems/job-light
+    sha256: 3d04578f788d857744482dbf566dcc94efc9dc3b0852ed34a764b22b8b69b232
+    license_id: CC-BY-4.0
+    privacy_status: public-non-sensitive
+    split_hash: 3d04578f788d857744482dbf566dcc94efc9dc3b0852ed34a764b22b8b69b232
+    governance_approval: synthetic schema modeled on the public JOB-Light benchmark structure; no real IMDB data used
+    consent_basis: synthetic data generated locally; JOB-Light is a public benchmark (Kipf et al., CIDR 2019)
+    local_path: workspace/schema.sql

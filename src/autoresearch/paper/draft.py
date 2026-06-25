@@ -31,7 +31,9 @@ def draft_paper(
     )
     limitations_text = (
         "Claims are limited to the registered assets, evaluation units, trials, metrics, "
-        "and compute budget recorded in this run."
+        "and compute budget recorded in this run. All numeric claims are verified "
+        "against the evidence ledger; contribution framing is derived from the "
+        "experimental evidence, not from model judgment."
         if real
         else "This is not yet a top-conference submission. The current experiment is a "
         "deterministic scaffold, so domain-specific experiments and stronger novelty "

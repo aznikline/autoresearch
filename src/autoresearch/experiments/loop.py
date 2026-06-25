@@ -8,7 +8,7 @@ from pathlib import Path
 from autoresearch.experiments.backends.base import ExperimentBackend
 from autoresearch.experiments.decision import should_keep
 from autoresearch.experiments.ledger import LedgerEntry, append_entry
-from autoresearch.experiments.metrics import MetricError, read_metric
+from autoresearch.experiments.metrics import MetricError, read_all_numeric_metrics, read_metric
 from autoresearch.experiments.spec import ExperimentSpec
 
 
@@ -57,6 +57,7 @@ def run_experiment_loop(
             timeout_sec=spec.time_budget_sec,
         )
         metric: float | None = None
+        extra_metrics: dict[str, float] = {}
         decision = "crash"
         reason = result.status
         if result.ok:
@@ -75,6 +76,13 @@ def run_experiment_loop(
                 reason = "improved primary metric" if keep else "did not improve primary metric"
                 if keep:
                     best_metric = metric
+                try:
+                    all_metrics = read_all_numeric_metrics(result.metrics_path)
+                    extra_metrics = {
+                        k: v for k, v in all_metrics.items() if k != spec.metric_key
+                    }
+                except MetricError:
+                    extra_metrics = {}
 
         entry = LedgerEntry(
             trial_id=trial.trial_id,
@@ -99,6 +107,7 @@ def run_experiment_loop(
                 if path.is_file()
             ),
             evaluator_immutable=result.evaluator_immutable,
+            extra_metrics=extra_metrics,
         )
         append_entry(ledger_path, entry)
         entries.append(entry)

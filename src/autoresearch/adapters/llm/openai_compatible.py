@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import http.client
 import json
 import os
 import time
@@ -16,6 +17,7 @@ from autoresearch.adapters.llm.base import (
     LLMResponseError,
     LLMUsage,
     StructuredLLMResponse,
+    TextLLMResponse,
 )
 
 
@@ -123,19 +125,49 @@ class OpenAICompatibleProvider:
             / 1_000_000,
         )
 
+    def complete_text(
+        self,
+        *,
+        stage: str,
+        messages: tuple[tuple[str, str], ...],
+    ) -> TextLLMResponse:
+        payload, elapsed = self._request(messages, json_mode=False)
+        text = _content(payload)
+        self._record(stage=stage, messages=messages, payload=payload, elapsed=elapsed)
+        usage = _usage(payload)
+        return TextLLMResponse(
+            text=text,
+            request_id=str(payload.get("id", "")),
+            model=str(payload.get("model", self._model)),
+            usage=usage,
+            cost_usd=(
+                usage.prompt_tokens * self._input_cost_per_million
+                + usage.completion_tokens * self._output_cost_per_million
+            )
+            / 1_000_000,
+        )
+
     def _request(
         self,
         messages: tuple[tuple[str, str], ...],
+        *,
+        json_mode: bool = True,
     ) -> tuple[dict[str, Any], float]:
-        body = json.dumps(
-            {
-                "model": self._model,
-                "messages": [
-                    {"role": role, "content": content} for role, content in messages
-                ],
-                "response_format": {"type": "json_object"},
-            }
-        ).encode("utf-8")
+        request_body: dict[str, Any] = {
+            "model": self._model,
+            "messages": [
+                {"role": role, "content": content} for role, content in messages
+            ],
+        }
+        if json_mode:
+            request_body["response_format"] = {"type": "json_object"}
+        else:
+            # Cap completion length for free-text prose sections. Without this
+            # the model can generate very long outputs that exceed the provider
+            # timeout on slow responses; a section rarely needs more than 1024
+            # tokens of prose.
+            request_body["max_tokens"] = 1024
+        body = json.dumps(request_body).encode("utf-8")
         last_error: Exception | None = None
         for attempt in range(self._max_retries + 1):
             self._consume_request_budget()
@@ -161,6 +193,12 @@ class OpenAICompatibleProvider:
                     raise LLMError(f"LLM HTTP error {exc.code}") from exc
             except (URLError, TimeoutError) as exc:
                 last_error = exc
+            except http.client.HTTPException as exc:
+                # Catches RemoteDisconnected / IncompleteRead / BadStatusLine:
+                # connection-level failures that urlopen surfaces as HTTPException
+                # (not URLError). Without this a dropped LLM connection aborts the
+                # whole stage instead of triggering the retry loop below.
+                last_error = exc
             except json.JSONDecodeError as exc:
                 raise LLMResponseError("provider HTTP response is not JSON") from exc
             if attempt < self._max_retries:
@@ -183,6 +221,11 @@ class OpenAICompatibleProvider:
             parsed = json.loads(_content(payload))
         except (KeyError, IndexError, TypeError, json.JSONDecodeError):
             return None
+        # Some models (e.g. glm-5.2 via Bailian) return a bare JSON array instead
+        # of the expected {"key": [...]} object. When exactly one key is required
+        # and the response is a list, wrap it so the caller finds its data.
+        if isinstance(parsed, list) and len(required_keys) == 1:
+            parsed = {required_keys[0]: parsed}
         if not isinstance(parsed, dict) or any(key not in parsed for key in required_keys):
             return None
         return parsed
@@ -236,4 +279,4 @@ def _digest(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
-__all__ = ["LLMBudgetError", "OpenAICompatibleProvider"]
+__all__ = ["LLMBudgetError", "OpenAICompatibleProvider", "TextLLMResponse"]

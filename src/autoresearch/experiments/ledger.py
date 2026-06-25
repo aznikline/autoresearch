@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import json
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from pathlib import Path
 
 
@@ -23,6 +23,7 @@ class LedgerEntry:
     environment: str = ""
     raw_outputs: tuple[str, ...] = ()
     evaluator_immutable: bool = True
+    extra_metrics: dict[str, float] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, object]:
         return asdict(self)
@@ -64,6 +65,11 @@ def read_ledger(path: Path) -> list[LedgerEntry]:
                 environment=str(data.get("environment", "")),
                 raw_outputs=tuple(str(item) for item in data.get("raw_outputs", ())),
                 evaluator_immutable=bool(data.get("evaluator_immutable", True)),
+                extra_metrics={
+                    str(k): float(v)
+                    for k, v in (data.get("extra_metrics") or {}).items()
+                    if isinstance(v, int | float)
+                },
             )
         )
     return entries

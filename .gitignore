@@ -3,3 +3,10 @@ __pycache__/
 .pytest_cache/
 artifacts/
 *.pyc
+
+# Secrets
+.env
+.env.*
+
+# Run artifacts (large, regenerable) — keep best-bundle only
+docs/audits/reference-work/

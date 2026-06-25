@@ -38,7 +38,7 @@ from autoresearch.literature.screening import screen_papers
 from autoresearch.literature.search import collect_query_plan
 from autoresearch.literature.sources import seed_source
 from autoresearch.paper.citations import build_bibtex, verify_citations
-from autoresearch.paper.claims import verify_numeric_claims
+from autoresearch.paper.claims import _is_supported, verify_numeric_claims
 from autoresearch.paper.draft import draft_paper
 from autoresearch.paper.evidence import (
     build_block_registry,
@@ -47,6 +47,7 @@ from autoresearch.paper.evidence import (
 )
 from autoresearch.paper.export import export_bundle
 from autoresearch.paper.outline import build_outline
+from autoresearch.paper.prose import ProseContext, rewrite_paper_to_prose
 from autoresearch.paper.quality import ResearchEvidence, assess_venue_readiness
 from autoresearch.paper.review import review_draft
 from autoresearch.paper.revision import revise_paper
@@ -127,6 +128,7 @@ def execute_placeholder_stage(
             run_dir=run_dir,
             topic=topic,
             config=config,
+            llm_provider=llm_provider,
         )
         return
     if stage is Stage.FINAL_VERIFICATION_EXPORT:
@@ -350,12 +352,20 @@ def _execute_hypothesis_generation(
                 prior_lessons=prior_lessons,
             )
         )
-        response = llm_provider.complete_json(
-            stage="hypothesis_generation",
-            messages=(("system", prompt), ("user", f"Research topic: {topic}")),
-            required_keys=("hypotheses",),
-        )
-        hypotheses = _validate_hypotheses(response.data.get("hypotheses"))
+        try:
+            response = llm_provider.complete_json(
+                stage="hypothesis_generation",
+                messages=(("system", prompt), ("user", f"Research topic: {topic}")),
+                required_keys=("hypotheses",),
+            )
+            hypotheses = _validate_hypotheses(response.data.get("hypotheses"))
+        except Exception as exc:  # noqa: BLE001 — fall back to default hypotheses if LLM/validate fails
+            import logging
+
+            logging.getLogger("autoresearch.hypothesis").warning(
+                "live hypothesis generation failed; using default hypotheses: %s", exc
+            )
+            # hypotheses already holds the defaults from above
     write_json(stage_path / "hypotheses.json", hypotheses)
     (stage_path / "hypotheses.md").write_text(
         "# Competing Hypotheses\n\n"
@@ -523,12 +533,54 @@ def _execute_result_analysis_decision(
     )
 
 
+def _maybe_rewrite_prose(
+    *,
+    template_draft: str,
+    topic: str,
+    cards: list,
+    ledger: list,
+    decision_text: str,
+    llm_provider: LLMProvider | None,
+    config: AutoresearchConfig,
+) -> str | None:
+    """Rewrite the template draft into venue-grade prose via the LLM provider.
+
+    Returns None when prose rewriting is not applicable (synthetic mode or no
+    provider), so the caller falls back to the deterministic template draft.
+    """
+    if llm_provider is None:
+        return None
+    if config.llm.mode != "live":
+        return None
+    if config.experiment.evidence_mode != "real":
+        return None
+    try:
+        return rewrite_paper_to_prose(
+            template_draft=template_draft,
+            context=ProseContext(
+                topic=topic,
+                ledger=tuple(ledger),
+                cards=tuple(cards),
+                decision_text=decision_text,
+            ),
+            provider=llm_provider,
+        )
+    except Exception as exc:  # noqa: BLE001 — prose is best-effort; never block the run
+        import logging
+
+        logging.getLogger("autoresearch.paper.prose").warning(
+            "prose rewrite failed; falling back to template draft: %s", exc
+        )
+        return None
+
+
 def _execute_paper_draft_revision(
     *,
     stage_path: Path,
     run_dir: Path,
     topic: str,
     config: AutoresearchConfig,
+    llm_provider: LLMProvider | None = None,
 ) -> None:
     cards = read_cards_jsonl(stage_dir(run_dir, Stage.SYNTHESIS) / "knowledge_cards.jsonl")
     ledger = read_ledger(stage_dir(run_dir, Stage.EXPERIMENT_LOOP) / "ledger.jsonl")
@@ -543,8 +595,17 @@ def _execute_paper_draft_revision(
         decision_text=decision_text,
         evidence_mode=config.experiment.evidence_mode,
     )
+    prose_draft = _maybe_rewrite_prose(
+        template_draft=outline + "\n" + draft,
+        topic=topic,
+        cards=cards,
+        ledger=ledger,
+        decision_text=decision_text,
+        llm_provider=llm_provider,
+        config=config,
+    )
     reviews = review_draft(draft, evidence_mode=config.experiment.evidence_mode)
-    revised = revise_paper(draft, reviews)
+    revised = prose_draft if prose_draft is not None else revise_paper(draft, reviews)
     (stage_path / "paper_draft.md").write_text(
         outline + "\n" + draft,
         encoding="utf-8",
@@ -683,11 +744,24 @@ def _execute_final_verification_export(
     block_node_ids: list[str] = []
     for index, block in enumerate(paper_blocks(paper)):
         citation_keys = re.findall(r"\[@([A-Za-z0-9_:-]+)\]", block)
-        numbers = re.findall(r"(?<![A-Za-z0-9_.-])\d+(?:\.\d+)?", block)
+        number_strings = re.findall(r"(?<![A-Za-z0-9_.-])\d+(?:\.\d+)?", block)
+        # Match prose numbers against ledger values with the same rounding
+        # tolerance used by verify_numeric_claims (5% relative + 0.05 absolute),
+        # so a block is a numeric_claim (provenance-linked) when its numbers
+        # round-trip to the ledger — even if the LLM wrote a rounded form like
+        # "1.041" for a ledger value of 1.0412165834860359. Without this the
+        # block falls back to prose_claim (orphan) and breaks evidence_graph.
+        parsed_numbers: list[float] = []
+        for token in number_strings:
+            try:
+                parsed_numbers.append(float(token))
+            except ValueError:
+                continue
         matched_metrics = [
             (entry, metric_node)
             for entry, metric_node in metric_nodes
-            if entry.metric is not None and str(entry.metric) in numbers
+            if entry.metric is not None
+            and any(_is_supported(num, entry.metric) for num in parsed_numbers)
         ]
         block_node = evidence_graph.add_record(
             kind="numeric_claim" if matched_metrics else "prose_claim",
@@ -709,13 +783,13 @@ def _execute_final_verification_export(
                 block_node.node_id,
                 "supports",
             )
-        if not numbers and not citation_keys:
+        if not number_strings and not citation_keys:
             evidence_graph.add_edge(
                 fallback_artifact.node_id,
                 block_node.node_id,
                 "supports",
             )
-        if numbers and not matched_metrics and not citation_keys:
+        if number_strings and not matched_metrics and not citation_keys:
             # Leave the node orphaned so validation blocks fabricated numbers.
             pass
     block_registry = build_block_registry(paper, node_ids=tuple(block_node_ids))

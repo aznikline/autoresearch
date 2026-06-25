@@ -1,0 +1,62 @@
+project:
+  name: qerror-robustness-joblight
+research:
+  topic: "Q-error robustness of cardinality estimators under distribution shift on a JOB-Light-style workload"
+  quality_threshold: 4.0
+  profile: data-management-mining
+  depth: top_venue
+  target_venues: [VLDB, VLDBJournal, TKDE, ICDE]
+  primary_claim_type: systems performance or correctness
+  venue_id: vldb
+  venue_year: 2026
+  venue_track: main
+runtime:
+  artifacts_root: docs/audits/reference-work/qerror-robustness
+  max_iterations: 3
+  max_artifact_bytes: 1000000000
+llm:
+  mode: live
+  provider: openai-compatible
+  base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+  allowed_hosts: ["dashscope.aliyuncs.com"]
+  auth_mode: bearer_env
+  api_key_env: DASHSCOPE_API_KEY
+  primary_model: glm-5.2
+  max_requests: 80
+  max_retries: 2
+  timeout_sec: 120
+  input_cost_per_million: 0.0
+  output_cost_per_million: 0.0
+literature:
+  mode: live
+  sources: [arxiv, openalex, crossref]
+  per_source_limit: 30
+  max_retries: 2
+  timeout_sec: 30
+  queries:
+    - learned cardinality estimation Q-error robustness distribution shift
+    - cardinality estimator generalization query workload shift benchmark
+    - MSCN deep cardinality estimation distribution shift JOB-Light IMDB Q-error
+    - histogram sampling learned cardinality estimator comparison Q-error
+    - cardinality estimation error correlation plan quality optimizer
+    - query-driven versus data-driven cardinality estimation robustness empirical
+  saturation_patience: 2
+  saturation_max_new_ratio: 0.15
+governance:
+  assets_file: reference-projects/qerror-robustness/assets.yaml
+experiment:
+  mode: local
+  evidence_mode: real
+  workspace_source: reference-projects/qerror-robustness/workspace
+  allowed_imports: [csv, math, random, sqlite3, statistics, time, collections, json, pathlib, argparse]
+  code_trust: trusted_generated
+  time_budget_sec: 180
+  metric_key: primary_metric
+  metric_direction: minimize
+  total_compute_budget: twenty-four local CPU trials, at most 180 seconds each, single-threaded Python stdlib
+hitl:
+  mode: gate-only
+skills:
+  enabled: true
+  directories: [skills]
+  max_per_stage: 3

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import http.client
 import json
 import time
 from dataclasses import dataclass, replace
@@ -94,6 +95,12 @@ class HTTPLiteratureSource:
                 error = f"network error: {exc.reason}"
             except TimeoutError as exc:
                 error = f"network timeout: {exc}"
+            except http.client.HTTPException as exc:
+                # Catches RemoteDisconnected and other connection-level failures
+                # that urlopen surfaces as HTTPException (not URLError). Without
+                # this, a single dropped connection aborts the whole literature
+                # stage instead of triggering a retry.
+                error = f"connection error: {exc}"
             if attempt < self.max_retries:
                 time.sleep(min(0.05 * (2**attempt), 0.2))
 

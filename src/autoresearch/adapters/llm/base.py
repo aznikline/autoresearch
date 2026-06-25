@@ -32,6 +32,15 @@ class StructuredLLMResponse:
     cost_usd: float
 
 
+@dataclass(frozen=True)
+class TextLLMResponse:
+    text: str
+    request_id: str
+    model: str
+    usage: LLMUsage
+    cost_usd: float
+
+
 class LLMProvider(Protocol):
     def complete_json(
         self,
@@ -40,3 +49,10 @@ class LLMProvider(Protocol):
         messages: tuple[tuple[str, str], ...],
         required_keys: tuple[str, ...],
     ) -> StructuredLLMResponse: ...
+
+    def complete_text(
+        self,
+        *,
+        stage: str,
+        messages: tuple[tuple[str, str], ...],
+    ) -> TextLLMResponse: ...

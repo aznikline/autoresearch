@@ -1,0 +1,166 @@
+topic: Q-error robustness of cardinality estimators under distribution shift on JOB-Light
+metric_key: primary_metric
+metric_direction: minimize
+time_budget_sec: 180
+trials:
+  - trial_id: baseline-uniformity-ID-seed0
+    description: uniformity estimator, ID condition, seed 0.
+    parameters: {seed: 0}
+  - trial_id: baseline-uniformity-ID-seed1
+    description: uniformity estimator, ID condition, seed 1.
+    parameters: {seed: 1}
+  - trial_id: baseline-uniformity-ID-seed2
+    description: uniformity estimator, ID condition, seed 2.
+    parameters: {seed: 2}
+  - trial_id: baseline-uniformity-ID-seed3
+    description: uniformity estimator, ID condition, seed 3.
+    parameters: {seed: 3}
+  - trial_id: baseline-uniformity-ID-seed4
+    description: uniformity estimator, ID condition, seed 4.
+    parameters: {seed: 4}
+  - trial_id: baseline-uniformity-shifted-seed0
+    description: uniformity estimator, shifted condition, seed 0.
+    parameters: {seed: 0}
+  - trial_id: baseline-uniformity-shifted-seed1
+    description: uniformity estimator, shifted condition, seed 1.
+    parameters: {seed: 1}
+  - trial_id: baseline-uniformity-shifted-seed2
+    description: uniformity estimator, shifted condition, seed 2.
+    parameters: {seed: 2}
+  - trial_id: baseline-uniformity-shifted-seed3
+    description: uniformity estimator, shifted condition, seed 3.
+    parameters: {seed: 3}
+  - trial_id: baseline-uniformity-shifted-seed4
+    description: uniformity estimator, shifted condition, seed 4.
+    parameters: {seed: 4}
+  - trial_id: histogram-ID-seed0
+    description: histogram estimator, ID condition, seed 0.
+    parameters: {seed: 0}
+  - trial_id: histogram-ID-seed1
+    description: histogram estimator, ID condition, seed 1.
+    parameters: {seed: 1}
+  - trial_id: histogram-ID-seed2
+    description: histogram estimator, ID condition, seed 2.
+    parameters: {seed: 2}
+  - trial_id: histogram-ID-seed3
+    description: histogram estimator, ID condition, seed 3.
+    parameters: {seed: 3}
+  - trial_id: histogram-ID-seed4
+    description: histogram estimator, ID condition, seed 4.
+    parameters: {seed: 4}
+  - trial_id: histogram-shifted-seed0
+    description: histogram estimator, shifted condition, seed 0.
+    parameters: {seed: 0}
+  - trial_id: histogram-shifted-seed1
+    description: histogram estimator, shifted condition, seed 1.
+    parameters: {seed: 1}
+  - trial_id: histogram-shifted-seed2
+    description: histogram estimator, shifted condition, seed 2.
+    parameters: {seed: 2}
+  - trial_id: histogram-shifted-seed3
+    description: histogram estimator, shifted condition, seed 3.
+    parameters: {seed: 3}
+  - trial_id: histogram-shifted-seed4
+    description: histogram estimator, shifted condition, seed 4.
+    parameters: {seed: 4}
+  - trial_id: sampling-ID-seed0
+    description: sampling estimator, ID condition, seed 0.
+    parameters: {seed: 0}
+  - trial_id: sampling-ID-seed1
+    description: sampling estimator, ID condition, seed 1.
+    parameters: {seed: 1}
+  - trial_id: sampling-ID-seed2
+    description: sampling estimator, ID condition, seed 2.
+    parameters: {seed: 2}
+  - trial_id: sampling-ID-seed3
+    description: sampling estimator, ID condition, seed 3.
+    parameters: {seed: 3}
+  - trial_id: sampling-ID-seed4
+    description: sampling estimator, ID condition, seed 4.
+    parameters: {seed: 4}
+  - trial_id: sampling-shifted-seed0
+    description: sampling estimator, shifted condition, seed 0.
+    parameters: {seed: 0}
+  - trial_id: sampling-shifted-seed1
+    description: sampling estimator, shifted condition, seed 1.
+    parameters: {seed: 1}
+  - trial_id: sampling-shifted-seed2
+    description: sampling estimator, shifted condition, seed 2.
+    parameters: {seed: 2}
+  - trial_id: sampling-shifted-seed3
+    description: sampling estimator, shifted condition, seed 3.
+    parameters: {seed: 3}
+  - trial_id: sampling-shifted-seed4
+    description: sampling estimator, shifted condition, seed 4.
+    parameters: {seed: 4}
+  - trial_id: learned-ID-seed0
+    description: learned estimator, ID condition, seed 0.
+    parameters: {seed: 0}
+  - trial_id: learned-ID-seed1
+    description: learned estimator, ID condition, seed 1.
+    parameters: {seed: 1}
+  - trial_id: learned-ID-seed2
+    description: learned estimator, ID condition, seed 2.
+    parameters: {seed: 2}
+  - trial_id: learned-ID-seed3
+    description: learned estimator, ID condition, seed 3.
+    parameters: {seed: 3}
+  - trial_id: learned-ID-seed4
+    description: learned estimator, ID condition, seed 4.
+    parameters: {seed: 4}
+  - trial_id: learned-shifted-seed0
+    description: learned estimator, shifted condition, seed 0.
+    parameters: {seed: 0}
+  - trial_id: learned-shifted-seed1
+    description: learned estimator, shifted condition, seed 1.
+    parameters: {seed: 1}
+  - trial_id: learned-shifted-seed2
+    description: learned estimator, shifted condition, seed 2.
+    parameters: {seed: 2}
+  - trial_id: learned-shifted-seed3
+    description: learned estimator, shifted condition, seed 3.
+    parameters: {seed: 3}
+  - trial_id: learned-shifted-seed4
+    description: learned estimator, shifted condition, seed 4.
+    parameters: {seed: 4}
+
+confirmatory: true
+hypotheses:
+  - H1 learned estimators degrade more under distribution shift than classical estimators
+  - H2 in-distribution Q-error does not predict shifted Q-error across estimator families
+primary_metrics: [geomean_qerror]
+exclusions: [SQLite execution failure, schema build failure, invalid Q-error]
+stopping_rule: execute every prespecified trial once
+evaluation_units: [in-distribution-query-set, shifted-query-set, learned-estimator-held-out-split]
+seeds: [0, 1, 2, 3, 4]
+metrics:
+  - primary_metric
+  - geomean_qerror
+  - p95_qerror
+  - max_qerror
+  - degradation_ratio
+  - effect_size
+  - baseline_qerror
+  - ci_low
+  - ci_high
+  - ci_width
+  - shift_pct_change
+  - n_queries
+  - runtime_sec
+  - compute_units
+confidence_intervals: true
+effect_sizes: true
+compute_reporting: true
+data_split: 70/30 train-test split for learned estimator; full eval for classical
+tuning_allowance: prespecified estimators only; no post-result tuning
+resource_budget: one local CPU process and 180 seconds per trial
+uncertainty: 95% bootstrap confidence interval over per-query Q-error geomean
+system_versions: [Python stdlib sqlite3, SQLite version recorded per trial]
+scale_factor: 59000 rows across 4 tables
+concurrency: 1
+isolation_level: single in-memory connection per trial
+warmup: single unmeasured query pass before recording
+repetitions: 1
+timeout_policy: 180-second hard process timeout recorded in ledger
+correctness_check: true cardinality counted via COUNT(*) on the materialized database
+matched_hardware: true
