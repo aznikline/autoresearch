@@ -1,19 +1,30 @@
 # autoresearch
 
-Local workflow for turning a research idea into an auditable paper candidate.
+An **auditable research scaffold**: turn a research idea into a paper candidate where every claim traces to a verified evidence ledger. Not a venue-ready paper generator — it produces an auditable evidence trail + a scaffolded draft a human finishes.
 
-The current code is **not** a general LLM/CV/NLP/data top-venue paper generator.
-The normative target and its honest completion matrix are defined in
-`docs/specs/multidomain-top-venue-autoresearch.md`; the current-state boundary is
-recorded in section 16 of that spec.
+## What this is (honest)
 
-This project is being built from the plan in
-`docs/plans/2026-06-15-001-feat-local-autoresearch-workflow-plan.md`.
-The current implementation is an executable research scaffold: config loading,
-12 stage contracts, checkpointing, a project skill harness, synthetic and live
-multi-source literature retrieval, local toy experiments, evidence-linked paper
-export, and profile-aware quality gates. It is not yet a system that can
-produce venue-ready science unattended.
+autoresearch is a 12-stage pipeline (idea → literature → experiment → paper → export) built around an **evidence ledger**: every numeric claim in the prose must round-trip to a ledger entry, and the ledger records code_sha256 / config_sha256 / protocol_fingerprint / evaluator_immutable for reproducibility. It is **not** a system that produces venue-ready science unattended — the hardest walls (genuinely novel claim, real data, real compute, peer review) are not LLM capability gaps. What it does give you: a disciplined scaffold where experiments are auditable, claims are verified, and the readiness ladder (`unsupported → contract_supported → integration_validated → evidence_complete → submission_ready`) is honest by design.
+
+## What's here
+
+- **12-stage pipeline**: config → plan → literature (arXiv/OpenAlex/Crossref) → synthesis → hypothesis → experiment design → experiment loop → result analysis → paper draft + prose revision → final verification export. Gates pause for human review; checkpoints are append-only.
+- **Evidence ledger** (`experiments/ledger.py`): per-trial primary metric + extra_metrics (multi-metric: degradation_ratio, effect_size, ci_low/high, etc.), code/config SHA, protocol fingerprint, environment.
+- **Claim verification** (`paper/claims.py`): rounding-tolerant (5% rel + 0.05 abs) — admits legitimate rounding, rejects fabrication (446.5 → 5.0).
+- **Venue registry** (`src/autoresearch/venues/`): 13 verified venue contracts (VLDB/NeurIPS/ICML/ICLR/CoLM/KDD/EMNLP/NAACL/MLSys/ECCV/CVPR/TheWebConf/SIGMOD) with sha256-anchored official sources.
+- **5 domain methodology skills** (`skills/autoresearch-*/`): DB / ML-systems / NLP / CV / foundation-models — field-aware experiment rigor.
+- **5 academic workflow skills** (`skills/academic/`): paper-reading, research-genealogy, question-validator, academic-paper-skills, academic-research-skills — general academic work outside the pipeline (also published standalone at github.com/aznikline/academic-skills).
+- **Best run bundle** (`docs/audits/best-bundle/`): a score-3.95 paper run (Q-error robustness, 40 trials, live literature, claim verification OK) — submission_ready=false by design (3 venue-metadata blockers remain).
+
+## Honest boundaries
+
+This project has been pushed hard against the "produce a submittable paper unattended" goal. The honest conclusion (see `docs/specs/multidomain-top-venue-autoresearch.md` §16):
+
+- **What works**: experiment scaffolding, evidence ledger, multi-metric claim verification, literature retrieval with HTTPException retry, venue contracts, the readiness ladder, the discipline (no novelty-from-model-judgment, preserve null/negative).
+- **What does not work (and is not an LLM gap you can prompt around)**: producing genuinely novel claims, acquiring real data + real compute, passing peer review. The prose module scaffolds evidence-linked text; it never authors science.
+- **`submission_ready` stays false by design** — the README said so from the start and it stays that way. The system's value is the auditable trail, not the paper.
+
+If you want a submittable paper, use autoresearch as the evidence/audit substrate and do the real research (data, baselines, contribution) with a human in the loop. The `skills/academic/` skills (paper-reading, question-validator, etc.) and open-source PaperSpine (github.com/WUBING2023/PaperSpine) complement it for the reading/writing side.
 
 ## Current Local Flow
 
@@ -174,3 +185,29 @@ profile and depth; disabling skills remains explicit and is recorded per stage.
 - Paper drafting, review, revision, and export
 - Citation and numeric claim verification
 - Durable run memory
+
+## Install
+
+```bash
+git clone https://github.com/aznikline/autoresearch.git
+cd autoresearch
+uv sync --extra dev
+```
+
+Requires Python 3.11+. The `paper-reading` skill (in `skills/academic/`) uses `pymupdf` (already in dependencies).
+
+## Quick start
+
+```bash
+uv run autoresearch plan --config reference-projects/qerror-robustness/config.yaml \
+  --topic "Q-error robustness of cardinality estimators under distribution shift"
+uv run autoresearch run --config reference-projects/qerror-robustness/config.yaml \
+  --topic "..." --auto-approve
+uv run autoresearch capabilities --config reference-projects/qerror-robustness/config.yaml
+```
+
+The `reference-projects/qerror-robustness/` workspace is a worked example: 40 trials (5 seeds × 4 estimators × 2 conditions) on a JOB-Light-style synthetic schema, with multi-metric ledger (degradation_ratio, effect_size, CIs).
+
+## License
+
+MIT — see [LICENSE](LICENSE).
