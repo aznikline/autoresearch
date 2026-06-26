@@ -29,7 +29,7 @@ llm:
   output_cost_per_million: 0.0
 literature:
   mode: live
-  sources: [arxiv, openalex, crossref]
+  sources: [arxiv, openalex, crossref, web_research]
   per_source_limit: 30
   max_retries: 2
   timeout_sec: 30

@@ -12,6 +12,7 @@ from autoresearch.adapters.llm.base import LLMProvider
 from autoresearch.adapters.literature.arxiv import ArxivSource
 from autoresearch.adapters.literature.crossref import CrossrefSource
 from autoresearch.adapters.literature.openalex import OpenAlexSource
+from autoresearch.adapters.literature.web_research import WebResearchSource
 from autoresearch.config import AutoresearchConfig
 from autoresearch.domains.profile import load_profile
 from autoresearch.experiments.backends.local import LocalBackend
@@ -229,6 +230,7 @@ def _execute_literature_collect(
             "arxiv": (ArxivSource, config.literature.arxiv_base_url),
             "openalex": (OpenAlexSource, config.literature.openalex_base_url),
             "crossref": (CrossrefSource, config.literature.crossref_base_url),
+            "web_research": (WebResearchSource, "https://api.openalex.org"),
         }
         sources = [
             source_type(
