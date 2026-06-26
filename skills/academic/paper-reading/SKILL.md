@@ -17,11 +17,17 @@ Produce a **reading card** a researcher would actually use to decide whether to 
 
 1. **Get the full text with page markers.** Use `references/extract_pdf.py` on a PDF:
    ```bash
-   python ~/.claude/skills/paper-reading/references/extract_pdf.py <pdf-path>
+   python references/extract_pdf.py <pdf-path>
    ```
    This prints `=== 第 N 页 ===` then the page text. For arXiv, fetch the PDF first (`https://arxiv.org/pdf/<id>.pdf`). For markdown, read directly.
    - The script uses `pymupdf` (must be installed: `pip install pymupdf` or use a venv that has it).
    - If pymupdf is unavailable, fall back to the Read tool with `pages` parameter (requires poppler: `brew install poppler`). **Do NOT build the card from the abstract only** — that is the failure mode this skill exists to prevent.
+
+1b. **(Optional) Extract structured numeric claims.** For a smarter extraction that classifies each number (coverage/performance/count/dataset/budget), use:
+   ```bash
+   python references/extract_claims.py <pdf-path> [--pages 1-5] [--out claims.json]
+   ```
+   Uses qwen3.7-max via DashScope (`DASHSCOPE_API_KEY`) to parse each page's text into structured claims with page anchors. Degrades to text-only without the key. Output: JSON array of `{number, context, claim_type, page}` — directly feedable into the reading card's "报告数字" section.
 
 2. **Read all pages.** Do not skim only intro + abstract. The numbers, baselines, and limitations live in Sections 3-5 (Experiments / Results / Discussion), which the abstract does not contain.
 
