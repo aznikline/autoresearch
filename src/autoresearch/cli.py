@@ -12,6 +12,7 @@ from autoresearch.hitl.session import HITLError, record_decision
 from autoresearch.gapanalysis.report import analyze_gap, write_gap_report
 from autoresearch.ideation.session import IdeationSession, write_ideation_report
 from autoresearch.multivenue.report import generate_fit_report, write_fit_report
+from autoresearch.revision.loop import run_revision_loop, write_revision_report
 from autoresearch.pipeline.checkpoint import read_checkpoint
 from autoresearch.pipeline.runner import PipelineRunner, cancel_run
 from autoresearch.pipeline.verification import verify_run
@@ -152,6 +153,19 @@ def build_parser() -> argparse.ArgumentParser:
     gap_parser.add_argument("--target", type=int, default=8, help="target score (default: 8)")
     gap_parser.add_argument("--output", default="", help="write report to this path")
     gap_parser.set_defaults(func=_cmd_gap)
+
+    revise_parser = subparsers.add_parser(
+        "revise",
+        help="iteratively fix weaknesses and re-evaluate until score target",
+    )
+    revise_parser.add_argument("run_dir", help="path to a completed pipeline run")
+    revise_parser.add_argument("--config", default="config.yaml")
+    revise_parser.add_argument("--target", type=int, default=8, help="target score (default: 8)")
+    revise_parser.add_argument(
+        "--max-iterations", type=int, default=5, help="max revision iterations (default: 5)"
+    )
+    revise_parser.add_argument("--output", default="", help="write report to this path")
+    revise_parser.set_defaults(func=_cmd_revise)
 
     return parser
 
@@ -407,6 +421,33 @@ def _cmd_gap(args: argparse.Namespace) -> int:
     if args.output:
         output_path = Path(args.output)
         write_gap_report(report, output_path)
+        print(f"\nReport written to {output_path}")
+
+    return 0
+
+
+def _cmd_revise(args: argparse.Namespace) -> int:
+    run_dir = Path(args.run_dir)
+    config = load_config(args.config)
+    strategy_root = (
+        Path(__file__).resolve().parent / "strategy" / "profiles"
+    )
+    registry = VenueStrategyRegistry.load(strategy_root)
+    strategy = registry.resolve(config.research.venue_id)
+
+    result = run_revision_loop(
+        run_dir,
+        venue_strategy=strategy,
+        target_score=args.target,
+        max_iterations=args.max_iterations,
+    )
+
+    rendered = result.to_markdown()
+    print(rendered)
+
+    if args.output:
+        output_path = Path(args.output)
+        write_revision_report(result, output_path)
         print(f"\nReport written to {output_path}")
 
     return 0
