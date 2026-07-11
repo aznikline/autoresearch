@@ -86,8 +86,9 @@ CONTRACTS: dict[Stage, StageContract] = {
             "strategy_review.md",
             "strategy_contributions.json",
             "strategy_contributions.md",
+            "gap_analysis.md",
         ),
-        definition_of_done="Paper drafted, reviewed, revised, and venue-strategy analysis complete.",
+        definition_of_done="Paper drafted, reviewed, revised, strategy analysis and gap-to-acceptance complete.",
     ),
     Stage.FINAL_VERIFICATION_EXPORT: StageContract(
         stage=Stage.FINAL_VERIFICATION_EXPORT,

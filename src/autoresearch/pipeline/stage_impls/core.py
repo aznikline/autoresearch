@@ -56,6 +56,7 @@ from autoresearch.paper.venue import assess_venue_export
 from autoresearch.pipeline.artifacts import stage_dir, write_json
 from autoresearch.pipeline.contracts import contract_for
 from autoresearch.pipeline.stages import Stage
+from autoresearch.gapanalysis.report import analyze_gap, write_gap_report
 from autoresearch.prompts.manager import PromptContext, compose_stage_prompt
 from autoresearch.strategy.contributions import mine_contributions, write_contribution_report
 from autoresearch.strategy.models import VenueStrategy
@@ -733,6 +734,44 @@ def _run_strategy_analysis(
         )
     except Exception as exc:
         logger.warning("contribution mining failed: %s", exc)
+
+    # Gap analysis
+    try:
+        review = simulate_review(
+            paper_markdown=paper_markdown,
+            venue_strategy=venue_strategy,
+            ledger=ledger,
+            llm_provider=llm_provider,
+        )
+        claims_path = stage_path / "empirical_claims.json"
+        claims_raw: tuple[dict[str, object], ...] = ()
+        if claims_path.exists():
+            import json
+
+            loaded = json.loads(claims_path.read_text(encoding="utf-8"))
+            if isinstance(loaded, list):
+                claims_raw = tuple(
+                    item for item in loaded if isinstance(item, dict)
+                )
+
+        minings = mine_contributions(
+            venue_strategy=venue_strategy,
+            ledger=ledger,
+            claims=claims_raw,
+            llm_provider=llm_provider,
+            topic=topic,
+        )
+
+        gap = analyze_gap(
+            review=review,
+            mining=minings,
+            venue_strategy=venue_strategy,
+            ledger=ledger,
+            llm_provider=llm_provider,
+        )
+        write_gap_report(gap, stage_path / "gap_analysis.md")
+    except Exception as exc:
+        logger.warning("gap analysis failed: %s", exc)
 
 
 def _execute_final_verification_export(

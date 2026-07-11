@@ -9,6 +9,7 @@ from autoresearch.audit.completion import audit_repository
 from autoresearch.audit.reference import ReferenceBundleError, export_reference_bundle
 from autoresearch.config import ConfigError, load_config, write_example_config
 from autoresearch.hitl.session import HITLError, record_decision
+from autoresearch.gapanalysis.report import analyze_gap, write_gap_report
 from autoresearch.ideation.session import IdeationSession, write_ideation_report
 from autoresearch.multivenue.report import generate_fit_report, write_fit_report
 from autoresearch.pipeline.checkpoint import read_checkpoint
@@ -141,6 +142,16 @@ def build_parser() -> argparse.ArgumentParser:
         "--output", default="", help="write report to this path (default: stdout only)"
     )
     fit_parser.set_defaults(func=_cmd_fit)
+
+    gap_parser = subparsers.add_parser(
+        "gap",
+        help="analyze gap to acceptance for a completed run",
+    )
+    gap_parser.add_argument("run_dir", help="path to a completed pipeline run")
+    gap_parser.add_argument("--config", default="config.yaml")
+    gap_parser.add_argument("--target", type=int, default=8, help="target score (default: 8)")
+    gap_parser.add_argument("--output", default="", help="write report to this path")
+    gap_parser.set_defaults(func=_cmd_gap)
 
     return parser
 
@@ -324,6 +335,78 @@ def _cmd_ideate(args: argparse.Namespace) -> int:
     if args.output:
         output_path = Path(args.output)
         write_ideation_report(report, output_path)
+        print(f"\nReport written to {output_path}")
+
+    return 0
+
+
+def _cmd_gap(args: argparse.Namespace) -> int:
+    import json
+
+    from autoresearch.experiments.ledger import read_ledger
+    from autoresearch.strategy.models import ReviewSimulation, ReviewWeakness
+    from autoresearch.strategy.contributions import mine_contributions
+
+    run_dir = Path(args.run_dir)
+    config = load_config(args.config)
+
+    strategy_root = (
+        Path(__file__).resolve().parent / "strategy" / "profiles"
+    )
+    registry = VenueStrategyRegistry.load(strategy_root)
+    strategy = registry.resolve(config.research.venue_id)
+
+    # Try loading existing review, or build a minimal one
+    review_path = (
+        run_dir / "stage-11-paper_draft_revision" / "strategy_review.json"
+    )
+    if review_path.is_file():
+        review_data = json.loads(review_path.read_text(encoding="utf-8"))
+        review = ReviewSimulation(
+            venue_id=review_data["venue_id"],
+            overall_score=review_data["overall_score"],
+            confidence=review_data["confidence"],
+            strengths=tuple(review_data.get("strengths", ())),
+            weaknesses=tuple(
+                ReviewWeakness(
+                    claim=w["claim"],
+                    severity=w["severity"],
+                    suggested_fix=w.get("suggested_fix", ""),
+                    missing_evidence=tuple(w.get("missing_evidence", ())),
+                )
+                for w in review_data.get("weaknesses", ())
+            ),
+            suggested_experiments=tuple(review_data.get("suggested_experiments", ())),
+            narrative_suggestions=tuple(review_data.get("narrative_suggestions", ())),
+            summary=review_data.get("summary", ""),
+        )
+    else:
+        from autoresearch.strategy.reviewer import simulate_review
+        paper_path = (
+            run_dir / "stage-11-paper_draft_revision" / "paper_revised.md"
+        )
+        paper = paper_path.read_text(encoding="utf-8") if paper_path.is_file() else ""
+        ledger = tuple(read_ledger(run_dir / "stage-09-experiment_loop" / "ledger.jsonl"))
+        review = simulate_review(
+            paper_markdown=paper,
+            venue_strategy=strategy,
+            ledger=ledger,
+        )
+
+    ledger = tuple(read_ledger(run_dir / "stage-09-experiment_loop" / "ledger.jsonl"))
+    report = analyze_gap(
+        review=review,
+        venue_strategy=strategy,
+        ledger=ledger,
+        target_score=args.target,
+    )
+
+    rendered = report.to_markdown()
+    print(rendered)
+
+    if args.output:
+        output_path = Path(args.output)
+        write_gap_report(report, output_path)
         print(f"\nReport written to {output_path}")
 
     return 0
