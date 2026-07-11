@@ -10,6 +10,7 @@ from autoresearch.audit.reference import ReferenceBundleError, export_reference_
 from autoresearch.config import ConfigError, load_config, write_example_config
 from autoresearch.hitl.session import HITLError, record_decision
 from autoresearch.ideation.session import IdeationSession, write_ideation_report
+from autoresearch.multivenue.report import generate_fit_report, write_fit_report
 from autoresearch.pipeline.checkpoint import read_checkpoint
 from autoresearch.pipeline.runner import PipelineRunner, cancel_run
 from autoresearch.pipeline.verification import verify_run
@@ -127,6 +128,19 @@ def build_parser() -> argparse.ArgumentParser:
         "--output", default="", help="write report to this path (default: stdout only)"
     )
     ideate_parser.set_defaults(func=_cmd_ideate)
+
+    fit_parser = subparsers.add_parser(
+        "fit",
+        help="rank all 17 venues by fit for your research idea",
+    )
+    fit_parser.add_argument("--config", default="config.yaml")
+    fit_parser.add_argument(
+        "--idea", required=True, help="your research idea (one sentence)"
+    )
+    fit_parser.add_argument(
+        "--output", default="", help="write report to this path (default: stdout only)"
+    )
+    fit_parser.set_defaults(func=_cmd_fit)
 
     return parser
 
@@ -310,6 +324,34 @@ def _cmd_ideate(args: argparse.Namespace) -> int:
     if args.output:
         output_path = Path(args.output)
         write_ideation_report(report, output_path)
+        print(f"\nReport written to {output_path}")
+
+    return 0
+
+
+def _cmd_fit(args: argparse.Namespace) -> int:
+    strategy_root = (
+        Path(__file__).resolve().parent / "strategy" / "profiles"
+    )
+    if not strategy_root.is_dir():
+        print(
+            "venue strategy profiles not found; run from the autoresearch repo root",
+            file=sys.stderr,
+        )
+        return 2
+    registry = VenueStrategyRegistry.load(strategy_root)
+
+    report = generate_fit_report(
+        idea=args.idea,
+        registry=registry,
+    )
+
+    rendered = report.to_markdown()
+    print(rendered)
+
+    if args.output:
+        output_path = Path(args.output)
+        write_fit_report(report, output_path)
         print(f"\nReport written to {output_path}")
 
     return 0
