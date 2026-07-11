@@ -1,0 +1,51 @@
+schema_version: 1
+venue_id: aaai
+display_name: AAAI
+reviewer_values:
+  - broad AI contribution with clear significance
+  - technical depth in the specific subarea
+  - experimental validation on standard benchmarks
+  - novelty clearly differentiated from prior work
+  - reproducibility and ethical consideration
+common_rejections:
+  - incremental work with marginal improvement
+  - narrow contribution only relevant to a tiny subcommunity
+  - insufficient experimental validation
+  - missing comparison to recent SOTA methods
+  - overclaiming or vague contribution statements
+high_score_indicators:
+  - contribution that advances AI beyond a single benchmark
+  - thorough ablation and error analysis
+  - connection to broader AI principles or challenges
+  - code and data publicly available
+  - clear, accessible writing for a general AI audience
+narrative_framing: |
+  AAAI is the broadest top-tier AI venue. Your paper must be accessible to
+  any AAAI reviewer — not just your subarea. Lead with the AI contribution:
+  what principle, technique, or insight does this work contribute to AI?
+  The introduction should be understandable by a robotics person, an NLP
+  person, and a vision person alike. Technical depth goes in the methods
+  section, not the introduction. AAAI reviewers penalize overspecialized
+  jargon and reward clarity. Connect your contribution to broader AI themes.
+methodology_expectations: |
+  Standard benchmarks for your subarea. At least 3 strong recent baselines.
+  Ablation of key components. Statistical significance where applicable.
+  Reproducibility through code and data release. Broader impact statement
+  is expected. Compute resources should be reported.
+contribution_weights:
+  ai_significance: 0.25
+  technical_depth: 0.20
+  empirical_validation: 0.20
+  novelty_clarity: 0.15
+  reproducibility: 0.10
+  accessibility: 0.10
+known_biases:
+  - very broad reviewer pool — clarity and accessibility matter enormously
+  - subarea experts may disagree on what counts as significant
+  - papers that bridge subareas can fall through reviewer expertise gaps
+  - strong preference for work that generalizes beyond a single domain
+page_economy: |
+  7 pages + 2 pages for references. Extremely tight — every sentence counts.
+  The first page must convey the AI contribution clearly. Use the appendix
+  (unlimited) for proofs, extended ablations, and implementation details.
+  AAAI enforces page limits strictly.

@@ -1,0 +1,26 @@
+schema_version: 1
+venue_id: aaai
+display_name: AAAI
+year: 2027
+track: main
+status: draft
+compatible_profiles: [foundation-models-llm, computer-vision, natural-language-processing, ml-systems-efficiency, data-management-mining]
+official_sources:
+  - url: https://aaai.org/conference/aaai/aaai-27/
+    retrieved_at: 2026-07-11
+    sha256: "0000000000000000000000000000000000000000000000000000000000000000"
+template:
+  identity: aaai-2027-main
+  source_url: https://aaai.org/conference/aaai/aaai-27/paper-template/
+  sha256: "0000000000000000000000000000000000000000000000000000000000000000"
+policy:
+  anonymity: double_blind
+  page_limit: 7
+  supplement_allowed: true
+  checklist_required: false
+  checklist_delivery: none
+  ethics_required: true
+  limitations_required: true
+  artifact_policy: encouraged
+  required_sections: [Broader Impact Statement]
+valid_until: 2027-12-31
