@@ -1,0 +1,46 @@
+schema_version: 1
+venue_id: thewebconf
+display_name: TheWebConf (WWW)
+reviewer_values:
+  - web-scale systems, algorithms, and data
+  - contribution to how the web works or is used
+  - interdisciplinary work connecting web technology to society
+  - reproducibility and responsible research
+  - practical impact at web scale
+common_rejections:
+  - paper could be submitted to any CS venue — no web connection
+  - web dataset without novel methodology
+  - missing scale — web means billions of users/items/queries
+  - insufficient ethical consideration for user-facing work
+high_score_indicators:
+  - contribution to web infrastructure, search, recommendation, or analysis
+  - web-scale experiments or real web data
+  - interdisciplinary: web + economics, web + society, web + health
+  - responsible research practices (privacy, fairness, transparency)
+narrative_framing: |
+  TheWebConf is about the web. Your paper must articulate the web
+  connection clearly — why is this a web paper, not a generic CS paper?
+  Web-scale is the differentiator: billions of users, millions of sites,
+  real-world deployment. Interdisciplinary work that connects web technology
+  to social, economic, or political questions is welcome. Be explicit
+  about ethical considerations — web research affects real people.
+methodology_expectations: |
+  Web-scale data or experiments where applicable. Reproducibility with
+  public web data where possible. Ethical review of user data usage.
+  Comparison to web-scale baselines. Analysis of societal implications
+  for user-facing work.
+contribution_weights:
+  web_relevance: 0.25
+  scale: 0.20
+  algorithmic_novelty: 0.15
+  practical_impact: 0.15
+  responsible_research: 0.15
+  clarity: 0.10
+known_biases:
+  - web connection must be genuine, not forced
+  - industry web-scale papers have structural data advantage
+  - interdisciplinary work can fall between cracks of reviewer expertise
+page_economy: |
+  10 pages. Use the introduction to establish the web connection
+  unambiguously. Reserve space for ethical and societal implications
+  — this is expected, not optional.

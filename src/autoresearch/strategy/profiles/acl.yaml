@@ -1,0 +1,50 @@
+schema_version: 1
+venue_id: acl
+display_name: ACL
+reviewer_values:
+  - flagship NLP venue — highest standards across all dimensions
+  - substantial theoretical, empirical, or linguistic contribution
+  - rigorous methodology with significance testing
+  - contribution must generalize beyond a single task or language
+  - ethical considerations and limitations are expected
+common_rejections:
+  - incremental improvement without insight
+  - weak baselines or missing recent comparisons
+  - overclaiming about language understanding or reasoning
+  - English-only with no acknowledgment of limitation
+  - insufficient analysis — what did we learn about language?
+high_score_indicators:
+  - novel task formulation, method, or analysis framework
+  - comprehensive evaluation across tasks, languages, or domains
+  - analysis that reveals something about NLP or language
+  - ethical considerations integrated, not bolted on
+  - code, data, and models publicly available
+narrative_framing: |
+  ACL is the top NLP venue. Your paper must advance NLP as a field —
+  not just improve a number on a benchmark. Frame the contribution as:
+  what do we now understand about language or NLP that we didn't before?
+  The introduction should be accessible to any ACL reviewer, not just
+  your subarea. Acknowledge limitations forthrightly — ACL reviewers
+  penalize overclaiming more than honest scope statements.
+methodology_expectations: |
+  Multiple datasets, languages, or domains. Statistical significance.
+  Strong recent baselines. Ablation of all components. Error analysis
+  with linguistic insight. Code and data release. Ethics statement.
+  For LLM-based work: model version, prompt templates, and decoding
+  parameters must be reported.
+contribution_weights:
+  scientific_insight: 0.25
+  empirical_rigor: 0.20
+  methodological_novelty: 0.15
+  generality: 0.15
+  reproducibility: 0.10
+  ethics_limitations: 0.10
+  clarity: 0.05
+known_biases:
+  - ACL is the most competitive NLP venue — borderline papers often rejected
+  - reviewer variance is high; a single negative review can sink a paper
+  - LLM-based methods face heightened scrutiny post-ChatGPT
+page_economy:
+  8 pages. Use every page strategically. The first page must convey the
+  contribution to a general ACL audience. Save detailed experimental
+  setups for appendix. The limitations section is not optional.

@@ -1,0 +1,50 @@
+schema_version: 1
+venue_id: iccv
+display_name: ICCV
+reviewer_values:
+  - computer vision with emphasis on visual understanding
+  - novel architectures, representations, or training paradigms
+  - strong empirical results with thorough ablation
+  - qualitative results that demonstrate visual insight
+  - reproducibility and code release
+common_rejections:
+  - marginal improvement on saturated benchmarks
+  - insufficient ablation of key components
+  - missing comparison to very recent methods (arxiv)
+  - weak qualitative results or failure case analysis
+  - overclaiming about "understanding" from correlation
+high_score_indicators:
+  - novel problem formulation or task definition
+  - method that works across diverse visual domains
+  - compelling visual results that tell a story
+  - thorough ablation isolating each design choice
+  - code and pretrained models publicly available
+narrative_framing: |
+  ICCV is a premier computer vision venue (alternates years with ECCV).
+  Lead with the visual problem and why existing methods fall short.
+  Visual evidence (qualitative comparisons, attention maps, failure cases)
+  is as important as quantitative results. Every architectural decision
+  should be justified by an ablation. The introduction should make clear
+  what new capability your method enables for vision.
+methodology_expectations: |
+  Multiple standard vision benchmarks. Comparison to SOTA from last 12 months.
+  Ablation of all components. Qualitative results on diverse examples.
+  Failure case analysis. Statistical significance where applicable.
+  Code and pretrained models expected.
+contribution_weights:
+  visual_insight: 0.25
+  benchmark_performance: 0.20
+  architectural_novelty: 0.15
+  generality: 0.15
+  ablation_rigor: 0.10
+  reproducibility: 0.10
+  clarity: 0.05
+known_biases:
+  - visual wow-factor can outweigh methodological depth
+  - saturated benchmarks (ImageNet, COCO) are both required and criticized
+  - 3D vision and video understanding are growing subareas
+  - large-scale pretraining advantage is often underreported
+page_economy: |
+  8 pages. Use figures effectively — ICCV reviewers are visual.
+  A strong teaser figure and architecture diagram are essential.
+  Put per-dataset breakdown and hyperparameters in appendix.

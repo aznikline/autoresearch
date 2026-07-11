@@ -1,0 +1,46 @@
+schema_version: 1
+venue_id: sigmod
+display_name: SIGMOD
+reviewer_values:
+  - data management systems research
+  - rigorous experimental evaluation on standard benchmarks
+  - theoretical foundations with practical implications
+  - reproducibility through code and data release
+  - clear differentiation from prior systems
+common_rejections:
+  - no system built or no theoretical contribution
+  - weak experimental validation
+  - incremental SQL extension without architectural novelty
+  - missing comparison to standard benchmarks (TPC-*)
+high_score_indicators:
+  - system that advances data management capabilities
+  - formal analysis with practical system validation
+  - experiments on standard benchmarks at meaningful scale
+  - released as open-source with community adoption potential
+narrative_framing: |
+  SIGMOD is the premier data management venue. Your paper must advance
+  data management — a new query processing technique, storage architecture,
+  transaction mechanism, or data model. Define the problem precisely.
+  Compare against the state of the art in data management, not just ML
+  or systems in general. The SIGMOD community values both theory and
+  practice — bridge them when possible.
+methodology_expectations: |
+  Standard benchmarks (TPC-H, TPC-DS, TPC-C, YCSB, etc.). Reproducible
+  experimental setup. Statistical validation where applicable. Comparison
+  to industry systems (PostgreSQL, MySQL, Spark, etc.) or recent SIGMOD/VLDB
+  papers. Code and data release expected.
+contribution_weights:
+  data_management_advance: 0.25
+  empirical_rigor: 0.20
+  theoretical_foundation: 0.15
+  practical_impact: 0.15
+  reproducibility: 0.15
+  clarity: 0.10
+known_biases:
+  - SIGMOD and VLDB are peers — a rejection from one doesn't predict the other
+  - systems contributions without formal analysis can succeed with strong experiments
+  - industry co-authors signal deployment potential
+page_economy: |
+  12 pages. SIGMOD papers tend to be thorough. Use space for formal
+  definitions, algorithms in pseudocode, and detailed experimental
+  analysis. The repeatability evaluation is part of the review process.

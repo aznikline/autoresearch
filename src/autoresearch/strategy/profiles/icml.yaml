@@ -1,0 +1,48 @@
+schema_version: 1
+venue_id: icml
+display_name: ICML
+reviewer_values:
+  - theoretical grounding even for empirical papers
+  - clear statement of what is new vs prior work
+  - principled experimental design with significance testing
+  - algorithmic contribution with demonstrated generality
+  - reproducible results with code submission
+common_rejections:
+  - missing theory or formal justification
+  - empirical results on toy domains only
+  - insufficient comparison to related methods
+  - claims not supported by statistical evidence
+  - paper reads like a technical report not a research contribution
+high_score_indicators:
+  - theorem + experiment alignment
+  - generalization across multiple domains/datasets
+  - statistical significance tests on key comparisons
+  - open-source code with reproduction instructions
+  - clear differentiation from most similar prior work
+narrative_framing: |
+  ICML expects a contribution to machine learning methodology.
+  Start with the learning problem, not the application. State the gap in current
+  methods precisely. Your contribution should be a new algorithm, analysis, or
+  principle — not just good results on a benchmark. The theory section (even if
+  brief) signals that you understand why your method works.
+methodology_expectations: |
+  Statistical significance tests (e.g., Wilcoxon, t-test with Bonferroni) on
+  key comparisons. Multiple datasets or domains to show generality. Ablation
+  of key algorithmic components. Sensitivity to hyperparameters. Compute
+  requirements in GPU-hours. Code submission is expected.
+contribution_weights:
+  algorithmic_novelty: 0.30
+  theoretical_insight: 0.25
+  empirical_rigor: 0.20
+  generality: 0.10
+  reproducibility: 0.10
+  presentation_clarity: 0.05
+known_biases:
+  - strong preference for theory — pure empirical papers face headwind
+  - convex optimization and statistical learning theory are overrepresented among reviewers
+  - benchmark results without insight are dismissed
+page_economy: |
+  8 pages main + unlimited appendix. The first page must convey the core idea —
+  reviewers skim before deep reading. Put proofs in appendix; keep main paper
+  theorem statements and proof sketches. Use the appendix for full experimental
+  details and hyperparameter sensitivity.

@@ -1,0 +1,52 @@
+schema_version: 1
+venue_id: vldb
+display_name: VLDB
+reviewer_values:
+  - systems contribution with real implementation
+  - reproducibility — code and data must be available
+  - scalability demonstrated on realistic workloads
+  - comparison against deployed or widely-used systems
+  - honest performance analysis including failure cases
+common_rejections:
+  - no real system built — simulation or toy prototype only
+  - missing comparison to production systems or standard benchmarks
+  - scalability claims without large-scale experiments
+  - insufficient detail to reproduce the system
+  - contribution is a minor SQL extension or UI feature
+high_score_indicators:
+  - open-source release with documentation
+  - experiments on standard benchmarks (TPC-H, TPC-DS, JOB) at scale
+  - microbenchmarks that isolate specific system components
+  - comparison to at least one commercial or production system
+  - discussion of engineering trade-offs, not just wins
+narrative_framing: |
+  VLDB reviews systems, not algorithms. Your contribution is the system
+  you built and the lessons from building it. Lead with the problem the
+  system solves and why existing systems fall short. The architecture
+  section should explain design decisions with trade-off rationale.
+  Performance numbers are evidence for your design claims, not the contribution
+  itself. Negative results (what didn't work) are valued — they save others time.
+methodology_expectations: |
+  Experiments at realistic scale (GB-TB data). Microbenchmarks to isolate
+  components. End-to-end benchmarks on standard workloads. Cost analysis
+  (hardware, cloud, energy). Code and data available for reproduction.
+  Single-blind means system provenance matters — disclose affiliations
+  that could indicate access to proprietary systems.
+contribution_weights:
+  systems_building: 0.25
+  reproducibility: 0.20
+  scalability_evidence: 0.15
+  practical_impact: 0.15
+  design_rationale: 0.10
+  comparison_rigor: 0.10
+  presentation_clarity: 0.05
+known_biases:
+  - favors systems that are actually built and measurable
+  - industry submissions with real deployments get benefit of doubt
+  - skepticism toward "system" papers that are really algorithm papers
+  - single-blind: institution and author track record matter
+page_economy: |
+  12 pages. Use the extra space (vs ML venues) for system architecture
+  diagrams and detailed experimental setup. Put API docs and extended
+  proofs in appendix. The first 3 pages should convince the reviewer
+  the system exists and solves a real problem.

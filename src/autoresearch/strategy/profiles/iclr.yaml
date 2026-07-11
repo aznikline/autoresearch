@@ -1,0 +1,47 @@
+schema_version: 1
+venue_id: iclr
+display_name: ICLR
+reviewer_values:
+  - representation learning insight over raw performance
+  - empirical demonstration that the learned representation matters
+  - connection to broader principles of deep learning
+  - openreview discussion contributes to paper evaluation
+  - novelty in architecture, objective, or training paradigm
+common_rejections:
+  - incremental architecture tweak with marginal gain
+  - no analysis of what the learned representation captures
+  - missing comparison to simpler baselines that might work
+  - overfitting to a single domain or modality
+  - weak related work — missing recent arxiv preprints
+high_score_indicators:
+  - visualization or probing of learned representations
+  - works across multiple modalities or domains
+  - simpler than existing approaches but equally effective
+  - active openreview engagement with reviewer questions
+  - negative results that reveal something about representation learning
+narrative_framing: |
+  ICLR is about representation learning. Your paper should answer:
+  what does the model learn to represent, and why is that representation
+  better? If you're proposing a new architecture, explain the inductive bias.
+  If you're proposing a training method, explain what representations emerge.
+  Connect to broader principles — ICLR reviewers value understanding over benchmarks.
+methodology_expectations: |
+  Probe or visualize learned representations. Compare to simpler representation
+  baselines, not just end-to-end performance. Show transfer or zero-shot
+  capability where relevant. Analyze failure cases via representation inspection.
+contribution_weights:
+  representational_insight: 0.30
+  algorithmic_novelty: 0.20
+  empirical_generality: 0.15
+  theoretical_understanding: 0.15
+  simplicity: 0.10
+  reproducibility: 0.10
+known_biases:
+  - favors deep learning over classical ML approaches
+  - openreview process amplifies bandwagon effects on trending topics
+  - prominent authors benefit from name recognition despite double-blind intent
+  - representation learning framing expected even for optimization papers
+page_economy: |
+  8 pages main + unlimited appendix. Put representation visualizations in the
+  main paper — they are evidence, not decoration. Use the appendix for
+  architecture details, full hyperparameters, and extended ablations.

@@ -1,0 +1,46 @@
+schema_version: 1
+venue_id: emnlp
+display_name: EMNLP
+reviewer_values:
+  - empirical results on standard NLP benchmarks
+  - clear ablation of method components
+  - significance testing on key results
+  - comparison to strong, recent baselines
+  - generalizability across languages or domains where claimed
+common_rejections:
+  - marginal improvement without clear insight
+  - method tested on a single dataset or language
+  - missing significance tests
+  - related work misses recent (1 year) publications
+  - overclaiming about "understanding" or "reasoning"
+high_score_indicators:
+  - works across multiple NLP tasks or languages
+  - thorough analysis of errors and limitations
+  - code and data publicly available
+  - clear takeaway about what makes the method work
+narrative_framing: |
+  EMNLP is the empirical NLP venue. Lead with the empirical finding or
+  method improvement. State clearly what existing methods cannot do that
+  yours can. The analysis section is critical: show where your method
+  succeeds and where it fails. NLP reviewers are increasingly skeptical
+  of benchmark-only contributions — connect results to linguistic insight.
+methodology_expectations: |
+  At least 3 random seeds. Statistical significance tests. Multiple datasets
+  or domains. Comparison to SOTA from ACL/EMNLP/NAACL of the last 2 years.
+  Error analysis with concrete examples. Code and data release expected.
+contribution_weights:
+  empirical_strength: 0.25
+  analysis_depth: 0.20
+  methodological_clarity: 0.15
+  generality: 0.15
+  reproducibility: 0.10
+  linguistic_insight: 0.10
+  presentation: 0.05
+known_biases:
+  - English-centric — multilingual claims scrutinized harder
+  - LLM-based methods face higher novelty bar post-2023
+  - benchmark saturation on GLUE/SuperGLUE is a known issue
+page_economy: |
+  8 pages + unlimited appendix. Use main paper for method, main results,
+  and analysis. Put implementation details, full hyperparameters, per-dataset
+  breakdowns, and extended error analysis in appendix.

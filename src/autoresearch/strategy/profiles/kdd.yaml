@@ -1,0 +1,45 @@
+schema_version: 1
+venue_id: kdd
+display_name: KDD
+reviewer_values:
+  - both data mining research and applied data science
+  - novel algorithms with demonstrated real-world impact
+  - scalability to large, real datasets
+  - rigorous experimental methodology
+  - reproducible results on public benchmarks
+common_rejections:
+  - algorithm with no real data evaluation
+  - missing comparison to industry-standard methods
+  - application paper without novel methodology
+  - insufficient statistical validation
+high_score_indicators:
+  - deployed system with measurable business impact
+  - algorithm that scales to billion-scale data
+  - novel problem formulation from real application needs
+  - open-source implementation with documentation
+narrative_framing: |
+  KDD spans research and practice. If your contribution is a method,
+  show it works at scale on real data. If it's an application, articulate
+  the novel methodology that made it possible. The research track values
+  algorithmic novelty; the applied track values impact. Be explicit about
+  which track you're targeting in the contribution statement.
+methodology_expectations: |
+  Large-scale experiments (million to billion data points). Statistical
+  validation. Comparison to widely-used methods. Runtime/scalability
+  analysis. Code and data availability. For applied papers: deployment
+  details and business impact metrics.
+contribution_weights:
+  algorithmic_novelty: 0.20
+  scalability: 0.20
+  real_world_impact: 0.20
+  empirical_rigor: 0.15
+  reproducibility: 0.15
+  clarity: 0.10
+known_biases:
+  - industry papers with real deployment data are highly valued
+  - applied data science track has different standards from research track
+  - big-tech datasets (Google, Meta, etc.) are hard to reproduce but influential
+page_economy: |
+  9 pages. Use space for detailed experimental setup — data statistics,
+  hardware, runtime. The methods section should be reproducible from the
+  main paper alone for research track submissions.

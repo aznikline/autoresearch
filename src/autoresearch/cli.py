@@ -9,9 +9,11 @@ from autoresearch.audit.completion import audit_repository
 from autoresearch.audit.reference import ReferenceBundleError, export_reference_bundle
 from autoresearch.config import ConfigError, load_config, write_example_config
 from autoresearch.hitl.session import HITLError, record_decision
+from autoresearch.ideation.session import IdeationSession, write_ideation_report
 from autoresearch.pipeline.checkpoint import read_checkpoint
 from autoresearch.pipeline.runner import PipelineRunner, cancel_run
 from autoresearch.pipeline.verification import verify_run
+from autoresearch.strategy.registry import VenueStrategyRegistry
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -112,6 +114,19 @@ def build_parser() -> argparse.ArgumentParser:
     verify_parser.add_argument("run_dir")
     verify_parser.add_argument("--config", default="config.yaml")
     verify_parser.set_defaults(func=_cmd_verify)
+
+    ideate_parser = subparsers.add_parser(
+        "ideate",
+        help="analyze a research idea against venue strategy before running the pipeline",
+    )
+    ideate_parser.add_argument("--config", default="config.yaml")
+    ideate_parser.add_argument(
+        "--idea", required=True, help="your research idea (one sentence)"
+    )
+    ideate_parser.add_argument(
+        "--output", default="", help="write report to this path (default: stdout only)"
+    )
+    ideate_parser.set_defaults(func=_cmd_ideate)
 
     return parser
 
@@ -265,6 +280,39 @@ def _cmd_verify(args: argparse.Namespace) -> int:
     payload = verify_run(Path(args.run_dir), config=load_config(args.config))
     print(json.dumps(payload, indent=2))
     return 0 if payload["ok"] else 1
+
+
+def _cmd_ideate(args: argparse.Namespace) -> int:
+    config = load_config(args.config)
+    strategy_root = (
+        Path(__file__).resolve().parent / "strategy" / "profiles"
+    )
+    if not strategy_root.is_dir():
+        print(
+            "venue strategy profiles not found; run from the autoresearch repo root",
+            file=sys.stderr,
+        )
+        return 2
+    registry = VenueStrategyRegistry.load(strategy_root)
+    try:
+        strategy = registry.resolve(config.research.venue_id)
+    except Exception as exc:
+        print(f"venue strategy not found for {config.research.venue_id}: {exc}", file=sys.stderr)
+        print(f"available: {', '.join(registry.venue_ids())}", file=sys.stderr)
+        return 2
+
+    session = IdeationSession(strategy, idea=args.idea)
+    report = session.analyze()
+
+    rendered = report.to_markdown()
+    print(rendered)
+
+    if args.output:
+        output_path = Path(args.output)
+        write_ideation_report(report, output_path)
+        print(f"\nReport written to {output_path}")
+
+    return 0
 
 
 if __name__ == "__main__":

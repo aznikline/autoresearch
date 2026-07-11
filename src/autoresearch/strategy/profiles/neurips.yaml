@@ -1,0 +1,49 @@
+schema_version: 1
+venue_id: neurips
+display_name: NeurIPS
+reviewer_values:
+  - methodological novelty over empirical breadth
+  - theoretical justification for every design choice
+  - rigorous ablation studies with clear takeaways
+  - comparison against strong, recent baselines
+  - honest limitations and failure modes
+common_rejections:
+  - insufficient novelty — incremental improvement over known method
+  - weak baselines — missing recent SOTA comparisons
+  - missing ablations — can't tell which component matters
+  - overclaiming — conclusions not supported by evidence
+  - sloppy experimental protocol — insufficient seeds or tuning budget
+high_score_indicators:
+  - a clear, falsifiable hypothesis stated early
+  - ablation that isolates each component's contribution
+  - multiple seeds with confidence intervals
+  - comparison to at least 3 strong recent baselines
+  - limitations section that anticipates reviewer concerns
+narrative_framing: |
+  Frame as a principled advance, not an engineering improvement.
+  Lead with the insight or mechanism, not the performance numbers.
+  The introduction should answer: what did we discover about how learning works?
+  Related work should position the gap, not just list prior art.
+  The conclusion should be honest about scope — NeurIPS reviewers reward intellectual honesty.
+methodology_expectations: |
+  At least 5 random seeds per configuration. Report mean ± std or 95% CI.
+  Ablation must isolate each proposed component. Tuning budget must be
+  equal across all methods (including baselines). Compute must be reported
+  in GPU-hours or equivalent. If you claim efficiency, wall-clock time is mandatory.
+contribution_weights:
+  algorithmic_novelty: 0.30
+  empirical_rigor: 0.25
+  theoretical_insight: 0.20
+  practical_impact: 0.10
+  reproducibility: 0.10
+  presentation_clarity: 0.05
+known_biases:
+  - prefers mathematically elegant solutions over simple effective ones
+  - skepticism toward pure engineering contributions without insight
+  - double-blind can reduce but not eliminate institution bias
+  - ACs often side with negative reviews in split decisions
+page_economy: |
+  Main paper is 9 pages. Use the first 2 pages to establish the problem and insight —
+  reviewers often form their opinion by page 3. Put extensive ablations in the appendix.
+  The checklist is part of the paper, not an afterthought. Reserve 0.5 pages for
+  meaningful limitations, not boilerplate.

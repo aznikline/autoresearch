@@ -1,0 +1,43 @@
+schema_version: 1
+venue_id: naacl
+display_name: NAACL
+reviewer_values:
+  - similar to ACL/EMNLP with emphasis on Americas regional NLP
+  - multilingual and low-resource NLP are central themes
+  - computational efficiency for NLP is valued
+  - applied NLP with real-world deployment evidence is welcome
+  - replicability and open-source are expected
+common_rejections:
+  - English-only with no broader linguistic contribution
+  - resource-heavy methods without efficiency analysis
+  - missing comparison to efficient or low-resource baselines
+high_score_indicators:
+  - multilingual or cross-lingual results
+  - efficiency analysis (parameters, FLOPs, inference time)
+  - real-world application with deployment evidence
+  - open-source code with documented reproduction steps
+narrative_framing: |
+  NAACL values NLP that works in the real world. If your method is more
+  efficient, more multilingual, or more accessible than alternatives,
+  center that contribution. The Americas focus means Spanish, Portuguese,
+  and indigenous language work is particularly relevant. Connect your
+  contribution to who can now do NLP that couldn't before.
+methodology_expectations: |
+  Same statistical rigor as EMNLP/ACL. Efficiency metrics where applicable.
+  Multilingual evaluation if claiming language generality. Human evaluation
+  for generation tasks. Code and model release expected.
+contribution_weights:
+  multilingual_access: 0.20
+  empirical_strength: 0.20
+  efficiency: 0.15
+  real_world_impact: 0.15
+  reproducibility: 0.15
+  analysis_depth: 0.10
+  presentation: 0.05
+known_biases:
+  - multilingual and low-resource work receives favorable attention
+  - industry applications with real users are compelling
+  - Americas languages beyond English are a differentiator
+page_economy: |
+  8 pages. Allocate space for efficiency analysis and/or multilingual
+  results if applicable. These are differentiators at NAACL specifically.

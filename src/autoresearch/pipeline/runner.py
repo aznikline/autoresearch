@@ -31,6 +31,7 @@ from autoresearch.pipeline.stages import (
     StageStatus,
 )
 from autoresearch.skills.harness import SkillHarness
+from autoresearch.strategy.registry import VenueStrategyRegistry
 from autoresearch.venues.registry import VenueRegistry
 from autoresearch.venues.schema import VenueContract, VenueContractError
 
@@ -105,6 +106,13 @@ class PipelineRunner:
         except VenueContractError as exc:
             raise ConfigError(str(exc)) from exc
         self.capability = _contract_capability(self.venue_contract)
+        strategy_root = Path(__file__).resolve().parents[1] / "strategy" / "profiles"
+        self.strategy_registry = VenueStrategyRegistry.load(strategy_root) if strategy_root.is_dir() else None
+        self.venue_strategy = (
+            self.strategy_registry.resolve(config.research.venue_id)
+            if self.strategy_registry is not None
+            else None
+        )
         project_slug = "".join(
             character if character.isalnum() or character in "-_" else "-"
             for character in config.project.name.lower()
@@ -340,6 +348,7 @@ class PipelineRunner:
                     f"{self.venue_contract.status.value}. It cannot certify readiness."
                 ),
                 venue_contract=self.venue_contract,
+                venue_strategy=self.venue_strategy,
                 prior_lessons=prior_lessons,
             )
             results.append(result)

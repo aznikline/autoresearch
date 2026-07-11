@@ -93,7 +93,8 @@ def test_live_provider_drives_hypothesis_stage(
         )
     )
     assert hypotheses[0]["hypothesis_id"] == "H-live-1"
-    assert _LiveHandler.calls == 1
+    # 3 calls: hypothesis + reviewer simulation + contribution mining
+    assert _LiveHandler.calls == 3
     audit = (run_dir / "llm/llm_calls.jsonl").read_text(encoding="utf-8")
     assert "do-not-persist" not in audit
     assert all(

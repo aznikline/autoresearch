@@ -1,0 +1,49 @@
+schema_version: 1
+venue_id: cvpr
+display_name: CVPR
+reviewer_values:
+  - visual results that are clearly better — qualitative evidence matters
+  - SOTA performance on standard benchmarks
+  - method generality across multiple vision tasks or datasets
+  - clear architectural or algorithmic novelty
+  - strong ablation that isolates the key insight
+common_rejections:
+  - marginal improvement on oversaturated benchmarks
+  - method only tested on one dataset
+  - missing comparison to very recent (arxiv) baselines
+  - insufficient qualitative results or failure case analysis
+  - paper reads like an engineering report
+high_score_indicators:
+  - compelling visual comparisons (not just tables)
+  - works across detection, segmentation, and classification
+  - code and pretrained models released
+  - novel architecture or loss function with principled motivation
+  - failure case analysis that reveals limitations honestly
+narrative_framing: |
+  CVPR reviewers judge with their eyes. Lead with what your method enables
+  visually — show, don't just tell. The introduction should have a clear
+  figure illustrating the problem and your solution. Architecture figures
+  must be precise (input/output dimensions, tensor shapes). Every design
+  choice needs an ablation, not just a justification.
+methodology_expectations: |
+  Multiple standard benchmarks (COCO, ImageNet, ADE20K, etc.). Comparison
+  to SOTA from the last 12 months including arxiv preprints. Ablation of
+  every architectural component. Qualitative results showing success and
+  failure cases. Pretrained models and code expected for reproducibility.
+contribution_weights:
+  visual_quality: 0.25
+  benchmark_performance: 0.20
+  architectural_novelty: 0.15
+  generality: 0.15
+  ablation_rigor: 0.10
+  reproducibility: 0.10
+  clarity: 0.05
+known_biases:
+  - visual wow-factor can outweigh methodological rigor
+  - overrepresented benchmarks (ImageNet, COCO) draw disproportionate attention
+  - large-scale pretraining advantage often understated
+  - negative results rarely accepted regardless of insight
+page_economy: |
+  8 pages. Use figures strategically — one strong teaser figure, one architecture
+  diagram, one qualitative comparison, one failure case figure. Tables for SOTA
+  comparison. Put per-dataset breakdowns and hyperparameters in appendix.

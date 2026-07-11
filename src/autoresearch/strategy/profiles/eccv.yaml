@@ -1,0 +1,41 @@
+schema_version: 1
+venue_id: eccv
+display_name: ECCV
+reviewer_values:
+  - similar to CVPR but slightly more open to exploratory work
+  - geometric and 3D vision are particularly welcome
+  - real-world applicability and robustness matter
+  - European conference — values theoretical depth slightly more than CVPR
+  - reproducibility and code release are increasingly expected
+common_rejections:
+  - same as CVPR rejection patterns
+  - additionally: method that only works on curated datasets
+high_score_indicators:
+  - strong geometric or physical motivation
+  - robustness to real-world variation (lighting, viewpoint, occlusion)
+  - works on uncurated or in-the-wild data
+  - clear mathematical formulation where applicable
+narrative_framing: |
+  ECCV shares CVPR's visual emphasis but rewards theoretical depth more.
+  If your method has a geometric or physical motivation, lead with it.
+  Real-world robustness demonstrations (not just benchmark numbers) are
+  compelling. The European reviewer pool values mathematical clarity.
+methodology_expectations: |
+  Same as CVPR plus: robustness analysis (lighting, viewpoint, compression).
+  In-the-wild evaluation preferred over curated test sets where applicable.
+contribution_weights:
+  visual_quality: 0.20
+  robustness: 0.20
+  theoretical_depth: 0.15
+  generality: 0.15
+  benchmark_performance: 0.10
+  reproducibility: 0.10
+  clarity: 0.10
+known_biases:
+  - slightly more favorable to theory than CVPR
+  - European labs and datasets receive more attention
+  - 3D/geometry work is disproportionately represented
+page_economy: |
+  14 pages (ECCV is more generous). Use the extra space for theoretical
+  derivations and extended qualitative results. Don't pad — reviewers
+  notice and penalize.

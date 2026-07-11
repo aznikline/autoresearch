@@ -57,6 +57,9 @@ from autoresearch.pipeline.artifacts import stage_dir, write_json
 from autoresearch.pipeline.contracts import contract_for
 from autoresearch.pipeline.stages import Stage
 from autoresearch.prompts.manager import PromptContext, compose_stage_prompt
+from autoresearch.strategy.contributions import mine_contributions, write_contribution_report
+from autoresearch.strategy.models import VenueStrategy
+from autoresearch.strategy.reviewer import simulate_review, write_review_report
 from autoresearch.venues.schema import VenueContract
 
 
@@ -71,6 +74,7 @@ def execute_placeholder_stage(
     prompt_context: str = "",
     venue_guidance: str = "",
     venue_contract: VenueContract | None = None,
+    venue_strategy: VenueStrategy | None = None,
     prior_lessons: str = "",
 ) -> None:
     """Write minimal contract artifacts for the current pipeline spine.
@@ -130,6 +134,7 @@ def execute_placeholder_stage(
             topic=topic,
             config=config,
             llm_provider=llm_provider,
+            venue_strategy=venue_strategy,
         )
         return
     if stage is Stage.FINAL_VERIFICATION_EXPORT:
@@ -583,6 +588,7 @@ def _execute_paper_draft_revision(
     topic: str,
     config: AutoresearchConfig,
     llm_provider: LLMProvider | None = None,
+    venue_strategy: VenueStrategy | None = None,
 ) -> None:
     cards = read_cards_jsonl(stage_dir(run_dir, Stage.SYNTHESIS) / "knowledge_cards.jsonl")
     ledger = read_ledger(stage_dir(run_dir, Stage.EXPERIMENT_LOOP) / "ledger.jsonl")
@@ -614,6 +620,18 @@ def _execute_paper_draft_revision(
     )
     (stage_path / "reviews.md").write_text(reviews, encoding="utf-8")
     (stage_path / "paper_revised.md").write_text(revised, encoding="utf-8")
+
+    # Venue strategy: reviewer simulation + contribution mining
+    if venue_strategy is not None:
+        _run_strategy_analysis(
+            stage_path=stage_path,
+            paper_markdown=revised,
+            venue_strategy=venue_strategy,
+            ledger=tuple(ledger),
+            llm_provider=llm_provider,
+            topic=topic,
+        )
+
     linked = [entry for entry in ledger if entry.metric is not None]
     write_json(
         stage_path / "empirical_claims.json",
@@ -633,6 +651,88 @@ def _execute_paper_draft_revision(
         if linked
         else [],
     )
+
+
+def _run_strategy_analysis(
+    *,
+    stage_path: Path,
+    paper_markdown: str,
+    venue_strategy: VenueStrategy,
+    ledger: tuple,
+    llm_provider: LLMProvider | None,
+    topic: str,
+) -> None:
+    """Run venue-aware reviewer simulation and contribution mining."""
+    import logging
+
+    logger = logging.getLogger("autoresearch.strategy")
+
+    # Reviewer simulation
+    try:
+        review = simulate_review(
+            paper_markdown=paper_markdown,
+            venue_strategy=venue_strategy,
+            ledger=ledger,
+            llm_provider=llm_provider,
+        )
+        write_review_report(review, stage_path / "strategy_review.json")
+        (stage_path / "strategy_review.md").write_text(
+            f"# {venue_strategy.display_name} Strategy Review\n\n"
+            f"**Overall Score:** {review.overall_score}/10  \n"
+            f"**Confidence:** {review.confidence:.0%}\n\n"
+            f"## Strengths\n\n"
+            + "\n".join(f"- {s}" for s in review.strengths)
+            + "\n\n## Weaknesses\n\n"
+            + "\n".join(
+                f"- **[{w.severity}]** {w.claim}: {w.suggested_fix}"
+                for w in review.weaknesses
+            )
+            + "\n\n## Suggested Experiments\n\n"
+            + "\n".join(f"- {e}" for e in review.suggested_experiments)
+            + "\n\n## Narrative Suggestions\n\n"
+            + "\n".join(f"- {n}" for n in review.narrative_suggestions)
+            + f"\n\n## Summary\n\n{review.summary}\n",
+            encoding="utf-8",
+        )
+    except Exception as exc:
+        logger.warning("reviewer simulation failed: %s", exc)
+
+    # Contribution mining
+    try:
+        claims_path = stage_path / "empirical_claims.json"
+        claims_raw: tuple[dict[str, object], ...] = ()
+        if claims_path.exists():
+            import json
+
+            loaded = json.loads(claims_path.read_text(encoding="utf-8"))
+            if isinstance(loaded, list):
+                claims_raw = tuple(
+                    item for item in loaded if isinstance(item, dict)
+                )
+
+        mining = mine_contributions(
+            venue_strategy=venue_strategy,
+            ledger=ledger,
+            claims=claims_raw,
+            llm_provider=llm_provider,
+            topic=topic,
+        )
+        write_contribution_report(mining, stage_path / "strategy_contributions.json")
+        (stage_path / "strategy_contributions.md").write_text(
+            f"# Contribution Mining for {venue_strategy.display_name}\n\n"
+            f"**Venue Fit Score:** {mining.venue_fit_score:.2f}\n\n"
+            + "\n".join(
+                f"## {i+1}. {c.description}\n"
+                f"- Relevance: {c.venue_relevance:.0%}\n"
+                f"- Strength: {c.strength_score:.0%}\n"
+                f"- Hook: {c.narrative_hook}\n"
+                for i, c in enumerate(mining.contributions)
+            )
+            + f"\n{mining.summary}\n",
+            encoding="utf-8",
+        )
+    except Exception as exc:
+        logger.warning("contribution mining failed: %s", exc)
 
 
 def _execute_final_verification_export(

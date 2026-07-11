@@ -1,0 +1,44 @@
+schema_version: 1
+venue_id: icde
+display_name: ICDE
+reviewer_values:
+  - data engineering — systems, pipelines, and infrastructure
+  - practical contributions that solve real data problems
+  - performance, scalability, and reliability
+  - comparison against real systems and benchmarks
+  - reproducibility with clear setup instructions
+common_rejections:
+  - pure algorithm paper with no engineering contribution
+  - no evaluation on realistic data volumes
+  - missing comparison to existing data infrastructure
+  - hand-waving about scalability without evidence
+high_score_indicators:
+  - system that handles realistic data engineering challenges
+  - evaluation on industry-standard benchmarks at scale
+  - clear engineering rationale for design decisions
+  - open-source release with deployment documentation
+narrative_framing: |
+  ICDE is about data engineering. Your contribution should solve a
+  practical data problem. Lead with the engineering challenge and
+  why existing approaches fail. Architecture and design decisions
+  should be justified with empirical evidence. Performance numbers
+  should tell a story about engineering trade-offs.
+methodology_expectations: |
+  Realistic data volumes and workloads. Comparison to deployed or
+  widely-used data systems. Reproducible setup. Cost or resource
+  analysis where applicable. Failure handling and robustness.
+contribution_weights:
+  engineering_contribution: 0.25
+  scalability: 0.20
+  practical_impact: 0.20
+  empirical_rigor: 0.15
+  reproducibility: 0.10
+  design_clarity: 0.10
+known_biases:
+  - industry data engineering work is highly valued
+  - cloud-scale evaluations are impressive but hard to reproduce
+  - pure academic prototypes without real-world testing face skepticism
+page_economy: |
+  12 pages. Use space for system architecture diagrams and detailed
+  experimental methodology. Database venues value precision in
+  describing what was built and how it was measured.

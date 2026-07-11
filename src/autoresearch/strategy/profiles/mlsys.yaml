@@ -1,0 +1,48 @@
+schema_version: 1
+venue_id: mlsys
+display_name: MLSys
+reviewer_values:
+  - systems contribution to ML workflow — training, inference, data, deployment
+  - real performance improvement on real hardware
+  - generalizability beyond a single model or framework
+  - comparison against widely-used ML systems (PyTorch, JAX, TF, etc.)
+  - reproducibility with containerized environments
+common_rejections:
+  - ML paper with no real systems contribution
+  - systems paper that doesn't understand the ML workload
+  - single-GPU optimizations that don't scale
+  - no comparison to existing ML infrastructure
+  - claims about efficiency without end-to-end measurement
+high_score_indicators:
+  - works across multiple model architectures or frameworks
+  - scaling curves (performance vs compute/resources)
+  - comparison to production ML systems
+  - containerized reproduction package
+  - analysis of why the optimization works at the systems level
+narrative_framing: |
+  MLSys sits at the intersection. Frame your contribution along both axes:
+  what ML insight makes the systems optimization possible, and what systems
+  insight makes the ML workflow faster or more efficient. Reviewers are split
+  between systems people and ML people — both must understand your paper.
+  The introduction should be accessible to someone strong in only one area.
+methodology_expectations: |
+  End-to-end wall-clock measurements, not just kernel timings. Multiple
+  hardware configurations where relevant. Scaling analysis across model
+  sizes. Comparison to at least one major ML framework or system.
+  Containerized or scripted reproduction. Energy or carbon measurement
+  for efficiency claims.
+contribution_weights:
+  systems_contribution: 0.25
+  ml_workflow_impact: 0.20
+  empirical_rigor: 0.15
+  generality: 0.15
+  reproducibility: 0.15
+  clarity_for_both_communities: 0.10
+known_biases:
+  - reviewers often strong in systems OR ML, rarely both — clarity matters
+  - industry systems papers with real deployment data are compelling
+  - pure algorithm papers routed here will be rejected as out of scope
+page_economy: |
+  10 pages. Use figures to bridge the ML/systems gap — architecture diagrams
+  that show both the ML workflow and the systems stack. Reserve space for
+  a clear "why this is a systems contribution" paragraph in the introduction.

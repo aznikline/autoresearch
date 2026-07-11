@@ -11,6 +11,7 @@ from autoresearch.pipeline.contracts import contract_for
 from autoresearch.pipeline.stage_impls.core import execute_placeholder_stage
 from autoresearch.pipeline.stages import Stage, StageStatus
 from autoresearch.skills.harness import SkillHarness
+from autoresearch.strategy.models import VenueStrategy
 from autoresearch.venues.schema import VenueContract
 
 
@@ -33,6 +34,7 @@ def execute_stage(
     llm_provider: LLMProvider | None = None,
     venue_guidance: str = "",
     venue_contract: VenueContract | None = None,
+    venue_strategy: VenueStrategy | None = None,
     prior_lessons: str = "",
 ) -> StageResult:
     stage_path = stage_dir(run_dir, stage)
@@ -55,6 +57,7 @@ def execute_stage(
             prompt_context=skill_context.rendered,
             venue_guidance=venue_guidance,
             venue_contract=venue_contract,
+            venue_strategy=venue_strategy,
             prior_lessons=prior_lessons,
         )
     except (LLMError, ValueError) as exc:

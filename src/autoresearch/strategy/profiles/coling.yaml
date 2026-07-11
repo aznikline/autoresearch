@@ -1,0 +1,46 @@
+schema_version: 1
+venue_id: coling
+display_name: COLING
+reviewer_values:
+  - computational linguistics with linguistic depth
+  - both NLP methods and linguistic analysis are welcome
+  - multilingual and low-resource language work
+  - theoretical linguistics informed by computation
+  - reproducibility and open data
+common_rejections:
+  - pure NLP engineering without linguistic contribution
+  - weak linguistic analysis or motivation
+  - English-only without acknowledging limitation
+  - missing connection to linguistic theory or typology
+high_score_indicators:
+  - cross-lingual or typologically diverse evaluation
+  - linguistic analysis that reveals something about language
+  - method motivated by linguistic phenomenon
+  - collaboration between NLP and linguistics
+narrative_framing: |
+  COLING bridges NLP and linguistics. Your paper should connect to
+  a linguistic phenomenon, theory, or challenge. Even engineering
+  papers should explain the linguistic motivation. If working with
+  multiple languages, frame them as linguistic diversity, not just
+  more datasets. The COLING community values language for its own
+  sake, not just as an application domain.
+methodology_expectations: |
+  Linguistic grounding for method design. Cross-lingual evaluation
+  where applicable. Connection to linguistic theory or typology.
+  Reproducibility with code and data. Human evaluation for generative
+  or annotation tasks where appropriate.
+contribution_weights:
+  linguistic_contribution: 0.25
+  empirical_rigor: 0.20
+  multilingual_scope: 0.15
+  methodological_novelty: 0.15
+  reproducibility: 0.10
+  theoretical_connection: 0.10
+  clarity: 0.05
+known_biases:
+  - linguistic depth is valued over engineering convenience
+  - multilingual work that engages with linguistic diversity is preferred
+  - pure benchmark results without linguistic analysis are weak
+page_economy: |
+  8 pages. Reserve space for linguistic analysis and motivation —
+  this is what differentiates COLING from pure NLP venues.

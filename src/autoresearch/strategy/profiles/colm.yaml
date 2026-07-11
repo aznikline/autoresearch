@@ -1,0 +1,47 @@
+schema_version: 1
+venue_id: colm
+display_name: CoLM
+reviewer_values:
+  - language modeling at scale — pretraining, fine-tuning, in-context learning
+  - mechanistic understanding of how language models work
+  - novel training objectives, architectures, or data strategies
+  - safety, alignment, and evaluation methodology
+  - reproducible results with clear reporting
+common_rejections:
+  - applying an existing LM to a new task without methodological insight
+  - small-scale experiments that don't inform large-scale behavior
+  - missing comparison to contemporary models of similar scale
+  - overclaiming about capabilities without rigorous evaluation
+high_score_indicators:
+  - scaling laws or predictable behavior across model sizes
+  - mechanistic analysis that reveals how the model works
+  - novel evaluation methodology that exposes model limitations
+  - data curation or training strategy with demonstrated impact
+narrative_framing: |
+  CoLM is the dedicated venue for language modeling research.
+  Your contribution should advance understanding of language models —
+  how to build them, how to evaluate them, or what they learn.
+  Scaling insight (even at smaller scale if it predicts larger behavior)
+  is valued over raw performance. Safety and evaluation work is welcome
+  if it reveals something general about LMs.
+methodology_expectations: |
+  Multiple model scales where applicable. Clear reporting of compute,
+  data, and hyperparameters. Comparison to contemporary models (not just
+  older baselines). Rigorous evaluation with multiple metrics. For
+  safety/alignment work: threat model and failure analysis required.
+contribution_weights:
+  scaling_insight: 0.25
+  methodological_novelty: 0.20
+  empirical_rigor: 0.15
+  evaluation_quality: 0.15
+  safety_alignment: 0.10
+  reproducibility: 0.10
+  clarity: 0.05
+known_biases:
+  - large-scale experiments with many GPUs are hard to reproduce but influential
+  - scaling law papers receive outsized attention
+  - industry labs with compute access have structural advantage
+page_economy: |
+  9 pages. Use figures to show scaling trends. Put model cards, dataset
+  sheets, and extended evaluation in appendix. The methods section must
+  be precise enough for reproduction.
