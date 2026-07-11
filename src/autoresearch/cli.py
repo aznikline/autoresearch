@@ -12,6 +12,7 @@ from autoresearch.hitl.session import HITLError, record_decision
 from autoresearch.gapanalysis.report import analyze_gap, write_gap_report
 from autoresearch.ideation.session import IdeationSession, write_ideation_report
 from autoresearch.multivenue.report import generate_fit_report, write_fit_report
+from autoresearch.prose.venue_prose import generate_venue_prose, write_prose_output
 from autoresearch.revision.loop import run_revision_loop, write_revision_report
 from autoresearch.pipeline.checkpoint import read_checkpoint
 from autoresearch.pipeline.runner import PipelineRunner, cancel_run
@@ -166,6 +167,15 @@ def build_parser() -> argparse.ArgumentParser:
     )
     revise_parser.add_argument("--output", default="", help="write report to this path")
     revise_parser.set_defaults(func=_cmd_revise)
+
+    prose_parser = subparsers.add_parser(
+        "prose",
+        help="generate venue-aware prose from a paper draft",
+    )
+    prose_parser.add_argument("run_dir", help="path to a completed pipeline run")
+    prose_parser.add_argument("--config", default="config.yaml")
+    prose_parser.add_argument("--output", default="", help="write output to this path")
+    prose_parser.set_defaults(func=_cmd_prose)
 
     return parser
 
@@ -449,6 +459,41 @@ def _cmd_revise(args: argparse.Namespace) -> int:
         output_path = Path(args.output)
         write_revision_report(result, output_path)
         print(f"\nReport written to {output_path}")
+
+    return 0
+
+
+def _cmd_prose(args: argparse.Namespace) -> int:
+    from autoresearch.experiments.ledger import read_ledger
+
+    run_dir = Path(args.run_dir)
+    config = load_config(args.config)
+    strategy_root = (
+        Path(__file__).resolve().parent / "strategy" / "profiles"
+    )
+    registry = VenueStrategyRegistry.load(strategy_root)
+    strategy = registry.resolve(config.research.venue_id)
+
+    paper_path = run_dir / "stage-11-paper_draft_revision" / "paper_revised.md"
+    if not paper_path.is_file():
+        paper_path = run_dir / "stage-11-paper_draft_revision" / "paper_draft.md"
+    paper = paper_path.read_text(encoding="utf-8") if paper_path.is_file() else ""
+    ledger = tuple(read_ledger(run_dir / "stage-09-experiment_loop" / "ledger.jsonl"))
+
+    output = generate_venue_prose(
+        venue_strategy=strategy,
+        paper_markdown=paper,
+        ledger=ledger,
+        topic=config.research.topic,
+    )
+
+    rendered = output.to_markdown()
+    print(rendered)
+
+    if args.output:
+        output_path = Path(args.output)
+        write_prose_output(output, output_path)
+        print(f"\nOutput written to {output_path}")
 
     return 0
 

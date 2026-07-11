@@ -58,6 +58,7 @@ from autoresearch.pipeline.contracts import contract_for
 from autoresearch.pipeline.stages import Stage
 from autoresearch.gapanalysis.report import analyze_gap, write_gap_report
 from autoresearch.prompts.manager import PromptContext, compose_stage_prompt
+from autoresearch.prose.venue_prose import generate_venue_prose, write_prose_output
 from autoresearch.strategy.contributions import mine_contributions, write_contribution_report
 from autoresearch.strategy.models import VenueStrategy
 from autoresearch.strategy.reviewer import simulate_review, write_review_report
@@ -772,6 +773,23 @@ def _run_strategy_analysis(
         write_gap_report(gap, stage_path / "gap_analysis.md")
     except Exception as exc:
         logger.warning("gap analysis failed: %s", exc)
+
+    # Venue-aware prose generation
+    try:
+        prose_output = generate_venue_prose(
+            venue_strategy=venue_strategy,
+            paper_markdown=paper_markdown,
+            ledger=ledger,
+            topic=topic,
+            llm_provider=llm_provider,
+        )
+        write_prose_output(prose_output, stage_path / "venue_prose.md")
+        (stage_path / "paper_venue_ready.md").write_text(
+            prose_output.full_paper,
+            encoding="utf-8",
+        )
+    except Exception as exc:
+        logger.warning("venue prose generation failed: %s", exc)
 
 
 def _execute_final_verification_export(
